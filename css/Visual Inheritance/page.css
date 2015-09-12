@@ -1,0 +1,9 @@
+div { background-color:gold; color:black; padding:10px 20px; 
+  border-left:1px solid gray; border-right:2px solid black; 
+  border-top:1px solid gray; border-bottom:2px solid black; }
+
+p     { background-color:transparent; background-image:none; }
+label { background-color:transparent; background-image:none; }
+span  { background-color:transparent; background-image:none; }
+
+code { background-color:firebrick; color:white; }

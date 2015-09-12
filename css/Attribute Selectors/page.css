@@ -1,0 +1,11 @@
+code { white-space:pre; }
+
+p[title] { padding:5px 10px; border:1px solid gray; }
+p[title~="paragraph"] { background-color:gold; }
+p[title="#4   paragraph"] { font-weight:bold; }
+
+a[href="http://www.example.com"][target="_blank"] { font-weight:bold; }
+p[type^="#4"] {color: grey }
+a[href$=".com"] { font-weight:bold; }
+p[title*="test"] { font-weight:bold; }
+
