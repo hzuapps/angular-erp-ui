@@ -1,0 +1,13 @@
+/* Group Selectors */
+p,ol,li { border:1px solid black; padding-left:10px; font-family:monospace;
+  margin:10px; margin-left:0px; }
+
+ol { margin-left:0px; padding-left:40px; margin-top:20px; }
+
+/* Position Selectors */
+div *.my-class { font-size:1.2em; font-weight:bold; }  /* Descendant  Selector */
+#my-id   p { background-color:gold; }                  /* Descendant  Selector */
+#my-id > * { border:3px solid black; }                 /* Child       Selector */
+
+li:first-child { font-weight:bold; color:red; }        /* First-child Selector */
+li + li { font-style:italic; color:blue; }             /* Sibling     Selector */

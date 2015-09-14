@@ -1,0 +1,8 @@
+p:first-line { font-weight:bold; word-spacing:2px; letter-spacing:1px; }
+p:first-letter { font-size:48px; }
+  
+span:first-line { font-weight:bold; word-spacing:2px; letter-spacing:1px; }
+span:first-letter { font-size:48px; }
+
+dl:first-line { font-weight:bold; word-spacing:2px; letter-spacing:1px; }
+dl:first-letter { font-size:48px; }

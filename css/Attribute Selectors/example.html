@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Attribute Selectors</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <link rel="stylesheet" href="site.css"   media="all"    type="text/css" />
+ <link rel="stylesheet" href="page.css"   media="all"    type="text/css" />
+ <link rel="stylesheet" href="print.css"  media="print"  type="text/css" />
+ <!--[if lte IE 6]>
+ <link rel="stylesheet" href="ie6.css"    media="all"    type="text/css" />
+ <![endif]-->
+</head>
+
+<body>
+
+ <h1>Attribute Selectors</h1>
+
+ <p>This is a paragraph without the <code>title</code> attribute.</p>
+
+ <p title="Second">
+  <code>p[title]</code> selects all paragraphs containing a title attribute.</p>
+
+ <p title="Third paragraph">
+  <code>p[title~="paragraph"]</code> selects all paragraphs with a
+  title attribute containing the word, <code>paragraph</code>.</p>
+
+ <p title="#4   paragraph">
+  <code>p[title="#4   paragraph"]</code> selects all paragraphs with a
+  title attribute containing the exact text, <code>#4   paragraph</code>. Matches
+  are case sensitive and must match letter-for-letter including whitespace.</p>
+
+	<a href=”http://www.example.com” target=”_blank” hreflang=”en-GB”>hello</a>
+
+
+</body>
+</html>
