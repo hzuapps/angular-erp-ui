@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>JavaScript Primer</title>
+</head>
+<body>
+<script>
+ 
+    function anotherFunctionReference() {         
+    	console.log('callbacks part 2');
+    }
+ 
+    var x = anotherFunctionReference;
+    x();
+    anotherFunctionReference();
+    x();
+    anotherFunctionReference();
+    x();
+ 
+</script>
+ 
+</body>
+</html>
