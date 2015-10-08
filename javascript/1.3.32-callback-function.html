@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Primer</title>
+</head>
+<body>
+<script>
+ 
+    var actionsToTakeWhenServerHasResponded = function () {
+        console.log('The server just responded!')
+    }
+ 
+    function communicateWithServer(callback) {
+ 
+        callback();
+    }
+ 
+    communicateWithServer(actionsToTakeWhenServerHasResponded);
+ 
+ 
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Primer</title>
+</head>
+<body>
+<script>
+ 
+    // Example 1   
+    var myFirstObject = {};     
+    myFirstObject.firstName = "Andrew";     
+    myFirstObject.lastName = "Grant";     
+    console.log(myFirstObject.firstName);
+ 
+    // Example 2     
+    var mySecondObject = {         
+    	firstName: "Andrew",         
+    	lastName: "Grant"
+    };
+    console.log(mySecondObject.firstName);
+ 
+    // Example 3
+    var myThirdObject = new Object();     
+    myThirdObject.firstName = "Andrew";     
+    myThirdObject.lastName = "Grant";     
+    console.log(myThirdObject.firstName);
+
+
+    var manyObj = {
+    	abc : {
+    		def : {
+    			ghi : {
+    				jkl : 1
+    			}
+    		}
+    	}
+    };
+
+    manyObj.abc.def.ghi.jkl = 2;
+    console.dir(manyObj);
+ 
+</script>
