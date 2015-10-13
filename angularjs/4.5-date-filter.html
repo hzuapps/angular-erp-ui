@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listing 4-5</title>
+    <script src="../lib/angular-1.4.5/angular.min.js"></script>
+    <script>
+        function MyFilterDemoCtrl($scope) {
+            var someData = {
+                firstName: 'JENNA',
+                surname: 'GRANT',
+                dateJoined: new Date(2010, 2, 23),
+                consumption: 123.659855,
+                plan: 'super-basic-plan'
+            };
+            $scope.data = someData;
+} </script>
+</head>
+<body ng-app ng-controller="MyFilterDemoCtrl">
+    <p>medium:<strong> {{ data.dateJoined | date:'medium'}} </strong></p>
+    <p>mediumDate:<strong> {{ data.dateJoined | date:'mediumDate'}} </strong></p>
+    <p>shortDate:<strong> {{ data.dateJoined | date:'shortDate'}} </strong></p>
+    <p>
+        This customer joined in the month of {{ data.dateJoined | date:'MMMM'}} 
+        on a {{data.dateJoined | date:'EEEE'}} at {{ data.dateJoined | date:'ha'}}
+    </p>
+</body>
+</html>
