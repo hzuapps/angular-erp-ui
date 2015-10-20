@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>{{流程审核}} by 1314080901112</title>
+    <title>{{工程 BOM 物料录入清单}} by 1314080901112</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
     
     <!-- Bootstrap -->
@@ -20,6 +20,18 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+    function MyFilterDemoCtrl($scope) {
+        var BOM = {
+            serial number: '编号',
+            category: '类别',
+            name: '名称',
+             type: '型号',
+              colour: '颜色',
+            plan: 'super-basic-plan'
+        };
+        $scope.data =BOM ;
+} </script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
