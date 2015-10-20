@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +21,15 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<script>
+    	function MyFilterDemoCtrl($scope) {
+       	 var someData = {
+            Name: '生产下的订单',
+    	    interface: '列表',	
+ 	    instructions: '输入条件查询后刷新生产订单列表（树）'	
+        };
+        $scope.data = someData;
+} </scrip
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
