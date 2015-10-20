@@ -5,24 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>1314080901209人事-在岗查询-考勤
--列表</title>
+    <title>1314080901209人事-组织-新增岗位-列表、表单
+</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
     <script>
-    function emp($scope) {
+    function organization($scope) {
         var someData = {
-            empid: '员工编号',
-            empname:'员工姓名',
-            attendance:'考勤',
-            morning:'上午',
-            worktime,'上班时间',
-            dangpai:'党派',
-            jiguan:'籍贯',
-            phone:'手机',
-            
-            dateJoined: new Date(2010, 2, 23),
-            consumption: 123.659855,
-            plan: 'super-basic-plan'
+            dep: '所属部门',
+            quartersName:'岗位名称',
+            quartersLay:'岗位层次',
+            quartersType:'岗位类型',
+            salary,'基本薪资',
+            quartersDuty:'岗位职责',
         };
         $scope.data = someData;
 } </script>
@@ -40,7 +34,6 @@
     <![endif]-->
   </head>
   <body>
-    <div id="zaigang">{{emp('zaigang')}}</div>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
