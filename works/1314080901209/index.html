@@ -5,9 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>1314080901209 人事->在岗查询</title>
+    <title>1314080901209人事-在岗查询-考勤
+-列表</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    
+    <script>
+    function emp($scope) {
+        var someData = {
+            empid: '员工编号',
+            empname:'员工姓名',
+            attendance:'考勤',
+            morning:'上午',
+            worktime,'上班时间',
+            dangpai:'党派',
+            jiguan:'籍贯',
+            phone:'手机',
+            
+            dateJoined: new Date(2010, 2, 23),
+            consumption: 123.659855,
+            plan: 'super-basic-plan'
+        };
+        $scope.data = someData;
+} </script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,14 +40,13 @@
     <![endif]-->
   </head>
   <body>
+    <div id="zaigang">{{emp('zaigang')}}</div>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar">西西</span>
-            <span class="icon-bar">哈哈</span>
-            <span class="icon-bar">嘿嘿</span>
+        
           </button>
           <a class="navbar-brand" href="#">Project name</a>
         </div>
