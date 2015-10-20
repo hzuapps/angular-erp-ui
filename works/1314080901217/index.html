@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+  <script>
+    function MyFilterDemoCtrl($scope) {
+        var someData = {
+            firstName: 'JENNA',
+            surname: 'GRANT',
+            dateJoined: new Date(2010, 2, 23),
+            consumption: 123.659855,
+            plan: 'super-basic-plan'
+        };
+        $scope.data = someData;
+} </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
