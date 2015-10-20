@@ -5,25 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>采购->需求->导入物料需求表</title>
+    <title>生产->工序->工序信息表单</title>
     <script>
 	    function MyFilterDemoCtrl($scope) {
-	        var material requirement = {
-	            source:'来源',
-	            material:'物料',
-	            standard:'规格',
-	            quantity:'数量',
-	            type:'类别',
+	        var procedure message = {
 	            name:'名称',
-	            size:'型号',
-	            color:'颜色',
-	            length:'长',
-	            wide:'宽',
-	            stock:'库存数',
-	            requirement:'需求数',
-	            purchase:'采购数'
+	            unit:'单位',
+	            standard:'规格',
+	            number:'系数',
+	            condition:'状态'
 	            };
-	        $scope.data = meterial requirement;
+	        $scope.data = procedure message;
 	} </script>
     <link rel="shortcut icon" href="icons/favicon.ico" />
     
