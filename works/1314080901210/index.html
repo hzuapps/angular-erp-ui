@@ -7,7 +7,17 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>{{uiName}} 1314080901210物料信息 </title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    
+    <script>
+    function MyFilterDemoCtrl($scope) {
+        var wuliaoxinxi = {
+            wuliaoleibie: 'bancai',
+            wuliaomingchen: '',
+            gengxinriqi: new Date(2010, 2, 23),
+            pinyinma: ' ' ,
+            wuliaomiaoshu: ' '
+        };
+        $scope.data = wuliaoxinxi;
+} </script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
