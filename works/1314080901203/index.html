@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>财务-费用付款 by 1314080901203</title>
+    <script>
+    function MyFilterDemoCtrl($scope) {
+           var msgCt;
+	    function createBox(t, s){
+	        return '<div class="msg"><h3>' + t + '</h3><p>' + s + '</p></div>';
+	    }
+	    return {
+	        msg : function(title, format){
+	            if(!msgCt){
+	                msgCt = Ext.DomHelper.insertFirst(document.body, {id:'msg-div'}, true);
+	            }
+	            var s = Ext.String.format.apply(String, Array.prototype.slice.call(arguments, 1));
+	            var m = Ext.DomHelper.append(msgCt, createBox(title, s), true);
+	            m.hide();
+	            m.slideIn('t').ghost("t", { delay: 1000, remove: true});
+	        }
+	    };
+} </script>
     <link rel="shortcut icon" href="icons/favicon.ico" />
     
     <!-- Bootstrap -->
