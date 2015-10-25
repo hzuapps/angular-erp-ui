@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>财务-添加其他收入项目</title>
+    <title>财务-其他收入-查询选项列表</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
     
     <!-- Bootstrap -->
@@ -20,6 +20,16 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
++    function MyFilterDemoCtrl($scope) {
++        var Query options = {
++            Income state: '未完成',
++            Start date:  '2015-1-1',
++     Termination date: '2015-2-13',
++        };
++        $scope.data =  Query options;
++} 
++</script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
