@@ -6,6 +6,13 @@ var myAppModule = angular.module('myStoreModule', []);
 // configure the module with a controller
 myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
+	var someData = {
+            operator: "jinxiaohao",
+            dateJoined: new Date(2010, 2, 23),
+            dateEnd: new Date(2015, 10, 22),
+            remark: "i'm a handsome boy!"
+        };
+        $scope.data = someData;
     }
 );
 
