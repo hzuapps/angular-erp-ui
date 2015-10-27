@@ -5,9 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>1314080901209 人事->在岗查询</title>
+    <title>1314080901209人事-组织-新增岗位-列表、表单
+</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    
+    <script>
+    function organization($scope) {
+        var someData = {
+            dep: '所属部门',
+            quartersName:'岗位名称',
+            quartersLay:'岗位层次',
+            quartersType:'岗位类型',
+            salary,'基本薪资',
+            quartersDuty:'岗位职责',
+        };
+        $scope.data = someData;
+} </script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -27,9 +39,7 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar">西西</span>
-            <span class="icon-bar">哈哈</span>
-            <span class="icon-bar">嘿嘿</span>
+        
           </button>
           <a class="navbar-brand" href="#">Project name</a>
         </div>
