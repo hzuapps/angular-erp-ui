@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title> 工程模块/BOM</title>
+    <title> 工程模块/BOM  查询BOM单 BOM列表</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
     
     <!-- Bootstrap -->
@@ -21,10 +21,15 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script>
-    function MyFilterDemoCtrl($scope) {
+    function BOMliebiao($scope) {
         var someData = {
-            firstName: '查询BOM单',
-            surname: 'BOM列表',
+            dingdan: '某某公司装修工程',
+            chanping: '楼层装饰',
+            data1: '2015.9.1',
+            data2: '2015.9.31',
+            status: '装修中',
+            caidanyuan: '小张',
+            beizhu: '无',
         };
         $scope.data = someData;
 } </script>
