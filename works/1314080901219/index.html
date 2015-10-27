@@ -20,6 +20,24 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+    function createOrderCtrl($scope) {
+        var someData = {
+            id: '序号',
+            number: '编号',
+            name: '品名',
+            type: '类别',
+            xinghao: '型号',
+            color:'颜色',
+            numbers:'数量',
+            danwei:'单位',
+            danjia:'单价',
+            jine:'金额',
+            avg:'平均价',
+            jiubianma:'旧编码'
+        };
+        $scope.data = someData;
+} </script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
