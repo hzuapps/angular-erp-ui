@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="materialModule">
   <head>
     <meta http-equiv="Content-Type" charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,28 +21,14 @@
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+      <script src"../..lib/angular-1.4.5/angular.min.js></script>
+      <script src="js/wuliaoxinxiModule.js"></script>
     <![endif]--> 
-    <script>
-    function MyFilterDemoCtrl($scope) {
-        var someData = {
-            number:100,
-            date:'建档日期',
-            sort:'供应商类别',
-            name:'供应商全称',
-            code:'拼音码',
-            homepage:'供应商主页',
-            jc:'供应商简称',
-            area:'行政区域',
-            synposis:'供应商简介',
-            dateJoined: new Date(2015, 10, 20),
-            consumption: 123.659855,
-            plan: 'super-basic-plan'
-        };
-        $scope.data = someData;
-} </script>
 
   </head>
   <body>
+  <body ng-controller="wuliaoxinxiCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
