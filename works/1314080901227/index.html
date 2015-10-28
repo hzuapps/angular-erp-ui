@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html ng-app="Processingflow">
+<head lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,21 +21,12 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-    function MyFilterDemoCtrl($scope) {
-        var someData = {
-          id: '待处理流程编号',
-          name: '流程名称',
-          operation: '操作',
-          fitness: '状态',
-          dateJoined: new Date(2010, 2, 23),
-        };
-        $scope.data = someData;
-        } 
-    </script>
+  <script src="../lib/angular-1.4.5/angular.min.js"></script>
+  <script src="js/Processingflow.js"></script>
     
   </head>
-  <body>
+  <body ng-controller="MyFilterDemoCtrl">
+    <p>名字：{{data.name}}</p>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
