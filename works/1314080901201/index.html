@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="MymaterialsModule">
   <head>
     <meta http-equiv="Content-Type" charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,9 +21,12 @@
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <script src"../..lib/angular-1.4.5/angular.min.js></script>
+      <script src="js/MymaterialsModule.js"></script>
     <![endif]--> 
   </head>
   <body>
+  <body ng-controller="MymaterialsCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -78,23 +83,6 @@
     <lable for="stop or not">是否停用：</lable>
     <input type="checkbox" value="" name="stop or not" checked="checked" >
     <input type="submit" value="+保存/修改" name="submit"/>
-  </div>
-  
-
-  <div>
-  <table style="background-color:#c5c5c5;margin:0px;width:614px;right:auto;left:0px;top:0px;border:1px solid black">
-   <caption style="background-color:#99bce8;color:blue;font-weight:bold">供应商联系人</caption>
-     <tr> 
-      <th>名称</th>
-      <th>手机</th>
-      <th>办公电话</th>
-      <th>传真号码</th>
-      <th>QQ</th>
-      <th>邮箱地址</th>
-      <th>职务</th>
-      <th>备注</th>
-     </tr>
-      </table>
   </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
