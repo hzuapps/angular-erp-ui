@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app="myAppModule">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +19,8 @@
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+      <script src="liuqinweiAppModule.js"></script>
     <![endif]-->
     <script>
     function MyFilterDemoCtrl($scope) {
@@ -35,7 +37,7 @@
         $scope.data = worker information;
 } </script>
   </head>
-  <body>
+  <body ng-controller="liuqinweiFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
