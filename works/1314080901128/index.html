@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+  <!DOCTYPE html>
+<html ng-app="workersModule"> <head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,19 +19,10 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-    function workers_online($scope) {
-        var workers = {
-            no: '1',
-            name:'chenzhengang',
-            worker_no:'1',
-            sex:'f',
-            id_card:'4415210000000000001234'
-        };
-        $scope.data = someData;
-} </script>
+     <script src="../lib/angular-1.4.5/angular.min.js"></script>
+     <script src="js/workersModule.js"></script>
   </head>
-  <body>
+  <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
