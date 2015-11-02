@@ -1,18 +1,20 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
+<html ng-app="orderModule">
+ <head lang="en">
   <head>
-    <meta http-equiv="Content-Type" charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title> 仓库产品入库 by 1314080901212</title>
+    <title> 仓库产品入库->单据信息 by 1314080901212</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    
-    <!-- Bootstrap -->
+        <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+	  <script src="js/orderModule.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +37,7 @@
 } </script>
 
   </head>
-  <body>
+  <body ng-controller="createOrderCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
