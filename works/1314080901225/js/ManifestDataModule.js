@@ -5,13 +5,15 @@ var ManifestDataModule = angular.module('ManifestDataModule', []);
 // use the myAppModule variable to
 // configure the module with a controller
 ManifestDataModule.controller('MyFilterDemoCtrl', function($scope) {
-        var ManifestData = {
-            ManifestNum: '001',
-            Wearhouse: '001',
-            Handler: 'Ayden',
-            HandlingData: '2000-10-15',
-            State: ' ',
-	    Remark: ' ',
+        
+       var ManifestData = {
+            	
+		ManifestNum: '001',
+            	Wearhouse: '001',
+            	Handler: 'Ayden',
+            	HandlingData: '2000-10-15',
+            	State: ' ',
+	    	Remark: ' ',
             
        };
         $scope.data =ManifestData;
