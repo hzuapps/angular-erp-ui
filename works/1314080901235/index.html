@@ -1,16 +1,19 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+     <head ng-app="itmListModule">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>仓库-盘点-盘点信息1314080901235</title>
+    <title>{{盘点物品列表}} by 1314080901235</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
+     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
++        <script src="js/itemListModule.js"></script>
     
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
+ 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -20,8 +23,11 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+     $scope.data = someData;
+     } </script>
   </head>
   <body>
+    <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
