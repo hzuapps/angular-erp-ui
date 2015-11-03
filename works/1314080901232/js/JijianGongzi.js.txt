@@ -1,26 +1,25 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var documentsDetailModule = angular.module('documentsDetailModule', []);
+var JijianGongziModule = angular.module('JijianGongziModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-documentsDetailModule.controller('MyFilterDemoCtrl', function ($scope) {
+JijianGongziModule.controller('createorterCtrl', function ($scope) {
        // controller code would go here
-       var JijianGongzi = {
-            Type: 'Á±ªÂûã',
-            price: 'Âçï‰ª∑',
-            number: ‚ÄòÊï∞Èáè‚Äô,
-            money: ‚ÄòÈáëÈ¢ù‚Äô,
+	var JijianGongzi = {
+            Type: '¿‡–Õ',
+            price: 'µ•º€',
+            number: °Æ ˝¡ø°Ø,
+            money: °ÆΩ∂Ó°Ø,
             IdCard: ' IdCard '
         };
         $scope.data = JijianGongzi;
-
     }
 );
 
 // use the myAppModule variable to
 // configure the module with a filter
-documentsDetailModule.filter('stripDashes', function() {
+JijianGongziModule.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; });
