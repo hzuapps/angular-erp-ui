@@ -7,10 +7,10 @@ var JijianGongziModule = angular.module('JijianGongziModule', []);
 JijianGongziModule.controller('createorterCtrl', function ($scope) {
        // controller code would go here
 	var JijianGongzi = {
-            Type: 'ÀàĞÍ',
-            price: 'µ¥¼Û',
-            number: ¡®ÊıÁ¿¡¯,
-            money: ¡®½ğ¶î¡¯,
+            Type: 'ç±»å‹',
+            price: 'å•ä»·',
+            number: â€˜æ•°é‡â€™,
+            money: â€˜é‡‘é¢â€™,
             IdCard: ' IdCard '
         };
         $scope.data = JijianGongzi;
