@@ -6,17 +6,16 @@ var myAppModule = angular.module('myAppModule', []);
 // configure the module with a controller
 myAppModule.controller('SuppInfor', function ($scope)
 	{
-	     function SuppInfor($scope) {
-			var SuppInfor= {
-			    SuppId: '001',
+		var SuppInfor= 
+			{  SuppId: '001',
 			    CreatDate: new Date(2015, 10, 18),
-			    SuppType: 'Îå½ðÀà',
-			    SuppFullName: '¹©Ó¦ÉÌÈ«³Æ',
-			    pinyincode: 'null'
-			    SuppPage: 'http://'
-			    SuppShortName:'¹©Ó¦ÉÌ¼ò³Æ'
-			    AdministrativeDivision :'ÐÐÕþÇøÓò'
-			    SuppDesc :'¹©Ó¦ÉÌ¼ò½é'
+			    SuppType: 'äº”é‡‘ç±»',
+			    SuppFullName: 'ä¾›åº”å•†å…¨ç§°',
+			    pinyincode: 'null',
+			    SuppPage: 'http://',
+			    SuppShortName:'ä¾›åº”å•†ç®€ç§°',
+			    AdministrativeDivision :'è¡Œæ”¿åŒºåŸŸ',
+			    SuppDesc :'ä¾›åº”å•†ç®€ä»‹',
 			};
 			$scope.data = someData;
 	}
