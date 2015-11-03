@@ -1,9 +1,9 @@
 // javascript.js
-// create a new module called 'MymaterialsModule' and save 
-// a reference to it in a variable called MymaterialsModule 
-var MymaterialsModule = angular.module('MymaterialsModule', []);
+// create a new module called 'myMaterialsModule' and save 
+// a reference to it in a variable called myMaterialsModule 
+var myMaterialsModule = angular.module('myMaterialsModule', []);
 
- MymaterialsModule.controller('createMymaterialsCtrl', function ($scope) {
+myMaterialsModule.controller('createmyMaterialsCtrl', function ($scope) {
         var someData = {
             number:100,
             date:'建档日期',
@@ -18,7 +18,7 @@ var MymaterialsModule = angular.module('MymaterialsModule', []);
         };
         $scope.data = someData;
 });
- MymaterialsModule.filter('stripDashes', function() {
+ myMaterialsModule.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; });
