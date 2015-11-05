@@ -17,7 +17,7 @@ myAppModule.controller('SuppInfor', function ($scope)
 			    AdministrativeDivision :'行政区域',
 			    SuppDesc :'供应商简介',
 			};
-			$scope.data = someData;
+			$scope.data = SuppInfor;
 	}
 );
 
