@@ -1,0 +1,5 @@
+<h2>My Favourite Cities</h2>
+<div ng-repeat="city in ['Liverpool','Perth','Sydney','Dublin','Paris']">
+    {{$index}}. {{city}}
+    {{$first ? '(This is the first row)' : ''}} {{$last ? '(This is the last row)' : ''}}
+</div>
