@@ -6,13 +6,13 @@ var purchasingGroupDelModule = angular.module('purchasingGroupDelModule', []);
 // configure the module with a controller
 purchasingGroupDelModule.controller('purchasingGroupDelCtrl', function ($scope) {
        // controller code would go here
-function purchasingGroupDelCtrl($scope) { 
+
          var purchasingGroup1 = { 
              groupName: '小组名', 
              groupId:'00002'
          }; 
          $scope.data = purchasingGroup1; 
- }
+
     }
 );
 
