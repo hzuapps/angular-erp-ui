@@ -20,6 +20,18 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+     <script>
+    function MyFilterDemoCtrl($scope) {
+        var someData = {
+            cc:'客户类别',
+            fitness:'状态',
+            notes:'备注',
+            dateJoined: new Date(2015, 11, 3),
+            consumption: 123.659855,
+            plan: 'super-basic-plan'
+        };
+        $scope.data = someData;
+} </script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
