@@ -11,7 +11,7 @@ providerModule.controller('MyFilterDemoCtrl', function ($scope) {
             providerFullName: 'intel',
             providerSimpName: 'intel',
             providerType: 'computer',
-            providerIntroduce: 'intel',
+            providerIntroduce: 'fashionable product',
             address: 'China'
         };
         $scope.data = providerData;
