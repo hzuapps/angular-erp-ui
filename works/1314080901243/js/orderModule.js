@@ -8,7 +8,7 @@ orderModule.controller('createOrderCtrl', function ($scope) {
     // controller code would go here
         var someData = {
             bumenname:'部门名称',
-            bumendaima:'部门代码'，
+            bumendaima:'部门代码',
             bumenzhuguan:'部门主管',
             bumenmiaosu:'部门描述'
         };
