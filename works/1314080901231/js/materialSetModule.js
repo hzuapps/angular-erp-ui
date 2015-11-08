@@ -4,7 +4,7 @@ var materialSetModule = angular.module('materialSetModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-materialSetModule.controller('MyFilterDemoCtrl', function ($scope) {
+materialSetModule.controller('creatematerialSetDemoCtrl', function ($scope) {
        // controller code would go here
         var materialSet = {
             typeName:" °å²Ä ",
@@ -19,4 +19,4 @@ materialSetModule.controller('MyFilterDemoCtrl', function ($scope) {
 materialSetModule.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
-}; });
+}; }); // javascript.js
