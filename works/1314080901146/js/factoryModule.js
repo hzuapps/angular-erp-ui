@@ -10,8 +10,8 @@ factoryModule.controller('MyFilterDemoCtrl', function ($scope) {
 	var factoryData = {
             factoryName: 'kaixin',
             factoryNum:  '001',
-	    factoryLocation: 'GuangDong',
-	    factoryDescription: '信誉良好',
+			factoryLocation: 'GuangDong',
+			factoryDescription: '信誉良好',
         };
         $scope.data = factoryData;
 	 
