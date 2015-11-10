@@ -85,6 +85,23 @@
    
     <label for="Handing date">经办日期：</label>
 -    <input type="text" name="Handing date" id="Handing date" value=""/>
+
+   </div>
+   
+   <div>
+    <label for="State">状态：</label>
+    <input type="text" name="State" id="State" value=""/>
+    <label for="Remark">备注：</label>
+    <input type="text" name="Remark" id="Remark" value=""/>
+   
+    </div>
+    
+	
+  <div style="width: 1270px;height: 155px">
+    <input type="submit" value="+新建" name="submit"/>
+    <input type="submit" value="+保存" name="submit"/>
+  </div>
+  
 <DIV style="position:relative; top:0px; left:0px; width:80px; height:120px;  overflow: hidden">
 <SCRIPT language=javascript>
 function Year_Month(){  
@@ -154,26 +171,6 @@ document.write('</td></tr></table>');
 setInterval('refreshCalendarClock()',1000);
       
 </SCRIPT></DIV>
-   </div>
-   
-   <div>
-    <label for="State">状态：</label>
-    <input type="text" name="State" id="State" value=""/>
-    <label for="Remark">备注：</label>
-    <input type="text" name="Remark" id="Remark" value=""/>
-   
-    </div>
-    
-    <script language=“JavaScript”>
-	setInterval("thistime.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
-	</script>
-	
-  <div style="width: 1270px;height: 155px">
-    <input type="submit" value="+新建" name="submit"/>
-    <input type="submit" value="+保存" name="submit"/>
-  </div>
-  
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
