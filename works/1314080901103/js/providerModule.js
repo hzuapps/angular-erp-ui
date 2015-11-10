@@ -15,6 +15,10 @@ providerModule.controller('MyFilterDemoCtrl', function ($scope) {
             address: 'China'
         };
         $scope.data = providerData;
+        $scope.isHidden = true;
+        $scope.showInput = function () {
+            $scope.isHidden = !$scope.isHidden;
+        }
 }
 );
 
