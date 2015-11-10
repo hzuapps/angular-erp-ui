@@ -59,59 +59,49 @@
     </nav>
     
     <div margin:0px;width:614px;right:auto;left:0px;top:0px;height:154px;>
-    <p style="background-color:#99bce8;color:blue;font-weight:bold">供应商信息</p>
-    <label for="number">供应商编号：</label>
+    <p style="background-color:#99bce8;color:blue;font-weight:bold">单据信息</p>
+    <label for="number">供应商：</label>
     <input type="text" name="number" id="number" value=""/>
-    <label for="date">建档日期：</label>
-    <input type="text" name="date" id="date" value=""/>
-    <label for="sort">供应商类别：</label>
+    
+    <label for="sort">仓库：</label>
    <select> 
-    <option value="五金类" >五金类</option>
-    <option value="电器类">电器类</option>
-    <option value="板材类">板材类</option>
-    <option value="油漆类">油漆类</option>
-    <option value="刀具类">刀具类</option>
-    <option value="其它">其它</option>
+    <option value="001" >001</option>
+    <option value="002">002</option>
+    <option value="003">003</option>
+    <option value="004">004</option>
+    <option value="005">005</option>
+    <option value="006">006</option>
    </select>
+   
+    <label for="Hand">经手人：</label>
+   <select> 
+    <option value="礼品盒" >礼品盒</option>
+    <option value="按时">按时</option>
+    <option value="6564564">6564564</option>
+    <option value="叶良辰">叶良辰</option>
+    <option value="李哲">李哲</option>
+    <option value="泽拉图">泽拉图</option>
+   </select>
+   
+    <label for="Handing date">经办日期：</label>
+-    <input type="text" name="Handing date" id="Handing date" value=""/>
+
    </div>
    
    <div>
-    <label for="name">供应商全称：</label>
-    <input type="text" name="name" id="name" value=""/>
-    <label for="code">拼音码：</label>
-    <input type="text" name="code" id="code" value=""/>
-    <label for="homepage">供应商主页：</label>
-    <input type="text" name="homepage" id="homepage" value=""/>
+    <label for="State">状态：</label>
+    <input type="text" name="State" id="State" value=""/>
+    <label for="Remark">备注：</label>
+    <input type="text" name="Remark" id="Remark" value=""/>
+   
     </div>
     
   <div style="width: 1270px;height: 155px">
-  <label for="jc">供应商简称：</label>
-    <input type="text" name="jc" id="jc" value=""/>
-    <label for="area">行政区域：</label>
-    <input type="text" name="area" id="area" value=""/>
-    <label for="synposis">供应商简介：</label>
-    <input type="text" name="synposis" id="synposis" value=""/><br/>
-    <lable for="stop or not">是否停用：</lable>
-    <input type="checkbox" value="" name="stop or not" checked="checked" >
-    <input type="submit" value="+保存/修改" name="submit"/>
+    <input type="submit" value="+新建" name="submit"/>
+    <input type="submit" value="+保存" name="submit"/>
   </div>
   
 
-  <div>
-  <table style="background-color:#c5c5c5;margin:0px;width:614px;right:auto;left:0px;top:0px;border:1px solid black">
-   <caption style="background-color:#99bce8;color:blue;font-weight:bold">供应商联系人</caption>
-     <tr> 
-      <th>名称</th>
-      <th>手机</th>
-      <th>办公电话</th>
-      <th>传真号码</th>
-      <th>QQ</th>
-      <th>邮箱地址</th>
-      <th>职务</th>
-      <th>备注</th>
-     </tr>
-      </table>
-  </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
