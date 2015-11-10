@@ -6,7 +6,7 @@ var EmployeeAttendanceModule = angular.module('EmployeeAttendanceModule', []);
 // configure the module with a controller
 EmployeeAttendanceModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
-       var attenceData = {
+       var EmployeeAttendanceData = {
          personNum:'001'，
          personName:'zhouzebiao',
          attenceDate:'2015-01-01',
@@ -20,7 +20,7 @@ EmployeeAttendanceModule.controller('MyFilterDemoCtrl', function ($scope) {
          start:'2015-01-01 19:30',
          stop:'2015-01-01 22:00'
         };
-        $scope.data = attenceData;
+        $scope.data = EmployeeAttendanceData;
     }
 );
 
