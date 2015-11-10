@@ -1,5 +1,5 @@
 
-//定义表单数据实体
+//露篓脪氓卤铆碌楼脢媒戮脻脢碌脤氓
       var orderData = {
           orderId: 1,
           storage: 'myStorage',
@@ -30,5 +30,5 @@ myOrderModule.filter("", function () {
 
 
 
-//测试引用js文件是否成功的函数调用
-function a() { alert("引用js文件成功");}
+//虏芒脢脭脪媒脫脙js脦脛录镁脢脟路帽鲁脡鹿娄碌脛潞炉脢媒碌梅脫脙
+function a() { alert("脪媒脫脙js脦脛录镁鲁脡鹿娄");}
