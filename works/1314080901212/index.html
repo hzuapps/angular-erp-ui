@@ -96,14 +96,16 @@
    
     </div>
     
+    <script language=“JavaScript”>
+	setInterval("thistime.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+	</script>
+	
   <div style="width: 1270px;height: 155px">
     <input type="submit" value="+新建" name="submit"/>
     <input type="submit" value="+保存" name="submit"/>
   </div>
   
-<script language=“JavaScript”>
-	setInterval("thistime.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
-	</script>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
