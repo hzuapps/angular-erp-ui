@@ -1,10 +1,10 @@
 // create a new module called 'myAppModule' and save
 // a reference to it in a variable called myAppModule
-var ZhengjinhuaAppModule = angular.module('ZhengjinhuaAppModule', []);
+var SuppliersFormAppModule = angular.module('SuppliersFormAppModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-ZhengjinhuaAppModule.controller('ZhengjinhuaFilterDemoCtrl', function ($scope) {
+SuppliersFormAppModule.controller('SuppliersFormFilterDemoCtrl', function ($scope) {
     // controller code would go here
         var wuliao = {
         wuliao leibie='wujin',
@@ -23,7 +23,7 @@ ZhengjinhuaAppModule.controller('ZhengjinhuaFilterDemoCtrl', function ($scope) {
 
 // use the myAppModule variable to
 // configure the module with a filter
-ZhengjinhuaAppModule.filter('ZhengjinhuastripDashes', function() {
+SuppliersFormAppModule.filter('SuppliersFormstripDashes', function() {
     return function(txt) {
         // filter code would go here
     }; });
