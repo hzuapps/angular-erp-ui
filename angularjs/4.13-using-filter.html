@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Demo</title>
+    <script src="../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/myModules/myAppModule.js"></script>
+</head>
+<body ng-app="myAppModule" ng-controller="MyFilterDemoCtrl">
+    <p>Plan type: {{data.plan}}</p>
+    <p>Plan type: {{data.plan | stripDashes}}</p>
+</body>
+</html>
