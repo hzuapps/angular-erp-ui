@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+<html ng-app="feiyongdanModule"> 
+<head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,25 +20,10 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-    function MyFilterDemoCtrl($scope) {
-        var someData = {
-            leibie:'费用类别',
-            danwei:'报账单位',
-            ren:'报账人',
-            baozhangjine:'报账金额',
-            shifujijine:'实付金额',
-            riqi:'报账日期',
-            zhuangtai:'状态',
-            beizhu:'备注',
-            dateJoined: new Date(2015, 10, 25),
-            consumption: 123.659855,
-            plan: 'super-basic-plan'
-        };
-        $scope.data = someData;
-} </script>
+<script src="../lib/angular-1.4.5/angular.min.js"></script>
+	<script src="feiyongdanModule.js"></script>
   </head>
-  <body>
+  <body  ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">

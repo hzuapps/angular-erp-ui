@@ -1,24 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-  <script>
-    function MyFilterDemoCtrl($scope) {
-        var someData = {
-            firstName: '采购设置删除',
-            surname: 'GRANT',
-            dateJoined: new Date(2010, 2, 23),
-            consumption: 123.659855,
-            plan: 'super-basic-plan'
-        };
-        $scope.data = someData;
-} </script>
+<html ng-app="purchasingGroupDelModule"> <html lang="zh-CN">
+<head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>采购设置删除1314080901134</title>
+    <title>采购设置采购组删除-1314080901134</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+	<script src="js/purchasingGroupDelModule.js"></script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,7 +22,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+ <body ng-controller="purchasingGroupDelCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -62,7 +52,7 @@
       </div>
 
     </div><!-- /.container -->
-
+  <p>{{data.groupName}}</p>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

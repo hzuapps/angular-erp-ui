@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="myMaterialsModule">
   <head>
     <meta http-equiv="Content-Type" charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +9,8 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>{{uiName}} by 1314080901201物料中的供应商信息</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    
+    <script src"../..lib/angular-1.4.5/angular.min.js></script>
+      <script src="js/myMaterialsModule.js"></script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,6 +25,7 @@
     <![endif]--> 
   </head>
   <body>
+  <body ng-controller="myMaterialsCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -78,23 +82,6 @@
     <lable for="stop or not">是否停用：</lable>
     <input type="checkbox" value="" name="stop or not" checked="checked" >
     <input type="submit" value="+保存/修改" name="submit"/>
-  </div>
-  
-
-  <div>
-  <table style="background-color:#c5c5c5;margin:0px;width:614px;right:auto;left:0px;top:0px;border:1px solid black">
-   <caption style="background-color:#99bce8;color:blue;font-weight:bold">供应商联系人</caption>
-     <tr> 
-      <th>名称</th>
-      <th>手机</th>
-      <th>办公电话</th>
-      <th>传真号码</th>
-      <th>QQ</th>
-      <th>邮箱地址</th>
-      <th>职务</th>
-      <th>备注</th>
-     </tr>
-      </table>
   </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

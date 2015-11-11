@@ -1,24 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head><script> 
-2     function MyFilterDemoCtrl($scope) { 
-3         var someData = { 
-4             firstName: '采购设置新增列表', 
-5             surname: 'GRANT', 
-6             dateJoined: new Date(2010, 2, 23), 
-7             consumption: 123.659855, 
-8             plan: 'super-basic-plan' 
-9         }; 
-10         $scope.data = someData; 
-11 } </script> 
-
+<html ng-app="purchasingGroupNewModule"> 
+<head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>采购设置新增列表1314080901234</title>
+    <title>采购设置采购组新增列表1314080901234</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    
+      <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+	<script src="js/purchasingGroupNewModule.js"></script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,7 +22,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-controller="purchasingGroupNewCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -60,7 +50,7 @@
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
-
+<p>name:{{data.groupName}}</p>
     </div><!-- /.container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
