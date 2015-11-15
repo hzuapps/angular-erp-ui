@@ -20,10 +20,12 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
       <script src="../lib/angular-1.4.5/angular.min.js"></script>
-+     <script src="js/caiwushouruchaxunModule.js"></script>
+      <script src="js/caiwushouruchaxunModule.js"></script>
     <![endif]-->
   </head>
   <body ng-controller="MyFilterDemoCtrl">
+  
+ <body ng-controller="MyFilterDemoCtrl" ng-cloak>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -54,6 +56,38 @@
       </div>
 
     </div><!-- /.container -->
+       <h2>AngularJS Socks</h2>
+    <p>CaiwuQitaShouruChaxun</p>
+    </button>
+    <form class="form-horizontal" role="form">
+    <fieldset>
+
+        <div class="form-group">
+            <label for="Startdate"  class="col-md-1 control-label">Startdate</label>
+            <div class="col-md-2">
+                <select id="Startdate" class="form-control">
+                    <option>2015-1-1</option>
+                    <option>2015-1-10</option>
+                    <option>2015-1-20</option>
+                    <option>2015-2-1</option>
+                </select>
+            </div>
+            <label for="Terminationdate"  class="col-md-1 control-label">Terminationdate</label>
+            <div class="col-md-2">
+                <select id="Terminationdate" class="form-control">
+                    <option>2015-1-15</option>
+                    <option>2015-1-25</option>
+                    <option>2015-2-10</option>
+                    <option>2015-2-20</option>
+                </select>
+           
+        </div>
+        <div class="form-group">
+            <label for="State"  class="col-md-1 control-label ">State</label>
+            <div class="col-md-2">
+                <select id="Terminationdate" class="form-control">
+                    <option>Completed</option>
+                    <option>Not finished</option>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
