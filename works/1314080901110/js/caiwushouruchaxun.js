@@ -10,11 +10,7 @@ caiwushouruchaxun.controller('MyFilterDemoCtrl', function ($scope) {
    $scope.showHideColors = function () {
    $scope.isHidden = !$scope.isHidden;
    }
-      var chaxunxuanxiang = {
-            Incomestate:'未完成',
-            Startdate:'2015-1-1',
-            Terminationdate:'2015-2-13'
-        };
+      var chaxunxuanxiang 
         $scope.data =  chaxunxuanxiang;
     }
 );

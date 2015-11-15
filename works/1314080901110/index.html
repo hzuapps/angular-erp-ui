@@ -24,35 +24,7 @@
     <![endif]-->
   </head>
   <body ng-controller="MyFilterDemoCtrl">
-    <style>
-       body {
-           font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
-       }
-       div {
-           margin: 20px;
-           padding: 20px;
-           font-size: 16px;
-           color:#ffffff;
-       }
-       #red {
-           background-color: red;
-       }
-       #green {
-           background-color: green;
-       }
-       #blue {
-           background-color: blue;
-       }
-       #purple {
-           background-color: purple;
-       }
-       #gray {
-           background-color: gray;
-       }
-       #olive {
-           background-color: olive;
-       }
-   </style>
+  
  <body ng-controller="MyFilterDemoCtrl" ng-cloak>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -85,17 +57,38 @@
 
     </div><!-- /.container -->
        <h2>AngularJS Socks</h2>
-    <p>Keep warm this winter with our 100% wool, 100% cool, AngularJS socks!</p>
-    <button ng-click="showHideColors()" type="button">
-        {{isHidden ? 'Show Available Colors' : 'Hide Available Colors'}}
+    <p>CaiwuQitaShouruChaxun</p>
     </button>
-    <div id="red" ng-hide="isHidden">Red</div>
-    <div id="green" ng-hide="isHidden">Green</div>
-    <div id="blue" ng-hide="isHidden">Blue</div>
-    <div id="purple" ng-hide="isHidden">Purple</div>
-    <div id="gray" ng-hide="isHidden">Dark Slate Gray</div>
-    <div id="olive" ng-hide="isHidden">Olive</div>
-    <p ng-cloak style="text-align:center;">{{data.operator}}</p>
+    <form class="form-horizontal" role="form">
+    <fieldset>
+
+        <div class="form-group">
+            <label for="Startdate"  class="col-md-1 control-label">Startdate</label>
+            <div class="col-md-2">
+                <select id="Startdate" class="form-control">
+                    <option>2015-1-1</option>
+                    <option>2015-1-10</option>
+                    <option>2015-1-20</option>
+                    <option>2015-2-1</option>
+                </select>
+            </div>
+            <label for="Terminationdate"  class="col-md-1 control-label">Terminationdate</label>
+            <div class="col-md-2">
+                <select id="Terminationdate" class="form-control">
+                    <option>2015-1-15</option>
+                    <option>2015-1-25</option>
+                    <option>2015-2-10</option>
+                    <option>2015-2-20</option>
+                </select>
+           
+        </div>
+        <div class="form-group">
+            <label for="State"  class="col-md-1 control-label ">State</label>
+            <div class="col-md-2">
+                <select id="Terminationdate" class="form-control">
+                    <option>Completed</option>
+                    <option>Not finished</option>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
