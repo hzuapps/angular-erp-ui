@@ -6,12 +6,16 @@ var caiwushouruchaxun = angular.module('caiwushouruchaxun', []);
 // configure the module with a controller
 caiwushouruchaxun.controller('MyFilterDemoCtrl', function ($scope) {
       // controller code would go here
-      var Queryoptions = {
+   $scope.isHidden = true;
+   $scope.showHideColors = function () {
+   $scope.isHidden = !$scope.isHidden;
+   }
+      var chaxunxuanxiang = {
             Incomestate:'未完成',
             Startdate:'2015-1-1',
             Terminationdate:'2015-2-13'
         };
-        $scope.data =  Queryoptions;
+        $scope.data =  chaxunxuanxiang;
     }
 );
 
