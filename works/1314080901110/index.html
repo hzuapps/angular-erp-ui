@@ -58,34 +58,36 @@
     </div><!-- /.container -->
        <h2>AngularJS Socks</h2>
     <p>CaiwuQitaShouruChaxun</p>
-    <button ng-click="showHide()" type="button">
-        {{isHidden ? 'Show' : 'Hide'}}
     </button>
-    
-    <p ng-cloak style="text-align:center;">{{data.operator}}</p>
-    <form class="form-horizontal" role="form" ng-hide="isHidden">
+    <form class="form-horizontal" role="form">
     <fieldset>
 
-        </div>
+        <div class="form-group">
             <label for="Startdate"  class="col-md-1 control-label">Startdate</label>
             <div class="col-md-2">
-                <input id="Startdate"  type="date"/>
+                <select id="Startdate" class="form-control">
+                    <option>2015-1-1</option>
+                    <option>2015-1-10</option>
+                    <option>2015-1-20</option>
+                    <option>2015-2-1</option>
                 </select>
             </div>
-           <label for="Terminationdate"  class="col-md-1 control-label">Terminationdate</label>
+            <label for="Terminationdate"  class="col-md-1 control-label">Terminationdate</label>
             <div class="col-md-2">
-                <input id="Terminationdate"  type="date"/>
+                <select id="Terminationdate" class="form-control">
+                    <option>2015-1-15</option>
+                    <option>2015-1-25</option>
+                    <option>2015-2-10</option>
+                    <option>2015-2-20</option>
                 </select>
            
         </div>
         <div class="form-group">
             <label for="State"  class="col-md-1 control-label ">State</label>
             <div class="col-md-2">
-                <select id="State" class="form-control">
+                <select id="Terminationdate" class="form-control">
                     <option>Completed</option>
                     <option>Not finished</option>
-                    <option>All</option>
-                    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
