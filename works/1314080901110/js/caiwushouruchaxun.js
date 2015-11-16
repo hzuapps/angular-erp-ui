@@ -7,7 +7,7 @@ var caiwushouruchaxun = angular.module('caiwushouruchaxun', []);
 caiwushouruchaxun.controller('MyFilterDemoCtrl', function ($scope) {
       // controller code would go here
    $scope.isHidden = true;
-   $scope.showHideColors = function () {
+   $scope.showHide= function () {
    $scope.isHidden = !$scope.isHidden;
    }
       var chaxunxuanxiang 
