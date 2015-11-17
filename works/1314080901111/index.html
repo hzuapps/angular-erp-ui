@@ -50,5 +50,39 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+      销售订单：
+      <select ng-model="saleList">
+
+      </select>
+      订单类型：
+      <select ng-model="listType">
+        <option>正常订单</option>
+        <option>打样订单</option>
+        <option>返工订单</option>
+        <option>委外订单</option>
+        <option>通函订单</option>
+        <option>特许订单</option>
+      </select>
+      订单日期：<input type="text" ng-model="listDate"/>
+      交货日期：<input type="text" ng-model="commitDate"/><br/>
+      订单编号：<input type="text" ng-model="listID"/>
+      订单状态：<input type="text" ng-model="listState"/>
+      备注：<input type="text" ng-model="remark"/>
+      <button type="button" ng-click="show()">
+          {{isHidden ? '提交' : '隐藏'}}
+      </button>
+
+      <div>
+
+        <div ng-hide="isHidden">销售订单: {{saleList}}</div>
+        <div ng-hide="isHidden">订单类型：{{listType}}</div>
+        <div ng-hide="isHidden">订单日期：{{listDate}}</div>
+        <div ng-hide="isHidden">交货日期：{{commitDate}}</div>
+        <div ng-hide="isHidden">订单编号：{{listID}}</div>
+        <div ng-hide="isHidden">订单状态：{{listState}}</div>
+        <div ng-hide="isHidden">备注：{{remark}}</div>
+
+      </div>  
 </body>
 </html>
