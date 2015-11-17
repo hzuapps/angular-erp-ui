@@ -7,11 +7,11 @@ var news_TemplateModule = angular.module('news_TemplateModule', []);
 news_TemplateModule.controller('news_TemplateModuleDemoCtrl', function ($scope) {
        // controller code would go here
 var Project_Template = {
-             Template_Name: 'czg',
-             Other_Name: 'xca',
-             News_People: 'admin',
-             Type: '房门类',
-             Price: '2000',
+             template_Name: 'czg',
+             other_Name: 'xca',
+             news_People: 'admin',
+             type: '路驴脙脜脌脿',
+             price: '2000',
          };
          $scope.data = Project_Template;
     }
