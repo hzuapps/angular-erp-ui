@@ -1,10 +1,10 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var orderModule = angular.module('orderModule', []);
+var myAppModule = angular.module('myAppModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-orderModule.controller('createOrderCtrl', function ($scope) {
+myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
     // controller code would go here
         var someData = {
             bumenname:'≤ø√≈√˚≥∆',
@@ -18,7 +18,7 @@ orderModule.controller('createOrderCtrl', function ($scope) {
 
 // use the myAppModule variable to
 // configure the module with a filter
-orderModule.filter('stripDashes', function () {
+myAppModule.filter('stripDashes', function () {
     return function (txt) {
         // filter code would go here
     };
