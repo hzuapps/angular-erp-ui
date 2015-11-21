@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="chaidanxinxiModule">
   <head lang="en">
+   <style type="text/css">
+   </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,19 +23,13 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="../lib/angular-1.4.5/angular.min.js"></script>
-	<script src="js/chaidanxinxiModule.js"></script>
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+	<script src="js/chaidanxinxi.js"></script>
   </head>
   <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="#">Project name</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -45,15 +41,62 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+<div class="container" style="padding-top:50px;">
+        <div class="row">
+            <form class="form-inline" role="form">
+         
+         <div class="form-group row" style="text:algin">
+           <div class="row">
+              <label for="number1">订单编号：</label>
+              <input type="text" class="form-control input-sm" ng-model="Orderform" id="000001"/>
+              <label for="date1">产品名称：</label>
+              <input type="text" class="form-control input-sm" ng-model="Productname" id="商品A"/>
+              <label for="sort1">客户名称：</label>
+              <input type="text" class="form-control input-sm" ng-model="Customername" id="王某某">
+              <label for="sort1">拆单员：</label>
+              <input type="text" class="form-control input-sm" ng-model="Sealoffmember" id="李某某">
+            </div>
+        </div> 
+        </br>
+        </br>
+        <div class="form-group row">
+           <div class="row">
+              <label for="fullname1">订单进度：</label>
+              <input type="text"class="form-control input-sm" ng-model="Orderformrate" id="10" />
+              <label for="code1">拆单日期：</label>
+              <input type="text" class="form-control input-sm" ng-model="Sealoffdate" id="date1" />
+              <label for="homepage1">完成日期：</label>
+              <input type="text" class="form-control input-sm"  ng-model="Finishdate" id="date2" />
+            </div>
+        </div> 
+     <br>
+     </br>
+     </br>
+      <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+      <button type="button" class="btn btn-default" ng-click="showInput()">
+            {{isHidden ? '提交' : '隐藏'}}
+      </button>     </div>
+     </form>
+     </div>
+    
+  <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+      <div ng-hide="isHidden">您输入的数据为：</div>    
+      <div id="Orderform" ng-hide="isHidden">订单编号->{{Orderform}}</div>
+      <div id="Productname" ng-hide="isHidden">产品名称->{{Productname}}</div>
+      <div id="Customername" ng-hide="isHidden">客户名称->{{Customername}}</div>
+      <div id=" Sealoffmember" ng-hide="isHidden">拆单员->{{ Sealoffmember}}</div>
+      <div id="Orderformrate" ng-hide="isHidden">订单进度->{{Orderformrate}}</div>
+      <div id="Sealoffdate" ng-hide="isHidden">拆单日期->{{Sealoffdate}}</div>
+      <div id="Finishdate" ng-hide="isHidden">完成日期->{{Finishdate}}</div>
+      </p>
+    </div>
+    <!-- /.container -->
 
-    <div class="container">
 
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+    
 
-    </div><!-- /.container -->
+   
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
