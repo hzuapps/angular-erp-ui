@@ -64,8 +64,11 @@
                         <label>结束日期:</label>
                         <input type="date" class="form-control input-sm" ng-model="dateEnd" id="dateEnd" />
                         <label>操作员:</label>
-                        <select class="form-control input-sm" ng-model="operator" ng-options="operator.id as operator.name for operator in operators">
+                        <select class="form-control input-sm" ng-model="operator" ng-options="operator.id as operator.name for operator in data.operators">
                             <option value>请选择操作员</option>
+                            <!-- <option ng-repeat="operator in data.operators" value="{{operator.id}}">
+                                {{operator.name}}   
+                            </option> just for testing-->
                         </select>
                     </div>
                 </div>
@@ -95,9 +98,11 @@
             </form>
         </div>
     </div>
-   <!--  <div ng-cloak>{{data.operators[2]}}</div> -->
+    <br />
+    <br />
+    <!-- <div style="text-align:center">操作员编码{{operator}}</div> just for testing-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../lib/angular-1.4.5/docs/components/jquery-2.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 </body>

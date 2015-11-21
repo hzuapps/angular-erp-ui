@@ -26,14 +26,13 @@ myAppModule.controller('MyFilterDemoCtrl', function($scope) {
         document.getElementById("profileForm").submit();
     }
     var someData = {
-        operator: "xiaoming",
         operators: [{
             "id": 001,
             "name": "jinhaoxu",
             "age": 20
         }, {
             "id": 002,
-            "name": "hengdanhuang",
+            "name": "hengdanwang",
             "age": 22
         }, {
             "id": 003,
