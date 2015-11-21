@@ -14,7 +14,11 @@ factoryModule.controller('MyFilterDemoCtrl', function ($scope) {
 			factoryDescription: '信誉良好',
         };
         $scope.data = factoryData;
-	 
+		$scope.isHidden = true;
+        $scope.showInput = function () 
+		{
+            $scope.isHidden = !$scope.isHidden;
+        }
 }
 );
 
