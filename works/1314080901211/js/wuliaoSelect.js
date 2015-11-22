@@ -6,15 +6,11 @@ var wuliaoSelect = angular.module('wuliaoSelect', []);
 // configure the module with a controller
 wuliaoSelect.controller('wuliaoSelectCtrl', function ($scope) {
        // controller code would go here
-        var someData = {
-            name: 'ee',
-            type: '五金',
-            version:'L',
-            dateJoined: new Date(2015, 10, 23),
-            color:'black',
-            description:'balabala',
-        };
-        $scope.data = someData;
+        $scope.someData = [
+           { name: 'aa',type: '五金',version:'L',color:'black', description:'balabala'},
+           { name: 'bb',type: '五金',version:'L',color:'black', description:'balabala'},
+           { name: 'cc',type: '五金',version:'L',color:'black', description:'balabala'}
+           ];
     }
 );
 
