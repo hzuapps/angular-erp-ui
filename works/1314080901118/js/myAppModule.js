@@ -1,4 +1,4 @@
-// create a new module called 'myAppModule' and save 
+// create a new module called 'myAppModule' & save 
 // a reference to it in a variable called myAppModule 
 var myAppModule = angular.module('myAppModule', []);
 
