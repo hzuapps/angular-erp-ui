@@ -7,15 +7,19 @@ var queryModule = angular.module('queryModule', []);
 queryModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
 	   var listData = {
-            salelist: '销售订单',
-            listtype: '订单类型',
-            listdate: new Date(2015, 10, 20),
-            commitdate:new Date(2015,10,20),
+            saleList: '销售订单',
+            listType: '订单类型',
+            listDate: new Date(2015, 10, 20),
+            commitDate:new Date(2015,10,20),
             listID:'订单编号',
-            liststate:'订单状态',
+            listState:'订单状态',
             remarks:'备注'
         };
         $scope.data = listData;
+		$scope.isHidden = true;
+		$scope.show = function(){
+			$scope.isHidden = !$scope.isHidden;
+			}
     }
 );
 

@@ -14,41 +14,104 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
     <script src="js/queryModule.js"></script>
+
+    <style type="text/css">
+      #id1{
+          margin: 20px;
+          padding: 20px;
+
+      }
+      #id2{
+
+        margin: 10px;
+        padding: 10px;
+      }
+      #id2 tr td{
+
+        text-align: center;
+      }
+    </style>
   </head>
 <body ng-controller="MyFilterDemoCtrl">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-    </div><!-- /.container -->
+  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+      <div>
+
+        <div ng-hide="isHidden">销售订单: {{saleList}}</div>
+        <div ng-hide="isHidden">订单类型：{{listType}}</div>
+        <div ng-hide="isHidden">订单日期：{{listDate}}</div>
+        <div ng-hide="isHidden">交货日期：{{commitDate}}</div>
+        <div ng-hide="isHidden">订单编号：{{listID}}</div>
+        <div ng-hide="isHidden">订单状态：{{listState}}</div>
+        <div ng-hide="isHidden">备注：{{remark}}</div>
+
+      </div>  
+      <table id="id2" border="1" bordercolor="#33CCFF" cellspacing="0" width="70%" cellpadding="10">
+      
+      <tr>
+        <td>销售订单:</td>
+        <td><select ng-model="saleList"></select></td>
+      </tr>
+      
+      <tr>
+        <td>订单类型:</td>
+        <td>
+
+          <select ng-model="listType">
+            <option>正常订单</option>
+            <option>打样订单</option>
+            <option>返工订单</option>
+            <option>委外订单</option>
+            <option>通函订单</option>
+            <option>特许订单</option>
+          </select>
+
+        </td>
+      </tr>
+      
+      <tr>
+        <td>订单日期:</td>
+        <td><input type="text" ng-model="listDate"/></td>
+      </tr>
+      
+      <tr>
+        <td>交货日期:</td>
+        <td>
+          <input type="text" ng-model="commitDate"/>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>订单编号:</td>
+        <td>
+          <input type="text" ng-model="listID"/>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>订单状态:</td>
+        <td>
+          <input type="text" ng-model="listState"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>备注:</td>
+        <td><input type="text" ng-model="remark"/></td>
+      </tr>
+      
+      <tr>
+        <th colspan="2">
+          <button type="button" ng-click="show()">
+              {{isHidden ? '提交' : '隐藏'}}
+          </button>
+        </th>
+      </tr>
+    </table>
 </body>
 </html>
