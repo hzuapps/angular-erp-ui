@@ -1,0 +1,24 @@
+<!DOCTYPE html >
+<html ng-app="banjianModule">
+<head>
+    <title></title>
+   <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/banjian.js"></script>
+    <style>
+        #colorContainer div {
+            color: white;
+            text-transform: uppercase;
+            width: 200px;
+            padding: 10px;
+            margin:5px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+</style>
+</head>
+<body ng-controller="createbanjianCtrl">
+<h2>AngularJS Socks</h2>
+<p>Keep warm this winter with our 100% wool, 100% cool, AngularJS socks!</p>
+          <div banjian-list ></div>
+</body>
+</html>
