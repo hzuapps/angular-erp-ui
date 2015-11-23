@@ -17,6 +17,11 @@ documentsDetailModule.controller('MyFilterDemoCtrl', function ($scope) {
             note:'taste good'
         };
         $scope.data = documentsDetail;
+        $scope.items = [
+            {code: '001',type: 'cake',name: 'ice cake',unit: 'kg',number: "99",length: 2,width: 1,thickness: 1.5},
+            {code: '002',type: 'dress',name: 'flower dress',unit: 'mm',number: "99",length: 1.8,width: 0.9,thickness: 0.3},
+            {code: '003',type: 'book',name: 'AngularJS',unit: 'cm',number: "99",length: 98,width: 56,thickness: 27} 
+        ];
     }
 );
 
