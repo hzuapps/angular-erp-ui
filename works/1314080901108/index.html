@@ -24,7 +24,6 @@
 	<script src="js/news_TemplateModule.js"></script>
   </head>
   <body ng-controller="news_TemplateModuleDemoCtrl">
-<p>{{data.price}}</p>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -59,5 +58,36 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <form class="form-inline">
+    <div class="container">
+    <div class="row col-lg-offset-2" role="form">
+  <div class="form-group">
+  <div class="row">
+    <label for="data.template_Name">模板名称:</label>
+    <input type="text" class="form-control" ng-model="template_Name" id="data.template_Name" >
+ 
+    <label for="data.other_Name">别名:</label>
+    <input type="text" class="form-control" ng-model="other_Name" id="data.other_Name" >
+ 
+    <label for="data.news_People">建模人:</label>
+    <input type="text" class="form-control" ng-model="news_Name" id="data.news_People" >
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="form-group">
+  <div class="row">
+    <label for="data.price">计价方式:</label>
+    <input type="text" class="form-control" ng-model="price" id="data.price" >
+
+    <label for="data.type">类别:</label>
+    <input type="text" class="form-control" ng-model="type" id="data.type" >
+  </div>
+  </div>
+  <br>
+<button type="button" class="btn btn-default">新建</button>
+</form>
+</div>
+</div>
   </body>
 </html>
