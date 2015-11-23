@@ -1,0 +1,27 @@
+<!DOCTYPE html >
+<html ng-app="myapp">
+<head>
+    <title>Angular Services</title>
+    <script src="js/angular.min.js"></script>
+    <script>
+		var module = angular.module('myapp', []); 
+		module.factory('dateTimeService', function () {
+            var dateTimeSvc = {};
+            dateTimeSvc.getDate = function () {
+                return new Date().toDateString();
+            }
+            dateTimeSvc.getTime = function () {
+                return new Date().toTimeString();
+			}
+			return dateTimeSvc;
+		}).controller("MyController", function ($scope, dateTimeService) {
+            $scope.theDate = dateTimeService.getDate();
+            $scope.theTime = dateTimeService.getTime();
+        });
+    </script>
+</head>
+<body ng-controller="MyController">
+    <p>{{theDate}}</p>
+    <p>{{theTime}}</p>
+</body>
+</html>
