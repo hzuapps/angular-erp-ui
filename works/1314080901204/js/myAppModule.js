@@ -4,7 +4,7 @@ var myAppModule = angular.module('myAppModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
+myAppModule.controller('someData', function ($scope) {
        // controller code would go here
 	    var someData = {
 	           productName: 'dengzi',
