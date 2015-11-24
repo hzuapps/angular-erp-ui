@@ -1,64 +1,36 @@
 ﻿<!DOCTYPE html>
-<html ng-app="PaymentDetailsModule"> 
-  <head lang="en">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>采购付款 付款明细 1314080901124</title>
-    <link rel="shortcut icon" href="icons/favicon.ico" />
-    
-    <!-- Bootstrap -->
-    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <script src="js/jquery.min.js"></script>
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-	<script src="js/PaymentDetailsModule.js"></script>
+    <!<script type="text/javascript" src="js/PaymentDetailsModule.js"></script>
+    <!<script src="js/PaymentDetailsModule.js"></script>
+    <![endif]-->
+	
 
   </head>
-  <body ng-controller="MyFilterDemoCtrl">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+   <div id="content">
+        <div id="head" style="width:auto;height:32px;background-color:#0066c0;color:#ff0;font-size:28px;padding-left:20px;">
+        付款明细
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-    </div><!-- /.container -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../../lib/angular-1.4.5/docs/components/jquery-2.1.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-  </body>
-</html>
+    <div>
+      <table class="table">
+      <tr style="background-color:#e3e3e3">
+        <td>单据编号</td>
+        <td>摘要</td>
+        <td>应付金额</td>
+        <td>付款金额</td>
+        <td>未付金额</td>
+        <td>备注</td>
+      </tr>
+      <tr ng-repeat="item in someData">
+        <td>{{item.danjubianhao}}</td>
+        <td>{{item.zhaiyao}}</td>
+        <td>{{item.yingfujine}}</td>
+        <td>{{item.fukuanjine}}</td>
+        <td>{{item.weifujine}}</td>
+        <td>{{item.beizhu}}</td>
+      </tr>
+      </table>
+    </div>
+  </div>
+      

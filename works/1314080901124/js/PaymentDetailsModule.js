@@ -6,15 +6,12 @@ var PaymentDetailsModule = angular.module('PaymentDetailsModule', []);
 // configure the module with a controller
 PaymentDetailsModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
-	var PaymentDetails = {
-            danjubianhao: '123456789',
-            zhaiyao: '采购付款 付款明细',
-            yingfujine: '1452154.12',
-            gukuanjine: '1452154.12',
-            weifujine: '0.00',
-            beizhu:'交易完成'
-        };
-        $scope.data = PaymentDetails;
+        $scope.someData = [
+           { danjubianhao: '1234567',zhaiyao: '付款完成',yingfujine:'532.2',fukuanjine:'532.2', weifujine:'0.0',beizhu:'交易完成'},
+           { danjubianhao: '1234568',zhaiyao: '等待付款',yingfujine:'533.2',fukuanjine:'532.2', weifujine:'1.0',beizhu:'交易未完成'},
+           { danjubianhao: '1234569',zhaiyao: '等待付款',yingfujine:'534.2',fukuanjine:'532.2', weifujine:'2.0',beizhu:'交易未完成'},
+           ];
+        $scope.data = someData;
     }
 );
 
