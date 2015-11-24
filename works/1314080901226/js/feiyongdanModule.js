@@ -6,9 +6,9 @@ var feiyongdanModule = angular.module('feiyongdanModule', []);
 // configure the module with a controller
 feiyongdanModule.controller('feiyongdanCtrl', function ($scope) {
            $scope.someData = [
-         { number: '01',abstract: '水费',payment:'50000',remark:'支付水费', description:'balabala'},
-         { number: '02',abstract: '电费',payment:'70000',remark:'支付电费', description:'balabala'},
-         { number: '03',abstract: '薪水',payment:'4000',remark:'支付员工薪水', description:'balabala'}
+         { number: '01',abstract: 'water rate',payment:'50000',remark:'pay for electricity'},
+         { number: '02',abstract: 'power rate',payment:'70000',remark:'pay for water'},
+         { number: '03',abstract: 'salary',payment:'4000',remark:'pay for employee'}
 ];
 
 // use the myAppModule variable to
