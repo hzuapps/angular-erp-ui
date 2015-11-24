@@ -21,6 +21,10 @@ EmployeeAttendanceModule.controller('MyFilterDemoCtrl', function ($scope) {
          stop:'2015-01-01 22:00'
         };
         $scope.data = EmployeeAttendanceData;
+        $scope.isHidden = true;
+        $scope.showInput = function () {
+            $scope.isHidden = !$scope.isHidden;
+        }
     }
 );
 
