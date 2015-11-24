@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html ng-app="workersModule"> <head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,8 +19,13 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-     <script src="../lib/angular-1.4.5/angular.min.js"></script>
-     <script src="js/workersModule.js"></script>
+     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+     <script src="js/workers.js"></script>
+ 
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="../../lib/angular-1.4.5/docs/components/jquery-2.1.1"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script> -->
   </head>
   <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -52,10 +57,34 @@
       </div>
 
     </div><!-- /.container -->
+	<table class="table">
+		<caption class="text-center">在岗员工信息</caption>
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>员工编号</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>身份证号</th>
+					<th>地址</th>
+					<th>手机</th>
+					<th>职位</th>
+				</tr>
+			</thead>
+		<tbody  ng-repeat="worker in data.workers">
+				<tr>
+						<td>{{worker.number}}</td>
+						<td>{{worker.worker_no}}</td>
+						<td>{{worker.name}}</td>
+						<td>{{worker.sex}}</td>
+						<td>{{worker.id_card}}</td>
+						<td>{{worker.address}}</td>
+						<td>{{worker.phone_number}}</td>
+						<td>{{worker.post}}</td>
+				</tr>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+		</tbody>
+	</table>
+	
   </body>
 </html>
