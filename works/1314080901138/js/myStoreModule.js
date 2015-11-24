@@ -2,30 +2,9 @@
 // a reference to it in a variable called myAppModule 
 var myAppModule = angular.module('myStoreModule', []);
 
-// use the myAppModule variable to
-// configure the module with a controller
-myAppModule.controller('MyFilterDemoCtrl', function($scope) {
-    // controller code would go here
-    $scope.create = function() {
-        // alert("新建了一条盘点信息！");
-        document.getElementById("profileForm").action = "https://www.baidu.com";
-        document.getElementById("profileForm").method = "post";
-        document.getElementById("profileForm").submit();
-
-    }
-    $scope.save = function() {
-        // alert("保存了一条盘点信息！");
-        document.getElementById("profileForm").action = "https://www.hao123.com";
-        document.getElementById("profileForm").method = "post";
-        document.getElementById("profileForm").submit();
-    }
-    $scope.finish = function() {
-        // alert("已完成！");
-        document.getElementById("profileForm").action = "https://www.github.com";
-        document.getElementById("profileForm").method = "get";
-        document.getElementById("profileForm").submit();
-    }
-    var someData = {
+myAppModule.factory('storeService', function() {
+    var service = {};
+    var Operator = {
         operators: [{
             "id": 001,
             "name": "jinhaoxu",
@@ -43,7 +22,49 @@ myAppModule.controller('MyFilterDemoCtrl', function($scope) {
         dateEnd: new Date(2015, 10, 22),
         remark: "i'm a handsome boy!"
     };
-    $scope.data = someData;
+    service.getData = function() {
+        return Operator;
+    }
+    service.create = function() {
+        // alert("新建了一条盘点信息！");
+        document.getElementById("profileForm").action = "https://www.baidu.com";
+        document.getElementById("profileForm").method = "post";
+        document.getElementById("profileForm").submit();
+    }
+    service.save = function() {
+        // alert("保存了一条盘点信息！");
+        document.getElementById("profileForm").action = "https://www.hao123.com";
+        document.getElementById("profileForm").method = "post";
+        document.getElementById("profileForm").submit();
+    }
+    service.finish = function() {
+        // alert("已完成！");
+        document.getElementById("profileForm").action = "https://www.github.com";
+        document.getElementById("profileForm").method = "get";
+        document.getElementById("profileForm").submit();
+    }
+
+    return service;
+})
+
+// use the myAppModule variable to
+// configure the module with a controller
+myAppModule.controller('MyFilterDemoCtrl', function($scope, storeService) {
+    // controller code would go here
+    $scope.data = storeService.getData();
+
+    $scope.create = function() {
+        storeService.create();
+    }
+
+    $scope.save = function() {
+        storeService.save();
+    }
+
+    $scope.finish = function() {
+        storeService.finish();
+    }
+
 });
 
 // use the myAppModule variable to
