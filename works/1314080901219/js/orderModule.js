@@ -1,26 +1,25 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var orderModule = angular.module('orderModule', []);
+var orderModule = angular.module('orderModule',[]);
 
 // use the myAppModule variable to
 // configure the module with a controller
 orderModule.controller('createOrderCtrl', function ($scope) {
     // controller code would go here
-        var someData = {
-            id: 'ĞòºÅ',
-            number: '±àºÅ',
-            name: 'Æ·Ãû',
-            type: 'Àà±ğ',
-            xinghao: 'ĞÍºÅ',
-            color:'ÑÕÉ«',
-            numbers:'ÊıÁ¿',
-            danwei:'µ¥Î»',
-            danjia:'µ¥¼Û',
-            jine:'½ğ¶î',
-            avg:'Æ½¾ù¼Û',
-            jiubianma:'¾É±àÂë'
-        };
-        $scope.data = someData;
+        $scope.someData = [{
+            id: '123',
+            number: '234',
+            name: 'å•†å“',
+            type: 'ç±»åˆ«',
+            xinghao: 'å‹å·',
+            color:'é¢œè‰²',
+            numbers:'æ•°é‡',
+            danwei:'å•ä½',
+            danjia:'å•ä»·',
+            jine:'é‡‘é¢',
+            avg:'å¹³å‡ä»·',
+            jiubianma:'æ—§ç¼–ç '
+        }];
     }
 );
 

@@ -12,6 +12,12 @@
  		 
      <!-- Custom styles for this template -->
      <link href="css/style.css" rel="stylesheet">
+                   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->        
+     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>  
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+     <script src="js/orderModule.js"></script>   
  		 
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,33 +25,53 @@
        <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
        <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
      <![endif]-->
-
    </head>
    <body ng-controller="createOrderCtrl">
      <nav class="navbar navbar-inverse navbar-fixed-top">
-                   <ul class="nav navbar-nav">
+              <div>     <ul class="nav navbar-nav">
              <li class="active"><a href="#">Home</a></li>
              <li><a href="#about">About</a></li>
              <li><a href="#contact">Contact</a></li>
            </ul>
-         </div><!--/.nav-collapse -->
+         <!--/.nav-collapse -->
        </div>
-     </nav>
- 		 
-     <div class="container">
- 		 
-       <div class="starter-template">
-         <h1>Bootstrap starter template</h1>
-         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>		    
+     </nav> 		 
+    <div>
+       <div>
+        <p>库存清单</p>
        </div>
- 		 
-     </div><!-- /.container -->
- 		 
-     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->		    
-     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>	
-     <!-- Include all compiled plugins (below), or include individual files as needed -->
-     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-        <script src="js/orderModule.js"></script>
+<div>
+	<table ng-controller="createOrderCtrl" style="width: 100%; height: 100%;" class="table table-striped" border="1" align="center">
+    <tr wide="100%">
+      <th>序号</th>
+      <th>编码</th>
+      <th>品名</th>
+      <th>类别</th>
+      <th>型号</th>
+      <th>颜色</th>
+      <th>数量</th>
+      <th>单位</th>
+      <th>单价</th>
+      <th>金额</th>
+      <th>平均价</th>
+      <th>旧编码</th>
+    </tr>
+    <tr ng-repeat="item in someData">
+        <td>{{item.id}}</td>
+        <td>{{item.number}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.xinghao}}</td>
+        <td>{{item.color}}</td>
+        <td>{{item.numbers}}</td>
+        <td>{{item.danwei}}</td>
+        <td>{{item.danjia}}</td>
+        <td>{{item.jine}}</td>
+        <td>{{item.avg}}</td>
+        <td>{{item.jiubianma}}</td>
+    </tr>
+  </table>
+</div>    
+    </div>
    </body>
 </html>
