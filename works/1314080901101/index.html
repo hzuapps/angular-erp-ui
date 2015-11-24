@@ -10,7 +10,7 @@
     
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
+ 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -48,9 +48,42 @@
       <div class="starter-template">
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        <p class="lead"><strong>{{data}}</strong></p>
       </div>
 
+      <div class="container">
+
+      <div class="starter-template">
+        <table class="table table-bordered table-condensed" align="center">
+          <thead>
+            <tr>
+              <th rowspan="2" class="text-center">序号</th>
+              <th rowspan="2" class="text-center">编码</th>
+              <th rowspan="2" class="text-center">类别</th>
+              <th rowspan="2" class="text-center">名称</th>
+              <th colspan="3" class="text-center">规格(mm)</th>
+              <th rowspan="2" class="text-center">单位</th>
+              <th rowspan="2" class="text-center">数量</th>
+            </tr>
+            <tr>
+              <th class="text-center">长</th>
+              <th class="text-center">宽</th>
+              <th class="text-center">厚</th>
+            </tr>
+          <tbody ng-repeat="item in items">
+            <tr>
+              <td rowspan="2" class="text-center">{{$index + 1}}</td>
+              <td rowspan="2" class="text-center">{{item.code}}</td>
+              <td rowspan="2" class="text-center">{{item.type}}</td>
+              <td rowspan="2" class="text-center">{{item.name}}</td>
+              <td colspan="1" class="text-center">{{item.length}}</td>
+              <td colspan="1" class="text-center">{{item.width}}</td>
+              <td colspan="1" class="text-center">{{item.thickness}}</td>
+              <td rowspan="2" class="text-center">{{item.unit}}</td>
+              <td rowspan="2" class="text-center">{{item.number}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div><!-- /.container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

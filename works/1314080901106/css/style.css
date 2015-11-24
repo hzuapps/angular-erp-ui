@@ -1,6 +1,7 @@
 body {
   padding-top: 50px;
-}
+	background-color: rgb(220,225,225);
+  }
 .starter-template {
   padding: 40px 15px;
   text-align: center;

@@ -1,0 +1,12 @@
+<div ng-app="myapp">
+	<div ng-controller="MyController">
+		<form name="theForm">
+			<input type="text" name="firstName" ng-model="person.firstName"/><br/> 
+			<input type="text" name="firstName" ng-model="person.address.street"/>
+		</form>
+		<p>
+			First name is:  {{person.firstName}} <br/>
+			Street name is: {{person.address.street}}
+		</p>
+	</div>
+</div>

@@ -4,8 +4,19 @@ var ManifestDataModule = angular.module('ManifestDataModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-ManifestDataModule.controller('MyFilterDemoCtrl', function($scope) {
-        var ManifestData = {
+angular.module('ManifestDataModule').controller('MyFilterDemoCtrl', function($scope) {
+      
+        	$scope.isCreat=true;
+		$scope.showCreat=function(){
+			$scope.isCreat=!$scope.isCreat;
+		}
+
+		$scope.isSave=true;
+		$scope.showSave=function(){
+			$scope.isSave=!$scope.isSave;
+		}
+			
+		var ManifestData = {
             	ManifestNum: '001',
             	Wearhouse: '001',
             	Handler: 'Ayden',
@@ -13,8 +24,9 @@ ManifestDataModule.controller('MyFilterDemoCtrl', function($scope) {
             	State: ' ',
 	    	Remark: ' ',
             
-       };
-        $scope.data =ManifestData;
+       		};
+        	$scope.data =ManifestData;
+
 });
 
 // use the myAppModule variable to

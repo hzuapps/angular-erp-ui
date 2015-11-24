@@ -1,0 +1,17 @@
+<!DOCTYPE html >
+<html ng-app="myapp">
+<head>
+    <title>Angular Services</title>
+    <script src="js/angular.min.js"></script>
+    <script>
+        var module = angular.module('myapp', []);
+        module.controller("MyController", function ($scope, $window) { 
+        	$scope.winWidth = $window.innerWidth;
+        });
+    </script>
+</head>
+<body ng-controller="MyController">
+    <p>Window width: {{winWidth}}px</p>
+</body>
+</html>
+

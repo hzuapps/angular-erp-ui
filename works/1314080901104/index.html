@@ -23,16 +23,16 @@
       <div class="container" >
         <form>
         <table >
-		<tr><td>名称：</td>
-	    <td colspan="2" ><input name="name" id="name" value="{{data.name}}"></td>
+		<tr>名称：</td>
+	    <td colspan="2" ><input name="name" id="name" ng-model="name"></td>
 	    </tr>
 		<tr>
 			<td >明细：</td>
 			<td colspan="1" >
-				<textarea  name="detailed" id="detailed" rows="4" cols="100%" >{{data.detailed}}</textarea>
+				<textarea  name="detailed" id="detailed" rows="4" cols="100%" ng-model="detailed">{{data.detailed}}</textarea>
 			</td>
 			<td colspan="1">
-				<a href="http://zeng.shaoning.net:8080/erp/">
+				<a href="#">
 					<img src="images/meitai.jpg" width="50px" height="50" >
 				</a>
 			</td>
@@ -40,10 +40,15 @@
 		<tr>
 			<td >批示：</td>
 			<td colspan="2">
-				<textarea  name="instructions" id="instructions" rows="4" >{{data.instructions}}</textarea>
+				<textarea  name="instructions" ng-model="instructions" id="instructions" rows="4" ><span ng-bind="data.instructions"></span></textarea>
 			</td>
 		</tr>
 		</table>
+    <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+        <button type="button" class="btn btn-default" ng-click="showInput()">
+            {{isHidden ? '提交' : '隐藏'}}
+        </button>
+    </div>
 		<div class="foot">
 			<button>通过</button>
 			<button>驳回</button>
@@ -51,6 +56,17 @@
 		</form>
       </div>
 
+    </div>
+
+
+    <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+    <div ng-hide="isHidden">您输入的数据为：</div>
+    <div id="name" ng-hide="isHidden">名称：{{name}}</div>
+    <div id="detailed" ng-hide="isHidden">供应商全称：{{detailed}}</div>
+    <div id="instructions" ng-hide="isHidden">供应商简称：{{instructions}}</div>
+   
+    </p>
     </div>
     
 

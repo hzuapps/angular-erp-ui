@@ -1,0 +1,18 @@
+<div ng-app="myapp" ng-controller="MyController">
+	<form name="registrationForm">
+		<input type="text" placeholder="First Name" name="firstName" ng-model="person.firstName" required> <br/>
+		<input type="text" placeholder="Last Name" name="lastName" ng-model="person.lastName" required>
+		<br/>
+		<input type="email" placeholder="Email" name="email" ng-model="person.email" required>
+		<br/>
+		<select name="channels" ng-model="person.channels"
+			<option value="">Where did you hear about us?</option>
+		</select>
+		<br/>
+		<input ng-model="person.newsletterOptIn" type="checkbox" name="newsletterOptIn"
+			id="newsletterOptIn" value="newsletterOptIn"/>
+		<label for="newsletterOptIn">Recieve monthly newsletter</label>
+		<br/>
+		<input type="submit" value="Register">
+	</form>
+</div>

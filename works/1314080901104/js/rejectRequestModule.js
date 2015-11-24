@@ -12,6 +12,13 @@ rejectRequestModule.controller('MyFilterDemoCtrl', function ($scope) {
               instructions: 'Approval',
               };
     $scope.data = someData;
+    $scope.isHidden = true;
+    $scope.showInput = function () {
+    $scope.isHidden = !$scope.isHidden;
+       }
+       $scope.showTextarea = function () {
+    $scope.isHidden = !$scope.isHidden;
+       }
   }
 );
 

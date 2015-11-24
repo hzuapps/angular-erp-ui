@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<!DOCTYPE html>
-<html lang="zh-CN" ng-app="myMaterialsModule">
-  <head>
-    <meta http-equiv="Content-Type" charset="utf-8">
+<html ng-app="myMaterialsModule">
+  <head lang="zh-CN">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>{{uiName}} by 1314080901201物料中的供应商信息</title>
+    <title> 1314080901201物料中的供应商信息</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    <script src"../..lib/angular-1.4.5/angular.min.js></script>
-      <script src="js/myMaterialsModule.js"></script>
+    
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,10 +19,12 @@
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <script src"../../lib/angular-1.4.5/angular.min.js></script>
+      <script src="js/myMaterialsModule.js"></script>
     <![endif]--> 
   </head>
-  <body>
-  <body ng-controller="myMaterialsCtrl">
+
+  <body ng-controller="createmyMaterialsCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -42,51 +41,78 @@
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#contact">about</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
+        <!--/.nav-collapse -->
       </div>
     </nav>
-    
-    <div margin:0px;width:614px;right:auto;left:0px;top:0px;height:154px;>
-    <p style="background-color:#99bce8;color:blue;font-weight:bold">供应商信息</p>
-    <label for="number">供应商编号：</label>
-    <input type="text" name="number" id="number" value=""/>
-    <label for="date">建档日期：</label>
-    <input type="text" name="date" id="date" value=""/>
-    <label for="sort">供应商类别：</label>
-   <select> 
-    <option value="五金类" >五金类</option>
-    <option value="电器类">电器类</option>
-    <option value="板材类">板材类</option>
-    <option value="油漆类">油漆类</option>
-    <option value="刀具类">刀具类</option>
-    <option value="其它">其它</option>
-   </select>
-   </div>
-   
-   <div>
-    <label for="name">供应商全称：</label>
-    <input type="text" name="name" id="name" value=""/>
-    <label for="code">拼音码：</label>
-    <input type="text" name="code" id="code" value=""/>
-    <label for="homepage">供应商主页：</label>
-    <input type="text" name="homepage" id="homepage" value=""/>
+
+   <div class="container">
+        <div class="row col-lg-offset-3">
+            <form class="form-inline" role="form">
+         
+         <div class="form-group row">
+           <div class="row">
+              <label for="number1">供应商编号：</label>
+              <input type="text" class="form-control input-sm" ng-model="number" id="number1"/>
+              <label for="date1">建档日期：</label>
+              <input type="text" class="form-control input-sm" ng-model="date" id="date1"/>
+              <label for="sort1">供应商类别：</label>
+              <input type="text" class="form-control input-sm" ng-model="sort" id="sort1">
+            </div>
+        </div> 
+            
+         <div class="form-group row">
+           <div class="row">
+              <label for="fullname1">供应商全称：</label>
+              <input type="text" ng-model="fullname" id="fullname1" />
+              <label for="code1">拼音码：</label>
+              <input type="text"  ng-model="code" id="code1" />
+              <label for="homepage1">供应商主页：</label>
+              <input type="text"  ng-model="homepage" id="homepage1" />
+            </div>
+        </div> 
+  
+         <div class="form-group row">
+           <div class="row">
+              <label for="simplename1">供应商简称：</label>
+              <input type="text" ng-model="simplename" id="simplename1" />
+              <label for="area1">行政区域：</label>
+              <input type="text" ng-model="area" id="area1" />
+              <label for="synposis1">供应商简介：</label>
+              <input type="text"  ng-model="synposis" id="synposis1"/>
+            </div>
+         </div>
+     <br>
+      <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+      <button type="button" class="btn btn-default" ng-click="showInput()">
+            {{isHidden ? '提交' : '隐藏'}}
+      </button>
+     </div>
+     </form>
     </div>
-    
-  <div style="width: 1270px;height: 155px">
-  <label for="jc">供应商简称：</label>
-    <input type="text" name="jc" id="jc" value=""/>
-    <label for="area">行政区域：</label>
-    <input type="text" name="area" id="area" value=""/>
-    <label for="synposis">供应商简介：</label>
-    <input type="text" name="synposis" id="synposis" value=""/><br/>
-    <lable for="stop or not">是否停用：</lable>
-    <input type="checkbox" value="" name="stop or not" checked="checked" >
-    <input type="submit" value="+保存/修改" name="submit"/>
   </div>
+
+  <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+      <div ng-hide="isHidden">您输入的数据为：</div>    
+      <div id="number" ng-hide="isHidden">供应商编号->{{number}}</div>
+      <div id="date" ng-hide="isHidden">建档日期->{{date}}</div>
+      <div id="sort" ng-hide="isHidden">供应商类别->{{sort}}</div>
+      <div id="fullname" ng-hide="isHidden">供应商全称->{{fullname}}</div>
+      <div id="code" ng-hide="isHidden">拼音码->{{code}}</div>
+      <div id="homepage" ng-hide="isHidden">供应商主页->{{homepage}}</div>
+      <div id="simplename" ng-hide="isHidden">供应商简称->{{simplename}}</div>
+      <div id="area" ng-hide="isHidden">行政区域->{{area}}</div>
+      <div id="synposis" ng-hide="isHidden">供应商简介->{{synposis}}</div>
+      </p>
+    </div>
+    <!-- /.container -->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src"../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/myMaterialsModule.js"></script>
   </body>
 </html>

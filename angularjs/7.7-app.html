@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <script src="js/angular.min.js"></script>
+    <script>
+        var module = angular.module('myapp', []);
+        module.factory('memberDataStoreService', function ($http) {
+            var memberDataStore = {};
+            memberDataStore.doRegistration = function (theData) {
+                var promise = $http({
+                    method: 'POST', 
+                    url: 'memberservices/register', 
+                    data: theData
+                }); 
+                return promise;
+            }
+            return memberDataStore;
+        }).controller("MyController", function ($scope, memberDataStoreService) {
+            $scope.person = {};
+            $scope.person.newsletterOptIn = true;
+            $scope.person.channels = [
+                { value: "television", label: "Television" },
+                { value: "radio", label: "Radio" },
+                { value: "social-media", label: "Social Media"},
+                { value: "other", label: "Other"}
+            ];
+            $scope.register = function () {
+                $scope.firstNameInvalid = false;
+                $scope.lastNameInvalid = false;
+                $scope.emailInvalid = false;
+                $scope.researchInvalid = false;
+                $scope.showSuccessMessage = false;
+                $scope.showErrorMessage = false;
+                if (!$scope.registrationForm.firstName.$valid) {
+                    $scope.firstNameInvalid = true;
+                }
+                if (!$scope.registrationForm.lastName.$valid) {
+                    $scope.lastNameInvalid = true;
+                }
+                if (!$scope.registrationForm.email.$valid) {
+                                $scope.emailInvalid = true;
+                }
+                if (!$scope.registrationForm.research.$valid) {
+                    $scope.researchInvalid = true;
+                }
+                // If the registration form is valid, use the
+                // memberDataStoreService to submit the form data if ($scope.registrationForm.$valid) {
+                var promise = memberDataStoreService.doRegistration($scope.person);
+                promise.success(function (data, status) {
+                    $scope.showSuccessMessage = true;
+                });
+                promise.error(function (data, status) {
+                    $scope.showErrorMessage = true;
+                });
+                $scope.doShow = true;
+            }
+        } 
+    })
+    </script>
+    <style>
+        body, input, select {
+            font: normal 16px/1.4 Georgia;
+        }
+        input:not([type='checkbox']), select {
+            width: 250px;
+        }
+        input, select {
+            padding: 5px;
+            margin-top: 12px;
+        }
+        input[name='email'].ng-dirty.ng-invalid-email {
+            color: red;
+        }
+        input[name='email'].ng-dirty.ng-valid-email {
+                    color: green;
+        }
+        form span, .error {
+            color: red;
+        } 
+    </style>
+</head>
+<body>
+<div>
+    <div ng-controller="MyController">
+        <form name="registrationForm" ng-submit="register()" novalidate>
+            <div ng-show="showSuccessMessage">
+                Thank you for taking the time to register!
+            </div>
+            <div class="error" ng-show="showErrorMessage">
+                There appears to have been a problem with your registration.<br/>
+            </div>
+            <input type="text" placeholder="First Name" name="firstName" ng-model="person.firstName" required/> <span ng-show="firstNameInvalid"><br/>Please enter a value for First name</span>
+            <br/>
+            <input type="text" placeholder="Last Name" name="lastName" ng-model="person.lastName" required/> <span ng-show="lastNameInvalid"><br/>Please enter a value for Last name</span>
+            <br/>
+            <input type="email" placeholder="Email" name="email" ng-model="person.email" required/>
+            <span ng-show="emailInvalid"><br/>A valid email address is required</span>
+            <br/>
+            <select name="research" ng-model="person.levels"
+                    ng-options="obj.label as obj.value for obj in person.channels" required>
+                <option value="">Where did you hear about us?</option>
+            </select>
+            <span ng-show="researchInvalid"><br/>Please tell us where you heard about us</span>
+            <br/>
+            <input ng-model="person.newsletterOptIn" type="checkbox" name="newsletterOptIn"
+                   id="newsletterOptIn" value="newsletterOptIn"/>
+            <label for="newsletterOptIn">Recieve monthly newsletter</label>
+            <br/>
+            <input type="submit" value="Register"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,11 +1,20 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+<html ng-app="procedureModule">
+<head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>流程-流程-审批环节 1314080901123</title>
+    <title>审批-查询待处理流程 1314080901123</title>
+    <script>
+    function MyFilterDemoCtrl($scope) {
+        var flow = {
+            name: '名称',
+            operation: '操作',
+            condition: '状态'
+        };
+        $scope.data = flow;
+    } </script>
     <link rel="shortcut icon" href="icons/favicon.ico" />
     
     <!-- Bootstrap -->
@@ -20,8 +29,9 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
   </head>
-  <body>
+  <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -48,7 +58,7 @@
       <div class="starter-template">
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+    </div>
 
     </div><!-- /.container -->
 
@@ -56,5 +66,6 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script Language=""JavaScript" src="js/procedureModule.js"></script>
   </body>
 </html>

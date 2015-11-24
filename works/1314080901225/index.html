@@ -14,7 +14,7 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -25,7 +25,7 @@
 
   </head>
   <body ng-controller="MyFilterDemoCtrl" >
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 	
       <div class="container">
         <div class="navbar-header">
@@ -47,14 +47,88 @@
       </div>
     </nav>
 
-    <div class="container">
+	<div class="container">
 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1>仓库的出库表单创建</h1>
+        <p class="lead">点击新建有惊喜实现.<br> 点击保存有惊喜出现.</p>
       </div>
 
     </div><!-- /.container -->
+
+
+    
+	<form class="form-horizontal" role="form">
+    <fieldset>
+
+        <div class="form-group">
+            <label for="ManifestNum"  class="col-md-1 control-label">订单编码：</label>
+            <div class="col-md-2">
+                <select id="ManifestNum" class="form-control">
+                    <option>001</option>
+                    <option>002</option>
+                    <option>003</option>
+                    <option>004</option>
+                </select>
+            </div>
+            <label for="Wearhouse"  class="col-md-1 control-label">仓库：</label>
+            <div class="col-md-2">
+                <select id="Wearhouse" class="form-control">
+                    <option>1号仓库</option>
+                    <option>2号仓库</option>
+                </select>
+            </div>
+            <label for="Handler"  class="col-md-1 control-label">经手人：</label>
+            <div class="col-md-2">
+                <select id="Handler" class="form-control">
+                    <option>富土康质检员张全蛋</option>
+                    <option>隔壁老王</option>
+                </select>
+            </div>
+            <label for="HandlingData"  class="col-md-1 control-label">经办日期：</label>
+            <div class="col-md-2">
+                <input id="HandlingData"  type="date"/>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="State"  class="col-md-1 control-label ">状态：</label>
+            <div class="col-md-2">
+                <input class="form-control " id="State" type="text" placeholder="我只能读不可编辑" disabled/>
+
+            </div>
+            <label for="Remark"  class="col-md-1 control-label">备注：</label>
+            <div class="col-md-7">
+                <input class="form-control disabled" id="Remark" type="text" />
+
+            </div>
+        </div>
+		 
+		 <!-- <button ng-click="showHideColors()" type="button">
+		         点我
+		 		</button> -->	
+        <div class="btn-group col-lg-push-1" >
+            <button ng-click="showCreat()" type="button" class="btn btn-default btn-sm" >新建</button>
+            <button ng-click="showSave()"type="button" class="btn btn-default btn-sm" >保存</button>
+            <button type="button" class="btn btn-default btn-sm" disabled="disabled">删除</button>
+            <button type="button" class="btn btn-default btn-sm" disabled="disabled">确定</button>
+            <button type="button" class="btn btn-default btn-sm" disabled="disabled">导出excel</button>
+            <button type="button" class="btn btn-default btn-sm" disabled="disabled">出库</button>
+        </div>
+    </fieldset>
+
+	<div class="container">
+
+      <div class="starter-template">
+        
+        <p id="creat" ng-hide="isCreat" class="lead">成功创建.</p>
+		 <p id="save" ng-hide="isSave" class="lead">成功保存.</p>
+      </div>
+	</div>
+	
+
+</form>
+   
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>

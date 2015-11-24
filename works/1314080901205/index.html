@@ -20,6 +20,10 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+      
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/caiwuzhichuModule.js"></script>
+      
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -43,14 +47,25 @@
       </div>
     </nav>
 
-    <div class="container">
-
+   <div class="container" >
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1>我的作业</h1>
+        <p class="lead">在这里添加功能<br> All you get is this text and a mostly barebones HTML document.</p>
+          <body>
+            <div style='flaot:left; width:30px; height:20px;'>
+          <p>支出状态</p>
+            </div>
+        <div style='flaot:left; width:30px; height:20px;'>
+        <select id="expendsatate" name="hexi" onchange="changelist();">
+            <option value='A'>未完成</option>
+            <option value='B'>已完成</option>
+            <option value='C'>全部</option> 
+        </select>
+            </div>
+        </body>
       </div>
 
-    </div><!-- /.container -->
+    </div>  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>

@@ -9,13 +9,17 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
        var someData = {
             Orderform: 00000001,
             Productname: 'shanping',
-            Customername:'wangmoumou'
-            Sealoffmember:'limoumou'
-            Orderformrate:70
+            Customername:'wangmoumou',
+            Sealoffmember:'limoumou',
+            Orderformrate:70,
             Sealoffdate:new Date(2010, 2, 23),
             Finishdate:new Date(2010, 2, 23)
         };
         $scope.data = someData;
+        $scope.isHidden=true;
+       $scope.showInput=function(){
+        	$scope.isHidden=!$scope.isHidden;
+        }
     }
 );
 
