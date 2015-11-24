@@ -14,7 +14,7 @@ PaymentDetailsModule.controller('MyFilterDemoCtrl', function ($scope) {
         $scope.data = someData;
     }
 );
-
+ 
 // use the myAppModule variable to
 // configure the module with a filter
 PaymentDetailsModule.filter('stripDashes', function() {
