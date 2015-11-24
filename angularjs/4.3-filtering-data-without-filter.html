@@ -1,0 +1,14 @@
+<script>
+   function MyFilterDemoCtrl($scope) {
+      var someData = {
+          firstName: 'JENNA',
+          surname: 'GRANT',
+          dateJoined: new Date(2010, 2, 23),
+          consumption: 123.659855,
+          plan: 'super-basic-plan'
+      };
+	// do the lowercaing here instead of using a filter 
+	someData.firstName = someData.firstName.toLowerCase(); 
+	someData.surname = someData.surname.toLowerCase(); 
+	$scope.data = someData;
+} </script>

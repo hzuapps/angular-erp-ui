@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" ng-app="OrderModule">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>产品出库-新建产品出库单-表单 by 1314080901208</title>
+      <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+      <script src="js/myOrderModule.js"></script>
+       
+   <script>
+     
+   </script>
+      <style>
+       
+      </style>
+  </head>
+
+  <body ng-controller="CreateOrderInformation">
+      
+      <style>
+          .table {
+              height: 350px;
+              width: 750px;
+              display: inline-block;
+              margin-left: 300px;
+              margin-top: 50px;
+              text-align: center;
+              padding-top: 20px;
+              box-shadow: 2px 3px 4px #808080;
+              box-shadow: 1px 1px 3px #808080;
+          }
+          .order {
+              
+              text-align: center;
+              height:20px;
+              display: inline-block;
+          }
+          .tableHead {
+              
+              font-weight:bolder;
+          }
+
+          .orderId {
+              width: 75px;
+          }
+          .storage {
+              width: 75px;
+          }
+          .people {
+              width: 120px;
+          }
+          .dateTime {
+              width: 220px;
+          }
+          .status {
+              width: 70px;
+          }
+          .notes {
+              width: 100px;
+          }
+      </style>
+     <div style="" id="table" class="table">
+         <div id="tableHead" class="tableHead">
+             <div id="orderId" class="order orderId" style="">订单编号</div>
+             <div id="storage" class="order storage" style="">仓库</div>
+             <div id="people" class="order people" style="">经手人</div>
+             <div id="dateTime" class="order dateTime" style="">经办日期</div>
+             <div id="status" class="order status" style="">状态</div>
+             <div id="notes" class="order notes" style="">备注</div>
+         </div>
+         <div id="tableBody" style="margin-top:5px;">
+             <div id="tableBody-data" style="margin-top:5px;" ng-repeat="thedata in theOrderDatas">
+                 <div id="orderId" class="order orderId" style="">{{thedata.orderId}}</div>
+                 <div id="storage" class="order storage" style="">{{thedata.storage}}</div>
+                 <div id="people" class="order people" style="">{{thedata.people}}</div>
+                 <div id="dateTime" class="order dateTime" style="">{{thedata.dateTime}}</div>
+                 <div id="status" class="order status" style="">{{thedata.status}}</div>
+                 <div id="notes" class="order notes" style="">{{thedata.notes}}</div>
+             </div>
+         </div>
+     </div>
+  </body>
+
+</html>
