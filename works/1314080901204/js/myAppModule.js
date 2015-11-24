@@ -7,10 +7,13 @@ var myAppModule = angular.module('myAppModule', []);
 myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
 	    var someData = {
-           Name: '生产订单-查询生产订单',
-    	   interface: '列表',	
-		   instructions: '输入条件查询后刷新生产订单列表（树）'	
-           
+	           productName: 'dengzi',
+	    	   productId: '001',	
+		   plannedQuantity: '100',
+		   num: '100',
+		   unit: 'changku',
+		   graphPaper: 'dengzi',
+		   remark: 'wu'
         };
         $scope.data = someData;
     }
