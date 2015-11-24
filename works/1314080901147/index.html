@@ -1,26 +1,14 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-<script>
-    function MyFilterDemoCtrl($scope) {
-        var typeSet = {
-            orderNumber:'123',
-            ordername:'123',
-            summary:'abc',
-            moneyed:'123',
-            money:'123',
-            beizhu:'abc',
-            
-        };
-        $scope.data = typeSet;
-} </script>
-
+<html ng-app="FinancialsalesModule"> <head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>财务销售收款 1314080901147</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
+
+ <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+	<script src="js/FinancialsalesModule.js"></script>
     
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +23,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-controller="MyfilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -65,6 +53,7 @@
       </div>
 
     </div><!-- /.container -->
+    <p>{{data.money}}</p>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
