@@ -8,9 +8,9 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
 	    var someData = {
 	           productName: 'dengzi',
-	    	   productId: '001',	
-		   plannedQuantity: '100',
-		   num: '100',
+	    	   productId: 001,	
+		   plannedQuantity: 100,
+		   num: 100,
 		   unit: 'changku',
 		   graphPaper: 'dengzi',
 		   remark: 'wu'
