@@ -5,15 +5,15 @@ var myAppModule = angular.module('myAppModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-myAppModule.controller('someData', function ($scope) {
+myAppModule.controller('documentsDetail', function ($scope) {
        // controller code would go here
-       var someData={
-              fydID:001,
-              Abstract:'ssadad',
-              rmoney:10000,
-              remark:'111111'
+           var documentsDetail = {
+            feiyongdanbianhao: '001',
+            zhaiyao: '费用单明细',
+            fukuanjine: 10000,
+            beizhu: '交易完成'
        };
-       $scope.data=someData;
+       $scope.data = documentsDetail;
     }
 );
 
