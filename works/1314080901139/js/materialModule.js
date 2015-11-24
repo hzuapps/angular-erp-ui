@@ -8,13 +8,19 @@ materialModule.controller('creatematerialCtrl', function ($scope) {
        // controller code would go here
 
         var material = {
-            wuliaoLeibie:"Îå½ð",
+            wuliaoLeibie:"ÃŽÃ¥Â½Ã°",
             wuliaoName:" ",
             updatedDate:" ",
             pingyinMa:" ",
             wuliaoMiaoshu:" ",
         };
         $scope.data = material;
+        
+        $scope.isHidden = ture;
+        $score.showInput = function()
+        {
+               $score.isHidden = !$score.isHidden;
+        }
 
 });
 
