@@ -7,34 +7,14 @@ var myAppModule = angular.module('myAppModule', []);
 myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
 	    var someData = {
-           Name: '生产订单-查询生产订单',
-    	   interface: '列表',	
-		   instructions: '输入条件查询后刷新生产订单列表（树）'	
+           Name: '鐢熶骇璁㈠崟-鏌ヨ鐢熶骇璁㈠崟',
+    	   interface: '鍒楄〃',	
+		   instructions: '杈撳叆鏉′欢鏌ヨ鍚庡埛鏂扮敓浜ц鍗曞垪琛紙鏍戯級'	
            
         };
         $scope.data = someData;
     }
 );
-myAppModule.directive('myappList', function ($compile) {
-return {
-        restrict: 'AE',
-        template: "{{data.instructions}}<input  type='button' value='dddddd'/>"
-           ,
-      //   link: function ($scope, $element) {
-      //       // set default state of hide/show
-      //       $scope.isHidden = true;
-      //       // add function to manage hide/show state
-      //       $scope.showHideColors = function () {
-      //           $scope.isHidden = !$scope.isHidden;
-      //       }
-      // // add colors divs to the document
-      //           var colorContainer = $element.find('div'); angular.forEach($scope.colorsArray, function (color) {
-      //           var appendString = "<div style='background-color:" + color + "'>" + color +   "</"
-      //           colorContainer.append(appendString);
-      //       });
-    // } 
-  };
-});
 
 // use the myAppModule variable to
 // configure the module with a filter
