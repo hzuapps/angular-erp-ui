@@ -19,6 +19,16 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
     }
 );
 
+myAppModule.directive('productList',function(){
+console.log();
+	return {
+	restrict:'AE',
+	template:"<div ng-repeat=\"data in data\">"+
+			"{{data.dep}}   &nbsp; &nbsp; &nbsp;  {{data.quartersName}} &nbsp; &nbsp; &nbsp; {{data.salary}}</div>"
+};
+});
+
+
 // use the myAppModule variable to
 // configure the module with a filter
 myAppModule.filter('stripDashes', function() {
