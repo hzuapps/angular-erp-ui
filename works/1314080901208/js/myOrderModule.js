@@ -26,6 +26,7 @@ myOrderModule.controller("CreateOrderInformation", function ($scope) {
     $scope.theOrderDatas = [orderData];
 });
 
+//使用directive渲染列表数据，样式即css已经定义在index页面
 myOrderModule.directive("myorderdata",function(){
   return{
       restrict:"AEC",
