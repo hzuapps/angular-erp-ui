@@ -25,6 +25,14 @@ EmployeeAttendanceModule.controller('MyFilterDemoCtrl', function ($scope) {
     }
 );
 
+EmployeeAttendanceModule.directive('EmployeeAttendanceList',function(){
+	return {
+	restrict:'AE',
+	template:"<div ng-repeat=\"data in data\">"+
+			"{{data.personNum}}   &nbsp; &nbsp; &nbsp;  {{data.personName}} </div>"
+};
+});
+
 // use the myAppModule variable to
 // configure the module with a filter
 EmployeeAttendanceModule.filter('stripDashes', function() {
