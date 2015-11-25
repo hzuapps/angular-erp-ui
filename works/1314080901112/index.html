@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html ng-app="BOMModule">
-  <head lang="en">
+<html ng-app="materialListModule">
+  <head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,8 +20,6 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-     <script src="../lib/angular-1.4.5/angular.min.js"></script>
-	<script src="js/BOMModule.js"></script>
   </head>
   <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -46,17 +44,43 @@
     </nav>
 
     <div class="container">
+      <div class="con">
+      <h3>物料清单</h3>
+      <table class="table table-bordered"}>
+        <thead>
+          <tr>
+            <th class="text-center " colspan="6">物料</th>
+          </tr>
+          <tr>
+            <th class="text-center">序号</th>
+            <th class="text-center">编号</th>
+            <th class="text-center">类别</th>
+            <th class="text-center">名称</th>
+            <th class="text-center">型号</th>
+            <th class="text-center">颜色</th>
+          </tr>
+        </thead>
+          <tbody ng-repeat="item in items">
+            <tr >
+              <td class="text-center">{{$index + 1}}</td>
+              <td class="text-center">{{item.num}}</td>
+              <td class="text-center">{{item.type}}</td>
+              <td class="text-center">{{item.name}}</td>
+              <td class="text-center">{{item.model}}</td>
+              <td class="text-center">{{item.color}}</td>
+            </tr>
+          </tbody>
+      </table>
 
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+    </div>
 
     </div><!-- /.container -->
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+
+    <script src="js/materialListModule.js"></script>
   </body>
 </html>
