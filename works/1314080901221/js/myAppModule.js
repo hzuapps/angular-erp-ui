@@ -16,6 +16,11 @@ myAppModule.controller('MyFilterDemoCtrl', function($scope) {
         };
         $scope.mydata = someData;
 
+        $scope.isHidden=true;
+       $scope.showInput=function(){
+            $scope.isHidden=!$scope.isHidden;
+        }
+    
 });
 
 // use the myAppModule variable to
@@ -24,4 +29,13 @@ myAppModule.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; });
+
+myAppModule.directive('quartersList',function(){
+console.log();
+    return {
+    restrict:'AE',
+    template:"<div ng-repeat=\"data in data\">"+
+            "{{data.dep}}   &nbsp; &nbsp; &nbsp;  {{data.quartersName}} &nbsp; &nbsp; &nbsp; {{data.salary}}</div>"
+};
+});
 
