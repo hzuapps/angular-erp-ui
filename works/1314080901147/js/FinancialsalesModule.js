@@ -6,7 +6,7 @@ var FinancialsalesModule = angular.module('FinancialsalesModule', []);
 // configure the module with a controller
 FinancialsalesModule.controller('MyfilterDemoCtrl', function ($scope) {
        // controller code would go here
-        var Financialsales1 = {
+      var Financialsales1 = {
             orderNumber:'123',
             ordername:'123',
             summary:'abc',

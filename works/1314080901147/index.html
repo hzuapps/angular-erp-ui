@@ -1,63 +1,278 @@
-﻿<!DOCTYPE html>
-<html ng-app="FinancialsalesModule"> <head lang="en">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>财务销售收款 1314080901147</title>
-    <link rel="shortcut icon" href="icons/favicon.ico" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>财务销售收款收款明细 1314080901147</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css"> -->
 
- <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-	<script src="js/FinancialsalesModule.js"></script>
+<style type="text/css">
+body,ul,li{margin:0;padding:0;color:gray;font-size:12px;}
+body{background:white;}
+div li{ list-style:none;float:left;width:100px;background:gray; text-align:center;margin:0 1px;line-height:30px;}
+div a{display:block;color:black; text-decoration:none;}
+div a:hover{display:block;color:black;background:#000000}
+div li .wwww{display:none;}
+div li:hover .wwww{display:block;}
+div li .wwww li .eeee{
+    display:none;
+    position: relative;
+    left: 100px;
+    top:-28px;
+}
+div li .wwww li:hover .eeee{display:block;}
+div li li li{clear:both;}
+</style>
+</head>
+<body>
+<table width="720" height="500" border="1" cellspacing="0" bgcolor="white" cellspacing="0" align="left">
+<tr>
+	<th >
+		<a href="#" color="" ><b>收款明细</b></a>
+	</th>
+</tr>
+<tr> 
+        <th valign="top">
+<div >
+    <ul>
+        <li><a href="#">订单编号</a>
+            <ul class="wwww">
+                <li><a href="#">列</a>
+                    <ul class="eeee">
+                        <li><a href="#">订单编号</a></li>
+                        <li><a href="#">订单名称</a></li>
+                        <li><a href="#">摘要</a></li>
+                        <li><a href="#">应收金额</a></li>
+                        <li><a href="#">已收金额</a></li>
+                        <li><a href="#">未收金额</a></li>
+                        <li><a href="#">备注</a></li>
+                        <li><a href="#">orderid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">正序</a></li>
+                <li><a href="#">倒序</a></li>
+
+                        <ul class="eeee">
+                      <!--   <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li> -->
+                    </ul>  
+                </li>
+            </ul>
+        </li>
+       
+
+
+         <li><a href="#">订单名称</a>
+            <ul class="wwww">
+                <li><a href="#">列</a>
+                    <ul class="eeee">
+                        <li><a href="#">订单编号</a></li>
+                        <li><a href="#">订单名称</a></li>
+                        <li><a href="#">摘要</a></li>
+                        <li><a href="#">应收金额</a></li>
+                        <li><a href="#">已收金额</a></li>
+                        <li><a href="#">未收金额</a></li>
+                        <li><a href="#">备注</a></li>
+                        <li><a href="#">orderid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">正序</a></li>
+                <li><a href="#">倒序</a></li>
+
+                        <ul class="eeee">
+                      <!--   <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li> -->
+                    </ul>  
+                </li>
+            </ul>
+        </li>
+    <!--     <li><a href="#">a</a></li>
+        <li><a href="#">a</a></li>
+        <li><a href="#">a</a></li>
+        <li><a href="#">a</a>
+            <ul class="wwww">
+                <li><a href="#">b</a>
+                    <ul class="eeee">
+                        <li><a href="#">c</a></li>
+                        <li><a href="#">c</a></li>
+                        <li><a href="#">c</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">b</a></li>
+                <li><a href="#">b</a></li>
+                <li><a href="#">b</a></li>
+                <li><a href="#"></a>b
+                    <ul class="eeee">
+                        <li><a href="#">c</a></li>
+                        <li><a href="#">c</a></li>
+                        <li><a href="#">c</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li> -->
+        <li><a href="#">摘要</a>
+            <ul class="wwww">
+                <li><a href="#">列</a>
+                    <ul class="eeee">
+                        <li><a href="#">订单编号</a></li>
+                        <li><a href="#">订单名称</a></li>
+                        <li><a href="#">摘要</a></li>
+                        <li><a href="#">应收金额</a></li>
+                        <li><a href="#">已收金额</a></li>
+                        <li><a href="#">未收金额</a></li>
+                        <li><a href="#">备注</a></li>
+                        <li><a href="#">orderid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">正序</a></li>
+                <li><a href="#">倒序</a></li>
+
+                        <ul class="eeee">
+                      <!--   <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li> -->
+                    </ul>  
+                </li>
+            </ul>
+        </li>
+
+        <li><a href="#">应收金额</a>
+            <ul class="wwww">
+                <li><a href="#">列</a>
+                    <ul class="eeee">
+                        <li><a href="#">订单编号</a></li>
+                        <li><a href="#">订单名称</a></li>
+                        <li><a href="#">摘要</a></li>
+                        <li><a href="#">应收金额</a></li>
+                        <li><a href="#">已收金额</a></li>
+                        <li><a href="#">未收金额</a></li>
+                        <li><a href="#">备注</a></li>
+                        <li><a href="#">orderid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">正序</a></li>
+                <li><a href="#">倒序</a></li>
+
+                        <ul class="eeee">
+                      <!--   <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li> -->
+                    </ul>  
+                </li>
+            </ul>
+        </li>
+
+        <li><a href="#">已收金额</a>
+            <ul class="wwww">
+                <li><a href="#">列</a>
+                    <ul class="eeee">
+                        <li><a href="#">订单编号</a></li>
+                        <li><a href="#">订单名称</a></li>
+                        <li><a href="#">摘要</a></li>
+                        <li><a href="#">应收金额</a></li>
+                        <li><a href="#">已收金额</a></li>
+                        <li><a href="#">未收金额</a></li>
+                        <li><a href="#">备注</a></li>
+                        <li><a href="#">orderid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">正序</a></li>
+                <li><a href="#">倒序</a></li>
+
+                        <ul class="eeee">
+                      <!--   <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li> -->
+                    </ul>  
+                </li>
+            </ul>
+        </li>
+
+        <li><a href="#">未收金额</a>
+            <ul class="wwww">
+                <li><a href="#">列</a>
+                    <ul class="eeee">
+                        <li><a href="#">订单编号</a></li>
+                        <li><a href="#">订单名称</a></li>
+                        <li><a href="#">摘要</a></li>
+                        <li><a href="#">应收金额</a></li>
+                        <li><a href="#">已收金额</a></li>
+                        <li><a href="#">未收金额</a></li>
+                        <li><a href="#">备注</a></li>
+                        <li><a href="#">orderid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">正序</a></li>
+                <li><a href="#">倒序</a></li>
+
+                        <ul class="eeee">
+                      <!--   <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li> -->
+                    </ul>  
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <li><a href="#">备注</a>
+            <ul class="wwww">
+                <li><a href="#">列</a>
+                    <ul class="eeee">
+                        <li><a href="#">订单编号</a></li>
+                        <li><a href="#">订单名称</a></li>
+                        <li><a href="#">摘要</a></li>
+                        <li><a href="#">应收金额</a></li>
+                        <li><a href="#">已收金额</a></li>
+                        <li><a href="#">未收金额</a></li>
+                        <li><a href="#">备注</a></li>
+                        <li><a href="#">orderid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">正序</a></li>
+                <li><a href="#">倒序</a></li>
+
+                        <ul class="eeee">
+                      <!--   <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li>
+                        <li><a href="#">b</a></li> -->
+                    </ul>  
+                </li>
+            </ul>
+        </li>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+       <table   width="720" height="30" border="1" cellspacing="0" bgcolor="blue">
+       <tr>
+       	<th>
+       	<form >
     
-    <!-- Bootstrap -->
-    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+     <li><a href="#" ><input type="submit" value="添加款项" ></input></a></li>
+      <li><a href="#"><input type="submit" value="自动收款"></input></a></li>
+       <li><a href="#"><input type="submit" value="删除" ></a></li>
+        <li ><a href="#">落单人:</a></li>
+         <li><a href="#"><input type="text" size="10" ></a></li>
+          <li><a href="#">落款日期：</input></a></li>
+           <li><a href="#"><input type="text" size="10" ></a></li>
+      
+           </form>
+           </th>
+       </tr>
+      
+</table>
+        </th>
+    </tr> 
+    
+</div>
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+</table>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body ng-controller="MyfilterDemoCtrl">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+        
+     <!--    <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        -->
 
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-    </div><!-- /.container -->
-    <p>{{data.money}}</p>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-  </body>
+	
+</body>
 </html>
