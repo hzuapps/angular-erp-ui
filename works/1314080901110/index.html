@@ -1,11 +1,11 @@
 -<!DOCTYPE html>
 <html ng-app="caiwushouruchaxun"> 
-  <head lang="en">
+  <head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- ÉÏÊö3¸ömeta±êÇ©*±ØĞë*·ÅÔÚ×îÇ°Ãæ£¬ÈÎºÎÆäËûÄÚÈİ¶¼*±ØĞë*¸úËæÆäºó£¡ -->
-    <title>²ÆÎñ-ÆäËûÊÕÈë-²éÑ¯Ñ¡ÏîÁĞ±í</title>
+    <!-- ä¸Šè¿°3ä¸ªmetaæ ‡ç­¾*å¿…é¡»*æ”¾åœ¨æœ€å‰é¢ï¼Œä»»ä½•å…¶ä»–å†…å®¹éƒ½*å¿…é¡»*è·Ÿéšå…¶åï¼ -->
+    <title>è´¢åŠ¡-å…¶ä»–æ”¶å…¥-æŸ¥è¯¢é€‰é¡¹è¡¨å•</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
     
     <!-- Bootstrap -->
@@ -50,16 +50,14 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1 style="color:blue">è´¢åŠ¡-å…¶ä»–æ”¶å…¥-æŸ¥è¯¢é€‰é¡¹-è¡¨å•</h1>
         <p>{{data}}</p>
       </div>
 
     </div><!-- /.container -->
-       <h2>AngularJS Socks</h2>
-    <p>CaiwuQitaShouruChaxun</p>
-     <button ng-click="showHide()" type="button">
-        {{isHidden ? 'Show' : 'Hide'}}
+       <h2 style="color:blue">è´¢åŠ¡>>å…¶ä»–æ”¶å…¥>>æŸ¥è¯¢é€‰é¡¹</h2>
+     <button ng-click="showHide()" type="button"style="background:#66B3FF" value>
+        {{isHidden ? 'æ˜¾ç¤ºæŸ¥è¯¢é€‰é¡¹' : 'éšè—æŸ¥è¯¢é€‰é¡¹'}}
     </button>
      <p ng-cloak style="text-align:center;">{{data.operator}}</p>
     <form class="form-horizontal" role="form" ng-hide="isHidden">
@@ -67,25 +65,24 @@
 
         <div class="form-group">
         </div>
-            <label for="Startdate"  class="col-md-1 control-label">Startdate</label>
+            <label for="Startdate"  class="col-md-1 control-label">èµ·å§‹æ—¥æœŸ</label>
             <div class="col-md-2">
                 <input id="Startdate"  type="date"/>
                 </select>
             </div>
-            <label for="Terminationdate"  class="col-md-1 control-label">Terminationdate</label>
+            <label for="Terminationdate"  class="col-md-1 control-label">ç»ˆæ­¢æ—¥æœŸ</label>
             <div class="col-md-2">
                 <input id="Terminationdate"  type="date"/>
                 </select>
            
         </div>
         <div class="form-group">
-            <label for="State"  class="col-md-1 control-label ">State</label>
+            <label for="State"  class="col-md-1 control-label ">æ”¶å…¥çŠ¶æ€</label>
             <div class="col-md-2">
                 <select id="State" class="form-control">
-                    <option>Completed</option>
-                    <option>Not finished</option>
-                    <option>All</option>
-
+                    <option>å·²å®Œæˆ</option>
+                    <option>æœªå®Œæˆ</option>
+                    <option>å…¨éƒ¨</option>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
