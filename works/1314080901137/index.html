@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
+<html ng-app="cangkucaigoushouhuoModule" lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,8 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>仓库采购收货 1314080901137</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    
+     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/cangkucaigoushouhuoModule.js"></script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,9 +22,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-    <script src="js/cangkucaigoushouhuo.js"></script>
-<body ng-controller="cakgkucaigoushouhuo">
+<body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -51,8 +50,9 @@
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
-<p>{{data}}</p>
+
     </div><!-- /.container -->
+<p>{{data.cangku}}</p>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
