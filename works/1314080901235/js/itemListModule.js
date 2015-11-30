@@ -1,35 +1,35 @@
-﻿// create a new module called 'myAppModule' and save 
-// a reference to it in a variable called myAppModule 
+﻿
+
+// create a new module called 'myAppModule' and save 
+// a reference to it in a variable called itemListModule
 var itemListModule = angular.module('itemListModule', []);
 
-// use the myAppModule variable to
+// use the itemListModule variable to
 // configure the module with a controller
-itemListModule.controller('MyFilterDemoCtrl', function ($scope) {
-          // controller code would go here
-        var someDate = {
-            code: '编码',
-            name: '品名',
-            type: '类型',
-            color: '颜色',
-            inventory_number: '库存数',
-            check_number:'盘点数'
-        };
-       
-    }
-);
+itemListModule.controller('itemListModuleCtrl', function ($scope)
+    {
+        var workerInformation = {
+                code: 'a',
+                name: 'T恤',
+                type: '衣服',
+                color: 'black',
+                inventory_number:'100',
+               check_number:'1000',
+            };
+            $scope.data = workerInformation;
+            $scope.items = [
+                {code: 'a', name: '衣服', type: 'black', color: 'black',inventory_number: '100',check_number:'1000'},
+                {code: 'b', name: '长袖', type: '衣服', color: 'white',inventory_number: '200',check_number:'2000'},
+                {code: 'c', name: '外套', type: '衣服', color: 'yellow',inventory_number: '300',check_number:'3000'}
+        ];
+        }
 
-itemListModule.directive('itemListModule',function(){
-console.log();
-	return {
-	restrict:'AE',
-	template:"<div ng-repeat=\"data in data\">"+
-			"{{data.code}}   &nbsp; &nbsp; &nbsp;  {{data.name}} &nbsp; &nbsp; &nbsp; {{data.type}} &nbsp; &nbsp; &nbsp;{{data.color}} &nbsp; &nbsp; &nbsp; {{data.inventory_number}} &nbsp; &nbsp; &nbsp; {{data.check_number}}</div>"
-};
-});
+
+);
 
 // use the myAppModule variable to
 // configure the module with a filter
-itemListModule.filter('stripDashes', function() {
+itemListModule.filter('itemListModulestripDashes', function() {
     return function(txt) {
         // filter code would go here
-}; });
+    }; });
