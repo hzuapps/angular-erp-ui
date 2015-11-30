@@ -4,22 +4,12 @@ var feiyongdanModule = angular.module('feiyongdanModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-feiyongdanModule.controller('MyFilterDemoCtrl', function ($scope) {
-           var someData = {
-            leibie:'费用类别',
-            danwei:'报账单位',
-            ren:'报账人',
-            baozhangjine:'报账金额',
-            shifujijine:'实付金额',
-            riqi:'报账日期',
-            zhuangtai:'状态',
-            beizhu:'备注',
-            dateJoined: new Date(2015, 10, 25),
-        };
-        $scope.data = someData;
-       
-    }
-);
+feiyongdanModule.controller('feiyongdanCtrl', function ($scope) {
+           $scope.someData = [
+         { number: '01',abstract: 'water rate',payment:'50000',remark:'pay for electricity'},
+         { number: '02',abstract: 'power rate',payment:'70000',remark:'pay for water'},
+         { number: '03',abstract: 'salary',payment:'4000',remark:'pay for employee'}
+];
 
 // use the myAppModule variable to
 // configure the module with a filter
