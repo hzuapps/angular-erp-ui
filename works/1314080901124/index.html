@@ -1,10 +1,35 @@
-﻿<!DOCTYPE html >
-<html ng-app="PaymentDetailsModule"> <head lang="en">
-<meta charset="UTF-8">
-<title>付款明细</title>
-    <script src="../lib/angular-1.4.5/angular.min.js"></script>
-	<script src="js/PaymentDetailsModule.js"></script>
-</head>
-<body ng-controller="MyFilterDemoCtrl">
-</body>
-</html>
+﻿<!DOCTYPE html>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <!<script type="text/javascript" src="js/PaymentDetailsModule.js"></script>
+    <!<script src="js/PaymentDetailsModule.js"></script>
+    <![endif]-->
+	
+
+  </head>
+   <div id="content">
+        <div id="head" style="width:auto;height:32px;background-color:#0066c0;color:#ff0;font-size:28px;padding-left:20px;">
+        付款明细
+        </div>
+    <div>
+      <table class="table">
+      <tr style="background-color:#e3e3e3">
+        <td>单据编号</td>
+        <td>摘要</td>
+        <td>应付金额</td>
+        <td>付款金额</td>
+        <td>未付金额</td>
+        <td>备注</td>
+      </tr>
+      <tr ng-repeat="item in someData">
+        <td>{{item.danjubianhao}}</td>
+        <td>{{item.zhaiyao}}</td>
+        <td>{{item.yingfujine}}</td>
+        <td>{{item.fukuanjine}}</td>
+        <td>{{item.weifujine}}</td>
+        <td>{{item.beizhu}}</td>
+      </tr>
+      </table>
+    </div>
+  </div>  
