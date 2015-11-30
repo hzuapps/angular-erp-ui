@@ -1,4 +1,4 @@
-// create a new module called 'myAppModule' and save 
+// create a new module called 'myAppModule' & save 
 // a reference to it in a variable called myAppModule 
 var myAppModule = angular.module('myAppModule', []);
 
@@ -7,6 +7,12 @@ var myAppModule = angular.module('myAppModule', []);
 myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
  {
+
+
+    $scope.isHidden = true;
+    $scope.showHideColors = function () {
+    $scope.isHidden = !$scope.isHidden;
+    }
         var someData = 
       {
             Pno: 't0001',

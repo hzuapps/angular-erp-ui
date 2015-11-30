@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+<html ng-app="myAppModule">
+  <head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,28 +20,10 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-    
-    
-        <script>
-    function MyFilterDemoCtrl($scope)
- {
-        var someData = 
-      {
-            Pno: 't0001',
-            Sort: 'coms',
-            Name: '锁存器',
-            Size: '74ls273',
-            Color: '黑',
-            Unit:' ',
-            Num:0,
-            Other:' '
-        };
-        $scope.data = someData;
-} </script>
-
   </head>
-  <body>
+
+<body ng-controller="MyFilterDemoCtrl">
+    
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -63,28 +45,83 @@
       </div>
     </nav>
 
+
     <div class="container">
 
       <div class="starter-template">
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
+    <div class="container">
+        <div class="row col-lg-offset-2">
+            <form class="form-inline" role="form">
 
-    </div><!-- /.container -->
+                <div class="form-group row">
+                    <div class="row">
+                        <label for="example1">产品编号：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Pno" id="example1"/>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-  </body>
-</html>
-<!DOCTYPE html >
-<html ng-app="myAppModule"> <head lang="en">
-<meta charset="UTF-8">
-<title>Listing 4-10</title>
+                        <label for="example2">产品类型：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Sort" id="example2"/>
+
+                        <label for="example3">产品名称：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Name" id="example3"/>
+
+                        <label for="example4">产品款式：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Size" id="example4"/>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <div class="form-group row">
+                    <div class="row">
+                        <label for="example5">产品颜色：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Color" id="example5"/>
+
+                        <label for="example6">单元：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Unit" id="example6"/>
+
+                         <label for="example7">数量：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Num" id="example7"/>
+
+                        <label for="example8">备注：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Other" id="example8"/>
+                       
+                    </div>
+                </div>
+
+                <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+                    <button type="button" class="btn btn-default" ng-click="showInput()">
+                        {{isHidden ? '提交' : '隐藏'}}
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+    <div ng-hide="isHidden">您输入的数据为：</div>
+    <div id="Pno" ng-hide="isHidden">产品编号->{{Pno}}</div>
+    <div id="Sort" ng-hide="isHidden">产品类型->{{Sort}}</div>
+    <div id="Name" ng-hide="isHidden">产品名称->{{Name}}</div>
+    <div id="Size" ng-hide="isHidden">产品款式->{{Size}}</div>
+    <div id="Color" ng-hide="isHidden">产品颜色->{{Color}}</div>
+    <div id="Unit" ng-hide="isHidden">单元->{{Unit}}</div>
+    <div id="Num" ng-hide="isHidden">数量->{{Num}}</div>
+    <div id="Other" ng-hide="isHidden">备注->{{Other}}</div>
+    </p>
+</div>
+<!-- /.container -->
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../lib/angular-1.4.5/angular.min.js"></script>
-	<script src="js/myAppModule.js"></script>
-</head>
-<body ng-controller="MyFilterDemoCtrl">
+  <script src="js/myAppModule.js"></script>
 </body>
 </html>
