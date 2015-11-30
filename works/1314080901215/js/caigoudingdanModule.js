@@ -6,13 +6,17 @@ var caigoudingdanModule = angular.module('caigoudingdanModule', []);
 // configure the module with a controller
 caigoudingdanModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
-              var someDate={
+			  var someDate={
         Name:'供应商名称',
         term:'付款条件',
         caigouData:'2015-10-27',
         jiaohuoData:'2015-10-27',
       };
       $scope.data=someDate;
+       $scope.isHidden = true;
+        $scope.showInput = function () {
+            $scope.isHidden = !$scope.isHidden;
+        }
 }
 );
 
@@ -22,3 +26,7 @@ caigoudingdanModule.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; });
+              function myfunction(txt)
+{
+alert(txt)
+}
