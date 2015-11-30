@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+<html ng-app="providerModule">
+  <head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,8 +20,22 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+    function MyFilterDemoCtrl($scope) {
+        var danjuData = {
+            danweiName:'changchengzhuangshi',
+            shoukuanfangshi:'zhifubao',
+            shoukuanData:'2015-11-12',
+            shoukuanren:'yeliangchen',
+            shoukuanjine:'2000',
+            shoukuanzhanghu:'zhaoritian',
+            yinghangkahao:'12345678',
+            zhuangtai:'wubianhua',
+        };
+        $scope.data = danjuData;
+} </script>
   </head>
-  <body>
+  <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -56,5 +70,7 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
++    <script src="js/providerModule.js"></script>
   </body>
 </html>
