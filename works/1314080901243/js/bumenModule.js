@@ -18,7 +18,7 @@ bumenModule.controller('MyFilterDemoCtrl', function ($scope) {
 
 // use the myAppModule variable to
 // configure the module with a filter
-myAppModule.filter('stripDashes', function () {
+bumenModule.filter('stripDashes', function () {
     return function (txt) {
         // filter code would go here
     };
