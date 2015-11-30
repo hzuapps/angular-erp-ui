@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="ManifestDataModule"><lang="zh-CN">
-  <head>
+<html ng-app="AuditQequestFormModule">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,9 +19,7 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="../../lib/angular-1.4.5/angular.min.js"></script> 
-    <script src="js/AuditQequestFormModule.js"></script>
-
+    
   </head>
   <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -46,18 +43,58 @@
       </div>
     </nav>
 
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-    </div><!-- /.container -->
+   <div class="wrapper">
+      <div class="container" >
+        <form>
+        <h4>操作明细</h4>
+        <table >
+	    <tr>
+	    	<td>名称：</td>
+      		<td colspan="2" ><input class="form-control" type="text" id="name" ng-model="name"></td>
+      	</tr>
+    	<tr>
+      		<td >明细：</td>
+      		<td colspan="1" >
+        		<textarea class="form-control" name="detailed" id="detailed" rows="4" cols="100%" ng-model="detailed">{{data.detailed}}</textarea>
+      		</td>
+      		<td colspan="1">
+        		<a href="#"><img src="images/mg.jpg" width="50px" height="50" ></a>
+      		</td>
+    	</tr>
+    	<tr>
+      		<td >批示：</td>
+      		<td colspan="2">
+        		<textarea class="form-control"  name="instructions" ng-model="instructions" id="instructions" rows="4" ><span ng-bind="data.instructions"></span></textarea>
+     		 </td>
+    	</tr>
+    	</table>
+    	<div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+       	 	<button type="button" class="btn btn-default" ng-click="showInput()">
+            {{isHidden ? '提交' : '隐藏'}}
+        	</button>
+    	</div>
+    	<div class="foot">
+      		<button>通过</button>
+    	</div>
+    </form>
+</div>
+</div>
+	<div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    	<p class="lead">
+    	<div ng-hide="isHidden">您输入的数据为：</div>
+    	<div id="name" ng-hide="isHidden">名称：{{name}}</div>
+    	<div id="detailed" ng-hide="isHidden">供应商全称：{{detailed}}</div>
+    	<div id="instructions" ng-hide="isHidden">供应商简称：{{instructions}}</div>
+    	</p>
+    </div>
+    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script> 
+    <script src="js/AuditQequestFormModule.js"></script>
+
   </body>
 </html>
