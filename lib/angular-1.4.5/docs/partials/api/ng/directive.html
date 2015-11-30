@@ -1,56 +1,4 @@
-
-<h1>Directive components in <code>ng</code></h1>
-
-
-
-<div class="component-breakdown">
-  <div>
-    <table class="definition-table">
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      
-      <tr>
-        <td><a href="api/ng/directive/ngJq">ngJq</a></td>
-        <td><p>Use this directive to force the angular.element library.  This should be
-used to force either jqLite by leaving ng-jq blank or setting the name of
-the jquery variable under window (eg. jQuery).</p>
-</td>
-      </tr>
-      
-      <tr>
-        <td><a href="api/ng/directive/ngApp">ngApp</a></td>
-        <td><p>Use this directive to <strong>auto-bootstrap</strong> an AngularJS application. The <code>ngApp</code> directive
-designates the <strong>root element</strong> of the application and is typically placed near the root element
-of the page - e.g. on the <code>&lt;body&gt;</code> or <code>&lt;html&gt;</code> tags.</p>
-</td>
-      </tr>
-      
-      <tr>
-        <td><a href="api/ng/directive/a">a</a></td>
-        <td><p>Modifies the default behavior of the html A tag so that the default action is prevented when
-the href attribute is empty.</p>
-</td>
-      </tr>
-      
-      <tr>
-        <td><a href="api/ng/directive/ngHref">ngHref</a></td>
-        <td><p>Using Angular markup like <code>{{hash}}</code> in an href attribute will
-make the link go to the wrong URL if the user clicks it before
-Angular has a chance to replace the <code>{{hash}}</code> markup with its
-value. Until Angular replaces the markup the link will be broken
-and will most likely return a 404 error. The <code>ngHref</code> directive
-solves this problem.</p>
-</td>
-      </tr>
-      
-      <tr>
-        <td><a href="api/ng/directive/ngSrc">ngSrc</a></td>
-        <td><p>Using Angular markup like <code>{{hash}}</code> in a <code>src</code> attribute doesn&#39;t
-work right: The browser will fetch from the URL with the literal
-text <code>{{hash}}</code> until Angular replaces the expression inside
-<code>{{hash}}</code>. The <code>ngSrc</code> directive solves this problem.</p>
+de>. The <code>ngSrc</code> directive solves this problem.</p>
 </td>
       </tr>
       
@@ -478,3 +426,62 @@ assigned through the element&#39;s <code>id</code>, which can then be used as a 
   </div>
 </div>
 
+                                                                                                                                                                                                                                                                                                                                                                                                         
+<h1>Filter components in <code>ng</code></h1>
+
+
+
+<div class="component-breakdown">
+  <div>
+    <table class="definition-table">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/filter/filter">filter</a></td>
+        <td><p>Selects a subset of items from <code>array</code> and returns it as a new array.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/filter/currency">currency</a></td>
+        <td><p>Formats a number as a currency (ie $1,234.56). When no currency symbol is provided, default
+symbol for current locale is used.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/filter/number">number</a></td>
+        <td><p>Formats a number as text.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/filter/date">date</a></td>
+        <td><p>Formats <code>date</code> to a string based on the requested <code>format</code>.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/filter/json">json</a></td>
+        <td><p>Allows you to convert a JavaScript object into JSON string.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/filter/lowercase">lowercase</a></td>
+        <td><p>Converts string to lowercase.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/filter/uppercase">uppercase</a></td>
+        <td><p>Converts string to uppercase.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/filter/limitTo">limitTo</a></td>
+        <td><p>Creates a new array or string containing only a specified 

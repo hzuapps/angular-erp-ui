@@ -1,40 +1,4 @@
-<a href='https://github.com/angular/angular.js/edit/v1.4.x/src/auto/injector.js?message=docs($provide)%3A%20describe%20your%20change...#L313' class='improve-docs btn btn-primary'><i class="glyphicon glyphicon-edit">&nbsp;</i>Improve this Doc</a>
-
-
-
-<a href='https://github.com/angular/angular.js/tree/v1.4.5/src/auto/injector.js#L313' class='view-source pull-right btn btn-primary'>
-  <i class="glyphicon glyphicon-zoom-in">&nbsp;</i>View Source
-</a>
-
-
-<header class="api-profile-header">
-  <h1 class="api-profile-header-heading">$provide</h1>
-  <ol class="api-profile-header-structure naked-list step-list">
-    
-  
-
-    <li>
-      - service in module <a href="api/auto">auto</a>
-    </li>
-  </ol>
-</header>
-
-
-
-<div class="api-profile-description">
-  <p>The <a href="api/auto/service/$provide">$provide</a> service has a number of methods for registering components
-with the <a href="api/auto/service/$injector">$injector</a>. Many of these functions are also exposed on
-<a href="api/ng/type/angular.Module"><code>angular.Module</code></a>.</p>
-<p>An Angular <strong>service</strong> is a singleton object created by a <strong>service factory</strong>.  These <strong>service
-factories</strong> are functions which, in turn, are created by a <strong>service provider</strong>.
-The <strong>service providers</strong> are constructor functions. When instantiated they must contain a
-property called <code>$get</code>, which holds the <strong>service factory</strong> function.</p>
-<p>When you request a service, the <a href="api/auto/service/$injector">$injector</a> is responsible for finding the
-correct <strong>service provider</strong>, instantiating it and then calling its <code>$get</code> <strong>service factory</strong>
-function to get the instance of the <strong>service</strong>.</p>
-<p>Often services have no configuration options and there is no need to add methods to the service
-provider.  The provider will be no more than a constructor function with a <code>$get</code> property. For
-these cases the <a href="api/auto/service/$provide">$provide</a> service has additional helper methods to register
+ the <a href="api/auto/service/$provide">$provide</a> service has additional helper methods to register
 services without specifying a provider.</p>
 <ul>
 <li><a href="api/auto/service/$provide#provider">provider(provider)</a> - registers a <strong>service provider</strong> with the
@@ -548,3 +512,53 @@ decorated or delegated to.</li>
 </div>
 
 
+                                                                                                                                                                                                                                                     
+<h1>Directive components in <code>ng</code></h1>
+
+
+
+<div class="component-breakdown">
+  <div>
+    <table class="definition-table">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/directive/ngJq">ngJq</a></td>
+        <td><p>Use this directive to force the angular.element library.  This should be
+used to force either jqLite by leaving ng-jq blank or setting the name of
+the jquery variable under window (eg. jQuery).</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/directive/ngApp">ngApp</a></td>
+        <td><p>Use this directive to <strong>auto-bootstrap</strong> an AngularJS application. The <code>ngApp</code> directive
+designates the <strong>root element</strong> of the application and is typically placed near the root element
+of the page - e.g. on the <code>&lt;body&gt;</code> or <code>&lt;html&gt;</code> tags.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/directive/a">a</a></td>
+        <td><p>Modifies the default behavior of the html A tag so that the default action is prevented when
+the href attribute is empty.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/directive/ngHref">ngHref</a></td>
+        <td><p>Using Angular markup like <code>{{hash}}</code> in an href attribute will
+make the link go to the wrong URL if the user clicks it before
+Angular has a chance to replace the <code>{{hash}}</code> markup with its
+value. Until Angular replaces the markup the link will be broken
+and will most likely return a 404 error. The <code>ngHref</code> directive
+solves this problem.</p>
+</td>
+      </tr>
+      
+      <tr>
+        <td><a href="api/ng/directive/ngSrc">ngSrc</a></td>
+        <td><p>Using

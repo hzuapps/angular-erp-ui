@@ -1,58 +1,4 @@
-<a href='https://github.com/angular/angular.js/edit/v1.4.x/src/ng/directive/ngController.js?message=docs(ngController)%3A%20describe%20your%20change...#L3' class='improve-docs btn btn-primary'><i class="glyphicon glyphicon-edit">&nbsp;</i>Improve this Doc</a>
 
-
-
-<a href='https://github.com/angular/angular.js/tree/v1.4.5/src/ng/directive/ngController.js#L3' class='view-source pull-right btn btn-primary'>
-  <i class="glyphicon glyphicon-zoom-in">&nbsp;</i>View Source
-</a>
-
-
-<header class="api-profile-header">
-  <h1 class="api-profile-header-heading">ngController</h1>
-  <ol class="api-profile-header-structure naked-list step-list">
-    
-    <li>
-      - directive in module <a href="api/ng">ng</a>
-    </li>
-  </ol>
-</header>
-
-
-
-<div class="api-profile-description">
-  <p>The <code>ngController</code> directive attaches a controller class to the view. This is a key aspect of how angular
-supports the principles behind the Model-View-Controller design pattern.</p>
-<p>MVC components in angular:</p>
-<ul>
-<li>Model — Models are the properties of a scope; scopes are attached to the DOM where scope properties
-are accessed through bindings.</li>
-<li>View — The template (HTML with data bindings) that is rendered into the View.</li>
-<li>Controller — The <code>ngController</code> directive specifies a Controller class; the class contains business
-logic behind the application to decorate the scope with functions and values</li>
-</ul>
-<p>Note that you can also attach controllers to the DOM by declaring it in a route definition
-via the <a href="api/ngRoute/service/$route">$route</a> service. A common mistake is to declare the controller
-again using <code>ng-controller</code> in the template itself.  This will cause the controller to be attached
-and executed twice.</p>
-
-</div>
-
-
-
-
-<div>
-  
-
-  
-  <h2>Directive Info</h2>
-  <ul>
-    <li>This directive creates new scope.</li>
-    <li>This directive executes at priority level 500.</li>
-    
-  </ul>
-
-  
-  <h2 id="usage">Usage</h2>
   <div class="usage">
   
     <ul>
@@ -216,3 +162,85 @@ inheritance masking primitives.</li>
 </div>
 
 
+                                                                                                                               <a href='https://github.com/angular/angular.js/edit/v1.4.x/src/ng/directive/ngEventDirs.js?message=docs(ngCopy)%3A%20describe%20your%20change...#L424' class='improve-docs btn btn-primary'><i class="glyphicon glyphicon-edit">&nbsp;</i>Improve this Doc</a>
+
+
+
+<a href='https://github.com/angular/angular.js/tree/v1.4.5/src/ng/directive/ngEventDirs.js#L424' class='view-source pull-right btn btn-primary'>
+  <i class="glyphicon glyphicon-zoom-in">&nbsp;</i>View Source
+</a>
+
+
+<header class="api-profile-header">
+  <h1 class="api-profile-header-heading">ngCopy</h1>
+  <ol class="api-profile-header-structure naked-list step-list">
+    
+    <li>
+      - directive in module <a href="api/ng">ng</a>
+    </li>
+  </ol>
+</header>
+
+
+
+<div class="api-profile-description">
+  <p>Specify custom behavior on copy event.</p>
+
+</div>
+
+
+
+
+<div>
+  
+
+  
+  <h2>Directive Info</h2>
+  <ul>
+    
+    <li>This directive executes at priority level 0.</li>
+    
+  </ul>
+
+  
+  <h2 id="usage">Usage</h2>
+  <div class="usage">
+  
+    <ul>
+    <li>as attribute:
+        <pre><code>&lt;window, input, select, textarea, a&#10;  ng-copy=&quot;expression&quot;&gt;&#10;...&#10;&lt;/window, input, select, textarea, a&gt;</code></pre>
+      </li>
+    
+  </div>
+  
+<section class="api-section">
+  <h3>Arguments</h3>
+
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        ngCopy
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-expression">expression</a>
+      </td>
+      <td>
+        <p><a href="guide/expression">Expression</a> to evaluate upon
+copy. (<a href="guide/expression#-event-">Event object is available as <code>$event</code></a>)</p>
+
+        
+      </td>
+    </tr>
+    
+  </tb

@@ -1,20 +1,4 @@
-<!doctype html>
-<html lang="en" ng-app="docsApp" ng-strict-di ng-controller="DocsController">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="Description"
-        content="AngularJS is what HTML would have been, had it been designed for building web-apps.
-                 Declarative templates with data-binding, MVC, dependency injection and great
-                 testability story all implemented with pure client-side JavaScript!">
-  <meta name="fragment" content="!">
-  <title ng-bind-template="AngularJS: {{ currentArea.name }}: {{ currentPage.name || 'Error: Page not found'}}">AngularJS</title>
-
-  <script type="text/javascript">
-    // dynamically add base tag as well as css and javascript files.
-    // we can't add css/js the usual way, because some browsers (FF) eagerly prefetch resources
-    // before the base attribute is added, causing 404 and terribly slow loading of the docs app.
+ing of the docs app.
     (function() {
       var indexFile = (location.pathname.match(/\/(index[^\.]*\.html)/) || ['', ''])[1],
           rUrl = /(#!\/|api|guide|misc|tutorial|error|index[^\.]*\.html).*$/,
@@ -258,3 +242,18 @@
   </div>
 </body>
 </html>
+                                                                                                                                                                                                                                             <!doctype html>
+<html lang="en" ng-app="docsApp" ng-strict-di ng-controller="DocsController">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="Description"
+        content="AngularJS is what HTML would have been, had it been designed for building web-apps.
+                 Declarative templates with data-binding, MVC, dependency injection and great
+                 testability story all implemented with pure client-side JavaScript!">
+  <meta name="fragment" content="!">
+  <title ng-bind-template="AngularJS: {{ currentArea.name }}: {{ currentPage.name || 'Error: Page not found'}}">AngularJS</title>
+
+  <script type="text/javascript">
+    // 
