@@ -34,7 +34,7 @@ myOrderModule.factory("orderService",function($http){
       }
       getOrderData.getData=function(){
             var promise=$http({
-              url:"jsonData/myOrderData.txt",
+              url:"jsonData/myOrderData.json",
               method:"get",
             });
             return promise;
