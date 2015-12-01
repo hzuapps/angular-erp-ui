@@ -26,7 +26,7 @@
        <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
      <![endif]-->
    </head>
-   <body ng-controller="createOrderCtrl">
+   <body ng-controller="goodsListController">
      <nav class="navbar navbar-inverse navbar-fixed-top">
               <div>     <ul class="nav navbar-nav">
              <li class="active"><a href="#">Home</a></li>
@@ -41,7 +41,7 @@
         <p>库存清单</p>
        </div>
 <div>
-	<table ng-controller="createOrderCtrl" style="width: 100%; height: 100%;" class="table table-striped" border="1" align="center">
+	<table ng-controller="goodsListController" style="width: 100%; height: 100%;" class="table table-striped" border="1" align="center">
     <tr wide="100%">
       <th>序号</th>
       <th>编码</th>
@@ -56,19 +56,19 @@
       <th>平均价</th>
       <th>旧编码</th>
     </tr>
-    <tr ng-repeat="item in someData">
-        <td>{{item.id}}</td>
-        <td>{{item.number}}</td>
-        <td>{{item.name}}</td>
-        <td>{{item.type}}</td>
-        <td>{{item.xinghao}}</td>
-        <td>{{item.color}}</td>
-        <td>{{item.numbers}}</td>
-        <td>{{item.danwei}}</td>
-        <td>{{item.danjia}}</td>
-        <td>{{item.jine}}</td>
-        <td>{{item.avg}}</td>
-        <td>{{item.jiubianma}}</td>
+    <tr ng-controller="goodsListController" ng-repeat="goods in theOrderDatas">
+        <td>{{goods.id}}</td>
+        <td>{{goods.number}}</td>
+        <td>{{goods.name}}</td>
+        <td>{{goods.type}}</td>
+        <td>{{goods.xinghao}}</td>
+        <td>{{goods.color}}</td>
+        <td>{{goods.numbers}}</td>
+        <td>{{goods.danwei}}</td>
+        <td>{{goods.danjia}}</td>
+        <td>{{goods.jine}}</td>
+        <td>{{goods.avg}}</td>
+        <td>{{goods.jiubianma}}</td>
     </tr>
   </table>
 </div>    
