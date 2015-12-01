@@ -16,12 +16,35 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
         };
         $scope.data = someData;
 
+<<<<<<< HEAD:works/1314080901221/js/myAppModule.js
+        $scope.isHidden=true;
+       $scope.showInput=function(){
+            $scope.isHidden=!$scope.isHidden;
+        }
+    
+});
+=======
     }
 );
+>>>>>>> parent of 0503540... 合并一些操作:works/1314080901221/js/myAppModule
 
 // use the myAppModule variable to
 // configure the module with a filter
 myAppModule.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
+<<<<<<< HEAD:works/1314080901221/js/myAppModule.js
 }; });
+
+myAppModule.directive('quartersList',function(){
+console.log();
+    return {
+    restrict:'AE',
+    template:"<div ng-repeat=\"data in data\">"+
+            "{{data.dep}}   &nbsp; &nbsp; &nbsp;  {{data.quartersName}} &nbsp; &nbsp; &nbsp; {{data.salary}}</div>"
+};
+});
+
+=======
+}; });
+>>>>>>> parent of 0503540... 合并一些操作:works/1314080901221/js/myAppModule
