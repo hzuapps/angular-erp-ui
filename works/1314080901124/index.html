@@ -1,19 +1,20 @@
 ﻿<!DOCTYPE html>
-
+ <head>
+    
     <script src="js/jquery.min.js"></script>
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-    <!<script type="text/javascript" src="js/PaymentDetailsModule.js"></script>
-    <!<script src="js/PaymentDetailsModule.js"></script>
+    <script type="text/javascript" src="js/PaymentDetailsModule.js"></script>
+    <script src="js/PaymentDetailsModule.js"></script>
     <![endif]-->
 	
 
   </head>
-   <div id="content">
+   <div id="content" ng-app="PaymentDetailsModule">
         <div id="head" style="width:auto;height:32px;background-color:#0066c0;color:#ff0;font-size:28px;padding-left:20px;">
         付款明细
         </div>
-    <div>
-      <table class="table">
+    <div ng-controller="MyFilterDemoCtrl">
+      <table class="table" border="2">
       <tr style="background-color:#e3e3e3">
         <td>单据编号</td>
         <td>摘要</td>
@@ -22,7 +23,7 @@
         <td>未付金额</td>
         <td>备注</td>
       </tr>
-      <tr ng-repeat="item in someData">
+      <tr ng-repeat="item in data">
         <td>{{item.danjubianhao}}</td>
         <td>{{item.zhaiyao}}</td>
         <td>{{item.yingfujine}}</td>
