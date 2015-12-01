@@ -1,0 +1,12 @@
+{
+    "success": [
+        {
+            "message": "Thank you for taking the time to register!"
+        }
+    ],
+    "error": [
+        {
+            "message": "There appears to have been a problem with your registration."
+        }
+    ]
+}
