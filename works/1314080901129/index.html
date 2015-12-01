@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html ng-app="providerModule">
-  <head lang="en">
+<html ng-app="myAppModule">
+  <head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,20 +20,7 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-    function MyFilterDemoCtrl($scope) {
-        var danjuData = {
-            danweiName:'changchengzhuangshi',
-            shoukuanfangshi:'zhifubao',
-            shoukuanData:'2015-11-12',
-            shoukuanren:'yeliangchen',
-            shoukuanjine:'2000',
-            shoukuanzhanghu:'zhaoritian',
-            yinghangkahao:'12345678',
-            zhuangtai:'wubianhua',
-        };
-        $scope.data = danjuData;
-} </script>
+    
   </head>
   <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -63,9 +50,67 @@
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
-
     </div><!-- /.container -->
-
+<div class="row col-lg-offset-2">
+   <form class="form-inline" role="form">
+     <div class="form-group row">
+       <div class="row">
+        <label for="example1">单位名称：</label>
+        <input type="text"
+        class="form-control input-sm" ng-model="danweiName" id="example1"/>
+         <label for="example2">收款方式：</label>
+           <input type="text" class="form-control input-sm" ng-model="shoukuanfangshi" id="example2"/>
+            <label for="example3">收款日期：</label>
+            <input type="text" class="form-control input-sm" ng-model="shoukuanDate" id="example3"/>
+             <label for="example4">收款金额：</label>
+             <input type="text" class="form-control input-sm" ng-model="shoukuanjine" id="example4"/>
+                </div>
+ </div>
+  <br>
++                <br>
++
++                <div class="form-group row">
++                    <div class="row">
++                        <label for="example5">收款账户：</label>
++                        <input type="text" class="form-control input-sm" ng-model="shoukuanzhanghu" id="example5"/>
++
++                        <label for="example6">银行账号：</label>
++                        <input type="text" class="form-control input-sm" ng-model="shoukuankahao" id="example6"/>
++
++                         <label for="example7">状态：</label>
++                        <input type="text" class="form-control input-sm" ng-model="zhuangtai" id="example7"/>
++
++                        <label for="example8">备注：</label>
++                        <input type="text" class="form-control input-sm" ng-model="Other" id="example8"/>
++                       
++                    </div>
++                </div>
++
++                <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
++                    <button type="button" class="btn btn-default" ng-click="showInput()">
++                        {{isHidden ? '提交' : '隐藏'}}
++                    </button>
++                </div>
++            </form>
++
++        </div>
++    </div>
++</div>
++
++<div class="container col-xs-offset-3 ng-cloak" ng-cloak>
++    <p class="lead">
++    <div ng-hide="isHidden">您输入的数据为：</div>
++    <div id="name" ng-hide="isHidden">单位名称->{{Pno}}</div>
++    <div id="fangshi" ng-hide="isHidden">收款方式->{{Sort}}</div>
++    <div id="date" ng-hide="isHidden">收款日期->{{Name}}</div>
++    <div id="jine" ng-hide="isHidden">收款金额->{{Size}}</div>
++    <div id="zhanghu" ng-hide="isHidden">收款账户->{{Color}}</div>
++    <div id="zhanghao" ng-hide="isHidden">银行账号->{{Unit}}</div>
++    <div id="zhuangtai" ng-hide="isHidden">状态->{{Num}}</div>
++    <div id="Other" ng-hide="isHidden">备注->{{Other}}</div>
++    </p>
++</div>
++<!-- /.container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
