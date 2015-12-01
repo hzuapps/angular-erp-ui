@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="myMaterialsModule">
+  <head>
+    <meta http-equiv="Content-Type" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>{{uiName}} by 1314080901201物料中的供应商信息</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <script src"../..lib/angular-1.4.5/angular.min.js></script>
+      <script src="js/myMaterialsModule.js"></script>
+    <!-- Bootstrap -->
+    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--> 
+  </head>
+  <body>
+  <body ng-controller="myMaterialsCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#contact">about</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div margin:0px;width:614px;right:auto;left:0px;top:0px;height:154px;>
+    <p style="background-color:#99bce8;color:blue;font-weight:bold">供应商信息</p>
+    <label for="number">供应商编号：</label>
+    <input type="text" name="number" id="number" value=""/>
+    <label for="date">建档日期：</label>
+    <input type="text" name="date" id="date" value=""/>
+    <label for="sort">供应商类别：</label>
+   <select> 
+    <option value="五金类" >五金类</option>
+    <option value="电器类">电器类</option>
+    <option value="板材类">板材类</option>
+    <option value="油漆类">油漆类</option>
+    <option value="刀具类">刀具类</option>
+    <option value="其它">其它</option>
+   </select>
+   </div>
+   
+   <div>
+    <label for="name">供应商全称：</label>
+    <input type="text" name="name" id="name" value=""/>
+    <label for="code">拼音码：</label>
+    <input type="text" name="code" id="code" value=""/>
+    <label for="homepage">供应商主页：</label>
+    <input type="text" name="homepage" id="homepage" value=""/>
+    </div>
+    
+  <div style="width: 1270px;height: 155px">
+  <label for="jc">供应商简称：</label>
+    <input type="text" name="jc" id="jc" value=""/>
+    <label for="area">行政区域：</label>
+    <input type="text" name="area" id="area" value=""/>
+    <label for="synposis">供应商简介：</label>
+    <input type="text" name="synposis" id="synposis" value=""/><br/>
+    <lable for="stop or not">是否停用：</lable>
+    <input type="checkbox" value="" name="stop or not" checked="checked" >
+    <input type="submit" value="+保存/修改" name="submit"/>
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
