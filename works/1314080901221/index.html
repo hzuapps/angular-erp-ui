@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head ng-app="myAppModule">
+<html lang="zh-CN" ng-app="myAppModule">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>{{岗位管理}} by 1314080901221</title>
+    <title>岗位管理 by 1314080901221</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-        <script src="js/myAppModule.js"></script>
+    <script src="js/myAppModule.js"></script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,19 +21,16 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-        <script>
-    function MyFilterDemoCtrl($scope) {
-        var someData = {
-            department: '所属部门',
-            job_name: '岗位名称',
-            job_level: '岗位层次',
-            job_type: '岗位类型',
-            salary: '基本薪资'
-            job_statement:'岗位指着'
-        };
-        $scope.data = someData;
-    } </script>
+    <style type="text/css">
+    .style1{
+      width:200px
+      }
+      body{
+        background-color:#838B83
+      }
+    </style>
   </head>
+
   <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -56,11 +53,36 @@
       </div>
     </nav>
 
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <div class="container" align="center">
+      <div style="width:330px; height:500px; background:#FFFFFF;" align="center" >
+        <h3 style="background-color:#FFF0F5;">岗位管理</h3>
+        <hr/>
+        <form>
+          <P>所属部门：       
+            <select name="bumen"class="style1" style="width:200px">
+              <option>人事</option>
+              <option>仓库</option>
+            </select>
+          </P>
+          <p>岗位名称：<input class="style1" style="width:200px" /></p>
+          <p>岗位层次：<input class="style1"/></p>
+          <p>岗位类型：<input class="style1"/></p>
+          <p>基本薪资：<input class="style1"/></p>
+          <p>岗位职责：<input class="style1" style="height:70px;"/></p>
+          <button ng-click="showInput()" type="button" >{{isHidden ? '提交' : '返回'}}</button>
+          <button>重置</button>
+        </form>
+        <div ng-hide="isHidden">
+        <p >
+          <div ng-hide="isHidden">您输入的数据为：</div>    
+          <div ng-hide="isHidden">所属部门：->{{mydata.department}}</div>
+          <div ng-hide="isHidden">岗位名称：->{{mydata.job_name}}</div>
+          <div ng-hide="isHidden">岗位层次：->{{mydata.job_level}}</div>
+          <div ng-hide="isHidden">岗位类型：->{{mydata.job_type}}</div>
+          <div ng-hide="isHidden">基本薪资：->{{mydata.salary}}</div>
+          <div ng-hide="isHidden">岗位职责：->{{mydata.job_statement}}</div>
+        </p>
+        </div>
       </div>
 
     </div><!-- /.container -->
