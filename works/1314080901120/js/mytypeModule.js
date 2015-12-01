@@ -9,7 +9,10 @@ mytypeModule.controller('mytypeCtrl', function ($scope) {
         
         var type = {
             typeName: 'һ',
-            
+            danjia:123,
+            shuliang:1,
+            jiner:456,
+            Idcard:'111'
         };
         $scope.data = someData;
 } 
