@@ -8,7 +8,7 @@ materialModule.controller('creatematerialCtrl', function ($scope) {
        // controller code would go here
 
         var material = {
-            wuliaoLeibie:"Îå½ð",
+            wuliaoLeibie:"wujin",
             wuliaoName:" ",
             updatedDate:" ",
             pingyinMa:" ",
