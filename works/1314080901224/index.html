@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app="operationModule">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>{{流程-审核-操作明细}} by 1314080901224</title>
+    <title>流程-审核-操作明细 by 1314080901224</title>
+ <!--引用js-->
+    
+      <script src="../../lib/angular-1.4.5/angular.js"></script>
+      <script src="js/operatingDetails.js"></script>
+  
     <link rel="shortcut icon" href="icons/favicon.ico" />
     
     <!-- Bootstrap -->
@@ -13,15 +18,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-	<script>
-+    function MyFilterDemoCtrl($scope) {
-+        var Operation = {
-+            operate-name: "lin",
-+            detail: 'xing',
-+            notes: "wei",
-+        };
-+        $scope.data = someData;
-+} </script>
+
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +29,7 @@
     <![endif]-->
   </head>
   
-  <body>
+  <body ng-controller="CreateOperation" >
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -59,7 +57,47 @@
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
+      
+      <div style="width:80%;margin:auto;font-size:20px;margin-left:150px;margin-bottom:20px;sh" >
+        <div style="width:90px;text-shadow:2px 2px 2px #808080;">
+          操作明细:
+          </div>
+        </div>
 
+        <div style="width:70%;margin:auto;">
+
+
+          <div style="margin-bottom:10px;margin-left:4px;">
+            名称：<input id="operationName" type="text" style="width:200px;height:30px;" ng-model="theData.operateName">            
+          </div> 
+
+          <div style="margin-bottom:8px;">
+
+            <div style="display:inline-block;width:42px;vertical-align:top;">
+              明细：
+            </div>
+            <div style="display:inline-block;width:400px;">
+              <textarea id="operationDetail" style="width:400px;height:100px;" ng-model="theData.detail"></textarea>
+            </div>
+            <div style="display:inline-block;width:100px;vertical-align:top;margin-left:0px;">
+             <input type="button" style="width:100px;height:100px;" value="详细数据PDF">
+            </div>
+             
+          </div>
+
+          <div>
+            <div style="display:inline-block;width:42px;vertical-align:top;">
+              批示：
+            </div>
+            <div style="display:inline-block;width:500px;height:120px;">
+              <textarea id="operationNotes" style="width:500px;height:100px;" ng-model="theData.notes"></textarea>
+            </div>
+             
+          </div>
+          
+      </div>
+      <div style="height:500px;">
+      </div>
     </div><!-- /.container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -68,3 +106,4 @@
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
+
