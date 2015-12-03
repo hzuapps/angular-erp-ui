@@ -13,10 +13,35 @@ var operationData = {
 
 
 
-//定义控制器
+
 var myOperationModule=angular.module("operationModule",[]);
-myOperationModule.controller("CreateOperation",function($scope){
-$scope.theData=operationData;
+
+myOperationModule.factory("operationService",function($http){
+	var getOperationData={};
+	getOperationData.getData=function(){
+		var promise=$http({
+			url:"jsonData/operationData.json",
+			method:"get",
+		});
+		return promise;
+	}
+	return getOperationData;
+
+});
+
+
+//定义控制器
+myOperationModule.controller("CreateOperation",function($scope,operationService){
+  var promise=operationService.getData();
+  promise.success(function(data,status){  
+        var operationData1=operationData;
+            operationData1.operateName=data["operateName"];
+            operationData1.detail=data["detail"];
+            operationData1.notes=data["notes"];
+
+            $scope.theData=operationData1;
+  });
+
 
 });
 
@@ -51,6 +76,7 @@ return{
 
 };
 });
+
 
 
 
