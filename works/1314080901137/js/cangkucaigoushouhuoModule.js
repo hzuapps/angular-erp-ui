@@ -7,14 +7,18 @@ var cangkucaigoushouhuoModule = angular.module('cangkucaigoushouhuoModule', []);
 cangkucaigoushouhuoModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
                 var cat = {
-            gongyingshang: '111',
-            cangku: '111',
-            jingshouren:'111',
-            jingbanriqi:'111',
-            zhuangtai:'111'  
+            gongyingshang: 'china',
+            cangku: '001',
+            jingshouren:'zhang3',
+            jingbanriqi:'2015-1-1',
+            zhuangtai:'ok',
+            beizhu:' '  
         };
         $scope.data = cat;
-       
+         $scope.isHidden = true;
+        $scope.showInput = function () {
+            $scope.isHidden = !$scope.isHidden;
+        }
     }
 );
 

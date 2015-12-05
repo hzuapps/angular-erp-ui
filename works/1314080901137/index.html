@@ -45,14 +45,68 @@
     </nav>
 
     <div class="container">
-
       <div class="starter-template">
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
+    </div>
 
-    </div><!-- /.container -->
-<p>{{data.cangku}}</p>
+
+<div class="container">
+    <div class="row col-lg-offset-2">
+        <form class="form-inline" role="form">
+
+            <div class="form-group row">
+                <div class="row">
+                    <label for="example1">供应商：</label>
+                    <input type="text" class="form-control input-sm" ng-model="gongyingshang" id="example1"/>
+
+                    <label for="example2">仓库：</label>
+                    <input type="text" class="form-control input-sm" ng-model="cangku" id="example2"/>
+
+                    <label for="example3">经手人：</label>
+                    <input type="text" class="form-control input-sm" ng-model="jingshouren" id="example3"/>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="form-group row">
+                <div class="row">
+                    <label for="example4">经办日期：</label>
+                    <input type="text" class="form-control input-sm" ng-model="jingbanriqi" id="example4"/>
+
+                    <label for="example5">状态：</label>
+                    <input type="text" class="form-control input-sm" ng-model="zhuangtai" id="example5"/>
+
+                    <label for="example6">备注</label>
+                    <input type="text" class="form-control input-sm" ng-model="beizhu" id="example6"/>
+                </div>
+            </div>
+
+            <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+                <button type="button" class="btn btn-default" ng-click="showInput()">
+                    {{isHidden ? '确定' : '隐藏'}}
+                </button>
+            </div>
+        
+        </form>
+    </div>
+</div>
+
+<div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+    <div ng-hide="isHidden">您输入的数据如下：</div>
+    <div id="gongyingshang" ng-hide="isHidden">供应商->{{gongyingshang}}</div>
+    <div id="cangku" ng-hide="isHidden">仓库->{{cangku}}</div>
+    <div id="jingshouren" ng-hide="isHidden">经手人->{{jingshouren}}</div>
+    <div id="jingbanriqi" ng-hide="isHidden">经办日期->{{jingbanriqi}}</div>
+    <div id="zhuangtai" ng-hide="isHidden">状态->{{zhuangtai}}</div>
+    <div id="beizhu" ng-hide="isHidden">备注->{{beizhu}}</div>
+    </p>
+</div>
+<!-- /.container -->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
