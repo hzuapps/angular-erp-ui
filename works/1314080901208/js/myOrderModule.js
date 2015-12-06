@@ -68,6 +68,7 @@ myOrderModule.controller("CreateOrderInformation",function($scope,orderService){
 });
 
 //使用directive渲染列表数据，样式即css已经定义在index页面
+//这里的directive命名必须小写 
 myOrderModule.directive("myorderdata",function(){
   return{
       restrict:"AEC",
