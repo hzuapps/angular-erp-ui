@@ -21,7 +21,7 @@
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-controller="MyFilterDemoCtrl">
+<body ng-controller="MyFilter">
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -56,18 +56,19 @@
 
 <div class="container">
     <div class="row col-lg-offset-2">
-        <form class="form-inline" role="form">
-
+        <form class="form-inline" role="form" ng-submit="register()" novalidate>
             <div class="form-group row">
                 <div class="row">
                     <label for="example1">供应商编号：</label>
-                    <input type="text" class="form-control input-sm" ng-model="providerNum" id="example1"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.Id" id="example1" required/>
 
                     <label for="example2">供应商全称：</label>
-                    <input type="text" class="form-control input-sm" ng-model="providerFullName" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.FullName" id="example2"
+                           required/>
 
                     <label for="example3">供应商简称：</label>
-                    <input type="text" class="form-control input-sm" ng-model="providerSimpName" id="example3"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.SimpName" id="example3"
+                           required/>
                 </div>
             </div>
             <br>
@@ -76,35 +77,44 @@
             <div class="form-group row">
                 <div class="row">
                     <label for="example4">供应商类别：</label>
-                    <input type="text" class="form-control input-sm" ng-model="providerType" id="example4"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.Type" id="example4" required/>
 
                     <label for="example5">供应商介绍：</label>
-                    <input type="text" class="form-control input-sm" ng-model="providerIntroduce" id="example5"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.Introduce" id="example5"
+                           required/>
 
                     <label for="example6">供应商地址：</label>
-                    <input type="text" class="form-control input-sm" ng-model="address" id="example6"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.Address" id="example6"
+                           required/>
                 </div>
             </div>
 
             <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
-                <button type="button" class="btn btn-default" ng-click="showInput()">
+                <button type="submit" class="btn btn-default">
                     {{isHidden ? '提交' : '隐藏'}}
                 </button>
             </div>
-        
+            <br>
+            <br>
+
+            <!-- SHOW ERROR/SUCCESS MESSAGES
+            <div id="messages" class="ng-cloak" ng-show="backMess" ng-hide="isHidden">
+                <p>{{ backMess[0].message }}</p>
+            </div>-->
         </form>
     </div>
 </div>
 
 <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
     <p class="lead">
+
     <div ng-hide="isHidden">您输入的数据为：</div>
-    <div id="providerNum" ng-hide="isHidden">供应商编号->{{providerNum}}</div>
-    <div id="providerFullName" ng-hide="isHidden">供应商全称->{{providerFullName}}</div>
-    <div id="providerSimpName" ng-hide="isHidden">供应商简称->{{providerSimpName}}</div>
-    <div id="providerType" ng-hide="isHidden">供应商类别->{{providerType}}</div>
-    <div id="providerIntroduce" ng-hide="isHidden">供应商介绍->{{providerIntroduce}}</div>
-    <div id="address" ng-hide="isHidden">供应商地址->{{address}}</div>
+    <div id="providerNum" ng-hide="isHidden">供应商编号->{{provider.Id}}</div>
+    <div id="providerFullName" ng-hide="isHidden">供应商全称->{{provider.FullName}}</div>
+    <div id="providerSimpName" ng-hide="isHidden">供应商简称->{{provider.SimpName}}</div>
+    <div id="providerType" ng-hide="isHidden">供应商类别->{{provider.Type}}</div>
+    <div id="providerIntroduce" ng-hide="isHidden">供应商介绍->{{provider.Introduce}}</div>
+    <div id="address" ng-hide="isHidden">供应商地址->{{provider.Address}}</div>
     </p>
 </div>
 <!-- /.container -->
