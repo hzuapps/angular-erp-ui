@@ -9,6 +9,7 @@
     <script>
     function MyFilterDemoCtrl($scope) {
         var flow = {
+            ID:'ID',
             name: '名称',
             operation: '操作',
             condition: '状态'
@@ -31,7 +32,7 @@
     <![endif]-->
     
   </head>
-  <body ng-controller="MyFilterDemoCtrl">
+  <body ng-controller="procedureModuleDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -54,18 +55,31 @@
     </nav>
 
     <div class="container">
-
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-    </div>
 
-    </div><!-- /.container -->
+      <div class="x-panel x-grid-with-row-lines x-border-item x-box-item x-panel-default x-grid" style="width: 520px; right: auto; left: 5px; top: 5px; margin: 0px; height: 195px;">
+      <div id="head" style="width:auto;height:32px;background-color:#5599FF;color:0000FF;font-size:28px;padding-right:400px;">待处理</div>
+      <table class="table">
+      <tr style="background-color:#e3e3e3">
+        <td>ID</td>
+        <td>名称</td>
+        <td>操作</td>
+        <td>状态</td>
+      </tr>
+       <tr >
+        <td>{{data.procedureID}}</td>
+        <td>{{data.procedureName}}</td>
+        <td>{{data.procedureOperation}}</td>
+        <td>{{data.procedureCondition}}</td>
+      </tr>
+      </table>
+      </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-    <script Language=""JavaScript" src="js/procedureModule.js"></script>
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/procedureModule.js"></script>
   </body>
 </html>
