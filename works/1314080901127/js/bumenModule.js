@@ -11,8 +11,13 @@ bumenModule.controller('MyFilterDemoCtrl', function ($scope) {
             code: '123',
             workernumber: 3
         };
-        $scope.data = bumen;
-    }
+        $scope.data = bumenData;
+		$scope.isHidden = true;
+        $scope.showInput = function () 
+		{
+            $scope.isHidden = !$scope.isHidden;
+        }
+}
 );
 
 // use the myAppModule variable to
