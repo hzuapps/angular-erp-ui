@@ -1,0 +1,5 @@
+[
+           { "name": "aa","type": "五金","version":"L","color":"black", "description":"balabala"},
+           { "name": "bb","type": "五金","version":"L","color":"black", "description":"balabala"},
+           { "name": "cc","type": "五金","version":"L","color":"black", "description":"balabala"}
+]
