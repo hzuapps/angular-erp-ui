@@ -7,9 +7,17 @@ var chaxundanModule = angular.module('chaxundanModule', []);
 chaxundanModule.controller('createchaxundanDemoCtrl', function ($scope) {
        // controller code would go here
         var chaxundanSet = {
-         付款状态:"全部"，
-         起始日期:"2015-10-20",
-         终止日期:"2015-10-20"        };
+         Unit name:"wwx"，
+         Payment method:"支付宝",
+         Payment date:"2015-10-20",
+         Middle man:"wwx",
+         Payment amount:"wwx",
+         Payment account:"wwx",
+         Bank account:"wwx",
+         State:"wwx",
+         Write off amount:"wwx",
+         Remarks:"wwx",
+        };
         $scope.data = chaxundanSet;
     }
 );
