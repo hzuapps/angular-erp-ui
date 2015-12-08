@@ -9,25 +9,13 @@
      
      <link rel="shortcut icon" href="icons/favicon.ico" />
      <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+     <script type="text/javascript" src="js/queryProcessing.js"></script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    <script>
-     var queryProcessing = angular.module('queryProcessing', []);
-      queryProcessing.controller('queryProcessingCtrl', function ($scope) {
-             // controller code would go here
-              var someData = {
-                  name: 'a',
-                  operation: '无',
-                  status:'待审核'
-              };
-              $scope.data = someData;
-          }
-      );
-
-    </script>
+   
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
