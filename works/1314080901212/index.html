@@ -22,6 +22,15 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]--> 
+    
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>仓库的出库表单创建</h1>
+             </div>
+
+    </div><!-- /.container -->
+    
     <script>
     function Crate Product Storage ($scope) {
         var someData = {
@@ -84,22 +93,29 @@
    </select>
    
     <label for="Handing date">经办日期：</label>
--    <input type="text" name="Handing date" id="Handing date" value=""/>
+    <div class="col-md-2">
+-    <input type="date" name="Handing date" id="Handing date" value=""/>
 
    </div>
    
    <div>
     <label for="State">状态：</label>
     <input type="text" name="State" id="State" value=""/>
+    
     <label for="Remark">备注：</label>
-    <input type="text" name="Remark" id="Remark" value=""/>
-   
+     <div class="col-md-7">
+                <input class="form-control disabled" id="Remark" type="text" />
+
     </div>
     
 	
   <div style="width: 1270px;height: 155px">
-    <input type="submit" value="+新建" name="submit"/>
-    <input type="submit" value="+保存" name="submit"/>
+    <input type="button" value="新建" name="submit"/>
+    <input type="button" value="保存" name="submit"/>
+    <input type="button" value="删除" name="submit"/>
+    <input type="button" value="确定" name="submit"/>
+    <input type="button" value="导出excel" name="submit"/>
+    <input type="button" value="入库" name="submit"/>
   </div>
   
 <DIV style="position:relative; top:0px; left:0px; width:80px; height:120px;  overflow: hidden">
