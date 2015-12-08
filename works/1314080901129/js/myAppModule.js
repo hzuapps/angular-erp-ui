@@ -24,6 +24,7 @@
 +            yinghangkahao:'12345678',
 +            zhuangtai:'wubianhua',
 +        };
+
 +        $scope.data = danjuData;
      	   $scope.isHidden = true;
      	   $scope.showInput = function () {
