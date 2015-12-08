@@ -11,11 +11,15 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
             job_name: '岗位',
             job_level: '层次',
             job_type: '类型',
-            salary: '5000'
+            salary: '5000',
             job_statement:'职责'
         };
-        $scope.data = someData;
+        $scope.mydata = someData;
 
+        $scope.isHidden=true;
+        $scope.showInput=function(){
+            $scope.isHidden=!$scope.isHidden;
+        }
     }
 );
 
