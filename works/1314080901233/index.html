@@ -9,7 +9,7 @@
      
      <link rel="shortcut icon" href="icons/favicon.ico" />
      <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-     <script type="text/javascript" src="js/queryProcessing.js"></script>
+     <script src="js/queryProcessing.js"></script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -44,9 +44,23 @@
       </div>
     </nav>
 
-    <div class="container" ng-app>
+    <div class="container">
+      <div id="procesingList">
+      <h1>流程-审核-待处理列表</h1>
+         <table class="table" >
+          <tr style="background-color:#0066cc">
+            <td>名称</td>
+            <td>操作</td>
+            <td>状态</td>
+          </tr>
+          <tr  ng-repeat="process in someData">
+            <td>{{process.name}}</td>
+            <td>{{process.operation}}</td>
+            <td>{{process.status}}</td>
+          </tr>
+      </table>
+      </div>
       <div class="starter-template" >
-       名字是：{{data.name}}
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
