@@ -12,6 +12,10 @@
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
     
     <link href="css/style.css" rel="stylesheet">
+    <script>
+
+    
+    </script>
 
   </head>
   <body ng-controller="MyFilterDemoCtrl">
@@ -21,15 +25,15 @@
         <h4>操作明细</h4>
       </div>
       <div class="container" >
-        <form>
+        <form  ng-submit="register()" novalidate>
         <table >
 		<tr>名称：</td>
-	    <td colspan="2" ><input name="name" id="name" ng-model="name"></td>
+	    <td colspan="2" ><input name="name" id="name" ng-model="name"  required/></td>
 	    </tr>
 		<tr>
 			<td >明细：</td>
 			<td colspan="1" >
-				<textarea  name="detailed" id="detailed" rows="4" cols="100%" ng-model="detailed">{{data.detailed}}</textarea>
+				<textarea  name="detailed" id="detailed" rows="4" cols="100%" ng-model="detailed" required></textarea>
 			</td>
 			<td colspan="1">
 				<a href="#">
@@ -40,12 +44,13 @@
 		<tr>
 			<td >批示：</td>
 			<td colspan="2">
-				<textarea  name="instructions" ng-model="instructions" id="instructions" rows="4" ><span ng-bind="data.instructions"></span></textarea>
+				<textarea  name="instructions" ng-model="instructions" id="instructions" rows="4"  required></textarea>
 			</td>
 		</tr>
 		</table>
     <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
-        <button type="button" class="btn btn-default" ng-click="showInput()">
+        <!-- <button type="button" class="btn btn-default" ng-click="showInput()"> -->
+         <button type="submit" class="btn btn-default">
             {{isHidden ? '提交' : '隐藏'}}
         </button>
     </div>
@@ -71,7 +76,7 @@
     
 
   	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!--<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
