@@ -6,12 +6,11 @@ var queryProcessing = angular.module('queryProcessing', []);
 // configure the module with a controller
 queryProcessing.controller('queryProcessingCtrl', function ($scope) {
        // controller code would go here
-        var someData = {
-            name: 'a',
-            operation: '无',
-            status:'待审核'
-        };
-        $scope.data = someData;
+        $scope.someData=[
+        {name:'w',operation:'改了a',status:'已审核'},
+        {name:'s',operation:'改了b',status:'待审核'},
+        {name:'t',operation:'改了c',status:'待审核'}        
+        ]
     }
 );
 
