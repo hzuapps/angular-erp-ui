@@ -55,3 +55,4 @@ message + "\n" + "\n" + "Your danju.danweiName is " + $scope.danju.danweiName);
 +    return function(txt) {
 +        // filter code would go here
 +}; }); 
+
