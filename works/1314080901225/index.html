@@ -58,31 +58,26 @@
 
 
     
-	<form class="form-horizontal" role="form">
+	<form class="form-horizontal" role="form" ng-submit="create()">
     <fieldset>
 
         <div class="form-group">
             <label for="ManifestNum"  class="col-md-1 control-label">订单编码：</label>
             <div class="col-md-2">
-                <select id="ManifestNum" class="form-control">
-                    <option>001</option>
-                    <option>002</option>
-                    <option>003</option>
-                    <option>004</option>
+                <select id="ManifestNum" class="form-control" ng-model="seleted" ng-options="a.ManifestNum for a in SelectItem">
+                    
                 </select>
             </div>
             <label for="Wearhouse"  class="col-md-1 control-label">仓库：</label>
             <div class="col-md-2">
-                <select id="Wearhouse" class="form-control">
-                    <option>1号仓库</option>
-                    <option>2号仓库</option>
+                <select id="Wearhouse" class="form-control" ng-model="seleted" ng-options="a.Wearhouse for a in SelectItem">
+                    
                 </select>
             </div>
             <label for="Handler"  class="col-md-1 control-label">经手人：</label>
             <div class="col-md-2">
-                <select id="Handler" class="form-control">
-                    <option>富土康质检员张全蛋</option>
-                    <option>隔壁老王</option>
+                <select id="Handler" class="form-control" ng-model="seleted" ng-options="a.Handler for a in SelectItem">
+                   
                 </select>
             </div>
             <label for="HandlingData"  class="col-md-1 control-label">经办日期：</label>
@@ -108,8 +103,8 @@
 		         点我
 		 		</button> -->	
         <div class="btn-group col-lg-push-1" >
-            <button ng-click="showCreat()" type="button" class="btn btn-default btn-sm" >新建</button>
-            <button ng-click="showSave()"type="button" class="btn btn-default btn-sm" >保存</button>
+            <button type="submit" class="btn btn-default btn-sm" >新建</button>
+            <button type="button" class="btn btn-default btn-sm" >保存</button>
             <button type="button" class="btn btn-default btn-sm" disabled="disabled">删除</button>
             <button type="button" class="btn btn-default btn-sm" disabled="disabled">确定</button>
             <button type="button" class="btn btn-default btn-sm" disabled="disabled">导出excel</button>
@@ -117,15 +112,17 @@
         </div>
     </fieldset>
 
-	<div class="container">
 
-      <div class="starter-template">
-        
-        <p id="creat" ng-hide="isCreat" class="lead">成功创建.</p>
-		 <p id="save" ng-hide="isSave" class="lead">成功保存.</p>
-      </div>
-	</div>
+
+
 	
+	<div class="errorMessage" ng-show="showErrorMessage">
+    {{errorsMessage}}
+	<br/>
+	</div>
+	<div class="successMessage" ng-show="showSuccessMessage">
+	{{successMessage}}    
+	</div>
 
 </form>
    
