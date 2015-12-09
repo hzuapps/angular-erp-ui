@@ -1,15 +1,24 @@
  
 var myapp = angular.module("myapp", []);
-myapp.controller("homeController", function ($scope){
-	var renshizz = {
-            suoshubumen: 'renshi',
-            gangweimingcheng: 'GRANT',
-            gangweichenchi: new Date(2010, 2, 23),
-            gangweileixin: 'guanligang',
-            jibenxinzhi: 'super-basic-plan',
-            gangweizhizhe:'myzhizhe'
-        };
-		$scope.renshizz1 = renshizz;
+myapp.controller("homeController", function ($scope,$http){
+	
+	var promise=$http({
+			url:"jsonData/myJson.json",
+			method:"get",
+		});
+    promise.success(function(data,status){ 
+	
+	     $scope.renshizz1 = {
+			 suoshubumen:data["suoshubumen"],
+			 gangweimingcheng: data["gangweimingcheng"],
+             gangweichenchi: data["gangweichenchi"],
+             gangweileixin: data["gangweileixin"],
+             jibenxinzhi: data["jibenxinzhi"],
+             gangweizhizhe:data["gangweizhizhe"]
+		 };
+  });
+	
+		
 });
 
 myapp.directive("thesuoshubumen",function(){
