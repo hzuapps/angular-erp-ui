@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app="myapp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,20 +20,11 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-    function MyFilterDemoCtrl($scope) {
-        var renshizz = {
-            suoshubumen: 'renshi',
-            gangweimingcheng: 'GRANT',
-            gangweichenchi: new Date(2010, 2, 23),
-            gangweileixin: 'guanligang',
-            jibenxinzhi: 'super-basic-plan',
-            gangweizhizhi
-        };
-        $scope.data = someData;
-} </script>
+   
+<script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/myModule.js"></script>
   </head>
-  <body>
+  <body ng-controller="homeController">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -61,6 +52,14 @@
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
+	  <div style="width:60%;margin:auto;">
+	    <div>所属部门<input type="text" style="margin-left:5px;" ng-model="renshizz1.suoshubumen"></div>
+		<div>岗位名称<input type="text" style="margin-left:5px;" ng-model="renshizz1.gangweimingcheng"></div>
+		<div>岗位层次<input type="text" style="margin-left:5px;" ng-model="renshizz1.gangweichenchi"></div>
+		<div>岗位类型<input type="text" style="margin-left:5px;" ng-model="renshizz1.gangweileixin"></div>
+		<div>基本薪资<input type="text" style="margin-left:5px;" ng-model="renshizz1.jibenxinzhi"></div>
+		<div>岗位职责<input type="text" style="margin-left:5px;" ng-model="renshizz1.gangweizhizhe"></div>
+	  </div>
 
     </div><!-- /.container -->
 
