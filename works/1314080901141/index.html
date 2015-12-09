@@ -21,8 +21,9 @@
     <![endif]-->
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>>
     <script src="js/myAppModule.js"></script>>
+    <script src="js/rejectRequestModule.js"></script>
   </head>
-  <body ng-app="myAppModule" ng-controller="MyFilterDemoCtrl">
+  <body ng-app="rejectRequestModule" ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -61,27 +62,27 @@
 
 	<label>单据信息</label>
 
-	<form class="form-inline" role="form">
+	<form class="form-inline" role="form" ng-submit="register()" novalidate>
 	   <div>
 		   <div class="form-group">
 		      <label for="category">费用类别:</label>
 		      <input type="text" class="form-control" id="category" 
-		         ng-model="data.category">
+		         ng-model="data.category" required>
 		   </div>
 		   <div class="form-group">
 		      <label for="department">报账单位:</label>
 		      <input type="text" class="form-control" id="department" 
-		         ng-model="data.department">
+		         ng-model="data.department" required>
 		   </div>
 		   <div class="form-group">
 		      <label for="receiverName">报账人:</label>
 		      <input type="text" class="form-control" id="receiverName" 
-		         ng-model="data.receiverName">
+		         ng-model="data.receiverName" required>
 		   </div>
 		   	<div class="form-group">
 		      <label for="costDateString">报账日期:</label>
 		      <input type="text" class="form-control" id="costDateString" 
-		         ng-model="data.costDateString">
+		         ng-model="data.costDateString" required>
 		    </div>
 	    </div>
 	    <div>
@@ -93,7 +94,7 @@
 		   <div class="form-group">
 		      <label for="total">实付金额:</label>
 		      <input type="text" class="form-control" id="total" 
-		         ng-model="data.total">
+		         ng-model="data.total" required>
 		   </div>
 		   <div class="form-group">
 		      <label for="statusText">状态 :</label>
@@ -103,16 +104,41 @@
 		   	<div class="form-group">
 		      <label for="remark">备注 :</label>
 		      <input type="text" class="form-control" id="remark" 
-		         ng-model="data.remark">
+		         ng-model="data.remark" required>
 		    </div>
 		</div>
 
 		<button type="submit" class="btn btn-default">新增</button>
+
+		<div class="btn-group ng-cloak" role="group" ng-cloak>
+        <!-- <button type="button" class="btn btn-default" ng-click="showInput()"> -->
+         	<button type="submit" class="btn btn-default">
+            	{{isHidden ? '提交' : '隐藏'}}
+         	</button>
+     	</div>
+
    		<button type="submit" class="btn btn-default">保存</button>
-   		<button type="submit" class="btn btn-default">提交</button>
    		<button type="submit" class="btn btn-default">确认</button>
    		<button type="submit" class="btn btn-default">删除</button>
    		<button type="submit" class="btn btn-default">导出Excel</button>
 	</form>
+
+	<div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+    <div ng-hide="isHidden">您输入的数据为：</div>
+    <div id="category" ng-hide="isHidden">费用类别:{{data.category}}</div>
+    <div id="department" ng-hide="isHidden">报账单位:{{data.department}}</div>
+    <div id="receiverName" ng-hide="isHidden">报账人:{{data.receiverName}}</div>
+    <div id="costDateString" ng-hide="isHidden">报账日期:{{data.costDateString}}</div>
+    <div id="total" ng-hide="isHidden">实付金额:{{data.total}}</div>
+    <div id="remark" ng-hide="isHidden">备注:{{data.remark}}</div>
+
+   
+    </p>
+    </div>
+
+
+
+
   </body>
 </html>
