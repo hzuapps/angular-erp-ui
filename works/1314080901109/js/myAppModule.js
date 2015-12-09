@@ -1,6 +1,6 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var myAppModule = angular.module('supplierInformationModule', []);
+var myAppModule = angular.module('myAPPModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
@@ -10,7 +10,7 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
             XUHAO: '01',
             BIANMA: '1008611',
             LEIBIE: 'watch',
-            NAME: 'SEIKO,
+            NAME: 'SEIKO',
             XINGHAO: '1008612'
             DANWEI: '100',
             SHULIANG: '1000',
@@ -20,12 +20,18 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
         };
         $scope.data = someData;
        // controller code would go here
+      $scope.isHidden = true;
+      $scope.showHideColors = function () {
+           $scope.isHidden = !$scope.isHidden;
+    }
+
+
     }
 );
 
 // use the myAppModule variable to
 // configure the module with a filter
-myAppModule.filter('stripDashes', function() {
+myAppModule.filter('mystripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; });
