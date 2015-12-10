@@ -1,0 +1,5 @@
+[
+           { type: '1',name: '内侧板',description:'结实'},
+           { type: '3',name: '外侧板',description:'美观'},
+           { type: '2',name: '中侧板',description:'好用'}
+]
