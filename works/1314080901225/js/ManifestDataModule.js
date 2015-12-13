@@ -13,7 +13,33 @@ var ManifestData = {
 
 
 //创建模块
-var ManifestDataModule = angular.module('ManifestDataModule', []);
+var ManifestDataModule = angular.module("ManifestDataModule", ['ngRoute']);
+      
+      ManifestDataModule.config(['$routeProvider',
+         function($routeProvider) {
+            $routeProvider.
+               when('/myWebsite', {
+                  templateUrl: 'myWebsite.html',
+                  //controller: 'myWebsiteController'
+               }).
+               when('/aboutMe', {
+                  templateUrl: 'aboutMe.html',
+                  //controller: 'aboutMeController'
+               }).
+               otherwise({
+                  redirectTo: '/myWebsite'
+               });
+         }]);
+
+         /*ManifestDataModule.controller('myWebsiteController', function($scope) {
+            $scope.message = "Welcome to my Website";
+         });
+
+         ManifestDataModule.controller('aboutMeController', function($scope) {
+            $scope.message = "machaorong 1314080901225";
+         });*/
+
+
 
 //创建服务
 ManifestDataModule.factory("ManifestService",function($http){
@@ -92,3 +118,27 @@ ManifestDataModule.filter('stripDashes', function() {
 		// filter code would go here
 	};
 });
+
+/*ManifestDataModule.config(['$routeProvider',
+         function($routeProvider) {
+            $routeProvider.
+               when('/addStudent', {
+                  templateUrl: 'addStudent.html',
+                  controller: 'AddStudentController'
+               }).
+               when('/viewStudents', {
+                  templateUrl: 'viewStudents.html',
+                  controller: 'ViewStudentsController'
+               }).
+               otherwise({
+                  redirectTo: '/addStudent'
+               });
+         }]);
+
+ManifestDataModule.controller('AddStudentController', function($scope) {
+            $scope.message = "This page will be used to display add student form";
+         });
+
+ManifestDataModule.controller('ViewStudentsController', function($scope) {
+            $scope.message = "This page will be used to display all the students";
+         });*/

@@ -20,7 +20,7 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+   <script src="../../lib/angular-1.4.5/angular.min.js"></script>
     <script src="js/ManifestDataModule.js"></script>
 
   </head>
@@ -39,9 +39,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+			<li class="active"><a href="#myWebsite">My Website</a></li>
+            
+            <li><a href="#aboutMe">About</a></li>
+            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -114,22 +115,35 @@
 
 
 
+	<div class="container">
 
-	
-	<div class="errorMessage" ng-show="showErrorMessage">
-    {{errorsMessage}}
-	<br/>
-	</div>
-	<div class="successMessage" ng-show="showSuccessMessage">
-	{{successMessage}}    
-	</div>
+      <div class="starter-template">
+        <div class="errorMessage" ng-show="showErrorMessage">
+		<h2>{{errorsMessage}}</h2>
+		<br/>
+		</div>
+		<div class="successMessage" ng-show="showSuccessMessage">
+		<h2>{{successMessage}}</h2>    
+		</div>
+      </div>
 
+	   
+      
 </form>
+
+
+      
+    <div ng-view>
+	
+	</div>
+      
    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+	
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
   </body>
 </html>
