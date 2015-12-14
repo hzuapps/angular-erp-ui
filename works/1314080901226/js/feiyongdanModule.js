@@ -4,12 +4,12 @@ var feiyongdanModule = angular.module('feiyongdanModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-feiyongdanModule.controller('feiyongdanCtrl', function ($scope) {
-           $scope.someData = [
-         { number: '01',abstract: 'water rate',payment:'50000',remark:'pay for electricity'},
-         { number: '02',abstract: 'power rate',payment:'70000',remark:'pay for water'},
-         { number: '03',abstract: 'salary',payment:'4000',remark:'pay for employee'}
-];
+feiyongdanModule.controller('feiyongdanCtrl', function ($http,$scope) {
+        $http.get("feiyongdan_JSON.txt").success(function(someData){
+        $scope.data=someData;
+       });
+     })
+           
 
 // use the myAppModule variable to
 // configure the module with a filter
