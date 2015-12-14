@@ -1,15 +1,15 @@
+
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var feiyongdanModule = angular.module('feiyongdanModule', []);
-
+var feiyongdanModule = angular.module("feiyongdanModule", []);
 // use the myAppModule variable to
 // configure the module with a controller
-feiyongdanModule.controller('feiyongdanCtrl', function ($http,$scope) {
-        $http.get("feiyongdan_JSON.txt").success(function(someData){
+feiyongdanModule.controller('feiyongdanModuleCtrl', function ($http,$scope) {
+       // controller code would go here
+       $http.get("feiyongdan_JSON.txt").success(function(someData){
         $scope.data=someData;
        });
      })
-           
 
 // use the myAppModule variable to
 // configure the module with a filter

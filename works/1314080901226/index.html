@@ -20,10 +20,12 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <script src="js/jquery.min.js"></script>
-<script src="../lib/angular-1.4.5/angular.min.js"></script>
+ <script src="../../lib/angular-1.4.5/angular.min.js"></script>
 	<script src="js/feiyongdanModule.js"></script>
+
+
   </head>
+<body  ng-controller="feiyongdanModuleCtrl">
   <div id="content">
     <div id="head" style="width:auto;height:32px;background-color:#0066c0;color:#fff;font-size:28px;padding-left:20px;">
       费用单明细
@@ -36,7 +38,7 @@
         <td>付款金额</td>
         <td>备注</td>
       </tr>
-      <tr  ng-repeat="item in data">
+      <tr ng-repeat="item in data">
         <td>{{item.number}}</td>
         <td>{{item.abstract}}</td>
         <td>{{item.payment }}</td>
@@ -45,7 +47,6 @@
       </table>
     </div>
   </div>
-  <body  ng-controller="feiyongdanDemoCtrl">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
