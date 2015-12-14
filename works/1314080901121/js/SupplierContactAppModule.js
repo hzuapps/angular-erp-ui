@@ -4,7 +4,7 @@ var SupplierContactAppModule = angular.module('SupplierContactAppModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-SupplierContactAppModule.controller('SupplierContactFilterDemoCtrl', function ($scope) {
+SupplierContactAppModule.controller('SupplierContactFilterDemoCtrl', function ($scope,$http) {
         // controller code would go here
             var workerInformation = {
                 name: 'Liuqinwei',
@@ -16,12 +16,43 @@ SupplierContactAppModule.controller('SupplierContactFilterDemoCtrl', function ($
                 zhiwu: '董事长',
                 beizhu: '男',
             };
-            $scope.data = workerInformation;
-            $scope.items = [
-                {name: '萧炎',phone: '13546764899',officePhone: '07538573637',phototelephony: '345435',QQ: "3885746",email:'3885746@qq.com',job: '董事长',remark:'无'},
-                {name: '薰儿',phone: '13546766666',officePhone: '07535656656',phototelephony: '454545',QQ: "5345535",email:'5345535@qq.com',job: '董事长助理',remark:'无'},
-                {name: '潇潇',phone: '13546777777',officePhone: '07537676767',phototelephony: '453424',QQ: "3454523",email:'3454523@qq.com',job: '总经理',remark:'无'},
-        ];
+        var promise=$http({
+            url:"jsonData/data.json",
+            method:"get",
+        });
+
+        promise.success(function(data,status){
+       $scope.items = [{name:data[0].name,
+                        phone:data[0].phone,
+                        officePhone:data[0].officePhone,
+                        phototelephony:data[0].phototelephony,
+                        QQ:data[0].QQ,
+                        email:data[0].email,
+                        job:data[0].job,
+                        remark:data[0].remark},
+                       {name:data[1].name,
+                        phone:data[1].phone,
+                        officePhone:data[1].officePhone,
+                        phototelephony:data[1].phototelephony,
+                        QQ:data[1].QQ,
+                        email:data[1].email,
+                        job:data[1].job,
+                        remark:data[1].remark},
+                       {name:data[2].name,
+                        phone:data[2].phone,
+                        officePhone:data[2].officePhone,
+                        phototelephony:data[2].phototelephony,
+                        QQ:data[2].QQ,
+                        email:data[2].email,
+                        job:data[2].job,
+                        remark:data[2].remark}];
+        });
+        promise.error(function(data,status){
+            alert(status);
+            alert("请求出现错误，具体是什么错误还有待检查");
+        });
+
+
         }
 
 
@@ -33,6 +64,7 @@ SupplierContactAppModule.filter('SupplierContactstripDashes', function() {
     return function(txt) {
         // filter code would go here
     }; });
+
 
 
 
