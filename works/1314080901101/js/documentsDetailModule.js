@@ -4,7 +4,14 @@ var documentsDetailModule = angular.module('documentsDetailModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-documentsDetailModule.controller('MyFilterDemoCtrl', function ($scope) {
+documentsDetailModule.factory('documentsDetailService',function($http){
+        var dataStroe = {};
+        dataStroe.getData = function () {
+            var promise = $http({method: 'GET',url: 'json/data.json'});
+            return promise;
+        }
+        return dataStroe;
+    }).controller('documentsDetailFilter', function ($scope,documentsDetailService) {
        // controller code would go here
         var documentsDetail = {
             number: '001',
@@ -22,8 +29,14 @@ documentsDetailModule.controller('MyFilterDemoCtrl', function ($scope) {
             {code: '002',type: 'dress',name: 'flower dress',unit: 'mm',number: "99",length: 1.8,width: 0.9,thickness: 0.3},
             {code: '003',type: 'book',name: 'AngularJS',unit: 'cm',number: "99",length: 98,width: 56,thickness: 27} 
         ];
-    }
-);
+        var promise = documentsDetailService.getData();
+        promise.success(function (data, status, headers, config, statusText) {
+            $scope.backMess = data.documentsDetailData;
+        });
+        promise.error(function(data,status){
+           alert('请求出错，请重试');
+        });
+});
 
 // use the myAppModule variable to
 // configure the module with a filter

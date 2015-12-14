@@ -21,7 +21,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-controller="MyFilterDemoCtrl">
+  <body ng-controller="documentsDetailFilter">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -69,17 +69,17 @@
               <th class="text-center">宽</th>
               <th class="text-center">厚</th>
             </tr>
-          <tbody ng-repeat="item in items">
+          <tbody ng-repeat="backMessOne in backMess">
             <tr>
               <td rowspan="2" class="text-center">{{$index + 1}}</td>
-              <td rowspan="2" class="text-center">{{item.code}}</td>
-              <td rowspan="2" class="text-center">{{item.type}}</td>
-              <td rowspan="2" class="text-center">{{item.name}}</td>
-              <td colspan="1" class="text-center">{{item.length}}</td>
-              <td colspan="1" class="text-center">{{item.width}}</td>
-              <td colspan="1" class="text-center">{{item.thickness}}</td>
-              <td rowspan="2" class="text-center">{{item.unit}}</td>
-              <td rowspan="2" class="text-center">{{item.number}}</td>
+              <td rowspan="2" class="text-center">{{backMessOne.code}}</td>
+              <td rowspan="2" class="text-center">{{backMessOne.type}}</td>
+              <td rowspan="2" class="text-center">{{backMessOne.name}}</td>
+              <td colspan="1" class="text-center">{{backMessOne.length}}</td>
+              <td colspan="1" class="text-center">{{backMessOne.width}}</td>
+              <td colspan="1" class="text-center">{{backMessOne.thickness}}</td>
+              <td rowspan="2" class="text-center">{{backMessOne.unit}}</td>
+              <td rowspan="2" class="text-center">{{backMessOne.number}}</td>
             </tr>
           </tbody>
         </table>
