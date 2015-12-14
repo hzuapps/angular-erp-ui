@@ -2,47 +2,51 @@
 // a reference to it in a variable called myAppModule 
 var myAppModule = angular.module('myStoreModule', []);
 
-myAppModule.factory('storeService', function() {
+myAppModule.factory('storeService', function($http) {
     var service = {};
-    var Operator = {
-        operators: [{
-            "id": 001,
-            "name": "jinhaoxu",
-            "age": 20
-        }, {
-            "id": 002,
-            "name": "hengdanwang",
-            "age": 22
-        }, {
-            "id": 003,
-            "name": "yongdanzhang",
-            "age": 21
-        }],
-        dateJoined: new Date(2010, 2, 23),
-        dateEnd: new Date(2015, 10, 22),
-        remark: "i'm a handsome boy!"
-    };
-    service.getData = function() {
-        return Operator;
-    }
+
     service.create = function() {
-        // alert("新建了一条盘点信息！");
-        document.getElementById("profileForm").action = "https://www.baidu.com";
-        document.getElementById("profileForm").method = "post";
-        document.getElementById("profileForm").submit();
-    }
+        var promise = $http({
+            method: 'POST',
+            url: 'someServer/create',
+            data: {
+                "id": 001,
+                "name": "jinhaoxu",
+                "age": 20,
+                "dateJoined": new Date(2010, 2, 23),
+                "dateEnd": new Date(2015, 10, 22),
+                "remark": "i'm a handsome boy!"
+            }
+        })
+
+        return promise;
+    };
+
     service.save = function() {
-        // alert("保存了一条盘点信息！");
-        document.getElementById("profileForm").action = "https://www.hao123.com";
-        document.getElementById("profileForm").method = "post";
-        document.getElementById("profileForm").submit();
-    }
+        var promise = $http({
+            method: 'PUT',
+            url: 'someServer/save/operator/id',
+            data: {
+                "id": 002,
+                "name": "hengdanwang",
+                "age": 22,
+                "dateJoined": new Date(2010, 2, 23),
+                "dateEnd": new Date(2015, 10, 22),
+                "remark": "i'm a handsome boy!"
+            }
+        })
+
+        return promise;
+    };
+
     service.finish = function() {
-        // alert("已完成！");
-        document.getElementById("profileForm").action = "https://www.github.com";
-        document.getElementById("profileForm").method = "get";
-        document.getElementById("profileForm").submit();
-    }
+        var promise = $http({
+            method: 'GET',
+            url: 'someServer/finish/operator/id',
+        })
+
+        return promise;
+    };
 
     return service;
 })
@@ -51,18 +55,44 @@ myAppModule.factory('storeService', function() {
 // configure the module with a controller
 myAppModule.controller('MyFilterDemoCtrl', function($scope, storeService) {
     // controller code would go here
-    $scope.data = storeService.getData();
-
+    // $scope.data = storeService.getData();
     $scope.create = function() {
-        storeService.create();
+        // storeService.create();
+        var promise = storeService.create();
+        promise.success(function(data, status, headers, config, statusText) {
+            var backMsg = data.success;
+            alert(backMsg.message);
+        });
+        promise.error(function(data, status, headers, config, statusText) {
+            var backMess = data.error;
+            alert(backMsg.message);
+        });
     }
 
     $scope.save = function() {
-        storeService.save();
+
+        var promise = storeService.save();
+        promise.success(function(data, status, headers, config, statusText) {
+            var backMsg = data.success;
+            alert(backMsg.message);
+        });
+        promise.error(function(data, status, headers, config, statusText) {
+            var backMess = data.error;
+            alert(backMsg.message);
+        });
     }
 
     $scope.finish = function() {
-        storeService.finish();
+
+        var promise = storeService.finish();
+        promise.success(function(data, status, headers, config, statusText) {
+            var backMsg = data.success;
+            alert(backMsg.message);
+        });
+        promise.error(function(data, status, headers, config, statusText) {
+            var backMess = data.error;
+            alert(backMsg.message);
+        });
     }
 
 });
