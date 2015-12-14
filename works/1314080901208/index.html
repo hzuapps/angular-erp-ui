@@ -7,6 +7,7 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 <title>产品出库-新建产品出库单-表单 by 1314080901208</title>
 <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+<script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
 <script src="js/myOrderModule.js"></script>
 
 
@@ -24,10 +25,10 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <style>
-          .table {
-            background-color:#f2f6f7;
+    <style type="text/css">
+        /*myViewStyle是定义局部页面ng-view的样式*/
+         .myViewStyle{
+          background-color:#f2f6f7;
               height: 350px;
               width: 750px;
               display: inline-block;
@@ -38,51 +39,22 @@
               padding-top: 20px;
               box-shadow: 2px 3px 4px #808080;
               box-shadow: 1px 1px 3px #808080;
-          }
-          .order {
-              
-              text-align: center;
-              height:20px;
-              display: inline-block;
-          }
-          .tableHead {
-              
-              font-weight:bolder;
-          }
-
-          .orderId {
-              width: 75px;
-          }
-          .storage {
-              width: 75px;
-          }
-          .people {
-              width: 120px;
-          }
-          .dateTime {
-              width: 220px;
-          }
-          .status {
-              width: 70px;
-          }
-          .notes {
-              width: 100px;
-          }
+         }
       </style>
   </head>
-  <body ng-controller="CreateOrderInformation">
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
-        
+
           </button>
           <a class="navbar-brand" href="#">Project name</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -96,25 +68,16 @@
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
-      {{aas[0]["name"]}}
-      {{aas[1]["age"]}}
+      
+
+      <!--这里是局部页面-->
+      <div id="main" class="myViewStyle">
+         <div ng-view ></div>
+      <div>
 
 
-      <div style="" id="table" class="table">
-         <div id="tableHead" class="tableHead">
-             <div id="orderId" class="order orderId" style="">订单编号</div>
-             <div id="storage" class="order storage" style="">仓库</div>
-             <div id="people" class="order people" style="">经手人</div>
-             <div id="dateTime" class="order dateTime" style="">经办日期</div>
-             <div id="status" class="order status" style="">状态</div>
-             <div id="notes" class="order notes" style="">备注</div>
-         </div>
-         <div id="tableBody" style="margin-top:5px;">
-            <!--使用AngularJS Directives设计，渲染列表数据-->
-            <myorderdata>
-            </myorderdata>
-         </div>
-     </div>
+      
+  
 
     </div><!-- /.container -->
 

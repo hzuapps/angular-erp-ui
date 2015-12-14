@@ -9,8 +9,6 @@
           orderStatus: 'theStatus',
           notes:"theNotes"
       };
-     
-     
 
 
 
@@ -18,12 +16,8 @@
 
 
 
+var myOrderModule = angular.module("OrderModule", ["ngRoute"]);
 
-
-
-
-
-var myOrderModule = angular.module("OrderModule", []);
 
 //创建一个Service
 myOrderModule.factory("orderService",function($http){
@@ -34,21 +28,45 @@ myOrderModule.factory("orderService",function($http){
       }
       getOrderData.getData=function(){
             var promise=$http({
-              url:"jsonData/myOrderData.txt",
+              url:"jsonData/myOrderData.json",
               method:"get",
             });
             return promise;
       }
-      
+
       return getOrderData;
 
 });
+
+
+function theRoute($routeProvider){
+  $routeProvider.
+  when("/home",{
+    templateUrl:"home.html",
+    controller:"CreateOrderInformation"
+      }).
+  when("/about",{
+    templateUrl:"aboutMe.html",
+    controller:"aboutController"
+  }).
+  otherwise({
+    templateUrl:"routeNotFound.html",
+    controller:"notFoundController"
+  });
+}
+myOrderModule.config(theRoute);
+
+
+
+
+
+
 
 //定义控制器
 myOrderModule.controller("CreateOrderInformation",function($scope,orderService){
           var promise=orderService.getData();
           promise.success(function(data,status){
-          alert(status+"：请求成功，获取文件里的json数据成功");
+          //alert(status+"：请求成功，获取文件里的json数据成功");
 
           var orderData1=orderData;
           orderData1.orderId = data[0].orderId;
@@ -56,7 +74,7 @@ myOrderModule.controller("CreateOrderInformation",function($scope,orderService){
           orderData1.people = data[0].people;
           orderData1.orderDateTime=data[0].orderDateTime;
           orderData1.orderStatus=data[0].orderStatus;
-          orderData1.notes=data[0].notes;        
+          orderData1.notes=data[0].notes;
 
           $scope.theOrderDatas = [orderData];
      });
@@ -66,8 +84,18 @@ myOrderModule.controller("CreateOrderInformation",function($scope,orderService){
      });
 
 });
+myOrderModule.controller("aboutController",function($scope){
+  $scope.myName="ChenXudong";
+  $scope.myNumber="1314080901208";
+});
+myOrderModule.controller("notFoundController",function($scope){
+  $scope.message="404页面 ";
+});
+
+
 
 //使用directive渲染列表数据，样式即css已经定义在index页面
+//这里的directive命名必须小写
 myOrderModule.directive("myorderdata",function(){
   return{
       restrict:"AEC",
@@ -89,12 +117,3 @@ myOrderModule.filter("", function () {
 
 //测试引用js文件是否成功的函数调用
 function a() { alert("引用js文件成功");}
-
-
-
-
-
-
-
-
-
