@@ -4,17 +4,74 @@ var bumenModule = angular.module('bumenModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-bumenModule.controller('MyFilterDemoCtrl', function ($scope) {
+
+bumenModule.factory('bumenService',function($http){
+ 
+       var dataStroe = {};
+
+       dataStroe.doRegistration = function (theData) {
+            var promise = $http({method: 'POST',url: 'json/message.json',data: theData});
+ 
+           return promise;
+  
+      }
+ 
+       return dataStroe;
+
+bumenModule.controller('MyFilter', function ($scope,bumenService) {
     // controller code would go here
         var bumenData = {
-            bumenname:'部门名称',
-            bumendaima:'部门代码',
-            bumenzhuguan:'部门主管',
-            bumenmiaoshu:'部门描述'
+            bumenName:'id',
+            bumenDaima:'code',
+            bumenZhuguan:'inter',
+            bumenMiaoshu:'inter'
         };
         $scope.data = bumenData;
-    }
-);
+
+$scope.isHidden = true;
+
+        $scope.showInput = function () {
+
+            $scope.isHidden = !$scope.isHidden;
+
+        }
+
+        $scope.bumen = {};
+
+        $scope.register = function () {
+
+            var promise = bumenService.doRegistration($scope.bumen);
+
+            promise.success(function (data, status, headers, config, statusText) {
+                $scope.backMess = data.success;
+
+                $scope.isHidden = !$scope.isHidden;
+
+                if(!$scope.isHidden){
+
+                    alert($scope.backMess[0].message + "\n" + "\n" + "Your bumenName is " + $scope.provider.Name);
+
+                }
+
+            });
+
+            promise.error(function (data, status, headers, config, statusText) {
+
+                $scope.backMess = data.error;
+
+                $scope.isHidden = !$scope.isHidden;
+
+                if(!$scope.isHidden){
+
+                    alert($scope.backMess[0].message);
+
+                }
+
+            });
+
+        }
+
+    });
 
 // use the myAppModule variable to
 // configure the module with a filter
