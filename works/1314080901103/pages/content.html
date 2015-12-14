@@ -1,0 +1,25 @@
+<div class="container starter-template">
+    <h2><p>Provider List</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">供应商编号</th>
+            <th rowspan="2" class="text-center">供应商全称</th>
+            <th rowspan="2" class="text-center">供应商简称</th>
+            <th rowspan="2" class="text-center">供应商类别</th>
+            <th rowspan="2" class="text-center">供应商介绍</th>
+            <th rowspan="2" class="text-center">供应商地址</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="providerData in providerArray">
+        <tr>
+            <td rowspan="2" class="text-center">{{providerData.providerId}}</td>
+            <td rowspan="2" class="text-center">{{providerData.providerFullName}}</td>
+            <td rowspan="2" class="text-center">{{providerData.providerSimpName}}</td>
+            <td rowspan="2" class="text-center">{{providerData.providerType}}</td>
+            <td rowspan="2" class="text-center">{{providerData.providerIntroduce}}</td>
+            <td rowspan="2" class="text-center">{{providerData.providerAddress}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
