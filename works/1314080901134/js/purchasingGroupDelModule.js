@@ -4,14 +4,27 @@ var purchasingGroupDelModule = angular.module('purchasingGroupDelModule', []);
 
 // use the purchasingGroupDelModule variable to
 // configure the module with a controller
-purchasingGroupDelModule.controller('purchasingGroupDelCtrl', function ($scope) {
-       // controller code would go here
-         var purchasingGroup1= { 
-             groupName:'小组名',
-             groupId:'00002'
-        };
-         $scope.data = purchasingGroup1; 
+purchasingGroupDelModule.factory("purchasingGroupService",function($http){
+	var getpurchasingGroupData={};
+	getpurchasingGroupData.getData=function(){
+		var promise=$http({
+			url:"json/purchasingGroup1.json",
+			method:"get",
+		});
+		return promise;
+	}
+	return getpurchasingGroupData;
 
+}).controller('purchasingGroupDelCtrl', function ($scope,purchasingGroupService) {
+       // controller code would go here
+         var promise=purchasingGroupService.getData();
+      promise.success(function(data,status){
+      	var purchasingGroupdata1=purchasingGroup1;
+      	purchasingGroupdata1.groupName=data["groupName"];
+      	purchasingGroupdata1.groupID=data["groupID"];
+         $scope.data =purchasingGroupdata1; 
+      }
+);
     }
 );
 
@@ -21,3 +34,4 @@ purchasingGroupDelModule.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; });
+
