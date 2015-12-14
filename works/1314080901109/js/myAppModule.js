@@ -10,7 +10,7 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
             XUHAO: '01',
             BIANMA: '1008611',
             LEIBIE: 'watch',
-            NAME: 'SEIKO,
+            NAME: 'SEIKO',
             XINGHAO: '1008612'
             DANWEI: '100',
             SHULIANG: '1000',
@@ -20,6 +20,12 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
         };
         $scope.data = someData;
        // controller code would go here
+      $scope.isHidden = true;
+      $scope.showHideColors = function () {
+           $scope.isHidden = !$scope.isHidden;
+    }
+
+
     }
 );
 
