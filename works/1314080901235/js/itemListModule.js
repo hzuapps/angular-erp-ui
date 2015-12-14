@@ -6,8 +6,8 @@ var itemListModule = angular.module('itemListModule', []);
 
 // use the itemListModule variable to
 // configure the module with a controller
-itemListModule.controller('itemListModuleCtrl', function ($scope)
-    {
+itemListModule.controller('itemListModuleCtrl', function ($scope,$http)
+    {        
         var workerInformation = {
                 code: 'a',
                 name: 'T恤',
@@ -16,12 +16,18 @@ itemListModule.controller('itemListModuleCtrl', function ($scope)
                 inventory_number:'100',
                check_number:'1000',
             };
+            var promise=$http({
+                url:"itemList_JSON.json",
+                method:"get"
+            });
+            promise.success(function(data,status){
+                $scope.items = [{code: data[0].code, name: data[0].name, type: data[0].type, color: data[0].color,inventory_number: data[0].inventory_number,check_number:data[0].check_number},
+{code: data[1].code, name: data[1].name, type: data[1].type, color: data[1].color,inventory_number: data[1].inventory_number,check_number:data[1].check_number},
+{code: data[2].code, name: data[2].name, type: data[2].type, color: data[2].color,inventory_number: data[2].inventory_number,check_number:data[2].check_number}];
+                
+            });
             $scope.data = workerInformation;
-            $scope.items = [
-                {code: 'a', name: '衣服', type: 'black', color: 'black',inventory_number: '100',check_number:'1000'},
-                {code: 'b', name: '长袖', type: '衣服', color: 'white',inventory_number: '200',check_number:'2000'},
-                {code: 'c', name: '外套', type: '衣服', color: 'yellow',inventory_number: '300',check_number:'3000'}
-        ];
+            
         }
 
 
