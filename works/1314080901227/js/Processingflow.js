@@ -11,9 +11,14 @@ Processingflow.controller('ProcessingflowCtrl', function ($scope) {
           name: '流程',
           operation: '操作',
           fitness: '状态',
-          dateJoined: new Date(2010, 2, 23),
+          operation_details:'操作明细',
+          instructions:'批示',
         };
         $scope.data = someData;
+        $scope.isHidden = true;
+        $scope.showInput = function(){
+          $scope.isHidden = !$scope.isHidden;
+        }
     }
        // controller code would go here
 );
@@ -21,7 +26,7 @@ Processingflow.controller('ProcessingflowCtrl', function ($scope) {
 
 // use the myAppModule variable to
 // configure the module with a filter
-myAppModule.filter('stripDashes', function() {
+Processingflow.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; });
