@@ -18,7 +18,7 @@ bumenModule.factory('bumenService',function($http){
  
        return dataStroe;
 
-bumenModule.controller('MyFilter', function ($scope,bumenService) {
+}).controller('MyFilter', function ($scope,bumenService) {
     // controller code would go here
         var bumenData = {
             bumenName:'id',
@@ -49,7 +49,7 @@ $scope.isHidden = true;
 
                 if(!$scope.isHidden){
 
-                    alert($scope.backMess[0].message + "\n" + "\n" + "Your bumenName is " + $scope.provider.Name);
+                    alert($scope.backMess[0].message + "\n" + "\n" + "Your bumenName is " + $scope.bumen.Name);
 
                 }
 
@@ -78,5 +78,4 @@ $scope.isHidden = true;
 bumenModule.filter('stripDashes',function() {
     return function(txt) {
         // filter code would go here
-  };
-     });
+  }; });
