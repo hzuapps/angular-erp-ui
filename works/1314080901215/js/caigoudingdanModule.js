@@ -6,9 +6,9 @@ var caigoudingdanModule = angular.module('caigoudingdanModule', []);
 // configure the module with a controller
 caigoudingdanModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
-			  var someDate={
-        Name:'供应商名称',
-        term:'付款条件',
+        var someDate={
+        Name:'??????????',
+        term:'????????',
         caigouData:'2015-10-27',
         jiaohuoData:'2015-10-27',
       };
