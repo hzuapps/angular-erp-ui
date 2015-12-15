@@ -1,5 +1,9 @@
 // create a new module called 'purchasingGroupDelModule' and save 
 // a reference to it in a variable called purchasingGroupDelModule 
+var purchasingGroup1 ={
+	groupName:'Name',
+	groupID  :'Id'
+};
 var purchasingGroupDelModule = angular.module('purchasingGroupDelModule', []);
 
 // use the purchasingGroupDelModule variable to
@@ -15,7 +19,8 @@ purchasingGroupDelModule.factory("purchasingGroupService",function($http){
 	}
 	return getpurchasingGroupData;
 
-}).controller('purchasingGroupDelCtrl', function ($scope,purchasingGroupService) {
+})
+purchasingGroupDelModule.controller('purchasingGroupDelCtrl', function ($scope,purchasingGroupService) {
        // controller code would go here
          var promise=purchasingGroupService.getData();
       promise.success(function(data,status){
@@ -35,3 +40,11 @@ purchasingGroupDelModule.filter('stripDashes', function() {
         // filter code would go here
 }; });
 
+purchasingGroupDelModule.config(function ($routeProvider) {
+  // configure the routes
+  $routeProvider
+    // route for the about page
+        .when('/about', {
+          templateUrl: 'pages/about.html'
+        });
+    });
