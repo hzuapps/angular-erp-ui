@@ -2,7 +2,7 @@
 "PayData":[
 { "danjubianhao": "1234567","zhaiyao": "finsh","yingfujine":"532.2","fukuanjine":"532.2", "weifujine":"0.0","beizhu":" "},
            { "danjubianhao": "1234568","zhaiyao": "not finsh","yingfujine":"533.2","fukuanjine":"532.2","weifujine":"1.0","beizhu":"wait pay"},
-           { "danjubianhao": "1234569","zhaiyao": "not finsh","yingfujine":"534.2","fukuanjine":"532.2","weifujine":"2.0","beizhu":"wait pay"}
-           
+           { "danjubianhao": "1234569","zhaiyao": "not finsh","yingfujine":"534.2","fukuanjine":"532.2","weifujine":"2.0","beizhu":"wait pay"},
+ { "danjubianhao": "12345707","zhaiyao": "finsh","yingfujine":"552.2","fukuanjine":"550.2", "weifujine":"2.2","beizhu":"wait pay"}          
 ]
 }
