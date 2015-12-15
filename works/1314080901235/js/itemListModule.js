@@ -37,13 +37,21 @@ itemListModule.controller('itemListModuleCtrl', function ($scope,$http)
 // configure the module with a filter
 itemListModule.filter('itemListModulestripDashes', function() {
     return function(txt) {
-        // filter code would go here
+        // filter code would go hereb
     }; });
 
 
  itemListModule.config(['$routeProvider',
          function($routeProvider) {
             $routeProvider.
+               when('/website', {
+                  templateUrl: 'website.html',
+                  //controller: 'aboutController'
+               }).
+               when('/table', {
+                  templateUrl: 'table.html',
+                  //controller: 'aboutController'
+               }).
                when('/about', {
                   templateUrl: 'about.html',
                   //controller: 'aboutController'
