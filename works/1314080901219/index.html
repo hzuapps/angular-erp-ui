@@ -1,77 +1,31 @@
 ﻿<!DOCTYPE html>
- <html ng-app="orderModule"> <head lang="en">
-     <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-     <title>仓库库存_查询库存清单列表 by 1314080901219</title>
-     <link rel="shortcut icon" href="icons/favicon.ico" />
-     		     
-     <!-- Bootstrap -->
-     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
- 		 
-     <!-- Custom styles for this template -->
-     <link href="css/style.css" rel="stylesheet">
-                   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->        
-     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>  
-     <!-- Include all compiled plugins (below), or include individual files as needed -->
-     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-     <script src="js/orderModule.js"></script>   
- 		 
-     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-     <!--[if lt IE 9]>
-       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-     <![endif]-->
-   </head>
-   <body ng-controller="goodsListController">
-     <nav class="navbar navbar-inverse navbar-fixed-top">
-              <div>     <ul class="nav navbar-nav">
-             <li class="active"><a href="#">Home</a></li>
-             <li><a href="#about">About</a></li>
-             <li><a href="#contact">Contact</a></li>
-           </ul>
-         <!--/.nav-collapse -->
-       </div>
-     </nav> 		 
-    <div>
-       <div>
-        <p>库存清单</p>
-       </div>
-<div>
-	<table ng-controller="goodsListController" style="width: 100%; height: 100%;" class="table table-striped" border="1" align="center">
-    <tr wide="100%">
-      <th>序号</th>
-      <th>编码</th>
-      <th>品名</th>
-      <th>类别</th>
-      <th>型号</th>
-      <th>颜色</th>
-      <th>数量</th>
-      <th>单位</th>
-      <th>单价</th>
-      <th>金额</th>
-      <th>平均价</th>
-      <th>旧编码</th>
-    </tr>
-    <tr ng-controller="goodsListController" ng-repeat="goods in theOrderDatas">
-        <td>{{goods.id}}</td>
-        <td>{{goods.number}}</td>
-        <td>{{goods.name}}</td>
-        <td>{{goods.type}}</td>
-        <td>{{goods.xinghao}}</td>
-        <td>{{goods.color}}</td>
-        <td>{{goods.numbers}}</td>
-        <td>{{goods.danwei}}</td>
-        <td>{{goods.danjia}}</td>
-        <td>{{goods.jine}}</td>
-        <td>{{goods.avg}}</td>
-        <td>{{goods.jiubianma}}</td>
-    </tr>
-  </table>
-</div>    
-    </div>
-   </body>
+<html ng-app="app">
+<head>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/> 
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"/> 
+  <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+  <script src="../../lib/angular-1.4.5/angular-route.js"></script>
+  <script src="js/orderModule.js"></script> 
+</head>
+<body ng-controller="homeController">
+  <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="/">My Website</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+              <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+              <li><a href="#goodsList"><i class="fa fa-bar-chart-o"></i> GoodsList</a></li>
+          </ul> 
+        </div>
+      </nav>
+  </header>
+  <div id="main">
+    <!-- this is where content will be injected --> 
+    <div ng-view></div>
+  </div>
+</body>
 </html>
