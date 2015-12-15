@@ -17,6 +17,35 @@ orderModule.controller('Ctrl', function ($scope) {
         $scope.myData = someData;
     }
 );
+orderModule.directive("myorderdata",function(){
+  return{
+      restrict:"AEC",
+      template:'<div class="row">'
+                    +'<label for="example1">侧板：</label>'
+                    +'<input type="text" class="form-control input-sm" ng-model="myData.sidePlates" id="example1"/>'
+                    +'<br/>'
+                     +'<br/>'
+                    +'<label for="example2">层板：</label>'
+                    +'<input type="text" class="form-control input-sm" ng-model="myData.laminates" id="example2"/>'
+                    +'<br/>'
+                     +'<br/>'
+                    +'<label for="example3">背板：</label>'
+                    +'<input type="text" class="form-control input-sm" ng-model="myData.backboard" id="example3"/>'
+                    +'<br/>'
+                     +'<br/>'
+                    +'<label for="example4">门板：</label>'
+                    +'<input type="text" class="form-control input-sm" ng-model="myData.door" id="example4"/>'
+                    +'<br/>'
+                    +' <br/>'
+                    +'<label for="example5">木皮：</label>'
+                    +'<input type="text" class="form-control input-sm" ng-model="myData.veneer" id="example5"/>'
+                    +'<br/>'
+                     +'<br/>'
+                +'</div>',
+      transclude: true
+  };
+});
+
 
 // use the myAppModule variable to
 // configure the module with a filter
