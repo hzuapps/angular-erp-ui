@@ -2,7 +2,7 @@
 
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called itemListModule
-var itemListModule = angular.module('itemListModule', []);
+var itemListModule = angular.module("itemListModule", ['ngRoute']);
 
 // use the itemListModule variable to
 // configure the module with a controller
@@ -39,3 +39,16 @@ itemListModule.filter('itemListModulestripDashes', function() {
     return function(txt) {
         // filter code would go here
     }; });
+
+
+ itemListModule.config(['$routeProvider',
+         function($routeProvider) {
+            $routeProvider.
+               when('/about', {
+                  templateUrl: 'about.html',
+                  //controller: 'aboutController'
+               }).
+               otherwise({
+                  redirectTo: '/about'
+               });
+         }]);
