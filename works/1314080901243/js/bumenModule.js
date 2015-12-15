@@ -75,8 +75,8 @@ $scope.isHidden = true;
 
 // use the myAppModule variable to
 // configure the module with a filter
-bumenModule.filter('stripDashes', function () {
-    return function (txt) {
+bumenModule.filter('stripDashes',function() {
+    return function(txt) {
         // filter code would go here
-    };
-});// javascript.js
+  };
+     });
