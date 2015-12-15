@@ -3,18 +3,35 @@
 // a reference to it in a variable called myAppModule 
 var orderModule = angular.module('orderModule', []);
  var someData = {
-            sidePlates:'侧板名',
-            laminates:"层板名",
-            backboard:"背板名",
-            door:"门板名",
-            veneer:"木皮名"
+            "sidePlates":"侧板名",
+            "laminates":"层板名",
+            "backboard":"背板名",
+            "door":"门板名",
+            "veneer":"木皮名"
         };
 // use the myAppModule variable to
 // configure the module with a controller
-orderModule.controller('Ctrl', function ($scope) {
+orderModule.controller('Ctrl', function ($scope,$http) {
     // controller code would go here
-       
-        $scope.myData = someData;
+       var promise=$http({
+              url:"jsonData/myJsonDatas.json",
+              method:"get",
+           });
+       promise.success(function(data,status){
+        var data1=someData;
+        data1.sidePlates=data.sidePlates;
+        data1.laminates=data.laminates;
+        data1.backboard=data.backboard;
+        data1.door=data.door;
+        data1.veneer=data.veneer;
+        $scope.myData=data1;
+         
+       });
+       promise.error(function(data,status){
+           alert(status);
+           
+     });
+        
     }
 );
 orderModule.directive("myorderdata",function(){
