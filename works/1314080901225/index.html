@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html ng-app="ManifestDataModule"><lang="zh-CN">
   <head>
     <meta charset="utf-8">
@@ -13,7 +13,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-
+	
     
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,11 +21,47 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-    <script src="js/ManifestDataModule.js"></script>
+   <script src="js/ManifestDataModule.js"></script>
+
+ 
+  <style type="text/css">
+  .header{
+	padding:0;
+	margin:0;
+  }
+  .body{
+	font-weight:bold;
+	color:white
+  }.color{
+	background-color:#e6e8eb;
+  }
+  </style>
 
   </head>
+  
   <body ng-controller="MyFilterDemoCtrl" >
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<header  class="main-header header" style="background-image: url(images/background.jpg)" >
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <a  >
+						<img src="images/background.jpg"  height="250px" width="200px" >
+						
+					</a>
+                    <div class="container body ">
+						<h1>高级网页</h1>
+						<h2>欢迎来到晴天_1993的主页</h2>
+						</div>
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+
+	
+	
+   <nav class="navbar navbar-inverse navbar-fixed-top main-navigation">
 	
       <div class="container">
         <div class="navbar-header">
@@ -35,105 +71,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#myWebsite">My Website</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-			<li class="active"><a href="#myWebsite">My Website</a></li>
-            
-            <li><a href="#aboutMe">About</a></li>
+          <ul class="nav navbar-nav ">
+			<li><a href="#tableData"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>My Table</a></li>
+            <li><a href="#aboutMe"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>About Me</a></li>
             
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-	<div class="container">
-
-      <div class="starter-template">
-        <h1>仓库的出库表单创建</h1>
-        <p class="lead">点击新建有惊喜实现.<br> 点击保存有惊喜出现.</p>
-      </div>
-
-    </div><!-- /.container -->
-
-
-    
-	<form class="form-horizontal" role="form" ng-submit="create()">
-    <fieldset>
-
-        <div class="form-group">
-            <label for="ManifestNum"  class="col-md-1 control-label">订单编码：</label>
-            <div class="col-md-2">
-                <select id="ManifestNum" class="form-control" ng-model="seleted" ng-options="a.ManifestNum for a in SelectItem">
-                    
-                </select>
-            </div>
-            <label for="Wearhouse"  class="col-md-1 control-label">仓库：</label>
-            <div class="col-md-2">
-                <select id="Wearhouse" class="form-control" ng-model="seleted" ng-options="a.Wearhouse for a in SelectItem">
-                    
-                </select>
-            </div>
-            <label for="Handler"  class="col-md-1 control-label">经手人：</label>
-            <div class="col-md-2">
-                <select id="Handler" class="form-control" ng-model="seleted" ng-options="a.Handler for a in SelectItem">
-                   
-                </select>
-            </div>
-            <label for="HandlingData"  class="col-md-1 control-label">经办日期：</label>
-            <div class="col-md-2">
-                <input id="HandlingData"  type="date"/>
-
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="State"  class="col-md-1 control-label ">状态：</label>
-            <div class="col-md-2">
-                <input class="form-control " id="State" type="text" placeholder="我只能读不可编辑" disabled/>
-
-            </div>
-            <label for="Remark"  class="col-md-1 control-label">备注：</label>
-            <div class="col-md-7">
-                <input class="form-control disabled" id="Remark" type="text" />
-
-            </div>
-        </div>
-		 
-		 <!-- <button ng-click="showHideColors()" type="button">
-		         点我
-		 		</button> -->	
-        <div class="btn-group col-lg-push-1" >
-            <button type="submit" class="btn btn-default btn-sm" >新建</button>
-            <button type="button" class="btn btn-default btn-sm" >保存</button>
-            <button type="button" class="btn btn-default btn-sm" disabled="disabled">删除</button>
-            <button type="button" class="btn btn-default btn-sm" disabled="disabled">确定</button>
-            <button type="button" class="btn btn-default btn-sm" disabled="disabled">导出excel</button>
-            <button type="button" class="btn btn-default btn-sm" disabled="disabled">出库</button>
-        </div>
-    </fieldset>
+                          
 
 
 
-	<div class="container">
+    </main>
 
-      <div class="starter-template">
-        <div class="errorMessage" ng-show="showErrorMessage">
-		<h2>{{errorsMessage}}</h2>
-		<br/>
-		</div>
-		<div class="successMessage" ng-show="showSuccessMessage">
-		<h2>{{successMessage}}</h2>    
-		</div>
-      </div>
-
-	   
-      
-</form>
+	
 
 
       
-    <div ng-view>
+    <div ng-view >
 	
 	</div>
       
@@ -144,6 +103,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 	
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+   <script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
   </body>
 </html>
