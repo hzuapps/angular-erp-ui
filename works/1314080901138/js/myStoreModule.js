@@ -1,6 +1,23 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var myAppModule = angular.module('myStoreModule', []);
+var myAppModule = angular.module('myStoreModule', ['ngRoute']);
+myAppModule.config(function($routeProvider) {
+        // configure the routes
+        $routeProvider
+            .when('someServer/operators/create', {
+                templateUrl: '#',//当前页面，不跳转
+                controller: 'MyFilterDemoCtrl'
+            })
+            .when('someServer/operators/save/:id', {
+                templateUrl: '#',
+                controller: 'MyFilterDemoCtrl'
+            })
+            .when('someServer/operators/finish/:id',
+             {
+                templateUrl: '#',
+                controller: 'MyFilterDemoCtrl'
+            })
+})
 
 myAppModule.factory('storeService', function($http) {
     var service = {};
@@ -8,7 +25,7 @@ myAppModule.factory('storeService', function($http) {
     service.create = function() {
         var promise = $http({
             method: 'POST',
-            url: 'someServer/create',
+            url: 'someServer/operators/create',
             data: {
                 "id": 001,
                 "name": "jinhaoxu",
@@ -25,7 +42,7 @@ myAppModule.factory('storeService', function($http) {
     service.save = function() {
         var promise = $http({
             method: 'PUT',
-            url: 'someServer/save/operator/id',
+            url: 'someServer/operators/save/:id',
             data: {
                 "id": 002,
                 "name": "hengdanwang",
@@ -42,7 +59,7 @@ myAppModule.factory('storeService', function($http) {
     service.finish = function() {
         var promise = $http({
             method: 'GET',
-            url: 'someServer/finish/operator/id',
+            url: 'someServer/operators/finish/:id',
         })
 
         return promise;
@@ -64,8 +81,8 @@ myAppModule.controller('MyFilterDemoCtrl', function($scope, storeService) {
             alert(backMsg.message);
         });
         promise.error(function(data, status, headers, config, statusText) {
-            var backMess = data.error;
-            alert(backMsg.message);
+            var backMsg = data.statusText;
+            alert(backMsg);
         });
     }
 
@@ -77,7 +94,7 @@ myAppModule.controller('MyFilterDemoCtrl', function($scope, storeService) {
             alert(backMsg.message);
         });
         promise.error(function(data, status, headers, config, statusText) {
-            var backMess = data.error;
+            var backMsg = data.error;
             alert(backMsg.message);
         });
     }
@@ -90,7 +107,7 @@ myAppModule.controller('MyFilterDemoCtrl', function($scope, storeService) {
             alert(backMsg.message);
         });
         promise.error(function(data, status, headers, config, statusText) {
-            var backMess = data.error;
+            var backMsg = data.error;
             alert(backMsg.message);
         });
     }
