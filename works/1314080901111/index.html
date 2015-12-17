@@ -19,15 +19,12 @@
       #id1{
           margin: 20px;
           padding: 20px;
-
       }
       #id2{
-
         margin: 10px;
         padding: 10px;
       }
       #id2 tr td{
-
         text-align: center;
       }
     </style>
@@ -55,14 +52,14 @@
       
       <tr>
         <td>销售订单:</td>
-        <td><select ng-model="saleList"></select></td>
+        <td><select ng-model="saleList" name="saleList"></select></td>
       </tr>
       
       <tr>
         <td>订单类型:</td>
         <td>
 
-          <select ng-model="listType">
+          <select ng-model="listType" name="listType">
             <option>正常订单</option>
             <option>打样订单</option>
             <option>返工订单</option>
@@ -76,33 +73,33 @@
       
       <tr>
         <td>订单日期:</td>
-        <td><input type="text" ng-model="listDate"/></td>
+        <td><input type="text" ng-model="listDate" name="listDate" value="2015"/></td>
       </tr>
       
       <tr>
         <td>交货日期:</td>
         <td>
-          <input type="text" ng-model="commitDate"/>
+          <input type="text" ng-model="commitDate" name="commitDate"/>
         </td>
       </tr>
       
       <tr>
         <td>订单编号:</td>
         <td>
-          <input type="text" ng-model="listID"/>
+          <input type="text" ng-model="listID" name="listID"/>
         </td>
       </tr>
       
       <tr>
         <td>订单状态:</td>
         <td>
-          <input type="text" ng-model="listState"/>
+          <input type="text" ng-model="listState" name="listState"/>
         </td>
       </tr>
 
       <tr>
         <td>备注:</td>
-        <td><input type="text" ng-model="remark"/></td>
+        <td><input type="text" ng-model="remark" name="remark"/></td>
       </tr>
       
       <tr>
