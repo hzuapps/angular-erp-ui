@@ -21,6 +21,8 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -104,13 +106,13 @@
 <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
     <p class="lead">
     <div ng-hide="isHidden">您输入的数据为：</div>
-    <div id="name" ng-hide="isHidden">出库模式->{{Pno}}</div>
-    <div id="fangshi" ng-hide="isHidden">仓库编号->{{Sort}}</div>
-    <div id="date" ng-hide="isHidden">经手人->{{Name}}</div>
-    <div id="jine" ng-hide="isHidden">经办日期->{{Size}}</div>
-    <div id="zhanghu" ng-hide="isHidden">出库材料->{{Color}}</div>
-    <div id="zhanghao" ng-hide="isHidden">出库数量->{{Unit}}</div>
-    <div id="zhuangtai" ng-hide="isHidden">状态->{{Num}}</div>
+    <div id="outmode" ng-hide="isHidden">出库模式->{{Pno}}</div>
+    <div id="number" ng-hide="isHidden">仓库编号->{{Sort}}</div>
+    <div id="name" ng-hide="isHidden">经手人->{{Name}}</div>
+    <div id="date" ng-hide="isHidden">经办日期->{{Size}}</div>
+    <div id="material" ng-hide="isHidden">出库材料->{{Color}}</div>
+    <div id="amount" ng-hide="isHidden">出库数量->{{Unit}}</div>
+    <div id="status" ng-hide="isHidden">状态->{{Num}}</div>
     <div id="Other" ng-hide="isHidden">备注->{{Other}}</div>
     </p>
 </div>
