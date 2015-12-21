@@ -57,30 +57,31 @@
       <div style="width:330px; height:500px; background:#FFFFFF;" align="center" >
         <h3 style="background-color:#FFF0F5;">岗位管理</h3>
         <hr/>
-        <form>
+        <form ng-submit="register()" novalidate>
           <P>所属部门：       
-            <select name="bumen"class="style1" style="width:200px">
+            <select name="bumen"class="style1" style="width:200px" ng-model="gangwei.department" >
+              <option >请选择</option>
               <option>人事</option>
               <option>仓库</option>
             </select>
           </P>
-          <p>岗位名称：<input class="style1" style="width:200px" /></p>
-          <p>岗位层次：<input class="style1"/></p>
-          <p>岗位类型：<input class="style1"/></p>
-          <p>基本薪资：<input class="style1"/></p>
-          <p>岗位职责：<input class="style1" style="height:70px;"/></p>
-          <button ng-click="showInput()" type="button" >{{isHidden ? '提交' : '返回'}}</button>
+          <p>岗位名称：<input class="style1" placeholder="input" ng-model="gangwei.job_name"/></p>
+          <p>岗位层次：<input class="style1" ng-model="gangwei.job_level"/></p>
+          <p>岗位类型：<input class="style1" ng-model="gangwei.job_type"/></p>
+          <p>基本薪资：<input class="style1" ng-model="gangwei.salary"/></p>
+          <p>岗位职责：<input class="style1" ng-model="gangwei.job_statement" style="height:70px;"/></p>
+          <button ng-click="showInput()" type="summit" >{{isHidden ? '提交' : '返回'}}</button>
           <button>重置</button>
         </form>
         <div ng-hide="isHidden">
         <p >
           <div ng-hide="isHidden">您输入的数据为：</div>    
-          <div ng-hide="isHidden">所属部门：->{{mydata.department}}</div>
-          <div ng-hide="isHidden">岗位名称：->{{mydata.job_name}}</div>
-          <div ng-hide="isHidden">岗位层次：->{{mydata.job_level}}</div>
-          <div ng-hide="isHidden">岗位类型：->{{mydata.job_type}}</div>
-          <div ng-hide="isHidden">基本薪资：->{{mydata.salary}}</div>
-          <div ng-hide="isHidden">岗位职责：->{{mydata.job_statement}}</div>
+          <div ng-hide="isHidden">所属部门：->{{gangwei.department}}</div>
+          <div ng-hide="isHidden">岗位名称：->{{gangwei.job_name}}</div>
+          <div ng-hide="isHidden">岗位层次：->{{gangwei.job_level}}</div>
+          <div ng-hide="isHidden">岗位类型：->{{gangwei.job_type}}</div>
+          <div ng-hide="isHidden">基本薪资：->{{gangwei.salary}}</div>
+          <div ng-hide="isHidden">岗位职责：->{{gangwei.job_statement}}</div>
         </p>
         </div>
       </div>
