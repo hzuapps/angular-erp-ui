@@ -1,13 +1,13 @@
--<!DOCTYPE html>
-<html ng-app="caiwushouruchaxun"> 
-  <head lang="zh-CN">
+<!DOCTYPE html>
+<html ng-app="caiwushouruchaxunModule">
+<head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>财务-其他收入-查询选项表单</title>
-    <link rel="shortcut icon" href="icons/favicon.ico" />
-    
+    <link rel="shortcut icon" href="icons/favicon.ico"/>
+
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,76 +17,100 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-      <script src="../lib/angular-1.4.5/angular.min.js"></script>
-      <script src="js/caiwushouruchaxunModule.js"></script>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body ng-controller="MyFilterDemoCtrl">
-  
- <body ng-controller="MyFilterDemoCtrl" ng-cloak>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+</head>
+<body ng-controller="MyFilter">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container">
+<div class="container">
+    <div class="starter-template">
+        <h1></h1>
 
-      <div class="starter-template">
-        <h1 style="color:blue">财务-其他收入-查询选项-表单</h1>
-        <p>{{data}}</p>
-      </div>
+        <p class="lead">财务-其他收入-查询选项-表单</p>
+    </div>
+</div>
 
-    </div><!-- /.container -->
-       <h2 style="color:blue">财务>>其他收入>>查询选项</h2>
-     <button ng-click="showHide()" type="button"style="background:#66B3FF" value>
-        {{isHidden ? '显示查询选项' : '隐藏查询选项'}}
-    </button>
-     <p ng-cloak style="text-align:center;">{{data.operator}}</p>
-    <form class="form-horizontal" role="form" ng-hide="isHidden">
-    <fieldset>
 
-        <div class="form-group">
-        </div>
-            <label for="Startdate"  class="col-md-1 control-label">起始日期</label>
-            <div class="col-md-2">
-                <input id="Startdate"  type="date"/>
-                </select>
+<div class="container">
+    <div class="row col-lg-offset-2">
+        <form class="form-inline" role="form" ng-submit="register()" novalidate>
+            <div class="form-group row">
+                <div class="row">
+                    <label for="example1">起始日期：</label>
+                    <input type="date" class="form-control input-sm" ng-model="Startdate" id="example1" required/>
+
+                    <label for="example2">终止日期：</label>
+                    <input type="date" class="form-control input-sm" ng-model="Terminationdate" id="example2"
+                           required/>
+                    <br>
+                    <br>
+                    
+            <P> <label for="example1">收入状态：       </label>
+            <select name="bumen"class="style1" style="width:145px" ng-model="state" id required>
+                <option >全部</option>
+                <option>已完成</option>
+                <option>未完成</option>
+              </select>
+            </P>
+                </div>
             </div>
-            <label for="Terminationdate"  class="col-md-1 control-label">终止日期</label>
-            <div class="col-md-2">
-                <input id="Terminationdate"  type="date"/>
-                </select>
-           
-        </div>
-        <div class="form-group">
-            <label for="State"  class="col-md-1 control-label ">收入状态</label>
-            <div class="col-md-2">
-                <select id="State" class="form-control">
-                    <option>已完成</option>
-                    <option>未完成</option>
-                    <option>全部</option>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-    <script src="js/caiwushouruchaxun.js"></script>
-  </body>
+            <br>
+            <br>
+
+            <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+                <button type="submit" class="btn btn-default">
+                    {{isHidden ? '查询' : '隐藏'}}
+                </button>
+            </div>
+            <br>
+            <br>
+
+            <!-- SHOW ERROR/SUCCESS MESSAGES
+            <div id="messages" class="ng-cloak" ng-show="backMess" ng-hide="isHidden">
+                <p>{{ backMess[0].message }}</p>
+            </div>-->
+        </form>
+    </div>
+</div>
+
+<div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+
+    <div ng-hide="isHidden">您查询的数据为：</div>
+    <div id="Startdate" ng-hide="isHidden">起始日期->{{Startdate}}</div>
+    <div id="Terminationdate" ng-hide="isHidden">终止日期->{{Terminationdate}}</div>
+    <div id="state" ng-hide="isHidden">收入状态->{{state}}</div>
+    
+    </p>
+</div>
+<!-- /.container -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../lib/angular-1.4.5/angular.min.js"></script>
+<script src="js/caiwushouruchaxunModule.js"></script>
+</body>
 </html>
