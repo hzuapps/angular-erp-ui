@@ -19,11 +19,15 @@ var ManifestDataModule = angular.module("ManifestDataModule", ['ngRoute']);
          function($routeProvider) {
             $routeProvider.
                when('/myWebsite', {
-                  templateUrl: 'myWebsite.html',
+                  templateUrl: 'pages/myWebsite.html',
+                  //controller: 'myWebsiteController'
+               }).
+			   when('/tableData', {
+                  templateUrl: 'pages/tableData.html',
                   //controller: 'myWebsiteController'
                }).
                when('/aboutMe', {
-                  templateUrl: 'aboutMe.html',
+                  templateUrl: 'pages/aboutMe.html',
                   //controller: 'aboutMeController'
                }).
                otherwise({
@@ -72,7 +76,8 @@ angular.module('ManifestDataModule').controller('MyFilterDemoCtrl', function($sc
 			
 		  
 			$scope.successMessage =data[0].SMessage;
-   		    $scope.showSuccessMessage=true;
+			alert($scope.successMessage);
+   		    //$scope.showSuccessMessage=true;
 			});
 		  
 			//promise的失败方法
@@ -80,7 +85,7 @@ angular.module('ManifestDataModule').controller('MyFilterDemoCtrl', function($sc
 		  
 		  
 			$scope.errorsMessage =data[0].EMessage;
-			$scope.showErrorMessage=true; 
+			alert($scope.errorsMessage);
 		  
 			});
 		  }
@@ -119,26 +124,3 @@ ManifestDataModule.filter('stripDashes', function() {
 	};
 });
 
-/*ManifestDataModule.config(['$routeProvider',
-         function($routeProvider) {
-            $routeProvider.
-               when('/addStudent', {
-                  templateUrl: 'addStudent.html',
-                  controller: 'AddStudentController'
-               }).
-               when('/viewStudents', {
-                  templateUrl: 'viewStudents.html',
-                  controller: 'ViewStudentsController'
-               }).
-               otherwise({
-                  redirectTo: '/addStudent'
-               });
-         }]);
-
-ManifestDataModule.controller('AddStudentController', function($scope) {
-            $scope.message = "This page will be used to display add student form";
-         });
-
-ManifestDataModule.controller('ViewStudentsController', function($scope) {
-            $scope.message = "This page will be used to display all the students";
-         });*/

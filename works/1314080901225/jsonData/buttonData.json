@@ -1,6 +1,6 @@
 [
     {
-        "SMessage": "create successfully!",
-        "EMessage": "error!Try again"
+        "SMessage": "恭喜你新建数据成功!",
+        "EMessage": "新建数据失败，请再试一次！"
     }
 ]
