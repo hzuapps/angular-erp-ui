@@ -4,9 +4,14 @@ var queryModule = angular.module('queryModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-queryModule.controller('MyFilterDemoCtrl', function ($scope) {
-       // controller code would go here
-	   var listData = {
+queryModule.controller('MyFilterDemoCtrl', function ($scope,$http) {
+      var promise=$http({
+              url:"json/operationData.json",
+              method:"get",
+            });
+      promise.success(function(data,status){
+		alert(status);
+         var listData = {
             saleList: '销售订单',
             listType: '订单类型',
             listDate: new Date(2015, 10, 20),
@@ -16,10 +21,16 @@ queryModule.controller('MyFilterDemoCtrl', function ($scope) {
             remarks:'备注'
         };
         $scope.data = listData;
-		$scope.isHidden = true;
-		$scope.show = function(){
-			$scope.isHidden = !$scope.isHidden;
-			}
+        $scope.isHidden = true;
+        $scope.show = function(){
+            $scope.isHidden = !$scope.isHidden;
+            }
+      });
+      promise.error(function(data,status){
+        alert(status);
+      });
+       // controller code would go here
+	  
     }
 );
 
