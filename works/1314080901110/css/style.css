@@ -6,3 +6,4 @@ body {
   text-align: center;
 }
 
+.ng-cloak{display:none;}
