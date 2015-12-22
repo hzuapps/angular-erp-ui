@@ -3,6 +3,9 @@
 var purchasingGroupDelModule = angular.module('purchasingGroupDelModule', ['ngRoute']);
 purchasingGroupDelModule.config(function ($routeProvider){
   $routeProvider
+       .when('/',{
+        templateUrl:'home.html'
+      })
       .when('/about',{
         templateUrl:'about.html'
       });
