@@ -1,0 +1,51 @@
+﻿<div class="color">
+<div class="container">
+
+      <div class="starter-template">
+        <h1>BOM订单表</h1>
+      </div>
+</div><!-- /.container -->
+<form class="form-horizontal" role="form" ng-submit="create()">
+    <fieldset>
+
+        <div class="form-group">
+            <label for="order"  class="col-md-1 control-label">订单：</label>
+            <div class="col-md-2">
+                <select id="order" class="form-control" ng-model="seleted" ng-options="a.order for a in SelectItem">
+                </select>
+            </div>
+            <label for="product"  class="col-md-1 control-label">产品：</label>
+            <div class="col-md-2">
+                <select id="product" class="form-control" ng-model="seleted" ng-options="a.product for a in SelectItem">
+                </select>
+            </div>
+            <label for="data1"  class="col-md-1 control-label">起始日期：</label>
+            <div class="col-md-2">
+                <input id="data1"  type="date"/>
+            </div> 
+            <label for="data2"  class="col-md-1 control-label">终止日期：</label>
+            <div class="col-md-2">
+                <input id="data2"  type="date"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="state"  class="col-md-1 control-label">状态：</label>
+            <div class="col-md-2">
+                 <input class="form-control " id="state" type="text" placeholder="只可读不可编辑" disabled/>
+            </div>
+            <label for="singlemember"  class="col-md-1 control-label">拆单员：</label>
+            <div class="col-md-2">
+                <select id="singlemember" class="form-control" ng-model="seleted" ng-options="a.singlemember for a in SelectItem">
+                </select>
+            </div>
+            <label for="remark"  class="col-md-1 control-label">备注：</label>
+            <div class="col-md-2">
+                <input class="form-control disabled" id="remark" type="text" /> 
+            </div>
+        </div>
+        <div class="btn-group col-lg-push-1" >
+            <button type="submit" class="btn btn-default btn-sm" >提交</button>
+        </div>
+    </fieldset>
+</form>
+ </div>
