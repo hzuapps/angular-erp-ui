@@ -23,7 +23,7 @@
 </head>
 
 <body ng-controller="MyFilterDemoCtrl">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -46,73 +46,31 @@
     </nav>
     <h1>AngularJS</h1>
     <p>Keep warm this winter with our 100% wool,</p>
-    <!-- </div> -->
-    <div class="container">
-        <!-- <div class="starter-template">
-            <h1>Bootstrap starter template</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.
-                <br> All you get is this text and a mostly barebones HTML document.</p>
-        </div> -->
-        <button ng-click="showHideColors()" type="button">
-            供应商资料
-        </button>
-        <div ng-hide="isHidden">
-            <table>
-                <tr style="background-color:cadetblue;">
-                    <td align=center>
-                        <span id="number">编号</span>
-                    </td>
-                    <td align=center>
-                        <span id="name">名字</span>
-                    </td>
-                    <td align=center>
-                        <span id="code">code</span>
-                    </td>
-                    <td align=center>
-                        <span id="photo">查看</span>
-                    </td>
-                    <td align=center>
-                        <span id="creatTime">创建时间</span>
-                    </td>
-                </tr>
-                <!-- <div style="padding:4px 4px 4px 4px"> -->
-                <!-- </div> -->
-                <!-- <div style="padding:4px 4px 4px 4px"> -->
-                <tr style="background-color:darkgrey;">
-                    <td align=center>
-                        <div ng-repeat="supplier in data.suppliers">
-                            <span style="margin-left:10px;">{{supplier.numbers}}</span>
-                        </div>
-                    </td>
-                    <td align=center>
-                        <div ng-repeat="supplier in data.suppliers">
-                            <span style="margin-left:10px;">{{supplier.name}}</span>
-                        </div>
-                    </td>
-                    <td align=center>
-                        <div ng-repeat="supplier in data.suppliers">
-                            <span style="margin-left:10px;">{{supplier.code}}</span>
-                        </div>
-                    </td>
-                    <td align=center>
-                        <div ng-repeat="supplier in data.suppliers">
-                            <span style="margin-left:10px;">{{supplier.photo}}</span>
-                        </div>
-                    </td>
-                    <td align=center>
-                        <div ng-repeat="supplier in data.suppliers">
-                            <span style="margin-left:10px;">{{supplier.createTime}}</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="starter-template">
-            <h1>Bootstrap starter template</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.
-                <br> All you get is this text and a mostly barebones HTML document.</p>
-        </div>
-    </div>
+
+    
+    <div id="content">
+     <div id="head" style="width:auto;height:32px;background-color:#0066c0;color:#fff;font-size:28px;padding-left:20px;">
+       供应商资料
+     </div>
+     <div>
+       <table class="table">
+       <tr style="background-color:#e3e3e3">
+         <td>编号</td>
+         <td>名字</td>
+         <td>code</td>
+          <td>查看</td>
+          <td>描述创建时间</td>
+        </tr>
+       <tr  ng-repeat="item in data">
+          <td>{{item.numbers}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.code}}</td>
+          <td>{{item.photo}}</td>
+         <td>{{item.createTime}}</td>
+       </tr>
+       </table>
+     </div>
+   </div>
     <!-- /.container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../../lib/angular-1.4.5/docs/components/jquery-2.1.1/jquery.min.js"></script>
