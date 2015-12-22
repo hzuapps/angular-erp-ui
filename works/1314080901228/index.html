@@ -64,5 +64,48 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/CaiGouShouHuo.js"></script>
+	
+	
+	<table class="table table-bordered table-condensed" align="center"> 
+          <thead> 
+             <tr> 
+               <th rowspan="2" class="text-center">序号</th> 
+               <th rowspan="2" class="text-center">编码</th> 
+               <th rowspan="2" class="text-center">类别</th> 
+               <th rowspan="2" class="text-center">名称</th> 
+               <th rowspan="2" class="text-center">型号</th> 
+               <th rowspan="2" class="text-center">长</th> 
+               <th rowspan="2" class="text-center">宽</th> 
+               <th rowspan="2" class="text-center">厚</th> 
+               <th rowspan="2" class="text-center">单位</th> 
+               <th rowspan="2" class="text-center">数量</th> 
+               <th rowspan="2" class="text-center">收货数量</th> 
+               <th rowspan="2" class="text-center">备注</th> 
+              </tr> 
+            
+        <tbody ng-repeat="item in items"> 
+             <tr> 
+              <td rowspan="2" class="text-center">{{item.number}}</td> 
+              <td rowspan="2" class="text-center">{{item.encoding}}</td> 
+              <td rowspan="2" class="text-center">{{item.classes}}</td> 
+			  <td rowspan="2" class="text-center">{{item.name}}</td> 
+              <td rowspan="2" class="text-center">{{item.type}}</td> 
+              <td rowspan="2" class="text-center">{{item.long}}</td>
+			  <td rowspan="2" class="text-center">{{item.wide}}</td> 
+              <td rowspan="2" class="text-center">{{item.hight}}</td> 
+              <td rowspan="2" class="text-center">{{item.units}}</td>
+			  <td rowspan="2" class="text-center">{{item.count}}</td> 
+              <td rowspan="2" class="text-center">{{item.receiving count}}</td> 
+              <td rowspan="2" class="text-center">{{item.remark}}</td>
+			  
+     
+            </tr> 
+        </tbody> 
+        </table> 
+
+	
+	
+	
   </body>
 </html>
