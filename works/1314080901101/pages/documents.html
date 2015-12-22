@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="starter-template">
+        <table class="table table-bordered table-condensed" align="center">
+            <thead>
+            <tr>
+                <th rowspan="2" class="text-center">序号</th>
+                <th rowspan="2" class="text-center">编码</th>
+                <th rowspan="2" class="text-center">类别</th>
+                <th rowspan="2" class="text-center">名称</th>
+                <th colspan="3" class="text-center">规格(mm)</th>
+                <th rowspan="2" class="text-center">单位</th>
+                <th rowspan="2" class="text-center">数量</th>
+            </tr>
+            <tr>
+                <th class="text-center">长</th>
+                <th class="text-center">宽</th>
+                <th class="text-center">厚</th>
+            </tr>
+            <tbody ng-repeat="backMessOne in backMess">
+            <tr>
+                <td rowspan="2" class="text-center">{{$index + 1}}</td>
+                <td rowspan="2" class="text-center">{{backMessOne.code}}</td>
+                <td rowspan="2" class="text-center">{{backMessOne.type}}</td>
+                <td rowspan="2" class="text-center">{{backMessOne.name}}</td>
+                <td colspan="1" class="text-center">{{backMessOne.length}}</td>
+                <td colspan="1" class="text-center">{{backMessOne.width}}</td>
+                <td colspan="1" class="text-center">{{backMessOne.thickness}}</td>
+                <td rowspan="2" class="text-center">{{backMessOne.unit}}</td>
+                <td rowspan="2" class="text-center">{{backMessOne.number}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!-- /.container -->
