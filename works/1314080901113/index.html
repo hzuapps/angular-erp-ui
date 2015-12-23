@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+<html ng-app="chaxundingdanModule">
+  <head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,16 +20,8 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<script>
-+    function MyFilterDemoCtrl($scope) {
-+        var options = {
-+        order form state:'new','finish','unfinished','all',
-         start time:'2015-11-1',
-		 terminal time:'2015-11-30',
-+        };
-+        $scope.data = options;
-+}
-</script>
+ <script src="../lib/angular-1.4.5/angular.min.js"></script>
+	<script src="js/chaxundingdan.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
