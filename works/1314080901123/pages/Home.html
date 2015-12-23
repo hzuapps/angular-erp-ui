@@ -1,0 +1,24 @@
+<div class="container"  ng-app="procedureModule">
+      <div class="starter-template">
+      
+      <div class="x-panel x-grid-with-row-lines x-border-item x-box-item x-panel-default x-grid" style="width: 520px; right: auto; left: 5px; top: 5px; margin: 0px; height: 195px;">
+      <div id="head" style="width:auto;height:32px;background-color:#5599FF;color:0000FF;font-size:28px;padding-right:400px;">待处理</div>
+      <div  ng-controller="procedureModuleDemoCtrl">
+      <table class="table">
+      <tr style="background-color:#e3e3e3">
+        <td>ID</td>
+        <td>名称</td>
+        <td>操作</td>
+        <td>状态</td>
+      </tr>
+       <tr ng-controller="procedureModuleDemoCtrl" ng-repeat="item in theOrderDatas">
+        <td>{{item.procedureID}}</td>
+        <td>{{item.procedureName}}</td>
+        <td>{{item.procedureOperation}}</td>
+        <td>{{item.procedureCondition}}</td>
+      </tr>
+      </table>
+                </div>
+            </div>
+          </div>
+        </div>
