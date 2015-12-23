@@ -7,16 +7,17 @@ var myAppModule = angular.module('qitashourushezhi', []);
 // configure the module with a controller
 myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
-var someData = {
-+            shouruleixing: a,
-+            kemubianma: 001,
-+            beizhu: wu
-
-+        };
-+        $scope.data = someData;
-+} </script>
+        var documentsDetail = {
+            code: '001',
+            type: 'weikuan',
+            other:'wu'
         };
-        $scope.data = danjuData;
+        $scope.data = documentsDetail;
+        $scope.items = [
+            {code: '001',type: 'weikuan',other:'wu'},
+            {code: '002',type: 'dingjin',other:'wu'},
+            {code: '003',type: 'fenqifukuan',other:'wu'} 
+        ];
     }
 );
 
