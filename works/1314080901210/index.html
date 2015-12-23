@@ -1,42 +1,30 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+<html ng-app="myMaterialsModule">
+  <head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>{{uiName}} 1314080901210物料信息 </title>
+    <title> 1314080901210物料物料信息</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-   
-} </script>
+    
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <h2>AngularJS Socks</h2>
-+    <p>Keep warm this winter with our 100% wool, 100% cool, AngularJS socks!</p>
-+    <button ng-click="showHideColors()" type="button">
-+        {{isHidden ? 'Show Available Colors' : '增加/修改'}}
-+    </button>
-+    <div id="red" ng-hide="isHidden">Red</div>
-+    <div id="green" ng-hide="isHidden">Green</div>
-+    <div id="blue" ng-hide="isHidden">Blue</div>
-+    <div id="purple" ng-hide="isHidden">Purple</div>
-+    <div id="gray" ng-hide="isHidden">Dark Slate Gray</div>
-+    <div id="olive" ng-hide="isHidden">Olive</div>
-+  <p ng-cloak>{{data.groupName}}</p>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-      <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-    <script src="js/wuliaoModule.js"></script>
-    <![endif]-->
+      <script src"../../lib/angular-1.4.5/angular.min.js></script>
+      <script src="js/myMaterialsModule.js"></script>
+    <![endif]--> 
   </head>
-  <body>
+
+  <body ng-controller="Myfilter">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -46,30 +34,78 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Project</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">about</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
+        <!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <div class="row col-lg-offset-3">
+            <form class="form-inline" role="form" ng-submit="register()" novalidate>
+         
+         <div class="form-group row">
+           <div class="row">
+              <label for="sort1">物料类别：</label>
+              <input type="text" class="form-control input-sm" ng-model="Sort" id="sort1"/ required>
+              <label for="number1">物料名称：</label>
+              <input type="text" class="form-control input-sm" ng-model="myName" id="name1" required/>
+              <label for="date1">更新日期：</label>
+              <input type="text" class="form-control input-sm" ng-model="Date" id="date1" required/>
+              
+              <br/>
+           </div>
+        </div> 
+            
+         <div class="form-group row">
+           <div class="row">
+              <label for="code1">拼音码：</label>
+              <input type="text" class="form-control input-sm" ng-model="Code" id="code1" required/>
+              <label for="fullname1">物料描述：</label>
+              <input type="text" class="form-control input-sm" ng-model="Synposis" id="synposis1" required/>
+              <br/>
+            </div>
+        </div> 
+  
+        
+     <br>
+      <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+      <button type="submit" class="btn btn-default">
+            {{isHidden ? '提交' : '隐藏'}}
+      </button>
+     </div>
+     </form>
+    </div>
+  </div>
+  <!-- SHOW ERROR/SUCCESS INFORMATION
+      <div id="information" class="ng-cloak" ng-show="backMess" ng-hide="isHidden">
+      <p>{{ backMess[0].information }}</p>
       </div>
+  -->
 
-    </div><!-- /.container -->
+  <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+      <div ng-hide="isHidden">您输入的数据为：</div>
+      <div id="sort" ng-hide="isHidden">物料类别->{{Sort}}</div>
+      <div id="name" ng-hide="isHidden">物料名称->{{myName}}</div>
+      <div id="date" ng-hide="isHidden">更新日期->{{Date}}</div>
+      <div id="code" ng-hide="isHidden">拼音码->{{Code}}</div> 
+      <div id="synposis" ng-hide="isHidden">物料描述->{{Synposis}}</div>
+       </p>
+    </div>
+    <!-- /.container -->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/myMaterialsModule.js"></script>
   </body>
 </html>
