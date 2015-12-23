@@ -1,0 +1,21 @@
+<div class="container starter-template">
+    <h2><p>Factory List</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">工厂名称</th>
+            <th rowspan="2" class="text-center">工厂代号</th>
+            <th rowspan="2" class="text-center">工厂位置</th>
+            <th rowspan="2" class="text-center">工厂描述</th>           
+        </tr>
+        </thead>
+        <tbody ng-repeat="factoryData in factoryArray">
+        <tr>
+            <td rowspan="2" class="text-center">{{factoryData.factoryName}}</td>
+            <td rowspan="2" class="text-center">{{factoryData.factoryNum}}</td>
+            <td rowspan="2" class="text-center">{{factoryData.factoryLocation}}</td>
+            <td rowspan="2" class="text-center">{{factoryData.factoryDescription}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div> 
