@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html ng-app="NewTypeSetModule"> 
-<head lang="en">
+<head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,12 +44,32 @@
     </nav>
 
     <div class="container">
+       <div class="starter-template">
+      <h3>物料类别设置</h3>
+       <table class="table table-bordered table-condensed" align="center">
+         <thead>
+           <tr>
+            <th rowspan="2" class="text-center">类别名称</th>
+            <th rowspan="2" class="text-center">类别代码</th>
+           </tr>
+           
 
-      <div class="starter-template">
+           
+         
+          <tbody ng-repeat="item in items">
+            <tr>
+              
+              <td rowspan="2" class="text-center">{{item.typeName}}</td>
+              <td rowspan="2" class="text-center">{{item.typecode}}</td>
+             </tr>
+           </tbody>
+       </table>
+      <!--<div class="starter-template">-->
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        <h3>{{data.typeCode}}</h3>
       </div>
+        <!--<h3>{{data.typeCode}}</h3>
+      </div>-->
 
     </div><!-- /.container -->
 
