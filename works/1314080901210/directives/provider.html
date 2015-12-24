@@ -1,0 +1,37 @@
+﻿    <div class="container">
+        <div class="row col-lg-offset-3">
+            <form class="form-inline" role="form" ng-submit="register()" novalidate>
+         
+         <div class="form-group row">
+           <div class="row">
+              <label for="sort1">物料类别：</label>
+              <input type="text" class="form-control input-sm" ng-model="Sort" id="sort1"/ required>
+              <label for="number1">物料名称：</label>
+              <input type="text" class="form-control input-sm" ng-model="myName" id="name1" required/>
+              <label for="date1">更新日期：</label>
+              <input type="text" class="form-control input-sm" ng-model="Date" id="date1" required/>
+              
+              <br/>
+           </div>
+        </div> 
+            
+         <div class="form-group row">
+           <div class="row">
+              <label for="code1">拼音码：</label>
+              <input type="text" class="form-control input-sm" ng-model="Code" id="code1" required/>
+              <label for="fullname1">物料描述：</label>
+              <input type="text" class="form-control input-sm" ng-model="Synposis" id="synposis1" required/>
+              <br/>
+            </div>
+        </div> 
+  
+        
+     <br>
+      <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+      <button type="submit" class="btn btn-default">
+            {{isHidden ? '提交' : '隐藏'}}
+      </button>
+     </div>
+     </form>
+    </div>
+  </div>
