@@ -10,10 +10,14 @@ var Project_Template = {
              template_Name: 'czg',
              other_Name: 'xca',
              news_People: 'admin',
-             type: '·¿ÃÅÀà',
+             type: 'mucai',
              price: '2000',
          };
          $scope.data = Project_Template;
+         $scope.isHidden = true;
+         $scope.showInput = function () {
+            $scope.isHidden = !$scope.isHidden;
+         }
     }
 );
 
