@@ -3,10 +3,5 @@
 		{
 			"message":"Submit success!"
 		}
-	],
-	"error":[
-		{
-			"message":"There appears to have been a problem ."
-		}
 	]
 }
