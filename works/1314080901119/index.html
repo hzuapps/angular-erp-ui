@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="qitashourushezhiModule">
- <head lang="en">
+ <head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,9 +20,8 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
   </head>
-  <body>
+  <body ng-controller="qitashourushezhiFilter">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -64,12 +63,11 @@
               <th rowspan="2" class="text-center">备注</th>
 
             </tr>
-          <tbody ng-repeat="item in items">
+          <tbody ng-repeat="backMessOne in backMess">
             <tr>
-              <td rowspan="2" class="text-center">{{$index + 1}}</td>
-              <td rowspan="2" class="text-center">{{item.code}}</td>
-              <td rowspan="2" class="text-center">{{item.type}}</td>
-              <td rowspan="2" class="text-center">{{item.other}}</td>
+              <td rowspan="2" class="text-center">{{backMessOne.code}}</td>
+              <td rowspan="2" class="text-center">{{backMessOne.type}}</td>
+              <td rowspan="2" class="text-center">{{backMessOne.other}}</td>
 
             </tr>
           </tbody>
@@ -82,7 +80,7 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-    <script src="../lib/angular-1.4.5/angular.min.js">
+    <script src="../../lib/angular-1.4.5/angular.min.js">
 </script>
 	<script src="js/qitashourushezhi.js"></script>
   </body>

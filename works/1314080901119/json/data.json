@@ -1,0 +1,23 @@
+
+     "qitashourushezhiData": [
+         {
+             "code": "001",
+             "type": "weikuan",
+             "other": "wu",
+
+         },
+         {
+             "code": "002",
+             "type": "dingjin",
+             "other": "wu",
+
+ 
+         },
+         {
+             "code": "003",
+             "type": "fenqifukuan",
+             "other": "wu",
+
+         }
+     ]
+ } 
