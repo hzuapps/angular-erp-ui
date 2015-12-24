@@ -4,7 +4,14 @@ var news_TemplateModule = angular.module('news_TemplateModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-news_TemplateModule.controller('news_TemplateModuleDemoCtrl', function ($scope) {
+news_TemplateModule.factory('news_TemplateService', function ($http) {
+    var dataStroe = {};
+    dataStroe.newData = function (theData) {
+        var promise = $http({method: 'post',url: 'json/message.json',data: theData});
+        return promise;
+    }
+    return dataStroe;
+}).controller('news_Template',function ($scope,news_TemplateService){
        // controller code would go here
 var Project_Template = {
              template_Name: 'czg',
@@ -18,8 +25,26 @@ var Project_Template = {
          $scope.showInput = function () {
             $scope.isHidden = !$scope.isHidden;
          }
-    }
-);
+
+         $scope.news = {};
+         $scope.register = function () {
+             var promise = news_TemplateService.newData($scope.news);
+             promise.success(function (data, status, headers, config, statusText) {
+                 $scope.backMess = data.success;
+                 $scope.isHidden = !$scope.isHidden;
+                 if(!$scope.isHidden){
+                    alert($scope.backMess[0].message + "\n" + "\n" + "Your newId is " + $scope.news.template_Name);
+                 }
+             });
+             promise.error(function (data, status, headers, config, statusText) {
+                 $scope.backMess = data.error;
+                 $scope.isHidden = !$scope.isHidden;
+                 if(!$scope.isHidden){
+                     alert($scope.backMess[0].message);
+                 }
+             });
+         }
+ });
 
 // use the myAppModule variable to
 // configure the module with a filter
