@@ -1,0 +1,54 @@
+<div class="wrapper" ng-contrller="inputController" >
+    <div class="head">
+            <h4>单据信息</h4>
+    </div>
+    <form class="form-inline" role="form" ng-submit="register()" novalidate>
+           <div>
+               <div class="form-group">
+                  <label for="category">销售订单:</label>
+                  <input type="text" class="form-control" id="category" 
+                     ng-model="data.category" required>
+               </div>
+               <div class="form-group">
+                  <label for="department">订单类型:</label>
+                  <input type="text" class="form-control" id="department" 
+                     ng-model="data.department" required>
+               </div>
+               <div class="form-group">
+                  <label for="receiverName">订单日期:</label>
+                  <input type="text" class="form-control" id="receiverName" 
+                     ng-model="data.receiverName" required>
+               </div>
+                <div class="form-group">
+                  <label for="costDateString">提交日期:</label>
+                  <input type="text" class="form-control" id="costDateString" 
+                     ng-model="data.costDateString" required>
+                </div>
+            </div>
+            <div>
+               <div class="form-group">
+                  <label for="money">订单编号:</label>
+                  <input type="text" class="form-control" id="money" 
+                     placeholder="">
+               </div>
+               <div class="form-group">
+                  <label for="total">订单状态:</label>
+                  <input type="text" class="form-control" id="total" 
+                     ng-model="data.total" required>
+               </div>
+                <div class="form-group">
+                  <label for="remark">备注 :</label>
+                  <input type="text" class="form-control" id="remark" 
+                     ng-model="data.remark" required>
+                </div>
+            </div>
+
+
+            <div class="btn-group ng-cloak" role="group" ng-cloak>
+            <!-- <button type="button" class="btn btn-default" ng-click="showInput()"> -->
+                <button type="submit" class="btn btn-default">
+                    {{isHidden ? '提交' : '隐藏'}}
+                </button>
+            </div>
+    </form>
+</div>

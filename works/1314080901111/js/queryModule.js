@@ -1,42 +1,118 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var queryModule = angular.module('queryModule', []);
+var queryModule = angular.module('queryModule', ['ngRoute']);
 
 // use the myAppModule variable to
 // configure the module with a controller
-queryModule.controller('MyFilterDemoCtrl', function ($scope,$http) {
-      var promise=$http({
-              url:"json/operationData.json",
-              method:"get",
-            });
-      promise.success(function(data,status){
-		alert(status);
-         var listData = {
-            saleList: 'œ˙ €∂©µ•',
-            listType: '∂©µ•¿‡–Õ',
+
+queryModule.config(function($routeProvider){
+  
+    $routeProvider
+.when('/',{
+  templateUrl:'page/home.html',
+})
+.when('/home',{
+  templateUrl:'page/home.html',
+})
+.when('/about',{
+  templateUrl:'page/about.html',
+  controller:'aboutController'
+})
+.when('/form',{
+  templateUrl:'page/form.html',
+  controller:'inputController'
+})
+.when('/content',{
+  templateUrl:'page/content.html',
+  controller:'contentController'
+});
+});
+
+queryModule.factory('providerService',function($http){
+  var dataSvc={};
+  dataSvc.getData=function(theData){
+    var promise=$http({method: 'POST',url: 'json/operationData.json',data: theData});
+    return promise;
+  }
+  return dataSvc;
+});
+queryModule.controller("inputController",function($scope,providerService){
+          var someData = {
+            saleList: 'ÈîÄÂîÆËÆ¢Âçï',
+            listType: 'ËÆ¢ÂçïÁ±ªÂûã',
             listDate: new Date(2015, 10, 20),
             commitDate:new Date(2015,10,20),
-            listID:'∂©µ•±‡∫≈',
-            listState:'∂©µ•◊¥Ã¨',
-            remarks:'±∏◊¢'
-        };
-        $scope.data = listData;
-        $scope.isHidden = true;
-        $scope.show = function(){
-            $scope.isHidden = !$scope.isHidden;
-            }
-      });
-      promise.error(function(data,status){
-        alert(status);
-      });
-       // controller code would go here
-	  
-    }
-);
+            listID:'ËÆ¢ÂçïÁºñÂè∑',
+            listState:'ËÆ¢ÂçïÁä∂ÊÄÅ',
+            remarks:'Â§áÊ≥®'
+              };
+          $scope.data=someData;
+          $scope.isHidden=true;
 
-// use the myAppModule variable to
-// configure the module with a filter
+          // $scope.provider={};
+          $scope.register=function(){
+              var promise=providerService.getData($scope.provider);
+              promise.success(function(data){
+                  $scope.backMess=data.success;
+                  $scope.isHidden = !$scope.isHidden;
+                  if (!$scope.isHidden) {
+                    alert($scope.backMess[0].message+"\n"+"\n"+"The receiverName is "+$scope.data.receiverName);
+                  }
+                });
+                promise.error(function(data,status,headers,config,statusText){
+                    $scope.backMess="There appears to have been a problem .";
+                    alert($scope.backMess);
+                });
+            }
+});
+queryModule.controller('aboutController',function($scope){
+  var aboutData={
+    StudentId:'1314080901111'
+  };
+  $scope.aboutData=aboutData;
+});
+queryModule.controller('contentController',function($scope){
+  var someData = {
+                saleList: 'ÈîÄÂîÆËÆ¢Âçï',
+                listType: 'ËÆ¢ÂçïÁ±ªÂûã',
+                listDate: new Date(2015, 10, 20),
+                commitDate:new Date(2015,10,20),
+                listID:'ËÆ¢ÂçïÁºñÂè∑',
+                listState:'ËÆ¢ÂçïÁä∂ÊÄÅ',
+                remarks:'Â§áÊ≥®'
+              };
+              $scope.data=someData;
+});
+
+
 queryModule.filter('stripDashes', function() {
-    return function(txt) {
-        // filter code would go here
-}; });
+     return function(txt) {
+         // filter code would go here
+ }; });
+
+queryModule.directive("myProvider", function () {
+    return {
+        restrict: "AE",
+        replace: true,
+        templateUrl: 'directives/provider.html'
+
+    }
+}).directive("myHide", function () {
+    return {
+        restrict: "AE",
+        replace: true,
+        templateUrl: 'directives/hide.html'
+    }
+}).directive("myNav", function () {
+    return {
+        restrict: "AE",
+        replace: true,
+        templateUrl: 'directives/nav.html'
+    }
+}).directive("myShow", function () {
+    return {
+        restrict: "AE",
+        replace: true,
+        template: '<div id="main"><div ng-view></div></div>'
+    }
+});
