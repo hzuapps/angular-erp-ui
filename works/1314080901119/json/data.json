@@ -1,0 +1,23 @@
+{
+     "qitashourushezhiData": [
+         {
+             "code": "001",
+             "type": "aabb",
+             "other": "wu"
+
+         },
+         {
+             "code": "002",
+             "type": "ccdd",
+             "other": "wu"
+
+ 
+         },
+         {
+             "code": "003",
+             "type": "eeff",
+             "other": "wu"
+
+         }
+     ]
+ } 
