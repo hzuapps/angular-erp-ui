@@ -16,6 +16,11 @@ danjumingxiModule.controller('MyFilterDemoCtrl', function ($scope) {
              number: 100
         };
         $scope.data = someData;
+        $scope.items = [
+             {No: '001',code: '001',name: 'abc',model: 'MX5',color: 'red',unit: 'kg',number: 99,length: 2,width: 1,thickness: 1.5},
+             {No: '001',code: '001',name: 'cba',model: 'MX5',color: 'red',unit: 'kg',number: 99,length: 2,width: 1,thickness: 1.5},
+             {No: '001',code: '001',name: 'dsa',model: 'MX5',color: 'red',unit: 'kg',number: 99,length: 2,width: 1,thickness: 1.5} 
+        ];
     }
 );
 

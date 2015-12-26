@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="danjumingxiModule"> 
-  <head lang="en">
+  <head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,6 +52,44 @@
       </div>
 
     </div><!-- /.container -->
+    <div class="con">
+       <h3>单据明细</h3>
+       <table class="table table-bordered"}>
+         <thead>
+           
+           <tr>
+             <th rowspan="2" class="text-center">序号</th>
+             <th rowspan="2" class="text-center">编码</th>
+             <th rowspan="2" class="text-center">名称</th>
+             <th rowspan="2" class="text-center">型号</th>
+             <th rowspan="2" class="text-center">颜色</th>
+             <th colspan="3" class="text-center">规格</th>
+             <th rowspan="2" class="text-center">单位</th>
+             <th rowspan="2" class="text-center">出库数量</th>
+           </tr>
+           <tr>
+               <th class="text-center">长</th>
+               <th class="text-center">宽</th>
+               <th class="text-center">厚</th>
+           </tr>
+         </thead>
+           <tbody ng-repeat="item in items">
+             <tr >
+               
+               <td rowspan="2" class="text-center">{{item.No}}</td>
+               <td rowspan="2" class="text-center">{{item.code}}</td>
+               <td rowspan="2" class="text-center">{{item.name}}</td>
+               <td rowspan="2" class="text-center">{{item.model}}</td>
+               <td rowspan="2" class="text-center">{{item.color}}</td>
+               <td colspan="1" class="text-center">{{item.length}}</td>
+               <td colspan="1" class="text-center">{{item.width}}</td>
+               <td colspan="1" class="text-center">{{item.thickness}}</td>
+               <td rowspan="2" class="text-center">{{item.unit}}</td>
+               <td rowspan="2" class="text-center">{{item.number}}</td>
+             </tr>
+           </tbody>
+       </table>
+  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
