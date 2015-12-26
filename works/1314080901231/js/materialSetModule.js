@@ -1,6 +1,6 @@
 ﻿// create a new module called 'materialsSetModule' and save 
 // a reference to it in a variable called itemListModule
- var materialSetModule = angular.module('materialSetModule', []);
+ var materialSetModule = angular.module('materialSetModule', ['ngRoute']);
  
 // use the materialSetModule variable to
 // configure the module with a controller
@@ -38,3 +38,24 @@ materialSetModule.filter('materialSetstripDashes', function() {
      return function(txt) {
          // filter code would go here
     }; });
+	
+ 
+ materialSetModule.config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+            when('/website', {
+                templateUrl: 'website.html',
+                //controller: 'aboutController'
+            }).
+            when('/table', {
+                templateUrl: 'table.html',
+                //controller: 'aboutController'
+            }).
+            when('/about', {
+                templateUrl: 'about.html',
+                //controller: 'aboutController'
+            }).
+            otherwise({
+                redirectTo: '/about'
+            });
+    }]);

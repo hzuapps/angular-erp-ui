@@ -1,27 +1,27 @@
 ﻿[
     {
         "typeName": "板材",
-        "tyoeCode": "bc"
+        "typeCode": "bc"
     },
 
 	    {
         "typeName": "木皮",
-        "tyoeCode": "mp"
+        "typeCode": "mp"
     },
 	
 	    {
         "typeName": "灯具",
-        "tyoeCode": "dg"
+        "typeCode": "dg"
     },
 	
 	    {
         "typeName": "油漆",
-        "tyoeCode": "yq"
+        "typeCode": "yq"
     },
 	
 	    {
         "typeName": "铰链",
-        "tyoeCode": "jl"
+        "typeCode": "jl"
     }
 	
 ] 
