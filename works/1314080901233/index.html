@@ -45,15 +45,15 @@
     </nav>
 
     <div class="container">
-      <div id="procesingList">
+      <div>
       <h1>流程-审核-待处理列表</h1>
          <table class="table" >
-          <tr style="background-color:#0066cc">
+          <tr>
             <td>名称</td>
             <td>操作</td>
             <td>状态</td>
           </tr>
-          <tr  ng-repeat="process in someData">
+          <tr  ng-repeat="process in data1">
             <td>{{process.name}}</td>
             <td>{{process.operation}}</td>
             <td>{{process.status}}</td>
