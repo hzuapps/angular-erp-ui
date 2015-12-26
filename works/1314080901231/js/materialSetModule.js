@@ -4,23 +4,31 @@
  
 // use the materialSetModule variable to
 // configure the module with a controller
-materialSetModule.controller('materialSetCtrl', function ($scope)
+materialSetModule.controller('materialSetCtrl', function ($scope,$http)
     {
         var materialSet = {
                 typeName: '板材',
                 typeCode: 'bc'
             };
 			
-            $scope.data = materialSet;
+			var promise=$http({
+                url:"materialSet_JSON.json",
+                method:"get"
+            });
 			
-            $scope.items = [
-				{ typeName: '板材',typeCode: 'bc'},
-				{ typeName: '五金',typeCode: 'wj'},
-				{ typeName: '木皮',typeCode: 'mp'},
-				{ typeName: '灯具',typeCode: 'dj'},
-				{ typeName: '油漆',typeCode: 'yq'},
-				{ typeName: '铰链 ',typeCode: 'jl'}
-             ];
+            promise.success(function(data,status){
+				
+				
+                $scope.items = [{typeName: data[0].typeName, typeCode: data[0].typeCode},
+								{typeName: data[1].typeName, typeCode: data[1].typeCode},
+								{typeName: data[2].typeName, typeCode: data[2].typeCode},
+								{typeName: data[3].typeName, typeCode: data[3].typeCode},
+								{typeName: data[4].typeName, typeCode: data[4].typeCode}];
+            });
+			
+            				$scope.data = materialSet;
+
+			
     }
 );
  
