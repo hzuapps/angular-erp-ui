@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>查询订单列表 by 1314080901233温仕添</title>
+    <title>流程-审核-待处理列表 by 1314080901233温仕添</title>
      
      <link rel="shortcut icon" href="icons/favicon.ico" />
      <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+     <script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
      <script src="js/queryProcessing.js"></script>
     <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +23,7 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <body ng-controller="queryProcessingCtrl">
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -32,11 +33,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="/">Project name</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -44,22 +45,8 @@
       </div>
     </nav>
 
-    <div class="container">
-      <div>
-      <h1>流程-审核-待处理列表</h1>
-         <table class="table" >
-          <tr>
-            <td>名称</td>
-            <td>操作</td>
-            <td>状态</td>
-          </tr>
-          <tr  ng-repeat="process in data1">
-            <td>{{process.name}}</td>
-            <td>{{process.operation}}</td>
-            <td>{{process.status}}</td>
-          </tr>
-      </table>
-      </div>
+    <div class="container" ng-view>
+      <h3>流程-审核-待处理列表</h3>
       <div class="starter-template" >
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
