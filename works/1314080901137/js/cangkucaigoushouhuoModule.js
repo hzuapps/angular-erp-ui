@@ -28,4 +28,4 @@ cangkucaigoushouhuoModule.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; 
-});//javascript.js
+});//javascript.j
