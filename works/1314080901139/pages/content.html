@@ -1,0 +1,22 @@
+<div class="container starter-template">
+    <h2><p>Material List</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">物料类别</th>
+            <th rowspan="2" class="text-center">物料名称</th>
+            <th rowspan="2" class="text-center">更新日期</th>
+            <th rowspan="2" class="text-center">拼音码</th>
+            <th rowspan="2" class="text-center">物料描述</th>        </tr>
+        </thead>
+        <tbody ng-repeat="materialData in materialArray">
+        <tr>
+            <td rowspan="2" class="text-center">{{materialData.wuliaoLeibie}}</td>
+            <td rowspan="2" class="text-center">{{materialData.wuliaoName}}</td>
+            <td rowspan="2" class="text-center">{{materialData.updatedDate}}</td>
+            <td rowspan="2" class="text-center">{{materialData.pingyinMa}}</td>
+            <td rowspan="2" class="text-center">{{materialData.wuliaoMiaoshu}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
