@@ -1,0 +1,40 @@
+{
+     "danjumingxiData": [
+          {
+              "No": "001",
+              "type": "cake",
+              "name": "ice cake",
+              "model": "kg",
+              "color":"red",
+              "unit": "kg"
+              "number" "99",
+              "length": "2",
+              "width": "1",
+              "thickness": "1.5"
+          },
+          {
+              "No": "001",
+              "type": "cake",
+              "name": "ice cake",
+              "model": "kg",
+              "color":"red",
+              "unit": "kg"
+              "number" "99",
+              "length": "2",
+              "width": "1",
+              "thickness": "1.5"
+          },
+          {
+              "No": "001",
+              "type": "cake",
+              "name": "ice cake",
+              "model": "kg",
+              "color":"red",
+              "unit": "kg"
+              "number" "99",
+              "length": "2",
+              "width": "1",
+              "thickness": "1.5"
+          }
+      ]
+  } 

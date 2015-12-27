@@ -4,9 +4,16 @@ var danjumingxiModule = angular.module('danjumingxiModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-danjumingxiModule.controller('MyFilterDemoCtrl', function ($scope) {
+   danjumingxiModule.factory('danjumingxiModuleService',function($http){
+         var getsomedata = {};
+         getsomedata.getData = function () {
+             var promise = $http({method: "GET",url: "danjumingxi.json"});
+             return promise;
+         }
+         return getsomedata;
+     }).controller('danjumingxiFilter', function ($scope,danjumingxiModuleService) {
        // controller code would go here
-       var someData = {
+       var danjumingxi = {
              No: '001',
              code: 'xidada',
              name: '110120119',
@@ -15,7 +22,7 @@ danjumingxiModule.controller('MyFilterDemoCtrl', function ($scope) {
              unit:'件',
              number: 100
         };
-        $scope.data = someData;
+        $scope.data = danjumingxi;
         $scope.items = [
              {No: '001',code: '001',name: 'abc',model: 'MX5',color: 'red',unit: 'kg',number: 99,length: 2,width: 1,thickness: 1.5},
              {No: '001',code: '001',name: 'cba',model: 'MX5',color: 'red',unit: 'kg',number: 99,length: 2,width: 1,thickness: 1.5},
@@ -23,10 +30,13 @@ danjumingxiModule.controller('MyFilterDemoCtrl', function ($scope) {
         ];
     }
 );
+     var promise=danjumingxiModuleService.getData();
+         promise.success(function (data, status, headers, config, statusText) {
+             $scope.backMess = data.danjumingxiData;
+         });
+         promise.error(function(data,status){
+            alert('出现错误，请重试');
+         });
 
 // use the myAppModule variable to
 // configure the module with a filter
-danjumingxiModule.filter('stripDashes', function() {
-    return function(txt) {
-        // filter code would go here
-}; });
