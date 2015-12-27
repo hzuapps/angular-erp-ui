@@ -1,6 +1,6 @@
 // create a new module called 'procedure message' and save 
 // a reference to it in a variable called procedure message 
-var procedure_message = angular.module('procedure_message', []);
+var procedure_message = angular.module('procedure_message', ['ngRoute']);
 
 // use the procedure message variable to
 // configure the module with a controller
@@ -57,3 +57,24 @@ procedure_message.filter('procedure_message', function() {
     return function(txt) {
         // filter code would go here
 }; });
+
+
+procedure_message.config(['$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/website', {
+                templateUrl: 'website.html',
+                //controller: 'aboutController'
+            }).
+            when('/table', {
+                templateUrl: 'table.html',
+                //controller: 'aboutController'
+            }).
+            when('/about', {
+                templateUrl: 'about.html',
+                //controller: 'aboutController'
+            }).
+            otherwise({
+                redirectTo: '/about'
+            });
+    }]);
