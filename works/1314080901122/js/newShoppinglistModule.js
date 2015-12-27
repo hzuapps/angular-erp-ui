@@ -4,17 +4,24 @@ var newShoppinglistModule = angular.module('newShoppinglistModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-newShoppinglistModule.controller('MyFilterDemoCtrl', function ($scope) {
+newShoppinglistModule.factory('newShoppinglistService',function($http){
+         var dataStroe = {};
+         dataStroe.getData = function () {
+             var promise = $http({method: 'GET',url: 'json/data.json'});
+             return promise;
+         }
+         return dataStroe;
+     }).controller('MyFilterDemoCtrl', function ($scope,newShoppinglistService) {
        // controller code would go here
-        var NewShoppinglist = {
-            no: '001',
-            name: 'liNing',
-            model: 'T-shirt',
-            color: 'red',
-            number: 99
-        };
-        $scope.data = NewShoppinglist;
+        var promise = newShoppinglistService.getData();
+         promise.success(function (data, status, headers, config, statusText) {
+             $scope.datas = data.NewShoppinglist;
+         });
+         promise.error(function(data,status){
+            alert('请求出错，请重试');
+         });
     }
+
 );
 
 // use the myAppModule variable to
