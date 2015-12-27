@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="starter-template">
+      <h3>物料类别设置</h3>
+        <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+          <th rowspan="2" class="text-center">类别名称</th>
+          <th rowspan="2" class="text-center">类别代码</th>
+          </tr>
+        <tbody ng-repeat="item in items">
+           <tr>
+            <td rowspan="2" class="text-center">{{item.typeName}}</td>
+            <td rowspan="2" class="text-center">{{item.typecode}}</td>
+            </tr>
+          </tbody>
+        </table>
+  <!--<div class="starter-template">-->
+  </div>
+</div>
