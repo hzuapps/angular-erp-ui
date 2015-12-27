@@ -4,15 +4,19 @@ var myAppModule = angular.module('myAppModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
-       // controller code would go here
-            var typeSet = {
-            typeName: 'wujin',
-            typeCode: 'WXG',
-        };
-        $scope.data = typeSet;
-    }
-);
+myAppModule.factory("myAppModuleService",function($http){
+   var getmyData={};
+   getmyData.getData=function(){
+      var promise = $http({method: 'GET',url: 'json/myData.json'});
+      return promise;
+   }
+  return getmyData;
+ }).controller('myAppModuleCtrl', function ($scope,myAppModuleService){
+    var promise = myAppModuleService.getData();
+    promise.success(function(data,status){
+       $scope.datas = data.typeSet; 
+    });
+});
 
 // use the myAppModule variable to
 // configure the module with a filter
