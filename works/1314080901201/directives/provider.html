@@ -1,0 +1,48 @@
+ <div class="container">
+        <div class="row col-lg-offset-3">
+            <form class="form-inline" role="form" ng-submit="register()" novalidate>
+         
+         <div class="form-group row">
+           <div class="row">
+              <label for="number1">供应商编号：</label>
+              <input type="text" class="form-control input-sm" ng-model="supplierNumber" id="number1" required/>
+              <label for="date1">建档日期：</label>
+              <input type="text" class="form-control input-sm" ng-model="Filing date" id="date1" required/>
+              <label for="sort1">供应商类别：</label>
+              <input type="text" class="form-control input-sm" ng-model="supplierSort" id="sort1"/ required>
+              <br/>
+           </div>
+        </div> 
+            
+         <div class="form-group row">
+           <div class="row">
+              <label for="fullname1">供应商全称：</label>
+              <input type="text" class="form-control input-sm" ng-model="supplierFullname" id="fullname1" required/>
+              <label for="code1">拼音码：</label>
+              <input type="text" class="form-control input-sm" ng-model="Code" id="code1" required/>
+              <label for="homepage1">供应商主页：</label>
+              <input type="text" class="form-control input-sm" ng-model="supplierHomepage" id="homepage1" required/>
+              <br/>
+            </div>
+        </div> 
+  
+         <div class="form-group row">
+           <div class="row">
+              <label for="simplename1">供应商简称：</label>
+              <input type="text" class="form-control input-sm" ng-model="supplierSimplename" id="simplename1" required/>
+              <label for="area1">行政区域：</label>
+              <input type="text" class="form-control input-sm" ng-model="supplierArea" id="area1" required/>
+              <label for="synposis1">供应商简介：</label>
+              <input type="text" class="form-control input-sm" ng-model="supplierSynposis" id="synposis1" required/>
+              <br/>
+            </div>
+         </div>
+     <br>
+      <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+      <button type="submit" class="btn btn-default">
+            {{isHidden ? '提交' : '隐藏'}}
+      </button>
+     </div>
+     </form>
+    </div>
+  </div>
