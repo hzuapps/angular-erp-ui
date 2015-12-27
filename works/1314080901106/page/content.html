@@ -1,0 +1,27 @@
+  <div class="container starter-template">
+    <h2><p>选择工程中的拆单信息</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">订单编号：</th>
+            <th rowspan="2" class="text-center">产品名称：</th>
+            <th rowspan="2" class="text-center">客户名称：</th>
+            <th rowspan="2" class="text-center">拆单员：</th>
+            <th rowspan="2" class="text-center">订单进度：</th>
+            <th rowspan="2" class="text-center">拆单日期：</th>
+            <th rowspan="2" class="text-center">完成日期：</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="Data in someData">
+        <tr>
+            <td rowspan="2" class="text-center">{{Data.Orderform}}</td>
+            <td rowspan="2" class="text-center">{{Data.Productname}}</td>
+            <td rowspan="2" class="text-center">{{Data.Customername}}</td>
+            <td rowspan="2" class="text-center">{{Data.Sealoffmember}}</td>
+            <td rowspan="2" class="text-center">{{Data.Orderformrate}}</td>
+            <td rowspan="2" class="text-center">{{Data.Sealoffdate}}</td>
+            <td rowspan="2" class="text-center">{{Data.Finishdate}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

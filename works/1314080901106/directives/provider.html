@@ -1,0 +1,38 @@
+    <div class="container" style="padding-top:50px;">
+        <div class="row">
+            <form class="form-inline" role="form" ng-submit="register()" novalidate>
+                <div class="form-group row" style="text:algin">
+                    <div class="row">
+                        <label for="Orderform">订单编号：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Orderform" id="Orderform" required/>
+                        <label for="Productname">产品名称：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Productname" id="Productname" required/>
+                        <label for="Customername">客户名称：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Customername" id="Customername" required/>
+                        <label for="Sealoffmember">拆单员：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Sealoffmember" id="Sealoffmember" required/>
+                    </div>
+                </div> 
+                </br>
+                </br>
+                <div class="form-group row">
+                    <div class="row">
+                        <label for="Orderformrate">订单进度：</label>
+                        <input type="text"class="form-control input-sm" ng-model="Orderformrate" id="Orderformrate" required/>
+                        <label for="Sealoffdate">拆单日期：</label>
+                        <input type="text" class="form-control input-sm" ng-model="Sealoffdate" id="Sealoffdate" required/>
+                        <label for="Finishdate">完成日期：</label>
+                        <input type="text" class="form-control input-sm"  ng-model="Finishdate" id="Finishdate" required/>
+                    </div>
+                </div> 
+                <br>
+                <br/>
+                <br/>
+                <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+                    <button type="submit" class="btn btn-default">
+                     {{isHidden ? '提交' : '隐藏'}}
+                    </button> 
+                </div>
+            </form>
+        </div>
+</div>
