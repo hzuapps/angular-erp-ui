@@ -1,0 +1,12 @@
+{
+     "items": [
+         {
+             "typeName": "钢材",
+             "typecode": "gc"
+         },
+         {
+             "typeName": "玻璃",
+             "typecode": "bl"
+         }
+     ]
+ } 
