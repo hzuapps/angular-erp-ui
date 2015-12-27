@@ -1,0 +1,40 @@
+{
+     "cangkucaigoushouhuodata":[
+       {
+            "xuhao":"0",
+            "bianma":"000", 
+            "leibie":"man", 
+            "mingcheng":"box",
+            "xinghao":"m",
+            "chang":"1.0",
+            "kuan":"1.0",
+            "hou":"1.0",
+            "danwei":"jian",
+            "shuliang":"10"     
+        },
+{
+            "xuhao":"1",
+            "bianma":"001", 
+            "leibie":"man", 
+            "mingcheng":"box",
+            "xinghao":"l",
+            "chang":"2.0",
+            "kuan":"2.0",
+            "hou":"2.0",
+            "danwei":"jian",
+            "shuliang":"20"     
+        },
+{
+            "xuhao":"2",
+            "bianma":"002", 
+            "leibie":"man", 
+            "mingcheng":"box",
+            "xinghao":"xl",
+            "chang":"3.0",
+            "kuan":"3.0",
+            "hou":"3.0",
+            "danwei":"jian",
+            "shuliang":"20"     
+        }
+   ]
+}
