@@ -1,0 +1,24 @@
+
+<div class="container starter-template">
+    <h2><p>Provider List</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">模板名称</th>
+            <th rowspan="2" class="text-center">别名</th>
+            <th rowspan="2" class="text-center">建模人</th>
+            <th rowspan="2" class="text-center">计价方式</th>
+            <th rowspan="2" class="text-center">类别</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="newsData in Project_Template">
+        <tr>
+            <td rowspan="2" class="text-center">{{newsData.template_Name}}</td>
+            <td rowspan="2" class="text-center">{{newsData.other_Name}}</td>
+            <td rowspan="2" class="text-center">{{newsData.news_People}}</td>
+            <td rowspan="2" class="text-center">{{newsData.type}}</td>
+            <td rowspan="2" class="text-center">{{newsData.price}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
