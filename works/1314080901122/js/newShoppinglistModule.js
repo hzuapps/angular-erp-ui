@@ -7,11 +7,11 @@ var newShoppinglistModule = angular.module('newShoppinglistModule', []);
 newShoppinglistModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
         var NewShoppinglist = {
-            supplier: 'lst',
-            shoppingdate: '2015-10-28',
-            recievedate: '2015-10-28',
-            linkman: 'sss',
-            totalprice:'5000'
+            no: '001',
+            name: 'liNing',
+            model: 'T-shirt',
+            color: 'red',
+            number: 99
         };
         $scope.data = NewShoppinglist;
     }
