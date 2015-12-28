@@ -1,0 +1,34 @@
+{
+    "FinancialsalesData": [
+        {
+            "ordernumber": "1314080901101",
+            "ordername": "客机",
+            "summary": "收付款说明",
+            "money": "100万",
+            "moneyed": "50万",
+            "beizhu": "客机收付款说明",
+            "width": "",
+            "thickness": ""
+        },
+        {
+            "ordernumber": "1314080901102",
+            "ordername": "轰炸机",
+            "summary": "收付款说明",
+            "money": "200万",
+            "moneyed": "60万",
+            "beizhu": "轰炸机收付款说明",
+            "width": "",
+            "thickness": ""
+        },
+        {
+            "ordernumber": "1314080901103",
+            "ordername": "直升机",
+            "summary": "收付款说明",
+            "money": "300万",
+            "moneyed": "70万",
+            "beizhu": "直升机收付款说明",
+            "width": "",
+            "thickness": ""
+        }
+    ]
+}

@@ -1,56 +1,76 @@
-
-// create a new module called 'myAppModule' and save 
+// create a new module called 'myAppModule' and save     Financialsales1Data Financialsales1  Financialsales 
 // a reference to it in a variable called myAppModule 
-var FinancialsalesModule = angular.module('FinancialsalesModule', []);
+var FinancialsalesModule = angular.module('FinancialsalesModule', ['ngRoute']);
+
+FinancialsalesModule.config(function ($routeProvider) {
+    // configure the routes
+    $routeProvider
+        .when('/', {
+            // route for the about page
+            templateUrl: 'pages/home.html'
+        })
+        .when('/home', {
+            templateUrl: 'pages/home.html'  
+        })
+        .when('/contact', {
+            templateUrl: 'pages/Financialsales.html',
+            controller: 'FinancialsalesCtrl'
+        })
+        .when('/about', {
+            templateUrl: 'pages/about.html',
+            controller: 'aboutCtrl'
+        });
+});
 
 // use the myAppModule variable to
 // configure the module with a controller
-FinancialsalesModule.factory('saleService', function ($http) {
-	var datasale = {};
-        datasale.getdata = function (theData) {
-            var promise = $http({method: 'POST',url: 'json/message.json',data: theData});
+
+
+
+FinancialsalesModule.factory('Financialsales1Service',function($http){
+        var dataStroe = {};
+        dataStroe.getData = function () {
+            var promise = $http({method: 'GET',url: 'json/Financialsales.json'});
             return promise;
         }
-        return datasale;
-    }).controller('MyFilter', function ($scope,saleService) {
-       // controller code would go here
-	var FinancialsalesData = {
-             orderNumber:'123',
-            ordername:'123',
-            summary:'abc',
-            moneyed:'123',
-            money:'123',
-            beizhu:'abc',
-        };
-        $scope.data = FinancialsalesData;
-		$scope.isHidden = true;
-        $scope.showInput = function () 
-		{
-            $scope.isHidden = !$scope.isHidden;
-        }
-		$scope.Financialsales = {};
-        $scope.register = function () {
-            var promise = saleService.getdata ($scope.Financialsales);
-            promise.success(function (data, status, headers, config, statusText) {
-                $scope.backMess = data.success;
-                $scope.isHidden = !$scope.isHidden;
-                if(!$scope.isHidden){
-                    alert($scope.backMess[0].message + "\n" );
-                }
-            });
-            promise.error(function (data, status, headers, config, statusText) {
-                $scope.backMess = data.error;
-                $scope.isHidden = !$scope.isHidden;
-                if(!$scope.isHidden){
-                    alert($scope.backMess[0].message);
-                }
-            });
-        }
-});
+        return dataStroe;
 
+
+    }).controller('FinancialsalesCtrl', function ($scope,Financialsales1Service) {
+       // controller code would go here
+
+        // var Financialsales1 = {
+        //     orderNumber:'123',
+        //     ordername:'123',
+        //     summary:'abc',
+        //     moneyed:'123',
+        //     money:'123',
+        //     beizhu:'abc',
+        // };
+        // $scope.data = Financialsales1;
+
+        
+
+        var promise = Financialsales1Service.getData();
+        promise.success(function (data, status, headers, config, statusText) {
+            $scope.shuju = data.FinancialsalesData;
+        });
+        promise.error(function(data,status){
+           alert('请求出错，请重试');
+        });
+    }).controller('aboutCtrl', function ($scope) {
+
+        var data = {
+            xuehao: '邹远潮 计科一班 1314080901147'
+        };
+        $scope.data = data;
+
+});
 
 // use the myAppModule variable to
 // configure the module with a filter
+
+
 FinancialsalesModule.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
