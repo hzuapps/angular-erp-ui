@@ -10,8 +10,8 @@ var BOM = {
 +            serial number: '编号',
 +            category: '类别',
 +            name: '名称',
-+             type: '型号',
-+              colour: '颜色',
++            type: '型号',
++            colour: '颜色',
 +            plan: 'super-basic-plan'
 +        };
 </body>
