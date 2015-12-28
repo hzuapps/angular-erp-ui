@@ -1,0 +1,64 @@
+<div class="wrapper" ng-contrller="inputController" >
+    <div class="head">
+            <h4>单据信息</h4>
+    </div>
+    <form class="form-inline" role="form" ng-submit="register()" novalidate>
+           <div>
+               <div class="form-group">
+                  <label for="category">供应商编号:</label>
+                  <input type="text" class="form-control" id="category" 
+                     ng-model="data.category" required>
+               </div>
+               <div class="form-group">
+                  <label for="department">建档日期:</label>
+                  <input type="text" class="form-control" id="department" 
+                     ng-model="data.department" required>
+               </div>
+               <div class="form-group">
+                  <label for="receiverName">供应商类别:</label>
+                  <input type="text" class="form-control" id="receiverName" 
+                     ng-model="data.receiverName" required>
+               </div>
+                <div class="form-group">
+                  <label for="costDateString">供应商全称:</label>
+                  <input type="text" class="form-control" id="costDateString" 
+                     ng-model="data.costDateString" required>
+                </div>
+            </div>
+            <div>
+               <div class="form-group">
+                  <label for="money">拼音码:</label>
+                  <input type="text" class="form-control" id="money" 
+                     placeholder="">
+               </div>
+               <div class="form-group">
+                  <label for="total">供应商主页:</label>
+                  <input type="text" class="form-control" id="total" 
+                     ng-model="data.total" required>
+               </div>
+               <div class="form-group">
+                  <label for="s">供应商简称:</label>
+                  <input type="text" class="form-control" id="s" 
+                     ng-model="data.s" required>
+               </div>
+               <div class="form-group">
+                  <label for="e">行政区域:</label>
+                  <input type="text" class="form-control" id="e" 
+                     ng-model="data.e" required>
+               </div>
+               <div class="form-group">
+                  <label for="n">供应商简介:</label>
+                  <input type="text" class="form-control" id="n" 
+                     ng-model="data.n" required>
+               </div>
+            </div>
+
+
+            <div class="btn-group ng-cloak" role="group" ng-cloak>
+            <!-- <button type="button" class="btn btn-default" ng-click="showInput()"> -->
+                <button type="submit" class="btn btn-default">
+                    {{isHidden ? '提交' : '隐藏'}}
+                </button>
+            </div>
+    </form>
+</div>
