@@ -1,0 +1,49 @@
+<div class="wrapper" ng-contrller="inputController" >
+    <div class="head">
+            <h4>单据信息</h4>
+    </div>
+    <form class="form-inline" role="form" ng-submit="register()" novalidate>
+           <div>
+               <div class="form-group">
+                  <label for="category">department:</label>
+                  <input type="text" class="form-control" id="category" 
+                     ng-model="data.category" required>
+               </div>
+               <div class="form-group">
+                  <label for="department">name:</label>
+                  <input type="text" class="form-control" id="department" 
+                     ng-model="data.department" required>
+               </div>
+               <div class="form-group">
+                  <label for="receiverName">level:</label>
+                  <input type="text" class="form-control" id="receiverName" 
+                     ng-model="data.receiverName" required>
+               </div>
+                <div class="form-group">
+                  <label for="costDateString">type:</label>
+                  <input type="text" class="form-control" id="costDateString" 
+                     ng-model="data.costDateString" required>
+                </div>
+            </div>
+            <div>
+               <div class="form-group">
+                  <label for="money">salary:</label>
+                  <input type="text" class="form-control" id="money" 
+                     placeholder="">
+               </div>
+               <div class="form-group">
+                  <label for="total">duty:</label>
+                  <input type="text" class="form-control" id="total" 
+                     ng-model="data.total" required>
+               </div>
+            </div>
+
+
+            <div class="btn-group ng-cloak" role="group" ng-cloak>
+            <!-- <button type="button" class="btn btn-default" ng-click="showInput()"> -->
+                <button type="submit" class="btn btn-default">
+                    {{isHidden ? '提交' : '隐藏'}}
+                </button>
+            </div>
+    </form>
+</div>
