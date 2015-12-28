@@ -1,0 +1,20 @@
+[{
+    "leixing": "001",
+    "danjia": "8",
+    "shuliang": "10",
+    "jine": "80",
+    "IDcard": "123"
+
+}, {
+    "leixing": "002",
+    "danjia": "9",
+    "shuliang": "10",
+    "jine": "90",
+    "IDcard": "456"
+}, {
+    "leixing": "003",
+    "danjia": "10",
+    "shuliang": "10",
+    "jine": "100",
+    "IDcard": "789"
+}]
