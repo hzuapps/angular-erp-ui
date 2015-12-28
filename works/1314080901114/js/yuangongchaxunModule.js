@@ -1,6 +1,6 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var yuangongchaxunModule = angular.module('yuangongchaxunModule', []);
+var yuangongchaxunModule = angular.module('yuangongchaxunModule', ['ngRoute']);
 
 // use the myAppModule variable to
 // configure the module with a controller
@@ -57,3 +57,24 @@ yuangongchaxunModule.filter('yuangongchaxunstripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; });
+
+
+yuangongchaxunModule.config(['$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/website', {
+                templateUrl: 'website.html',
+                //controller: 'aboutController'
+            }).
+            when('/table', {
+                templateUrl: 'table.html',
+                //controller: 'aboutController'
+            }).
+            when('/about', {
+                templateUrl: 'about.html',
+                //controller: 'aboutController'
+            }).
+            otherwise({
+                redirectTo: '/about'
+            });
+    }]);
