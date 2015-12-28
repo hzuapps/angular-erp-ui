@@ -15,6 +15,10 @@ postDataModule.controller('MyFilterDemoCtrl', function ($scope) {
             duty: 'GRANT'
         };
         $scope.data = postData;
+		$scope.isHidden = true;
+        $scope.show = function(){
+            $scope.isHidden = !$scope.isHidden;
+            }
     }
 );
 
