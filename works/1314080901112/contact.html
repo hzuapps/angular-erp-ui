@@ -1,0 +1,34 @@
+    <div>
+    <div class="container">
+      <div class="con">
+      <h3>物料清单</h3>
+      <table class="table table-bordered"}>
+        <thead>
+          <tr>
+            <th class="text-center " colspan="6">物料</th>
+          </tr>
+          <tr>
+            <th class="text-center">序号</th>
+            <th class="text-center">编号</th>
+            <th class="text-center">类别</th>
+            <th class="text-center">名称</th>
+            <th class="text-center">型号</th>
+            <th class="text-center">颜色</th>
+          </tr>
+        </thead>
+          <tbody ng-repeat="item in data">
+            <tr >
+              <td class="text-center">{{$index + 1}}</td>
+              <td class="text-center">{{item.num}}</td>
+              <td class="text-center">{{item.type}}</td>
+              <td class="text-center">{{item.name}}</td>
+              <td class="text-center">{{item.model}}</td>
+              <td class="text-center">{{item.color}}</td>
+            </tr>
+          </tbody>
+      </table>
+
+    </div>
+
+    </div>
+      </div>

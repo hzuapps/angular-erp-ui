@@ -23,11 +23,13 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+     <script src="../../lib/angular-1.4.5/angular-route.js"></script>
+     <script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
 
     <script src="js/materialListModule.js"></script>
 
   </head>
-  <body ng-controller="MyFilterDemoCtrl">
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -37,53 +39,27 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          </button>
+          <a class="navbar-brand" href="#name">Project name</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#about"><i class="fa fa-shield"></i>About</a></li>
+            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-    <div class="container">
-      <div class="con">
-      <h3>物料清单</h3>
-      <table class="table table-bordered"}>
-        <thead>
-          <tr>
-            <th class="text-center " colspan="6">物料</th>
-          </tr>
-          <tr>
-            <th class="text-center">序号</th>
-            <th class="text-center">编号</th>
-            <th class="text-center">类别</th>
-            <th class="text-center">名称</th>
-            <th class="text-center">型号</th>
-            <th class="text-center">颜色</th>
-          </tr>
-        </thead>
-          <tbody ng-repeat="item in data">
-            <tr >
-              <td class="text-center">{{$index + 1}}</td>
-              <td class="text-center">{{item.num}}</td>
-              <td class="text-center">{{item.type}}</td>
-              <td class="text-center">{{item.name}}</td>
-              <td class="text-center">{{item.model}}</td>
-              <td class="text-center">{{item.color}}</td>
-            </tr>
-          </tbody>
-      </table>
-
-    </div>
-
-    </div><!-- /.container -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <div id="content" ng-view>
+   
+  </div>
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
   </body>
 </html>
