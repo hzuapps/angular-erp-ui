@@ -4,27 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>仓库-其他出库-单据明细 1314080901140</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
     <script src="js/danjumingxiModule.js"></script>
-    
-    <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-  <body ng-controller="danjumingxiFilter">
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -38,63 +28,15 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>         
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        <h3>{{data}}</h3>
-      </div>
-
-    </div><!-- /.container -->
-    <div class="con">
-       <h3>单据明细</h3>
-       <table class="table table-bordered"}>
-         <thead>
-           
-           <tr>
-             <th rowspan="2" class="text-center">序号</th>
-             <th rowspan="2" class="text-center">编码</th>
-             <th rowspan="2" class="text-center">名称</th>
-             <th rowspan="2" class="text-center">型号</th>
-             <th rowspan="2" class="text-center">颜色</th>
-             <th colspan="3" class="text-center">规格</th>
-             <th rowspan="2" class="text-center">单位</th>
-             <th rowspan="2" class="text-center">出库数量</th>
-           </tr>
-           <tr>
-               <th class="text-center">长</th>
-               <th class="text-center">宽</th>
-               <th class="text-center">厚</th>
-           </tr>
-         </thead>
-           <tbody ng-repeat="backMessOne in backMess">
-             <tr > 
-               <td rowspan="2" class="text-center">{{backMessOne.No}}</td>
-               <td rowspan="2" class="text-center">{{backMessOne.code}}</td>
-               <td rowspan="2" class="text-center">{{backMessOne.name}}</td>
-               <td rowspan="2" class="text-center">{{backMessOne.model}}</td>
-               <td rowspan="2" class="text-center">{{backMessOne.color}}</td>
-               <td colspan="1" class="text-center">{{backMessOne.length}}</td>
-               <td colspan="1" class="text-center">{{backMessOne.width}}</td>
-               <td colspan="1" class="text-center">{{backMessOne.thickness}}</td>
-               <td rowspan="2" class="text-center">{{backMessOne.unit}}</td>
-               <td rowspan="2" class="text-center">{{backMessOne.number}}</td>
-             </tr>
-           </tbody>
-       </table>
-  
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    
-
-  </body>
+      <div id="main">
+       <div ng-view></div>
+     </div>
+      </body>
 </html>
