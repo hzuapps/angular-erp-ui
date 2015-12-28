@@ -23,7 +23,7 @@
     <![endif]-->
 
   </head>
-  <body ng-controller="SuppliersFormFilterDemoCtrl">
+  <body ng-controller="MyFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -57,32 +57,45 @@
 
   <div class="container">
     <div class="row col-lg-offset-2">
+        <div>
+
+        <div ng-hide="isHidden">供应商全称: {{shoukuanyue4}}</div>
+        <div ng-hide="isHidden">拼音码:{{shoukuanyue5}}</div>
+        <div ng-hide="isHidden">供应商主页:{{shoukuanyue6}}</div>
+        <div ng-hide="isHidden">供应商简称:{{shoukuanyue7}}</div>
+        <div ng-hide="isHidden">行政区域:{{shoukuanyue8}}</div>
+        <div ng-hide="isHidden">供应商简介:{{shoukuanyue9}}</div>
+        <div ng-hide="isHidden">供应商编号:{{shoukuanyue1}}</div>
+        <div ng-hide="isHidden">建档日期:{{shoukuanyue2}}</div>
+        <div ng-hide="isHidden">供应商类别:{{shoukuanyue3}}</div>
+      </div>  
         <form class="form-inline" role="form">
             <div class="form-group row">
                 <div class="row">
                     <label for="example2">供应商编号：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue1" id="example2"/>
                      
                      <label for="example2">建档日期：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue2" id="example2"/>
 
                     <label for="example2">供应商类别：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue" id="example2"/>   
+                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue3" id="example2"/>   
                </div>
             </div>
             <br>
             <br>
+            
             <div class="form-group row">
                 <div class="row">
                   <label for="example2">供应商全称：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue4" id="example2"/>
 
                         <label for="example2"> &nbsp;&nbsp;&nbsp;&nbsp;拼音码：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue5" id="example2"/>
 
 
                     <label for="example2">供应商主页：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue6" id="example2"/>
                     </div>
             </div>
             <br>
@@ -91,18 +104,21 @@
             <div class="form-group row">
                 <div class="row">
                     <label for="example1">供应商简称：</label>
-                    <input type="text" class="form-control input-sm" ng-model="UnitName" id="example1"/>
+                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue7" id="example1"/>
 
                     <label for="example2">行政区域：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue8" id="example2"/>
 
                     <label for="example2">供应商简介：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue9" id="example2"/>
 
                     
             </div>
             </div>
-        
+            <br/>
+            <button type="text" ng-click="show()">
+                {{isHidden ? 'save' : 'reset'}}
+            </button>
         </form>
     </div>
 </div>

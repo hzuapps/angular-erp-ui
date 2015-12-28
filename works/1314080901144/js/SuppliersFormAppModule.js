@@ -3,24 +3,41 @@
 var SuppliersFormAppModule = angular.module('SuppliersFormAppModule', []);
 
 // use the myAppModule variable to
-// configure the module with a controller
-SuppliersFormAppModule.controller('SuppliersFormFilterDemoCtrl', function ($scope) {
-    // controller code would go here
-        var wuliao = {
-        wuliao leibie='wujin',
-        wuliao mingcheng='5756336'
-        gengxin riqi='2015-10-20',
-        pinyin ma='5456',
-        wuliao miaosu='54567'
-
+// configure the module with a controller+queryModule.controller('MyFilterDemoCtrl', function ($scope,$http) {
+ 
+SuppliersFormAppModule.controller('MyFilterDemoCtrl', function ($scope,$http) {
+      var promise=$http({
+              url:"json/zjh.json",
+               method:"get",
+             });
+       promise.success(function(data,status){
+       alert(status);
+          var listData = {
+        shoukuanyue1:'wujin',
+        shoukuanyue2:'5756336',
+        shoukuanyue3:'2015',
+        shoukuanyue4:'5456',
+        shoukuanyue5:'54567',
+        shoukuanyue6:'123',
+        shoukuanyue:'159',
+        shoukuanyue8:'555',
+        shoukuanyue9:'2222'
         };
-        $scope.data = wuliao;
+        $scope.data = listData;
+        $scope.isHidden = true;
+         $scope.show = function(){
+             $scope.isHidden = !$scope.isHidden;
+             }
+       });
+        promise.error(function(data,status){
+         alert(status);
+       });
         }
-}
+
 
 
 );
-
+ 
 // use the myAppModule variable to
 // configure the module with a filter
 SuppliersFormAppModule.filter('SuppliersFormstripDashes', function() {
