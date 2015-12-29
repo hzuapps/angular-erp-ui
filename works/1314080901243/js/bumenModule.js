@@ -1,9 +1,34 @@
 // create a new module called 'bumenModule' and save 
 // a reference to it in a variable called myAppModule 
-var bumenModule = angular.module('bumenModule', []);
+var bumenModule = angular.module('bumenModule', ['ngRoute']);
 
 // use the myAppModule variable to
 // configure the module with a controller
+
+    bumenModule.config(['$routeProvider',
+         function($routeProvider) {
+            $routeProvider.
+               when('/about', {
+                  templateUrl: 'pages/about.html',
+                  //controller: 'myWebsiteController'
+               }).
+         when('/content', {
+                  templateUrl: 'pages/content.html',
+                  //controller: 'myWebsiteController'
+               }).
+               when('/home', {
+                  templateUrl: 'pages/home.html',
+                  //controller: 'aboutMeController'
+               }).
+               when('/input', {
+                  templateUrl: 'pages/input.html',
+                  //controller: 'aboutMeController'
+               }).
+               otherwise({
+                  redirectTo: '/about'
+               });
+         }]);
+
 
 bumenModule.factory('bumenService',function($http){
  
