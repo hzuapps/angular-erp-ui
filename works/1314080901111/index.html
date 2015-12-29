@@ -1,0 +1,117 @@
+<!DOCTYPE html >
+<html ng-app="queryModule"> 
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>生产订单->导入生产订单项</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <!-- Bootstrap -->
+    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/queryModule.js"></script>
+
+    <style type="text/css">
+      #id1{
+          margin: 20px;
+          padding: 20px;
+
+      }
+      #id2{
+
+        margin: 10px;
+        padding: 10px;
+      }
+      #id2 tr td{
+
+        text-align: center;
+      }
+    </style>
+  </head>
+<body ng-controller="MyFilterDemoCtrl">
+  
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+      <div>
+
+        <div ng-hide="isHidden">销售订单: {{saleList}}</div>
+        <div ng-hide="isHidden">订单类型：{{listType}}</div>
+        <div ng-hide="isHidden">订单日期：{{listDate}}</div>
+        <div ng-hide="isHidden">交货日期：{{commitDate}}</div>
+        <div ng-hide="isHidden">订单编号：{{listID}}</div>
+        <div ng-hide="isHidden">订单状态：{{listState}}</div>
+        <div ng-hide="isHidden">备注：{{remark}}</div>
+
+      </div>  
+      <table id="id2" border="1" bordercolor="#33CCFF" cellspacing="0" width="70%" cellpadding="10">
+      
+      <tr>
+        <td>销售订单:</td>
+        <td><select ng-model="saleList"></select></td>
+      </tr>
+      
+      <tr>
+        <td>订单类型:</td>
+        <td>
+
+          <select ng-model="listType">
+            <option>正常订单</option>
+            <option>打样订单</option>
+            <option>返工订单</option>
+            <option>委外订单</option>
+            <option>通函订单</option>
+            <option>特许订单</option>
+          </select>
+
+        </td>
+      </tr>
+      
+      <tr>
+        <td>订单日期:</td>
+        <td><input type="text" ng-model="listDate"/></td>
+      </tr>
+      
+      <tr>
+        <td>交货日期:</td>
+        <td>
+          <input type="text" ng-model="commitDate"/>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>订单编号:</td>
+        <td>
+          <input type="text" ng-model="listID"/>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>订单状态:</td>
+        <td>
+          <input type="text" ng-model="listState"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>备注:</td>
+        <td><input type="text" ng-model="remark"/></td>
+      </tr>
+      
+      <tr>
+        <th colspan="2">
+          <button type="button" ng-click="show()">
+              {{isHidden ? '提交' : '隐藏'}}
+          </button>
+        </th>
+      </tr>
+    </table>
+</body>
+</html>

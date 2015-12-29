@@ -1,0 +1,19 @@
+body {
+    background-color: #D5E8DE;
+}
+.wrapper {
+    padding: 50px;
+    
+}
+#name {
+    width: 100%;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-left: 42px;
+}
+#detailed {
+    width: 100%;
+}
+#instructions {
+    width: 100%;
+}	

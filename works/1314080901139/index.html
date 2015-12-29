@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" ng-app="materialModule">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>物料 物料信息 物料信息 1314080901139</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    
+    <!-- Bootstrap -->
+    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    legend{
+      font-size: 27px;
+      background-color: #66FFFF;
+    }
+    .frist-row select{
+      height: 26px;
+      width: 172px;
+    }
+    #thebutton{
+       margin-left: 159px;
+    }
+    .theformborder{
+      border: 10px;
+    }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/materialModule.js"></script>
+    
+  </head>
+  <body ng-controller="creatematerialCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+    </div><!-- /.container -->
+
+    <!--
+    <button ng-cloak="showInput()" type="button" value>{{isHidden ? '显示查询选项' : '隐藏查询选项'}}</button>
+    <form class="form-horizontal" role="form" ng-hide="isHidden">
+    -->
+
+    <form>
+      <fieldset class="theformborder">
+        <legend>物料-物料信息-物料信息</legend>
+            <div class="12">
+            <div class="frist-row">  
+              <label for="wuLiaoLeiBie">物料类别：</label>
+              <select name="LeiBie">
+                <option value="bancai">板材</option>
+                <option value="wujin">五金</option>
+                <option value="mupi">木皮</option>
+                <option value="dengju">灯具</option>
+                <option value="youqi">油漆</option>
+                <option value="jiaolian">铰链</option>
+              </select>
+              <label for="wuLiaoMingCheng">物料名称：</label>
+              <input type="text" name="wuLiaoname" />
+              <label for="gengXinRiQi">更新日期：</label>
+              <input type="text" name="gengxinriqi" />
+            </div>
+            </br>
+            <div class="second-row">
+              <label for="pinyinma">&nbsp;&nbsp;&nbsp;拼音码：</label>
+              <input type="text" name="pingyinma" />
+              <label for="wuliaomiaoshu">物料描述：</label>
+              <input type="text" name="wuliaomiaoshu" />
+              <input id="thebutton" type="button" value="+  保存/修改">
+            </div>
+          </div><!--class="12"-->
+      </fieldset>
+    </form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>

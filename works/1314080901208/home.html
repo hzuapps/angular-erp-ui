@@ -1,0 +1,54 @@
+<!--本页面放置订单的列表信息-->
+<!--这里是局部页面，渲染于index.html页面-->
+<!--由于这里是局部页面，所以不需要<html><head>等html标志标签-->
+     <style>
+          .table {
+          }
+          .order {
+
+              text-align: center;
+              height:20px;
+              display: inline-block;
+          }
+          .tableHead {
+
+              font-weight:bolder;
+          }
+
+          .orderId {
+              width: 75px;
+          }
+          .storage {
+              width: 75px;
+          }
+          .people {
+              width: 120px;
+          }
+          .dateTime {
+              width: 220px;
+          }
+          .status {
+              width: 70px;
+          }
+          .notes {
+              width: 100px;
+          }
+      </style>
+
+<div style="" id="table" class="table">
+         <div id="tableHead" class="tableHead">
+             <div id="orderId" class="order orderId" style="">订单编号</div>
+             <div id="storage" class="order storage" style="">仓库</div>
+             <div id="people" class="order people" style="">经手人</div>
+             <div id="dateTime" class="order dateTime" style="">经办日期</div>
+             <div id="status" class="order status" style="">状态</div>
+             <div id="notes" class="order notes" style="">备注</div>
+         </div>
+         <div id="tableBody" style="margin-top:5px;">
+            <!--使用AngularJS Directives设计，渲染列表数据-->
+            <myorderdata>
+            </myorderdata>
+           
+         </div>
+         
+     </div>

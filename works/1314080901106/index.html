@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="myAppModule">
+  <head lang="en">
+   <style type="text/css">
+   </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>选择工程中的拆单信息 1314080901106</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    
+    <!-- Bootstrap -->
+    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+   
+  </head>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+  <body ng-controller="MyFilterDemoCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	<div class="container" style="padding-top:50px;">
+        <div class="row">
+            <form class="form-inline" role="form" ng-submit="register()" novalidate>
+        		<div class="form-group row" style="text:algin">
+        		    <div class="row">
+        		      	<label for="Orderform">订单编号：</label>
+        		      	<input type="text" class="form-control input-sm" ng-model="Orderform" id="Orderform" required/>
+        		      	<label for="Productname">产品名称：</label>
+        		      	<input type="text" class="form-control input-sm" ng-model="Productname" id="Productname" required/>
+       		 		  	<label for="Customername">客户名称：</label>
+        		      	<input type="text" class="form-control input-sm" ng-model="Customername" id="Customername" required/>
+        		      	<label for="Sealoffmember">拆单员：</label>
+        		      	<input type="text" class="form-control input-sm" ng-model="Sealoffmember" id="Sealoffmember" required/>
+        		    </div>
+       		 	</div> 
+        		</br>
+        		</br>
+        		<div class="form-group row">
+           			<div class="row">
+              			<label for="Orderformrate">订单进度：</label>
+              			<input type="text"class="form-control input-sm" ng-model="Orderformrate" id="Orderformrate" required/>
+              			<label for="Sealoffdate">拆单日期：</label>
+              			<input type="text" class="form-control input-sm" ng-model="Sealoffdate" id="Sealoffdate" required/>
+              			<label for="Finishdate">完成日期：</label>
+              			<input type="text" class="form-control input-sm"  ng-model="Finishdate" id="Finishdate" required/>
+            		</div>
+        		</div> 
+     			<br>
+     			<br/>
+     			<br/>
+      			<div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+      				<button type="submit" class="btn btn-default">
+           			 {{isHidden ? '提交' : '隐藏'}}
+      				</button> 
+      			</div>
+     		</form>
+     	</div>
+<div>   
+  	<div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    	<p class="lead">
+      		<div ng-hide="isHidden">您输入的数据为：</div>    
+      		<div id="Orderform" ng-hide="isHidden">订单编号->{{Orderform}}</div>
+      		<div id="Productname" ng-hide="isHidden">产品名称->{{Productname}}</div>
+      		<div id="Customername" ng-hide="isHidden">客户名称->{{Customername}}</div>
+      		<div id=" Sealoffmember" ng-hide="isHidden">拆单员->{{Sealoffmember}}</div>
+      		<div id="Orderformrate" ng-hide="isHidden">订单进度->{{Orderformrate}}</div>
+      		<div id="Sealoffdate" ng-hide="isHidden">拆单日期->{{Sealoffdate}}</div>
+      		<div id="Finishdate" ng-hide="isHidden">完成日期->{{Finishdate}}</div>
+      	</p>
+  		</div>
+    </div>
+    <!-- /.container -->
+
+
+    
+
+   
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <!--<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  	<script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/chaidanxinxi.js"></script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>人事组织岗位</title>
+</head>
+<style>
+input[type=="text"]
+{width:600px;height:600px;}
+</style>
+
+<body>
+<form id="textform">
+
+<section>
+	<label>所属部门：</label>
+    <input type="text" style="width:500px" placeholder=">>请选择部门" value="" list="BM" >  
+    <datalist id="BM">  
+      <option value="人事">人事</option>   
+      <option value="仓库">仓库</option>   
+    </datalist>  
+<br><br>
+</section>
+
+<section>
+	<label>岗位名称：</label>
+    <input type="text" style="width:500px">
+<br><br>
+</section>
+	
+<section>
+	<label>岗位层次：</label>
+    <input type="text" style="width:500px" placeholder=">>请输入大于0的整数">
+<br><br>
+</section>     
+
+<section>
+  <label>岗位类型：</label>
+    <input type="text" style="width:500px" placeholder=">>请选择岗位类别" value="" list="GW">  
+    <datalist id="GW">  
+      <option value="管理岗">管理岗</option>   
+      <option value="技术岗">技术岗</option>
+      <option value="实习生">实习生</option>  
+      <option value="普通岗">普通岗</option>  
+    </datalist>
+<br><br>
+</section>
+
+<section>
+  <label>基本薪资：</label>
+    <input type="text" style="width:500px">
+<br><br>
+</section>
+
+<section>
+  <label style="float:left">岗位职责：</label>
+    <input type="text" style="width:500px;height:100px">
+<br><br>
+</section>
+
+<input type="submit" name="S1" value="保存" formmethod="post" formaction="http://localhost:8080/HelloJSP/text01.jsp">
+<input type="reset" name="button" id="button" value="重置" >
+
+</form>
+
+</body>
+</html>

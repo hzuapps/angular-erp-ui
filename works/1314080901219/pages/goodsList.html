@@ -1,0 +1,37 @@
+﻿<div>
+       <div>
+        <p>库存清单</p>
+       </div>
+<div>
+	<table style="width: 100%; height: 100%;" class="table table-striped" border="1" align="center">
+    <tr wide="100%">
+      <th>序号</th>
+      <th>编码</th>
+      <th>品名</th>
+      <th>类别</th>
+      <th>型号</th>
+      <th>颜色</th>
+      <th>数量</th>
+      <th>单位</th>
+      <th>单价</th>
+      <th>金额</th>
+      <th>平均价</th>
+      <th>旧编码</th>
+    </tr>
+    <tr ng-controller="goodsListController" ng-repeat="goods in theOrderDatas">
+        <td>{{goods.id}}</td>
+        <td>{{goods.number}}</td>
+        <td>{{goods.name}}</td>
+        <td>{{goods.type}}</td>
+        <td>{{goods.xinghao}}</td>
+        <td>{{goods.color}}</td>
+        <td>{{goods.numbers}}</td>
+        <td>{{goods.danwei}}</td>
+        <td>{{goods.danjia}}</td>
+        <td>{{goods.jine}}</td>
+        <td>{{goods.avg}}</td>
+        <td>{{goods.jiubianma}}</td>
+    </tr>
+  </table>
+</div>    
+    </div>

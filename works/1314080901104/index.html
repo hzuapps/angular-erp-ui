@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="rejectRequestModule">
+  <head lang="zh-CN">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>流程_驳回审核请求  1314080901104</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    
+    <!-- Bootstrap -->
+    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+
+    
+    </script>
+
+  </head>
+  <body ng-controller="MyFilterDemoCtrl">
+  
+  		<div class="wrapper">
+      <div class="head">
+        <h4>操作明细</h4>
+      </div>
+      <div class="container" >
+        <form  ng-submit="register()" novalidate>
+        <table >
+		<tr>名称：</td>
+	    <td colspan="2" ><input name="name" id="name" ng-model="name"  required/></td>
+	    </tr>
+		<tr>
+			<td >明细：</td>
+			<td colspan="1" >
+				<textarea  name="detailed" id="detailed" rows="4" cols="100%" ng-model="detailed" required></textarea>
+			</td>
+			<td colspan="1">
+				<a href="#">
+					<img src="images/meitai.jpg" width="50px" height="50" >
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td >批示：</td>
+			<td colspan="2">
+				<textarea  name="instructions" ng-model="instructions" id="instructions" rows="4"  required></textarea>
+			</td>
+		</tr>
+		</table>
+    <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+        <!-- <button type="button" class="btn btn-default" ng-click="showInput()"> -->
+         <button type="submit" class="btn btn-default">
+            {{isHidden ? '提交' : '隐藏'}}
+        </button>
+    </div>
+		<div class="foot">
+			<button>通过</button>
+			<button>驳回</button>
+		</div>
+		</form>
+      </div>
+
+    </div>
+
+
+    <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+    <div ng-hide="isHidden">您输入的数据为：</div>
+    <div id="name" ng-hide="isHidden">名称：{{name}}</div>
+    <div id="detailed" ng-hide="isHidden">供应商全称：{{detailed}}</div>
+    <div id="instructions" ng-hide="isHidden">供应商简称：{{instructions}}</div>
+   
+    </p>
+    </div>
+    
+
+  	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/rejectRequestModule.js"></script>
+  </body>
+</html>

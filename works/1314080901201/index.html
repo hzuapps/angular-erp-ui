@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="myMaterialsModule">
+  <head lang="zh-CN">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title> 1314080901201物料中的供应商信息</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    
+    <!-- Bootstrap -->
+    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <script src"../../lib/angular-1.4.5/angular.min.js></script>
+      <script src="js/myMaterialsModule.js"></script>
+    <![endif]--> 
+  </head>
+
+  <body ng-controller="Myfilter">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#contact">about</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+        <div class="row col-lg-offset-3">
+            <form class="form-inline" role="form" ng-submit="register()" novalidate>
+         
+         <div class="form-group row">
+           <div class="row">
+              <label for="number1">供应商编号：</label>
+              <input type="text" class="form-control input-sm" ng-model="myNumber" id="number1" required/>
+              <label for="date1">建档日期：</label>
+              <input type="text" class="form-control input-sm" ng-model="Date" id="date1" required/>
+              <label for="sort1">供应商类别：</label>
+              <input type="text" class="form-control input-sm" ng-model="Sort" id="sort1"/ required>
+              <br/>
+           </div>
+        </div> 
+            
+         <div class="form-group row">
+           <div class="row">
+              <label for="fullname1">供应商全称：</label>
+              <input type="text" class="form-control input-sm" ng-model="Fullname" id="fullname1" required/>
+              <label for="code1">拼音码：</label>
+              <input type="text" class="form-control input-sm" ng-model="Code" id="code1" required/>
+              <label for="homepage1">供应商主页：</label>
+              <input type="text" class="form-control input-sm" ng-model="Homepage" id="homepage1" required/>
+              <br/>
+            </div>
+        </div> 
+  
+         <div class="form-group row">
+           <div class="row">
+              <label for="simplename1">供应商简称：</label>
+              <input type="text" class="form-control input-sm" ng-model="Simplename" id="simplename1" required/>
+              <label for="area1">行政区域：</label>
+              <input type="text" class="form-control input-sm" ng-model="theArea" id="area1" required/>
+              <label for="synposis1">供应商简介：</label>
+              <input type="text" class="form-control input-sm" ng-model="Synposis" id="synposis1" required/>
+              <br/>
+            </div>
+         </div>
+     <br>
+      <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+      <button type="submit" class="btn btn-default">
+            {{isHidden ? '提交' : '隐藏'}}
+      </button>
+     </div>
+     </form>
+    </div>
+  </div>
+  <!-- SHOW ERROR/SUCCESS INFORMATION
+      <div id="information" class="ng-cloak" ng-show="backMess" ng-hide="isHidden">
+      <p>{{ backMess[0].information }}</p>
+      </div>
+  -->
+
+  <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+      <div ng-hide="isHidden">您输入的数据为：</div>    
+      <div id="number" ng-hide="isHidden">供应商编号->{{myNumber}}</div>
+      <div id="date" ng-hide="isHidden">建档日期->{{Date}}</div>
+      <div id="sort" ng-hide="isHidden">供应商类别->{{Sort}}</div>
+      <div id="fullname" ng-hide="isHidden">供应商全称->{{Fullname}}</div>
+      <div id="code" ng-hide="isHidden">拼音码->{{Code}}</div>
+      <div id="homepage" ng-hide="isHidden">供应商主页->{{Homepage}}</div>
+      <div id="simplename" ng-hide="isHidden">供应商简称->{{Simplename}}</div>
+      <div id="area" ng-hide="isHidden">行政区域->{{theArea}}</div>
+      <div id="synposis" ng-hide="isHidden">供应商简介->{{Synposis}}</div>
+      </p>
+    </div>
+    <!-- /.container -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/myMaterialsModule.js"></script>
+  </body>
+</html>

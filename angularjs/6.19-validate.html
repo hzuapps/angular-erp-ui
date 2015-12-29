@@ -1,0 +1,29 @@
+<div ng-app="myapp" ng-controller="MyController">
+  <div ng-show="registrationForm.$pristine">Form input has not yet started</div>
+  <div ng-show="registrationForm.$dirty">Form input has started</div>
+  <form name="registrationForm" ng-submit="register()" novalidate>
+    <input type="text" placeholder="First Name" name="firstName" ng-model="person.firstName" required /> 
+    <span ng-show="firstNameInvalid"><br/>Please enter a value for First name</span>
+    <br/>
+    <input type="text" placeholder="Last Name" name="lastName" ng-model="person.lastName" required /> 
+    <span ng-show="lastNameInvalid"><br/>Please enter a value for Last name</span>
+    <br/>
+    <input type="email" placeholder="Email" name="email" ng-model="person.email" required />
+    <span ng-show="emailInvalid"><br/>A valid email address is required</span>
+    <br/>
+    <select name="research" ng-model="person.levels"
+      ng-options="obj.label as obj.value for obj in person.channels" required>
+      <option value="">Where did you hear about us?</option>
+    </select>
+    <span ng-show="researchInvalid"><br/>Please tell us where you heard about us</span>
+    <br/>
+    <input ng-model="person.newsletterOptIn" type="checkbox" name="newsletterOptIn"
+      id="newsletterOptIn" value="newsletterOptIn"/>
+    <label for="newsletterOptIn">Recieve monthly newsletter</label>
+    <br/>
+    <input type="submit" value="Register"/>
+  </form>
+  <div ng-show="doShow">
+    Thank you for taking the time to register!
+  </div>
+</div>
