@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <html ng-app="salesIncomeModule"> <head lang="en">
+ <html ng-app="providerModule"> <head lang="zh-CN">
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
 +       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 +     <![endif]-->
    </head>
-   <body ng-controller="createSalesIncomeCtrl">
+   <body ng-controller="MyFilter">
      <nav class="navbar navbar-inverse navbar-fixed-top">
                    <ul class="nav navbar-nav">
              <li class="active"><a href="#">Home</a></li>
@@ -45,23 +45,23 @@
             <div class="form-group row">
                 <div class="row">
                     <label for="example1">单位名称：</label>
-                    <input type="text" class="form-control input-sm" ng-model="UnitName" id="example1"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.UnitName" id="example1"/>
                      
                      <label for="example1">收款方式：</label>
-                    <input type="text" class="form-control input-sm" ng-model="CollectMode" id="example1"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.CollectMode" id="example1"/>
 
                     <label for="example2">收款日期：</label>
-                    <input type="text" class="form-control input-sm" ng-model=" CollectDay" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.CollectDay" id="example2"/>
 
                      <label for="example2">经手人：</label>
-                    <input type="text" class="form-control input-sm" ng-model="jingshouren" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.jingshouren" id="example2"/>
 
                         <label for="example2">收款金额：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanyue" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.shoukuanyue" id="example2"/>
 
 
                     <label for="example3">收款账户：</label>
-                    <input type="text" class="form-control input-sm" ng-model="shoukuanzhanghu" id="example3"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.shoukuanzhanghu" id="example3"/>
                 </div>
             </div>
             <br>
@@ -70,18 +70,34 @@
             <div class="form-group row">
                 <div class="row">
                     <label for="example4">银行账号：</label>
-                    <input type="text" class="form-control input-sm" ng-model=" yinhangzhnanghu" id="example4"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.yinhangzhnanghu" id="example4"/>
 
                     <label for="example5">状态：</label>
-                    <input type="text" class="form-control input-sm" ng-model="zhuangtai" id="example5"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.zhuangtai" id="example5"/>
 
                     <label for="example2">核销金额：</label>
-                    <input type="text" class="form-control input-sm" ng-model=" hexiaoyue" id="example2"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.hexiaoyue" id="example2"/>
 
                     <label for="example6">备注：</label>
-                    <input type="text" class="form-control input-sm" ng-model="beizhu" id="example6"/>
+                    <input type="text" class="form-control input-sm" ng-model="provider.beizhu" id="example6"/>
                 </div>
             </div>
+            <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+
+    <div ng-hide="isHidden">您输入的数据为：</div>
+    <div id="providerNum" ng-hide="isHidden">单位名称->{{provider.UnitName}}</div>
+    <div id="providerFullName" ng-hide="isHidden">收款方式->{{provider.CollectMode}}</div>
+    <div id="providerSimpName" ng-hide="isHidden">收款日期->{{provider.CollectDay}}</div>
+    <div id="providerType" ng-hide="isHidden">经手人->{{provider.jingshouren}}</div>
+    <div id="providerIntroduce" ng-hide="isHidden">收款金额->{{provider.shoukuanyue}}</div>
+    <div id="address" ng-hide="isHidden">收款账户->{{provider.shoukuanzhanghu}}</div>
+    <div id="provideryinhangzhnanghu" ng-hide="isHidden">银行账号->{{provider.yinhangzhnanghu}}</div>
+    <div id="providerzhuangtai" ng-hide="isHidden">状态->{{provider.zhuangtai}}</div>
+    <div id="providerhexiaoyue" ng-hide="isHidden">核销金额->{{provider.hexiaoyue}}</div>
+    <div id="providerbeizhu" ng-hide="isHidden">备注->{{provider.beizhu}}</div>
+    </p>
+</div>
 
              <!--   <button ng-click="showHideColors()" type="button">
         {{isHidden ? 'Show Available Colors' : 'Hide Available Colors'}}
