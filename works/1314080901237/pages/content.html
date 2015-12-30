@@ -1,0 +1,33 @@
+<div class="container starter-template">
+    <h2><p>Provider List</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">单位名称</th>
+            <th rowspan="2" class="text-center">收款方式</th>
+            <th rowspan="2" class="text-center">收款日期</th>
+            <th rowspan="2" class="text-center">经手人</th>
+            <th rowspan="2" class="text-center">收款金额</th>
+            <th rowspan="2" class="text-center">收款账户</th>
+            <th rowspan="2" class="text-center">银行账号</th>
+            <th rowspan="2" class="text-center">状态</th>
+            <th rowspan="2" class="text-center">核销金额</th>
+            <th rowspan="2" class="text-center">备注</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="providerData in providerArray">
+        <tr>
+            <td rowspan="2" class="text-center">{{providerData.UnitName}}</td>
+            <td rowspan="2" class="text-center">{{providerData.CollectMode}}</td>
+            <td rowspan="2" class="text-center">{{providerData.CollectDay}}</td>
+            <td rowspan="2" class="text-center">{{providerData.jingshouren}}</td>
+            <td rowspan="2" class="text-center">{{providerData.shoukuanyue}}</td>
+            <td rowspan="2" class="text-center">{{providerData.shoukuanzhanghu}}</td>
+            <td rowspan="2" class="text-center">{{providerData.yinhangzhnanghu}}</td>
+            <td rowspan="2" class="text-center">{{providerData.zhuangtai}}</td>
+            <td rowspan="2" class="text-center">{{providerData.hexiaoyue}}</td>
+            <td rowspan="2" class="text-center">{{providerData.beizhu}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
