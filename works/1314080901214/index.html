@@ -50,7 +50,180 @@
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
+      <style type="text/css">
+          .theBorder{
+            border: 1px solid #E6E6FA;
+          }
+          .myFontSize{
+            font-size: 10px;
+          }
+          .myBackGroundColor{
+            style="background-color:#E6E6FA;"background-color:#E6E6FA;
+          }
+      </style>
+      <div id="myOrder"  >
+          <div class="row theBorder" >
+            <div class="col-md-1" >
+                 来源
+            </div>
+            <div class="col-md-4" >
+                <div class="row theBorder" style="text-align:center;" >
+                  物料
+                </div>
+                 <div class="row theBorde"  >
+                    <div class="col-md-3 " >
+                        类别
+                    </div>
+                    <div class="col-md-3 " >
+                         名称
+                    </div>
+                    <div class="col-md-3 " >
+                        型号
+                    </div>
+                    <div class="col-md-3 " >
+                       颜色
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 " >
+                 <div class="row theBorder" style="text-align:center;" >
+                  规格(mm)
+                </div>
+                 <div class="row theBorde"  >
+                    <div class="col-md-4 " >
+                        长
+                    </div>
+                    <div class="col-md-4 " >
+                         宽
+                    </div>
+                    <div class="col-md-4 " >
+                        厚
+                    </div>
+                   
+                </div>
+            </div>
 
+
+
+
+
+            <div class="col-md-1" >
+                 状态
+            </div>
+            <div class="col-md-3" >
+                 <div class="row "  >
+                    
+                    <div class="col-md-9" >
+                      <div class="row theBorder" style="text-align:center;" >
+                      数量
+                    </div>
+                      <div class="row theBorde"  >
+                    <div class="col-md-4 " style="font-size: 1px;" >
+                        库存数
+                    </div>
+                    <div class="col-md-4 " style="font-size: 1px;">
+                         需求数
+                    </div>
+                    <div class="col-md-4 " style="font-size: 1px;">
+                        采购数
+                    </div>
+                    </div>
+                    </div>
+
+
+
+                    <div class="col-md-3" >
+                      BOM项
+                    </div>
+
+
+               
+            </div>
+          </div>
+          </div>
+
+
+             <div class="row theBorder" >
+            <div class="col-md-1" >
+              {{data1.laiyuan}}
+            </div>
+            <div class="col-md-4" >
+                
+                 <div class="row theBorde"  >
+                    <div class="col-md-3 " >
+                         {{data1.leibie}}
+                    </div>
+                    <div class="col-md-3 " >
+                      {{data1.mingchen}}
+                    </div>
+                    <div class="col-md-3 " >
+                       {{data1.xinhao}}
+                    </div>
+                    <div class="col-md-3 " >
+                        {{data1.yanse}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 " >
+               
+                 <div class="row theBorde"  >
+                    <div class="col-md-4 " >
+                      {{data1.changdu}}
+                    </div>
+                    <div class="col-md-4 " >
+                        {{data1.kuandu}}
+                    </div>
+                    <div class="col-md-4 " >
+ {{data1.houdu}}
+                    </div>
+                   
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-md-1" >
+                 {{data1.zhuangtai}}
+            </div>
+            <div class="col-md-3" >
+                 <div class="row "  >
+                    
+                    <div class="col-md-9" >
+                    
+                      <div class="row theBorde"  >
+                    <div class="col-md-4 " style="font-size: 1px;" >
+                      {{data1.kucunshu}}
+                    </div>
+                    <div class="col-md-4 " style="font-size: 1px;">
+                        {{data1.xuqiushu}}
+                    </div>
+                    <div class="col-md-4 " style="font-size: 1px;">
+                       {{data1.caigoushu}}
+                    </div>
+                    </div>
+                    </div>
+
+
+
+                    <div class="col-md-3" >
+                     {{data1.BOM}}
+                    </div>
+
+
+               
+            </div>
+          </div>
+          </div>
+         
+
+
+
+
+
+          </div>
+          
     </div><!-- /.container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
