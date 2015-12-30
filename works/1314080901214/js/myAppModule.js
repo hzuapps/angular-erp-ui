@@ -1,8 +1,7 @@
 
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var myAppModule = angular.module('myAppModule', []);
-
+var myAppModule = angular.module('myAppModule', ["ngRoute"]);
 // use the myAppModule variable to
 // configure the module with a controller
 var documentsDetail = {
@@ -20,6 +19,25 @@ var documentsDetail = {
                  caigoushu:"caigoushu1",
                  BOM:"bom1"
                 };
+
+function theRoute($routeProvider){
+  $routeProvider.
+  when("/home",{
+    templateUrl:"home.html",
+    controller:"MyFilterDemoCtrl"
+      }).
+  when("/about",{
+    templateUrl:"aboutMe.html",
+    controller:"aboutController"
+  }).
+  otherwise({
+    templateUrl:"routeNotFound.html",
+    controller:"notFoundController"
+  });
+}
+myAppModule.config(theRoute);
+
+
 
 myAppModule.controller('MyFilterDemoCtrl', function ($scope,$http) {
        // controller code would go here
@@ -54,19 +72,12 @@ myAppModule.controller('MyFilterDemoCtrl', function ($scope,$http) {
 );
 
 
-myOrderModule.directive("myorderdata",function(){
-  return{
-      restrict:"AEC",
-      template:'<div id="tableBody-data" style="margin-top:5px;" ng-repeat="thedata in theOrderDatas">'
-                 +'<div id="orderId" class="order orderId" style="">{{thedata.orderId}}</div>'
-                 +'<div id="storage" class="order storage" style="">{{thedata.storage}}</div>'
-                 +'<div id="people" class="order people" style="">{{thedata.people}}</div>'
-                 +'<div id="dateTime" class="order dateTime" style="">{{thedata.orderDateTime}}</div>'
-                 +'<div id="status" class="order status" style="">{{thedata.orderStatus}}</div>'
-                 +'<div id="notes" class="order notes" style="">{{thedata.notes}}</div>'
-                 +'</div>',
-      transclude: true
-  };
+myAppModule.controller("aboutController",function($scope){
+  $scope.myName="huangkaisheng";
+  $scope.myNumber="1314080901214";
+});
+myAppModule.controller("notFoundController",function($scope){
+  $scope.message="404页面 ";
 });
 
 // use the myAppModule variable to
