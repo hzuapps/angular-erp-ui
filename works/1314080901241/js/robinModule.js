@@ -1,23 +1,17 @@
-// create a new module called 'myAppModule' and save 
+ // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var myAppModule = angular.module('robinModule', []);
+var robinModule = angular.module('robinModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-robinModule.controller('createDemoCtrl', function ($scope) {
-       // controller code would go here
 
-  	  
-  	      var DataList = {
-  	          classification: 'Àà±ð',
-  	          name: 'Ãû³Æ',
-   	          description:'ÃèÊö',
-    		  };
-       	 $scope.data = DataList;
-		} 
-	
-    }
-);
+robinModule.controller('createDemoCtrl', function ($http,$scope) {
+       // controller code would go here
+       $http.get("bjList_JSON.txt").success(function(someData){
+        $scope.data=someData;
+       });
+     })
+
 
 // use the myAppModule variable to
 // configure the module with a filter

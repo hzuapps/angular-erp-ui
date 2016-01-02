@@ -21,7 +21,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-controller="MyFilterDemoCtrl">
+  <body ng-controller="yuangongchaxunFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -46,6 +46,31 @@
     <div class="container">
 
       <div class="starter-template">
+
+
+         <table class="table table-bordered table-condensed" align="center">
+          <thead>
+            <tr>
+              <th rowspan="2" class="text-center">类型</th>
+              <th rowspan="2" class="text-center">单价</th>
+              <th rowspan="2" class="text-center">数量</th>
+              <th rowspan="2" class="text-center">金额</th>
+              <th rowspan="2" class="text-center">IDcard</th>
+            </tr>
+           
+          <tbody ng-repeat="item in items">
+            <tr>
+              <td rowspan="2" class="text-center">{{item.leixing}}</td>
+              <td rowspan="2" class="text-center">{{item.danjia}}</td>
+              <td rowspan="2" class="text-center">{{item.shuliang}}</td>
+              <td rowspan="2" class="text-center">{{item.jine}}</td>
+              <td rowspan="2" class="text-center">{{item.IDcard}}</td>
+   
+            </tr>
+          </tbody>
+        </table>
+
+
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
         <h3>{{data}}</h3>

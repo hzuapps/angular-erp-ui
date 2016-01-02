@@ -1,0 +1,29 @@
+<div class="container starter-template">
+    <h2 style="font-size:500%;color:blue">货单</h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">产品编号</th>
+            <th rowspan="2" class="text-center">产品类型</th>
+            <th rowspan="2" class="text-center">产品名称</th>
+            <th rowspan="2" class="text-center">产品款式</th>
+            <th rowspan="2" class="text-center">产品颜色</th>
+            <th rowspan="2" class="text-center">单元</th>
+            <th rowspan="2" class="text-center">数量</th>
+            <th rowspan="2" class="text-center">备注</th>           
+        </tr>
+        </thead>
+        <tbody ng-repeat="providerData in providerArray">
+        <tr>
+            <td rowspan="2" class="text-center">{{providerData.Pno}}</td>
+            <td rowspan="2" class="text-center">{{providerData.Sort}}</td>
+            <td rowspan="2" class="text-center">{{providerData.Name}}</td>
+            <td rowspan="2" class="text-center">{{providerData.Size}}</td>
+            <td rowspan="2" class="text-center">{{providerData.Color}}</td>
+            <td rowspan="2" class="text-center">{{providerData.Unit}}</td>
+            <td rowspan="2" class="text-center">{{providerData.Num}}</td>
+            <td rowspan="2" class="text-center">{{providerData.Other}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,7 +1,15 @@
 body {
-  padding-top: 50px;
+  padding-top:0px;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
 }
+.ng-cloak{display:none;}
+#se0{
+	width:100px;
+	height:25px;
+}
+#se1{
+width:500px;	
+	}

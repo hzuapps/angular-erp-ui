@@ -22,6 +22,20 @@
     <![endif]-->
         <script src="../../lib/angular-1.4.5/angular.min.js"></script>
 	<script src="js/myAppModule.js"></script>
+    
+    <style type="text/css">
+       body {padding: 0; margin: 0; font-size: 75%; line-height: 540%;}
+       body,html{height: 100%; }
+       a{color: #333;}
+       a:hover{color: green;}
+       #outer {height: 100%; overflow: hidden; position: relative;width: 100%; background:ivory; }
+       #outer[id] {display: table; position: static;}
+       #middle {position: absolute; top: 50%;text-align:center;} /* for explorer only*/
+       #middle[id] {display: table-cell; vertical-align: middle; position: static;}
+       #inner {position: relative; top: -50%;width: 600px;margin: 0 auto;text-align:left;}/*for explorer only */
+       div.greenBorder {border: 1px solid green; background-color: #FFF;}
+       p{margin: 1em;}
+    </style>
 
   </head>
   <body ng-controller="MyFilterDemoCtrl">
@@ -46,15 +60,37 @@
       </div>
     </nav>
 
-    <div class="container">
 
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-    </div><!-- /.container -->
-
+<div id="outer">
+<div id="middle">
+<div id="inner" class="greenBorder">
+<table width="100%" height="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="middle" align="center">
+      <form class="form-inline">
+       <label for="WorkShop">生产车间:</label>
+         <select class="WorkShop">
+           <option>木工车间</option>
+           <option>油漆车间</option>
+           <option>包装车间</option>
+           <option>橱柜车间</option>
+         </select>
+       <div class="form-group">
+        <label for="NewGroName">生产组别:</label>
+        <input type="NewGroName" class="form-control" id="NewGroName" placeholder="新增工作组组名">
+       </div>
+       <div class="form-group">
+       <label for="OfficerName">负责人:</label>
+       <input type="OfficerName" class="form-control" id="OfficerName" placeholder="负责人">
+       </div>
+       <button type="Save" class="btn btn-default">保存</button>
+      </form>
+     </td>
+   </tr>
+</table>
+</div>
+</div>
+</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN" ng-app="myAppModule">
-  <head>
+<html ng-app="SupplierContactAppModule">
+  <head lang="zh-CN">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,25 +19,11 @@
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-      <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-      <script src="liuqinweiAppModule.js"></script>
+
     <![endif]-->
-    <script>
-    function MyFilterDemoCtrl($scope) {
-        var worker information = {
-            name: 'Liuqinwei',
-            phone: '123456567',
-            telephone: '3456457456754',
-            code: '456567546757',
-            qq: '565645654',
-            email: '545435345@qq.com',
-            zhiwu: '董事长',
-            beizhu: '男' ,
-        };
-        $scope.data = worker information;
-} </script>
+
   </head>
-  <body ng-controller="liuqinweiFilterDemoCtrl">
+  <body ng-controller="SupplierContactFilterDemoCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -62,7 +48,36 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
+
+          <table class="table table-bordered table-condensed" align="center">
+              <thead>
+              <tr>
+                  <th rowspan="2" class="text-center">名称</th>
+                  <th rowspan="2" class="text-center">手机</th>
+                  <th rowspan="2" class="text-center">办公电话</th>
+                  <th rowspan="2" class="text-center">传真号码</th>
+                  <th rowspan="2" class="text-center">QQ</th>
+                  <th rowspan="2" class="text-center">邮箱地址</th>
+                  <th rowspan="2" class="text-center">职务</th>
+                  <th rowspan="2" class="text-center">备注</th>
+              </tr>
+              <tbody ng-repeat="item in items">
+              <tr>
+                  <td rowspan="2" class="text-center">{{item.name}}</td>
+                  <td rowspan="2" class="text-center">{{item.phone}}</td>
+                  <td rowspan="2" class="text-center">{{item.officePhone}}</td>
+                  <td rowspan="2" class="text-center">{{item.phototelephony}}</td>
+                  <td rowspan="2" class="text-center">{{item.QQ}}</td>
+                  <td rowspan="2" class="text-center">{{item.email}}</td>
+                  <td rowspan="2" class="text-center">{{item.job}}</td>
+                  <td rowspan="2" class="text-center">{{item.remark}}</td>
+
+              </tr>
+              </tbody>
+          </table>
+
+
+          <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
 
@@ -72,5 +87,7 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/SupplierContactAppModule.js"></script>
   </body>
 </html>

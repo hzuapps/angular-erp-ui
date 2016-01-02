@@ -8,9 +8,16 @@ var myAppModule = angular.module('myAppModule', []);
 myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
        // controller code would go here
       var someData={
-        Name:'新增工作组',
-        Detailed:'新增工作组组名',
-        instructions:'新建工作组',
+        FunctionName:'新增工作组',
+        OfficerName:'某某某某',
+        NewGroName:'新增工作组',
+        Save:'001',
+        WorkShop:{
+            WorkShop1:'木工车间',
+            WorkShop2:'油漆车间',
+            WorkShop3:'包装车间',
+            WorkShop4:'橱柜车间',
+               }
       };
       $scope.data=someData;
     }

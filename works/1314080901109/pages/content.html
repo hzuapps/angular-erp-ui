@@ -1,0 +1,29 @@
+<div class="container starter-template">
+     <h2><p>Storage List</p></h2>
+     <table class="table table-bordered table-condensed" align="center">
+         <thead>
+         <tr>
+             <th rowspan="2" class="text-center">出库模式</th>
+             <th rowspan="2" class="text-center">仓库编号</th>
+             <th rowspan="2" class="text-center">经手人</th>
+             <th rowspan="2" class="text-center">经办日期</th>
+             <th rowspan="2" class="text-center">出库材料</th>
+             <th rowspan="2" class="text-center">出库数量</th>
+             <th rowspan="2" class="text-center">状态</th>
+             <th rowspan="2" class="text-center">备注</th>
+         </tr>
+         </thead>
+         <tbody ng-repeat="StorageData in storageArray">
+         <tr>
+             <td rowspan="2" class="text-center">{{StorageData.outmode}}</td>
+             <td rowspan="2" class="text-center">{{StorageData.number}}</td>
+             <td rowspan="2" class="text-center">{{StorageData.name}}</td>
+             <td rowspan="2" class="text-center">{{StorageData.date}}</td>
+             <td rowspan="2" class="text-center">{{StorageData.material}}</td>
+             <td rowspan="2" class="text-center">{{StorageData.amount}}</td>
+             <td rowspan="2" class="text-center">{{StorageData.status}}</td>
+             <td rowspan="2" class="text-center">{{StorageData.Other}}</td>
+         </tr>
+         </tbody>
+     </table>
+ </div> 

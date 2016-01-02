@@ -1,32 +1,109 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var orderModule = angular.module('orderModule', []);
+var goodsData={id:1,number:23,name:"abc",type:'a',xinghao:'b',color:'red',numbers:567,danwei:'kg',danjia:8,jine:9,avg:10,jiubianma:123};
+
+var app = angular.module('app', ['ngRoute']); 
+    function theRoute($routeProvider) {
+    $routeProvider.when("/", {
+      // route for the home page
+        templateUrl: "pages/home.html",
+         controller: "homeController"
+    })
+    .when("/about", {
+      // route for the about page
+        templateUrl: "pages/about.html",
+         controller: "aboutController"
+    })
+    .when("/contact", {
+      // route for the contact page
+        templateUrl: "pages/contact.html",
+         controller: "contactController"
+    })
+    .when("/goodsList", {
+      // route for the goodsList page
+        templateUrl: "pages/goodsList.html",
+         controller: "goodsListController"
+    })
+    .otherwise({
+      // when all else fails
+        templateUrl: "pages/routeNotFound.html",
+         controller: "notFoundController"
+    });}
+    app.controller("homeController", function ($scope) {
+        $scope.message = "Welcome to my home page!";
+    });
+    app.controller("aboutController", function ($scope) {
+        $scope.name = "Name:lizifeng";
+        $scope.numbers = "Numbers:1314080901219";
+    });
+    app.controller("contactController", function ($scope) {
+        $scope.message = "Contact us!";
+    });
+    app.controller("goodsListController", function ($scope,goodsListService) {
+        var promise=goodsListService.getData();
+          promise.success(function(data,status){
+          alert(status+"ï¼šè¯·æ±‚æˆåŠŸï¼Œè·å–æ–‡ä»¶é‡Œçš„jsonæ•°æ®æˆåŠŸ");
+          var orderData=goodsData;
+          orderData.id = data[0].id;
+          orderData.number = data[0].number;
+          orderData.name = data[0].name;
+          orderData.type=data[0].type;
+          orderData.xinghao=data[0].xinghao;
+          orderData.color=data[0].color;
+          orderData.numbers=data[0].numbers;
+          orderData.danwei=data[0].danwei;
+          orderData.danjia=data[0].danjia;
+          orderData.jine=data[0].jine;
+          orderData.avg=data[0].avg;
+          orderData.jiubianma=data[0].jiubianma;
+          $scope.theOrderDatas = [goodsData];
+     });
+     promise.error(function(data,status){
+           alert(status);
+           alert("è¯·æ±‚å‡ºç°é”™è¯¯ï¼Œå…·ä½“æ˜¯ä»€ä¹ˆé”™è¯¯è¿˜æœ‰å¾…æ£€æŸ¥");
+     });
+    });
+    app.controller("notFoundController", function ($scope,$location) {
+      $scope.message = "There seems to be a problem finding the page you wanted";
+      $scope.attemptedPath = $location.path();
+    });
+    app.config(theRoute);
+app.factory('goodsListService',function($http){
+     var getGoodsData={};
+     getGoodsData.getData=function(){
+            var promise=$http({
+              url:"json/goodsList.json",
+              method:"get",
+            });
+            return promise;
+      }
+      return getGoodsData;
+});
 
 // use the myAppModule variable to
 // configure the module with a controller
-orderModule.controller('createOrderCtrl', function ($scope) {
+/*orderModule.controller('createOrderCtrl', function ($scope) {
     // controller code would go here
-        var someData = {
-            id: 'ĞòºÅ',
-            number: '±àºÅ',
-            name: 'Æ·Ãû',
-            type: 'Àà±ğ',
-            xinghao: 'ĞÍºÅ',
-            color:'ÑÕÉ«',
-            numbers:'ÊıÁ¿',
-            danwei:'µ¥Î»',
-            danjia:'µ¥¼Û',
-            jine:'½ğ¶î',
-            avg:'Æ½¾ù¼Û',
-            jiubianma:'¾É±àÂë'
-        };
-        $scope.data = someData;
+        $scope.someData = [{
+            id: '123',
+            number: '234',
+            name: 'å•†å“',
+            type: 'ç±»åˆ«',
+            xinghao: 'å‹å·',
+            color:'é¢œè‰²',
+            numbers:'æ•°é‡',
+            danwei:'å•ä½',
+            danjia:'å•ä»·',
+            jine:'é‡‘é¢',
+            avg:'å¹³å‡ä»·',
+            jiubianma:'æ—§ç¼–ç '
+        }];
     }
-);
+);*/
 
 // use the myAppModule variable to
 // configure the module with a filter
-orderModule.filter('stripDashes', function () {
+app.filter('stripDashes', function () {
     return function (txt) {
         // filter code would go here
     };

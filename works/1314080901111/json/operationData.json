@@ -1,0 +1,9 @@
+{
+    "saleList": "销售订单",
+    "listType": "订单类型",
+    "listDate": "new Date(2015, 10, 20)",
+    "commitDate": "new Date(2015,10,20)",
+    "listID": "订单编号",
+    "listState": "订单状态",
+    "remarks": "备注"
+}

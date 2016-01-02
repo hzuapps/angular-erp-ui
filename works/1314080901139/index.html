@@ -13,6 +13,22 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+    legend{
+      font-size: 27px;
+      background-color: #66FFFF;
+    }
+    .frist-row select{
+      height: 26px;
+      width: 172px;
+    }
+    #thebutton{
+       margin-left: 159px;
+    }
+    .theformborder{
+      border: 10px;
+    }
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,10 +36,10 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 
-      <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-      <script src="js/materialModule.js"></script>
-
     <![endif]-->
+
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/materialModule.js"></script>
     
   </head>
   <body ng-controller="creatematerialCtrl">
@@ -56,6 +72,42 @@
       </div>
 
     </div><!-- /.container -->
+
+    <!--
+    <button ng-cloak="showInput()" type="button" value>{{isHidden ? '显示查询选项' : '隐藏查询选项'}}</button>
+    <form class="form-horizontal" role="form" ng-hide="isHidden">
+    -->
+
+    <form>
+      <fieldset class="theformborder">
+        <legend>物料-物料信息-物料信息</legend>
+            <div class="12">
+            <div class="frist-row">  
+              <label for="wuLiaoLeiBie">物料类别：</label>
+              <select name="LeiBie">
+                <option value="bancai">板材</option>
+                <option value="wujin">五金</option>
+                <option value="mupi">木皮</option>
+                <option value="dengju">灯具</option>
+                <option value="youqi">油漆</option>
+                <option value="jiaolian">铰链</option>
+              </select>
+              <label for="wuLiaoMingCheng">物料名称：</label>
+              <input type="text" name="wuLiaoname" />
+              <label for="gengXinRiQi">更新日期：</label>
+              <input type="text" name="gengxinriqi" />
+            </div>
+            </br>
+            <div class="second-row">
+              <label for="pinyinma">&nbsp;&nbsp;&nbsp;拼音码：</label>
+              <input type="text" name="pingyinma" />
+              <label for="wuliaomiaoshu">物料描述：</label>
+              <input type="text" name="wuliaomiaoshu" />
+              <input id="thebutton" type="button" value="+  保存/修改">
+            </div>
+          </div><!--class="12"-->
+      </fieldset>
+    </form>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>

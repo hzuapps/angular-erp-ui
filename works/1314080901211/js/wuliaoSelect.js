@@ -4,15 +4,14 @@ var wuliaoSelect = angular.module('wuliaoSelect', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-wuliaoSelect.controller('wuliaoSelectCtrl', function ($scope) {
+
+wuliaoSelect.controller('wuliaoSelectCtrl', function ($http,$scope) {
        // controller code would go here
-        $scope.someData = [
-           { name: 'aa',type: '五金',version:'L',color:'black', description:'balabala'},
-           { name: 'bb',type: '五金',version:'L',color:'black', description:'balabala'},
-           { name: 'cc',type: '五金',version:'L',color:'black', description:'balabala'}
-           ];
-    }
-);
+       $http.get("materialList_JSON.txt").success(function(someData){
+        $scope.data=someData;
+       });
+     })
+
 
 // use the myAppModule variable to
 // configure the module with a filter

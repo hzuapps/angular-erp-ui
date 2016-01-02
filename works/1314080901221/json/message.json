@@ -1,0 +1,12 @@
+{
+    "success": [
+        {
+            "message": "you are success!"
+        }
+    ],
+    "error": [
+        {
+            "message": "fail to get the message!."
+        }
+    ]
+} 

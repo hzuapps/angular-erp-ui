@@ -1,0 +1,26 @@
+﻿[
+    {
+        "code": "a",
+        "name": "T恤",
+        "type": "衣服",
+        "color": "black",
+        "inventory_number": "100",
+        "check_number": "1000"
+    },
+    {
+        "code": "b",
+        "name": "长袖",
+        "type": "衣服",
+        "color": "white",
+        "inventory_number": "200",
+        "check_number": "2000"
+    },
+    {
+        "code": "c",
+        "name": "外套",
+        "type": "衣服",
+        "color": "yellow",
+        "inventory_number": "300",
+        "check_number": "3000"
+    }
+]

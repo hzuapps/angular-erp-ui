@@ -54,6 +54,50 @@
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
 
+    </div>
+
+    <div class="container">
+      <div class="row col-lg-offset-2">
+        <form class="form-inline" role="form">
+
+          <div class="form-group col">
+            <div class="col">
+              <label for="example1">参数名：</label>
+              <input type="text" class="form-control input-sm" ng-model="Name" id="example1"/>
+            </div>
+          </div>
+
+          <div class="form-group col">
+            <div class="col">
+              <label for="example2">代码：</label>
+              <input type="text" class="form-control input-sm" ng-model="Code" id="example2"/>
+            </div>
+          </div>
+
+          <div class="form-group col">
+            <div class="col">
+              <label for="example3">参数值：</label>
+              <input type="text" class="form-control input-sm" ng-model="ParameterData" id="example3"/>
+            </div>
+          </div>
+
+          <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+            <button type="button" class="btn btn-default" ng-click="showInput()">
+              {{isHidden ? '新增' : '删除'}}
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="container col-xs-offset-3 ng-cloak" ng-cloak>
+    <p class="lead">
+    <div ng-hide="isHidden">您输入了数据：</div>
+    <div id="Name" ng-hide="isHidden">参数名->{{Name}}</div>
+    <div id="Code" ng-hide="isHidden">代码->{{Code}}</div>
+    <div id="ParameterData" ng-hide="isHidden">参数值->{{ParameterData}}</div>
+    </p>
     </div><!-- /.container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

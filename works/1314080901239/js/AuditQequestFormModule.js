@@ -11,7 +11,14 @@ AuditQequestFormModule.controller('MyFilterDemoCtrl', function($scope) {
              date: 'PDF', 
              instructions:'pishi', 
          };
-        $scope.data =AuditQequestForm;
+        $scope.data =caozuomingxi;
+        $scope.isHidden = true;
+        $scope.showInput = function () {
+        $scope.isHidden = !$scope.isHidden;
+       }
+       $scope.showTextarea = function () {
+        $scope.isHidden = !$scope.isHidden;
+       }
 });
 
 // use the myAppModule variable to

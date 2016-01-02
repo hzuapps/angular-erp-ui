@@ -16,8 +16,29 @@ documentsDetailModule.controller('MyFilterDemoCtrl', function ($scope) {
             
         };
         $scope.data = documentsDetail;
-    }
-);
+         $scope.isHidden = true;
+        $scope.showInput = function () {
+            $scope.isHidden = !$scope.isHidden;
+        }
+        $scope.provider = {};
+        $scope.register = function () {
+            var promise = providerService.doRegistration($scope.provider);
+            promise.success(function (data, status, headers, config, statusText) {
+                $scope.backMess = data.success;
+                $scope.isHidden = !$scope.isHidden;
+                if(!$scope.isHidden){
+                    alert($scope.backMess[0].message + "\n" + "\n" + "Your providerId is " + $scope.provider.Id);
+                }
+            });
+            promise.error(function (data, status, headers, config, statusText) {
+                $scope.backMess = data.error;
+                $scope.isHidden = !$scope.isHidden;
+                if(!$scope.isHidden){
+                    alert($scope.backMess[0].message);
+                }
+            });
+        }
+    });
 
 // use the myAppModule variable to
 // configure the module with a filter

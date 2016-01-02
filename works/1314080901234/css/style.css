@@ -5,3 +5,10 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+div1{
+	float:right;
+}
+td{
+	text-align: left;
+}
+

@@ -1,49 +1,117 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var myAppModule = angular.module('myStoreModule', []);
+var myAppModule = angular.module('myStoreModule', ['ngRoute']);
+myAppModule.config(function($routeProvider) {
+        // configure the routes
+        $routeProvider
+            .when('someServer/operators/create', {
+                templateUrl: '#',//当前页面，不跳转
+                controller: 'MyFilterDemoCtrl'
+            })
+            .when('someServer/operators/save/:id', {
+                templateUrl: '#',
+                controller: 'MyFilterDemoCtrl'
+            })
+            .when('someServer/operators/finish/:id',
+             {
+                templateUrl: '#',
+                controller: 'MyFilterDemoCtrl'
+            })
+})
+
+myAppModule.factory('storeService', function($http) {
+    var service = {};
+
+    service.create = function() {
+        var promise = $http({
+            method: 'POST',
+            url: 'someServer/operators/create',
+            data: {
+                "id": 001,
+                "name": "jinhaoxu",
+                "age": 20,
+                "dateJoined": new Date(2010, 2, 23),
+                "dateEnd": new Date(2015, 10, 22),
+                "remark": "i'm a handsome boy!"
+            }
+        })
+
+        return promise;
+    };
+
+    service.save = function() {
+        var promise = $http({
+            method: 'PUT',
+            url: 'someServer/operators/save/:id',
+            data: {
+                "id": 002,
+                "name": "hengdanwang",
+                "age": 22,
+                "dateJoined": new Date(2010, 2, 23),
+                "dateEnd": new Date(2015, 10, 22),
+                "remark": "i'm a handsome boy!"
+            }
+        })
+
+        return promise;
+    };
+
+    service.finish = function() {
+        var promise = $http({
+            method: 'GET',
+            url: 'someServer/operators/finish/:id',
+        })
+
+        return promise;
+    };
+
+    return service;
+})
 
 // use the myAppModule variable to
 // configure the module with a controller
-myAppModule.controller('MyFilterDemoCtrl', function($scope) {
+myAppModule.controller('MyFilterDemoCtrl', function($scope, storeService) {
     // controller code would go here
+    // $scope.data = storeService.getData();
     $scope.create = function() {
-        // alert("新建了一条盘点信息！");
-        document.getElementById("profileForm").action = "https://www.baidu.com";
-        document.getElementById("profileForm").method = "post";
-        document.getElementById("profileForm").submit();
+        // storeService.create();
+        var promise = storeService.create();
+        promise.success(function(data, status, headers, config, statusText) {
+            var backMsg = data.success;
+            alert(backMsg.message);
+        });
+        promise.error(function(data, status, headers, config, statusText) {
+            var backMsg = data.statusText;
+            alert(backMsg);
+        });
+    }
 
-    }
     $scope.save = function() {
-        // alert("保存了一条盘点信息！");
-        document.getElementById("profileForm").action = "https://www.hao123.com";
-        document.getElementById("profileForm").method = "post";
-        document.getElementById("profileForm").submit();
+
+        var promise = storeService.save();
+        promise.success(function(data, status, headers, config, statusText) {
+            var backMsg = data.success;
+            alert(backMsg.message);
+        });
+        promise.error(function(data, status, headers, config, statusText) {
+            var backMsg = data.error;
+            alert(backMsg.message);
+        });
     }
+
     $scope.finish = function() {
-        // alert("已完成！");
-        document.getElementById("profileForm").action = "https://www.github.com";
-        document.getElementById("profileForm").method = "get";
-        document.getElementById("profileForm").submit();
+
+        var promise = storeService.finish();
+        promise.success(function(data, status, headers, config, statusText) {
+            var backMsg = data.success;
+            alert(backMsg.message);
+        });
+        promise.error(function(data, status, headers, config, statusText) {
+            var backMsg = data.error;
+            alert(backMsg.message);
+        });
     }
-    var someData = {
-        operators: [{
-            "id": 001,
-            "name": "jinhaoxu",
-            "age": 20
-        }, {
-            "id": 002,
-            "name": "hengdanwang",
-            "age": 22
-        }, {
-            "id": 003,
-            "name": "yongdanzhang",
-            "age": 21
-        }],
-        dateJoined: new Date(2010, 2, 23),
-        dateEnd: new Date(2015, 10, 22),
-        remark: "i'm a handsome boy!"
-    };
-    $scope.data = someData;
+
 });
 
 // use the myAppModule variable to

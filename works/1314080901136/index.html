@@ -1,72 +1,67 @@
-﻿<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-<script>
-    function MyFilterDemoCtrl($scope) {
-        var typeSet = {
-		suoshubuemn: '111',
-		gangweimingcheng: '111',
-		gangweicengci: '111',
-		gangweileixing: '111',
-		jibenxinzi: '111',
-		gangweizhize: '111',
-        };
-        $scope.data = typeSet;
-} </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>人事组织 1314080901136</title>
-    <link rel="shortcut icon" href="icons/favicon.ico" />
-    
-    <!-- Bootstrap -->
-    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>人事组织岗位</title>
+</head>
+<style>
+input[type=="text"]
+{width:600px;height:600px;}
+</style>
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+<body>
+<form id="textform">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+<section>
+	<label>所属部门：</label>
+    <input type="text" style="width:500px" placeholder=">>请选择部门" value="" list="BM" >  
+    <datalist id="BM">  
+      <option value="人事">人事</option>   
+      <option value="仓库">仓库</option>   
+    </datalist>  
+<br><br>
+</section>
 
-    <div class="container">
+<section>
+	<label>岗位名称：</label>
+    <input type="text" style="width:500px">
+<br><br>
+</section>
+	
+<section>
+	<label>岗位层次：</label>
+    <input type="text" style="width:500px" placeholder=">>请输入大于0的整数">
+<br><br>
+</section>     
 
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+<section>
+  <label>岗位类型：</label>
+    <input type="text" style="width:500px" placeholder=">>请选择岗位类别" value="" list="GW">  
+    <datalist id="GW">  
+      <option value="管理岗">管理岗</option>   
+      <option value="技术岗">技术岗</option>
+      <option value="实习生">实习生</option>  
+      <option value="普通岗">普通岗</option>  
+    </datalist>
+<br><br>
+</section>
 
-    </div><!-- /.container -->
+<section>
+  <label>基本薪资：</label>
+    <input type="text" style="width:500px">
+<br><br>
+</section>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-  </body>
+<section>
+  <label style="float:left">岗位职责：</label>
+    <input type="text" style="width:500px;height:100px">
+<br><br>
+</section>
+
+<input type="submit" name="S1" value="保存" formmethod="post" formaction="http://localhost:8080/HelloJSP/text01.jsp">
+<input type="reset" name="button" id="button" value="重置" >
+
+</form>
+
+</body>
 </html>
