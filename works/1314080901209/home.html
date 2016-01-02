@@ -1,0 +1,60 @@
+﻿
+		<style type="text/css">
+	.select-SelectDepartment{
+	  height: 40px;
+  padding: 0px 5px;
+  width:233px;
+  font-size: 18px;
+	 margin-bottom:3px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+   font-family : 微软雅黑,宋体;
+	}
+	.input-lg_2 {
+  height: 40px;
+  padding: 10px 16px;
+  font-size: 18px;
+  margin-bottom:3px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  font-family : 微软雅黑,宋体;
+}
+.title{ 
+  margin-bottom:20px;
+ font-size: 25px;
+font-family : 微软雅黑,宋体;
+
+ 
+ }
+</style>
+  
+	  <div style="margin:0 auto;text-align:center">
+	<form class="form-control">
+	<div class="title">编辑岗位信息</div>
+	<label>所属部门:</label>
+
+ 
+	<select id="multiple" class="select-SelectDepartment" >
+   <option  ng-repeat="dep in  SelectDepartment" id="SelectDepartment_{{index}}">{{dep}}</option>
+	</select>
+	<br/>
+	
+	<label for="name">岗位名称:</label>
+	<input type="text" class="input-lg_2" id="name"/><br/>
+	<label>岗位层次:</label>
+	<input type="text"  class="input-lg_2"  id="name"/><br/>
+	<label>岗位类型:</label>
+	<select class="select-SelectDepartment" >
+	 <option  ng-repeat="TYPE in  SelectQuartersType" id="SelectQuartersType_{{index}}">{{TYPE}}</option>
+	</select>
+	<br/>
+	<label>基本薪资:</label>
+		<input type="text"  class="input-lg_2"   id="name"/><br/>
+	<label>岗位职责:</label>
+	<input type="text" class="input-lg_2" id="name"/><br/>
+	
+<input type="button" onclick="return alert('xixi');" value="保存"/>
+<input type="reset" value="重置"/>
+		
+		</form>
+</div>
