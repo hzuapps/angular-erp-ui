@@ -14,8 +14,18 @@ var myOrder = angular.module('myModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-myOrder.controller('myController', function ($scope) {
-        $scope.myData=myData;
+myOrder.controller('myController', function ($scope,$http) {
+        var promise=$http({
+              url:"json/myData.json",
+              method:"get",
+            });
+        promise.success(function(data,status){
+           $scope.myData=data;
+        });
+        promise.error(function(data,status){
+           alert(status);
+           alert("请求出现错误，具体是什么错误还有待检查");
+     });
     });
 
 
