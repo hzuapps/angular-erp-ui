@@ -1,0 +1,235 @@
+<style type = "text/css">
+/*设置通配符样式*/
+*{
+    margin:0; 
+    padding:0;
+}
+body{
+    font-size:12px;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+ 
+/*设置一级导航样式*/   
+.nav {
+    width:500px; 
+    height:30px;
+    background-color:#b4b4b4;
+    /*导航栏居中*/
+    margin:auto;
+}
+.nav ul li { 
+    width:100px; 
+    height:30px; 
+    float:left; 
+    position:relative;
+}
+.nav ul li a {
+    display:block;
+    width:96px; 
+    border:2px solid gray; 
+    height:26px; 
+    line-height:26px; 
+    text-align:center;
+}
+.nav ul li a:hover { 
+    background-color:yellow;
+}
+ 
+/*设置二级导航样式*/
+.nav ul li ul{
+    display:none;
+}
+.nav ul li:hover ul{
+    display:block;
+    width:100px;
+    position:absolute;
+    top:30px;
+    left:0;
+    background-color:white;
+}
+.nav ul li:hover ul li a{
+    display:block;
+    width:96px;
+    height:26px;
+    line-height:26px;
+    border:2px solid gray;
+    text-align:center;
+}
+.nav ul li:hover ul li a:hover{
+    background-color:orange;
+}
+ 
+/*设置三级导航样式*/
+.nav ul li:hover ul li ul { 
+    display:none;
+}
+.nav ul li:hover ul li:hover ul{ 
+    display:block; 
+    width:100px; 
+    position:absolute; 
+    top:0px; 
+    left:100px;
+    background-color:#b4b4b4;
+}
+.nav ul li:hover ul li:hover ul li { 
+    width:100px; 
+    height:30px; 
+}
+.nav ul li:hover ul li:hover ul li a { 
+    display:block; 
+    width:96px; 
+    height:26px; 
+    line-height:26px; 
+    border:2px solid gray; 
+    text-align:center; 
+}
+.nav ul li:hover ul li:hover ul li a:hover { 
+    background-color:#00CC00;
+}
+.nav ul li:hover ul .nav_jw ul { 
+    display:none;
+}
+.nav ul li:hover ul .nav_jw:hover ul{ 
+    display:block; 
+    width:100px; 
+    position:absolute; 
+    top:0px; 
+    left:-100px;
+    background-color:#b4b4b4;
+}
+.nav ul li:hover ul .nav_jw:hover ul li { 
+    width:100px; 
+    height:30px; 
+}
+.nav ul li:hover ul .nav_jw:hover ul li a { 
+    display:block; 
+    width:96px; 
+    height:26px; 
+    line-height:26px; 
+    border:2px solid gray; 
+    text-align:center; 
+}
+.nav ul li:hover ul .nav_jw:hover ul li a:hover { 
+    background-color:#00CC00;
+}
+ 
+</style>
+  <table  height=300px width=750px;border="1" cellspacing="0" bgcolor="white" cellspacing="0" align="left">
+<tr>
+  <th >
+    <mytittle></mytittle>
+  </th>
+</tr>
+<tr> 
+        <th valign="top">
+
+<div class = "nav">
+<ul>
+<li><a href = "#">    <input name="" type="checkbox" value="费用单编号" checked="checked" />
+    费用单编号</a>
+    <ul>
+    <li><a href = "#">正序</a> </li>    
+    <li><a href = "#">倒序</a></li> 
+    <li><a href = "#">列</a>
+        <ul>
+            <li><a href = "#"><input name="" type="checkbox" value="费用单编号" checked="checked" />
+    费用单编号</a></li>
+            <li><a href = "#"><input name="" type="checkbox" value="摘要" checked="checked" />
+    摘要</a></li>
+            <li><a href = "#"><input name="" type="checkbox" value="付款金额" checked="checked" />
+    付款金额</a></li>
+      <li><a href = "#"><input name="" type="checkbox" value="备注" checked="checked" />
+    备注</a></li>
+        </ul>
+    </li>     
+    </ul>
+</li>
+<li><a href = "#">摘要</a>
+    <ul>
+    <li><a href = "#">正序</a> </li>  
+    <li><a href = "#">倒序</a></li> 
+    <li><a href = "#">列</a>
+        <ul>
+            <li><a href = "#"><input name="" type="checkbox" value="费用单编号" checked="checked" />
+    费用单编号</a></li>
+            <li><a href = "#"><input name="" type="checkbox" value="摘要" checked="checked" />
+    摘要</a></li>
+            <li><a href = "#"><input name="" type="checkbox" value="付款金额" checked="checked" />
+    付款金额</a></li>
+      <li><a href = "#"><input name="" type="checkbox" value="备注" checked="checked" />
+    备注</a></li>
+        </ul>
+    </li>     
+    </ul>
+</li>
+<li><a href = "#">付款金额</a>
+    <ul>
+    <li><a href = "#">正序</a> </li>   
+    <li><a href = "#">倒序</a></li> 
+    <li><a href = "#">列</a>
+        <ul>
+            <li><a href = "#"><input name="" type="checkbox" value="费用单编号" checked="checked" />
+    费用单编号</a></li>
+            <li><a href = "#"><input name="" type="checkbox" value="摘要" checked="checked" />
+    摘要</a></li>
+            <li><a href = "#"><input name="" type="checkbox" value="付款金额" checked="checked" />
+    付款金额</a></li>
+      <li><a href = "#"><input name="" type="checkbox" value="备注" checked="checked" />
+    备注</a></li>
+        </ul>
+    </li>     
+    </ul>
+</li>
+<li><a href = "#">备注</a>
+ <ul>
+    <li><a href = "#">正序</a> </li>    
+    <li><a href = "#">倒序</a></li> 
+    <li><a href = "#">列</a>
+        <ul>
+            <li><a href = "#"><input name="" type="checkbox" value="费用单编号" checked="checked" />
+    费用单编号</a></li>
+            <li><a href = "#"><input name="" type="checkbox" value="摘要" checked="checked" />
+    摘要</a></li>
+            <li><a href = "#"><input name="" type="checkbox" value="付款金额" checked="checked" />
+    付款金额</a></li>
+      <li><a href = "#"><input name="" type="checkbox" value="备注" checked="checked" />
+    备注</a></li>
+        </ul>
+    </li>     
+ </ul>
+</li>
+</ul>
+</div>    
+
+</tr>
+<table   width="750" height="30" border="1" cellspacing="0" bgcolor="blue">
+       <tr>
+        <th>
+        <form   name="input" action="html_form_action.asp" method="get">
+    
+      <a href="#" ><input type="submit" value="新增" ></input></a>
+       <a href="#"><input type="submit" value="删除" ></a>
+        <a href="#">录单员:</a>
+         <a href="#"><input type="text" size="10" ></a>
+          <a href="#">录单日期：</input></a>
+           <a href="#"><input type="text" size="10" ></a>
+      
+           </form>
+           </th>
+       </tr>
+      
+</table>
+       
+     </div>
+  
+    
+
+</table>
+        
+   
+
