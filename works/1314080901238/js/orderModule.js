@@ -10,7 +10,26 @@ var myData = {
       };
 
 
-var myOrder = angular.module('myModule', []);
+var myOrder = angular.module('myModule', ["ngRoute"]);
+
+function theRoute($routeProvider){
+  $routeProvider.
+  when("/home",{
+    templateUrl:"home.html",
+    controller:"myController"
+      }).
+  when("/about",{
+    templateUrl:"aboutMe.html",
+    controller:"aboutController"
+  }).
+  otherwise({
+    templateUrl:"error.html"
+  });
+}
+myOrder.config(theRoute);
+
+
+
 
 // use the myAppModule variable to
 // configure the module with a controller
@@ -28,6 +47,10 @@ myOrder.controller('myController', function ($scope,$http) {
      });
     });
 
+myOrder.controller("aboutController",function($scope){
+   $scope.myName="严文伟";
+   $scope.myNumber="1314080901238";
+ });
 
 myOrder.directive("myorderdata",function(){
   return{

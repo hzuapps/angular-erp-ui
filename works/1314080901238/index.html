@@ -22,10 +22,11 @@
     <![endif]-->
 
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-
+    <script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
     <script src="js/orderModule.js"></script>
+
   </head>
-  <body ng-controller="myController">
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -39,7 +40,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -48,20 +49,11 @@
     
     </nav>
     
- <div class="wrapper">
-      <div class="container" >
-        <form>
-        <h4>编辑工厂信息</h4>
-     <myorderdata></myorderdata>
-
-
-    	
-    	<div class="foot">
-      		<button> 保存/修改</button>
-    	</div>
-    </form>
-</div>
-</div>
+     <!--这里是局部页面-->
+      <div id="main" class="myViewStyle">
+         <div ng-view ></div>
+      <div>
+ 
 	
 
     </div><!-- /.container -->
