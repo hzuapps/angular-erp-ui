@@ -2,41 +2,22 @@
 // a reference to it in a variable called myAppModule 
 var EmployeeAttendanceModule = angular.module('EmployeeAttendanceModule', []);
 
-// use the myAppModule variable to
-// configure the module with a controller
-EmployeeAttendanceModule.controller('MyFilterDemoCtrl', function ($scope) {
-       // controller code would go here
-       var EmployeeAttendanceData = [{
-         personNum:'001',
-         personName:'zhouzebiao',
-         attenceDate:'2015-01-01',
-         moring:'true',
-         moringOn:'2015-01-01 08:00',
-         moringOff:'2015-01-01 11:30',
-         afternoon:'true',
-         afternoonOn:'2015-01-01 13:30',
-         afternoonOff:'2015-01-01 17:30',
-         extra:'true',
-         start:'2015-01-01 19:30',
-         stop:'2015-01-01 22:00'
-        },
-        {
-         personNum:'002',
-         personName:'zhouzebiao',
-         attenceDate:'2015-01-01',
-         moring:'true',
-         moringOn:'2015-01-01 08:00',
-         moringOff:'2015-01-01 11:30',
-         afternoon:'true',
-         afternoonOn:'2015-01-01 13:30',
-         afternoonOff:'2015-01-01 17:30',
-         extra:'true',
-         start:'2015-01-01 19:30',
-         stop:'2015-01-01 22:00'
-        }];
-        $scope.attendance_data = EmployeeAttendanceData;
+//创建服务
+EmployeeAttendanceModule.factory("EmployeeAttendanceService",function($http){
+      var getEmployeeAttendanceData={};
+      
+	  //getData方法
+      EmployeeAttendanceData.getData=function(AttenceData){
+            var promise=$http({
+              url:"jsonData/buttonData.json",
+              method:"GET",
+			  data:AttenceData
+              });
+            return promise;
         }
-);
+	return EmployeeAttendanceData;
+
+});
 
 EmployeeAttendanceModule.directive('list',function(){
 	return {
