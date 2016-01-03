@@ -1,28 +1,26 @@
 // create a new module called 'myAppModule' and save 
-// a reference to it in a variable called myAppModule 
-var orderModule = angular.module('orderModule', []);
+// a reference to it in a variable called myAppModule
+
+//定义数据结构
+var myData = {
+          name: '名称1',
+          number: '01',
+          position: "位置1",
+          details: '描述1',
+      };
+
+
+var myOrder = angular.module('myModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-orderModule.controller('createOrderCtrl', function ($scope) {
-    // controller code would go here
-        var someData = {
-             number: '001',
-            code: 'AAA',
-            type: 'food',
-            name: 'egg',
-            model: 'big',
-            color:'red'
-            quantity:10
-            note:'taste good'
-        };
-        $scope.data = someData;
-    }
-);
+myOrder.controller('myController', function ($scope) {
+        $scope.myData=myData;
+    });
 
 // use the myAppModule variable to
 // configure the module with a filter
-orderModule.filter('stripDashes', function () {
+myOrder.filter('stripDashes', function () {
     return function (txt) {
         // filter code would go here
     };

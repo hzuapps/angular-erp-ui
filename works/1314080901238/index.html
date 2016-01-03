@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="zh-CN">
+﻿<!DOCTYPE html >
+<html lang="zh-CN" ng-app="myModule">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,8 +21,11 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+
+    <script src="js/orderModule.js"></script>
   </head>
-  <body>
+  <body ng-controller="myController">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -42,14 +45,53 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
+    
     </nav>
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+    {{aa}} 
+ <div class="wrapper">
+      <div class="container" >
+        <form>
+        <h4>编辑工厂信息</h4>
+        <table >
+	    <tr>
+	    	<td>名称：</td>
+      		</tr>
+<tr>    	
+      		<td colspan="2" ><input class="form-control" type="text" id="name" ng-model="myData.name"></td>
+	<td></td>
+      	</tr>
+    	<tr>
+	    	<td>代号：</td>
+           </tr>
+<tr>    	
+      		<td colspan="2" ><input class="form-control" type="text" id="number" ng-model="myData.number"></td>
+	<td></td>
+      	</tr>
+    	<tr>
+                <td>位置：</td>
+         </tr>
+<tr>    	
+      		<td colspan="2" ><input class="form-control" type="text" id="position" ng-model="myData.position"></td>
+  	<td></td>
+      	</tr>
+    	<tr>  
+               <td >描述：</td>
+       </tr>
+<tr>    	
+      		<td colspan="1" >
+        		<textarea class="form-control" name="details" id="details" rows="4" cols="100%" ng-model="myData.details"></textarea>
+      			<td></td>
+      	</tr>
+    	
+    	</table>
+    	
+    	<div class="foot">
+      		<button> 保存/修改</button>
+    	</div>
+    </form>
+</div>
+</div>
+	
 
     </div><!-- /.container -->
 
