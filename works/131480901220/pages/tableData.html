@@ -1,0 +1,26 @@
+﻿<div class="color">
+<div class="container">
+      <div class="starter-template">
+        <h1>系统用户信息</h1>    
+      </div>         
+</div><!-- /.container -->  
+    <form class="form-horizontal" role="form" ng-submit="create()">
+    <fieldset>
+        <div class="form-group">
+            <label for="denglu"  class="col-md-1 control-label">登录名：</label>
+            <div class="col-md-4">
+                <select id="denglu" class="form-control" ng-model="seleted" ng-options="a.denglu for a in SelectItem">               
+                </select>
+            </div>
+            <label for="xianshi"  class="col-md-1 control-label">用户名：</label>
+            <div class="col-md-4">
+                <select id="xianshi" class="form-control" ng-model="seleted" ng-options="a.xianshi for a in SelectItem">      
+                </select>
+            </div>
+        </div>
+        <div class="btn-group col-lg-push-1" >
+            <button type="submit" class="btn btn-default btn-sm" >提交</button>
+        </div>
+    </fieldset>  
+ </form>
+ </div>
