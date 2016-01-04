@@ -2,23 +2,34 @@
 // a reference to it in a variable called myAppModule 
 var EmployeeAttendanceModule = angular.module('EmployeeAttendanceModule', []);
 
-//创建服务
 EmployeeAttendanceModule.factory("EmployeeAttendanceService",function($http){
       var getEmployeeAttendanceData={};
-      
-	  //getData方法
-      EmployeeAttendanceData.getData=function(AttenceData){
+      getEmployeeAttendanceData.getData=function(AttenceData){
             var promise=$http({
-              url:"jsonData/buttonData.json",
+              url:"jsonData/myData.json",
               method:"GET",
 			  data:AttenceData
               });
             return promise;
         }
-	return EmployeeAttendanceData;
+	return getEmployeeAttendanceData;
 
 });
 
+//定义控制器
+ EmployeeAttendanceModule.controller("EmployeeAttendanceController",function($scope,EmployeeAttendanceService){
+           var promise=EmployeeAttendanceService.getData();
+           promise.success(function(data,status){
+           alert("获取json数据成功！");
+           $scope.theOrderDatas = [data[0]];
+      });
+      promise.error(function(data,status){
+            alert("获取json数据错误！");
+      });
+ 
+  });
+  
+  
 EmployeeAttendanceModule.directive('list',function(){
 	return {
 	restrict:'AEC',
