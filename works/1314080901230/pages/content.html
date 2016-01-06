@@ -1,0 +1,33 @@
+<div class="container starter-template">
+    <h2><p>Chaxundan List</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">单位名称</th>
+            <th rowspan="2" class="text-center">付款方式</th>
+            <th rowspan="2" class="text-center">付款日期</th>
+            <th rowspan="2" class="text-center">经手人</th>
+            <th rowspan="2" class="text-center">付款金额</th>
+            <th rowspan="2" class="text-center">付款账户</th>
+            <th rowspan="2" class="text-center">银行账号</th>
+            <th rowspan="2" class="text-center">状态</th>
+            <th rowspan="2" class="text-center">核销金额</th>
+            <th rowspan="2" class="text-center">备注</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="chaxundanData in chaxundanArray">
+        <tr>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanUnitname}}</td>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanPaymentmethod}}</td>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanPaymentdate}}</td>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanMiddleman}}</td>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanPaymentamount}}</td>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanPaymentaccount}}</td>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanBankaccount}}</td>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanState}}</td>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanWriteoffamount}}</td>
+            <td rowspan="2" class="text-center">{{chaxundanData.chaxundanRemarks}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
