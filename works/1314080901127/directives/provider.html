@@ -1,0 +1,33 @@
+<div class="wrapper" ng-contrller="inputController" >
+    <div class="head">
+            <h4>单据信息</h4>
+    </div>
+    <form class="form-inline" role="form" ng-submit="register()" novalidate>
+           <div>
+               <div class="form-group">
+                  <label for="category">name:</label>
+                  <input type="text" class="form-control" id="category" 
+                     ng-model="data.category" required>
+               </div>
+               <div class="form-group">
+                  <label for="department">code:</label>
+                  <input type="text" class="form-control" id="department" 
+                     ng-model="data.department" required>
+               </div>
+               <div class="form-group">
+                  <label for="receiverName">workernumber:</label>
+                  <input type="text" class="form-control" id="receiverName" 
+                     ng-model="data.receiverName" required>
+               </div>
+                
+            </div>
+
+
+            <div class="btn-group ng-cloak" role="group" ng-cloak>
+            <!-- <button type="button" class="btn btn-default" ng-click="showInput()"> -->
+                <button type="submit" class="btn btn-default">
+                    {{isHidden ? '提交' : '隐藏'}}
+                </button>
+            </div>
+    </form>
+</div>
