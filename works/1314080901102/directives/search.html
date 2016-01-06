@@ -1,0 +1,35 @@
+ <div class="container jumbotron">   
+     <div class="row col-lg-offset-2">   
+         <form class="form-inline" role="form" ng-submit="register()" novalidate>
+             <div class="form-group row">
+                 <div class="row">
+                     <label for="example1">起始日期：</label>
+                     <input type="date" class="form-control input-sm" ng-model="Startdate" id="example1" required/>
+                     
+                     <label for="example2">终止日期：</label>
+                     <input type="date" class="form-control input-sm" ng-model="Terminationdate" id="example2" required/>
+                    
+            <br>   
+            <br>
+             <label for="example1">收款状态：       </label>
+            <select name="bumen"class="style1" style="width:145px" ng-model="state" id required>
+                <option >全部</option>
+                <option>已核销</option>
+                <option>未核销</option>
+              </select>
+            
+                 </div>
+             </div>
+             <br>   
+             <br>
+             
+             <div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+                 <button type="submit" class="btn btn-default">
+                     {{isHidden ? '查询' : '隐藏'}}
+                 </button>
+             </div>
+             <br>   
+             <br>
+         </form>
+     </div>
+ </div>
