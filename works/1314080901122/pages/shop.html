@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="starter-template">
+        <table class="table table-bordered table-condensed" align="center">
+            <thead>
+            <tr>
+                <th rowspan="2" class="text-center">序号</th>
+                <th rowspan="2" class="text-center">名称</th>
+                <th rowspan="2" class="text-center">型号</th>
+                <th rowspan="2" class="text-center">颜色</th>
+                <th rowspan="2" class="text-center">库存数</th>
+            </tr>
+            <tbody ng-repeat="data in datas">
+            <tr>
+                <td rowspan="2" class="text-center">{{data.no}}</td>
+                <td rowspan="2" class="text-center">{{data.name}}</td>
+                <td rowspan="2" class="text-center">{{data.model}}</td>
+                <td rowspan="2" class="text-center">{{data.color}}</td>
+                <td rowspan="2" class="text-center">{{data.number}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
