@@ -1,0 +1,30 @@
+﻿<html>
+ <head lang="zh-CN">
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
+    <div class="starter-template">
+      <table class="table" border="2">
+<thead>
+      <tr style="background-color:#e3e3e3">
+        <td>单据编号</td>
+        <td>摘要</td>
+        <td>应付金额</td>
+        <td>付款金额</td>
+        <td>未付金额</td>
+        <td>备注</td>
+      </tr>
+      <tr ng-repeat="item in theOrderDatas">
+        <td>{{item.danjubianhao}}</td>
+        <td>{{item.zhaiyao}}</td>
+        <td>{{item.yingfujine}}</td>
+        <td>{{item.fukuanjine}}</td>
+        <td>{{item.weifujine}}</td>
+        <td>{{item.beizhu}}</td>
+      </tr>
+      </table>
+   </div>
+ </div><!-- /.container -->
+ </head> 
+</html>
