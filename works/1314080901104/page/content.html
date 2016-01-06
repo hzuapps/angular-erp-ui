@@ -1,0 +1,19 @@
+  <div class="container starter-template">
+    <h2><p>流程_驳回审核请求</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">名称：</th>
+            <th rowspan="2" class="text-center">明细：</th>
+            <th rowspan="2" class="text-center">批示：</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="Data in someData">
+        <tr>
+            <td rowspan="2" class="text-center">{{Data.name}}</td>
+            <td rowspan="2" class="text-center">{{Data.detailed}}</td>
+            <td rowspan="2" class="text-center">{{Data.instructions}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
