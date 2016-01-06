@@ -1,0 +1,31 @@
+
+
+<div>
+				<table style="width: 100%; height: 100%;" class="table table-striped" border="1" align="center">
+				
+					<tr wide="100%">
+						<th>序号</th>
+						<th>编码</th>
+						<th>品名</th>
+						<th>类别</th>
+						<th>型号</th>
+						<th>颜色</th>
+						<th>数量</th>
+						<th>单位</th>
+						<th>单价</th>
+					</tr>
+
+					<tr ng-controller="MyFilterDemoCtrl" ng-repeat="data in theOrderDatas">
+						<td>{{data.xuhao}}</td>
+						<td>{{data.bianma}}</td>
+						<td>{{data.ming}}</td>
+						<td>{{data.leibie}}</td>
+						<td>{{data.xinghao}}</td>
+						<td>{{data.yanse}}</td>
+						<td>{{data.shuliang}}</td>
+						<td>{{data.danwei}}</td>
+						<td>{{data.danjia}}</td>
+        
+					</tr>
+				</table>
+</div>

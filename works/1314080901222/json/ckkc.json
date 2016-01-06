@@ -1,0 +1,36 @@
+
+    [
+        {
+            "xuhao": "1",
+            "bianma": "1",
+            "ming": "yifu",
+            "leibie": "man",
+            "xinghao": "m",
+            "yanse": "red",
+            "shuliang": "1",
+            "danwei": "jian",
+            "danjia":"100"
+        },
+        {
+            "xuhao": "2",
+            "bianma": "2",
+            "ming": "yifu",
+            "leibie": "man",
+            "xinghao": "l",
+            "yanse": "yellow",
+            "shuliang": "1",
+            "danwei": "jian",
+            "danjia":"100"
+        },
+        {
+          "xuhao": "3",
+            "bianma": "3",
+            "ming": "yifu",
+            "leibie": "man",
+            "xinghao": "xl",
+            "yanse": "blue",
+            "shuliang": "1",
+            "danwei": "jian",
+            "danjia":"100"
+        }
+    ]
