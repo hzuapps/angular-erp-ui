@@ -1,0 +1,37 @@
+ <div class="container">
+    <form class="form-inline" ng-submit="register()" novalidate>
+    <div class="container">
+    <div class="row col-lg-offset-2" role="form">
+  <div class="form-group">
+  <div class="row">
+    <label for="data.template_Name">模板名称:</label>
+    <input type="text" class="form-control input-sm" ng-model="template_Name" id="data.template_Name" required/ >
+    &nbsp&nbsp
+    <label for="data.other_Name">别名:</label>
+    <input type="text" class="form-control input-sm" ng-model="other_Name" id="data.other_Name" required/ >
+    &nbsp&nbsp
+    <label for="data.news_People">建模人:</label>
+    <input type="text" class="form-control input-sm" ng-model="news_People" id="data.news_People" required/ >
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="form-group">
+  <div class="row">
+    <label for="data.price">计价方式:</label>
+    <input type="text" class="form-control input-sm" ng-model="price" id="data.price" required/ >
+    &nbsp&nbsp
+    <label for="data.type">类别:</label>
+    <input type="text" class="form-control input-sm" ng-model="type" id="data.type" required/ >
+  </div>
+  </div>
+  <br>
+<div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
+<button type="submit" class="btn btn-default" >
+  {{isHidden ? '新建' : '隐藏'}}
+</button>
+</div>
+</form>
+</div>
+</div>
+</div><!-- /.container -->
