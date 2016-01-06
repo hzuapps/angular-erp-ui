@@ -1,7 +1,23 @@
 body {
-  padding-top: 50px;
+    background-color: #FFFFFF;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+.classone {
+	padding: 50px;
+	
+}
+.details {
+    padding: 50px;
+    
+}
+#name {
+    width: 100%;
+}
+#detailed {
+    width: 100%;
+}
+#instructions {
+    width: 100%;
+}
+	width: 100%;
+    margin-bottom: 5px;
 }

@@ -8,15 +8,18 @@ Processingflow.controller('ProcessingflowCtrl', function ($scope) {
 // function MyFilterDemoCtrl($scope) {
         var someData = {
           id: '待处理流程编号',
-          name: '流程',
+          name: '名称',
           operation: '操作',
           fitness: '状态',
-          operation_details:'操作明细',
+          details:'明细',
           instructions:'批示',
         };
         $scope.data = someData;
         $scope.isHidden = true;
         $scope.showInput = function(){
+          $scope.isHidden = !$scope.isHidden;
+        }
+        $scope.showTextarea = function () {
           $scope.isHidden = !$scope.isHidden;
         }
     }
@@ -29,4 +32,5 @@ Processingflow.controller('ProcessingflowCtrl', function ($scope) {
 Processingflow.filter('stripDashes', function() {
     return function(txt) {
         // filter code would go here
-}; });
+      }; 
+});
