@@ -1,0 +1,31 @@
+  <div class="container starter-template">
+    <h2><p>供应商信息</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">supplierNumber</th>
+            <th rowspan="2" class="text-center">Filingdate</th>
+            <th rowspan="2" class="text-center">supplierSort</th>
+            <th rowspan="2" class="text-center">supplierFullname</th>
+            <th rowspan="2" class="text-center">Code</th>
+            <th rowspan="2" class="text-center">supplierHomepage</th>
+            <th rowspan="2" class="text-center">supplierSimplename</th>
+            <th rowspan="2" class="text-center">supplierArea</th>
+            <th rowspan="2" class="text-center">supplierSynposis</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="Data in someData">
+        <tr>
+            <td rowspan="2" class="text-center">{{Data.supplierNumber}}</td>
+            <td rowspan="2" class="text-center">{{Data.Filingdate}}</td>
+            <td rowspan="2" class="text-center">{{Data.supplierSort}}</td>
+            <td rowspan="2" class="text-center">{{Data.supplierFullname}}</td>
+            <td rowspan="2" class="text-center">{{Data.Code}}</td>
+            <td rowspan="2" class="text-center">{{Data.supplierHomepage}}</td>
+            <td rowspan="2" class="text-center">{{Data.supplierSimplename}}</td>
+            <td rowspan="2" class="text-center">{{Data.supplierArea}}</td>
+            <td rowspan="2" class="text-center">{{Data.supplierSynposis}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
