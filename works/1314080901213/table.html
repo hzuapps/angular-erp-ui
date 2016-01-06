@@ -1,0 +1,48 @@
+
+
+    <div class="container">
+
+      <div class="starter-template">
+       <table class="table table-bordered table-condensed" align="center">
+              <thead>
+              <tr>
+                  <th rowspan="2" class="text-center">名称</th>
+                  <th colspan="3" class="text-center">开料尺寸(m)</th>
+                  <th rowspan="2" class="text-center">件数</th>
+                  <th rowspan="2" class="text-center">封边方法</th>
+                  <th rowspan="2" class="text-center">工艺符号</th>
+                  <th rowspan="2" class="text-center">单价</th>
+                  <th colspan="3" class="text-center">成品尺寸(m)</th>
+              </tr>
+              <tr>
+                <th class="text-center">长</th>
+                <th class="text-center">宽</th>
+                <th class="text-center">高</th>
+                <th class="text-center">长</th>
+                <th class="text-center">宽</th>
+                <th class="text-center">高</th>
+
+              </tr>
+              
+              <tbody ng-repeat="item in items">
+              <tr>
+                  <td rowspan="2" class="text-center">{{item.name}}</td>
+                  <td colspan="1" class="text-center">{{item.Mlength}}</td>
+                  <td colspan="1" class="text-center">{{item.Mwidth}}</td>
+                  <td colspan="1" class="text-center">{{item.Mheight}}</td>
+                  <td rowspan="2" class="text-center">{{item.amount}}</td>
+                  <td rowspan="2" class="text-center">{{item.packagemethod}}</td>
+                  <td rowspan="2" class="text-center">{{item.artsymbol}}</td>
+                  <td rowspan="2" class="text-center">{{item.unitprice}}</td>
+                  <td colspan="1" class="text-center">{{item.Plength}}</td>
+                  <td colspan="1" class="text-center">{{item.Pwidth}}</td>
+                  <td colspan="1" class="text-center">{{item.Pheight}}</td>
+              </tr>
+              </tbody>
+          </table>
+
+
+      </div>
+
+</div>
+
