@@ -1,0 +1,21 @@
+<div class="container starter-template">
+    <h2><p>Bumen List</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">部门名称</th>
+            <th rowspan="2" class="text-center">部门代码</th>
+            <th rowspan="2" class="text-center">部门主管</th>
+            <th rowspan="2" class="text-center">部门描述</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="bumenData in bumenArray">
+        <tr>
+            <td rowspan="2" class="text-center">{{bumenData.bumenname}}</td>
+            <td rowspan="2" class="text-center">{{bumenData.bumendaima}}</td>
+            <td rowspan="2" class="text-center">{{bumenData.bumenzhuguan}}</td>
+            <td rowspan="2" class="text-center">{{bumenData.bumenmiaoshu}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
