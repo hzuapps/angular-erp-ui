@@ -1,26 +1,16 @@
 <!DOCTYPE html >
-<html ng-app="procedure message"> <head lang="en">
+<html ng-app="procedure_message"> <head lang="en">
 <meta charset="UTF-8">
 <title>生产->工序->工序信息表单</title>
     <script src="../../lib/angular-1.4.5/angular.min.js"></script>
 	<script src="js/procedure_message.js"></script>
 </head>
-<body ng-controller="MyFilterDemoCtrl">
+<body ng-controller="procedure_message">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <script>
--	    function MyFilterDemoCtrl($scope) {
--	        var procedure_message={
--	            name:'名称',
--	            unit:'单位',
--	            standard:'规格',
--	            number:'系数',
--	            condition:'状态'
--	            };
--	        $scope.data = procedure_message;
--	} </script>
+
     <link rel="shortcut icon" href="icons/favicon.ico" />
   
     <!-- Bootstrap -->
@@ -42,46 +32,45 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
-    <table>
-      <tr>
-        <td>名称</td>
-        <td>单位</td>
-        <td>规格</td>
-        <td>系数</td>
-        <td>状态</td>
-      </tr>
-      <tr>
-        <td>
-          <div ng-repeat="city in ['陶然','Perth','Sydney','Dublin','Paris']">
-            {{$index}}. {{city}}
-            {{$first ? '(This is the first row)' : ''}} {{$last ? '(This is the last row)' : ''}}
-          </div>
-        </td>
-        <td>
-          <div ng-repeat="city in ['只','Perth','Sydney','Dublin','Paris']">
-            {{$index}}. {{city}}
-            {{$first ? '(This is the first row)' : ''}} {{$last ? '(This is the last row)' : ''}}
-          </div>
-        </td>
-        <td>
-          <div ng-repeat="city in ['胖子','Perth','Sydney','Dublin','Paris']">
-            {{$index}}. {{city}}
-            {{$first ? '(This is the first row)' : ''}} {{$last ? '(This is the last row)' : ''}}
-          </div>
-        </td>
-        <td>
-          <div ng-repeat="city in ['弱智','Perth','Sydney','Dublin','Paris']">
-            {{$index}}. {{city}}
-            {{$first ? '(This is the first row)' : ''}} {{$last ? '(This is the last row)' : ''}}
-          </div>
-        </td>
-        <td>
-          <div ng-repeat="city in ['缺屎','Perth','Sydney','Dublin','Paris']">
-            {{$index}}. {{city}}
-            {{$first ? '(This is the first row)' : ''}} {{$last ? '(This is the last row)' : ''}}
-          </div>
-        </td>
-      </tr>
-    </table>  
+
+    <body ng-controller="procedur_message">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#website" class="active">My website</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#table">My table</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+
+    <div ng-view>
+    </div>
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="js/procedure_message.js"></script>
+    <script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
   </body>
 </html>
