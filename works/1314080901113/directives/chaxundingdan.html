@@ -1,0 +1,39 @@
+<div class="container">
+     <div class="row col-lg-offset-2">
+          <form class="form-inline" role="form" ng-submit="register()" novalidate>
+             <div class="form-group row">
+                 <div class="row">
+                    <P> <label for="example1">订单状态：       </label>
+            <select name="bumen"class="style1" style="width:145px" ng-model="state" id required>
+                <option >全部</option>
+                <option>已完成</option>
+                <option>未完成</option>
+                <option>新建</option>
+              </select>
+            </P>
+ 
+                   <label for="example1">起始日期：</label>
+                    <input type="date" class="form-control input-sm" ng-model="Start date" id="example1" required/>
+
+                    <label for="example2">终止日期：</label>
+                    <input type="date" class="form-control input-sm" ng-model="Termination date" id="example2"
+                           required/>
+ 
+ 			         </div>
+             </div>
+           <br>
+           <br>
+           
+            
+          
+       <br>
+       <input type="reset" name="button" id="button" value="查询">
+ <br>
+              <!-- SHOW ERROR/SUCCESS MESSAGES
+             <div id="messages" class="ng-cloak" ng-show="backMess" ng-hide="isHidden">
+                 <p>{{ backMess[0].message }}</p>
+             </div>-->
+         </form>
+     </div>
+ </div>
+  
