@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="starter-template">
+        <table class="table table-bordered table-condensed" align="center">
+            <thead>
+            <tr>
+                <th rowspan="2" class="text-center">NO.</th>
+                <th rowspan="2" class="text-center">订单编号</th>
+                <th rowspan="2" class="text-center">订单名称</th>
+                <th rowspan="2" class="text-center">摘要</th>
+                <th colspan="2" class="text-center">已收金额</th>
+                <th rowspan="2" class="text-center">未收金额</th>
+                <th rowspan="2" class="text-center">备注</th>
+            </tr>
+      
+            <tbody ng-repeat="shujudata in shuju">
+            <tr>
+                <td rowspan="2" class="text-center">{{$index + 1}}</td>
+                <td rowspan="2" class="text-center">{{shujudata.ordernumber}}</td>
+                <td rowspan="2" class="text-center">{{shujudata.ordername}}</td>
+                <td rowspan="2" class="text-center">{{shujudata.summary}}</td>
+                <td colspan="2" class="text-center">{{shujudata.money}}</td>
+                <td rowspan="2" class="text-center">{{shujudata.moneyed}}</td>
+                <td rowspan="2" class="text-center">{{shujudata.beizhu}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
