@@ -1,0 +1,26 @@
+<html>
+     <head lang="zh-CN">
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
+    <div class="starter-template">
+        <table class="table table-bordered table-condensed" align="center">
+            <thead>
+        <tr style="background-color:#e3e3e3">
+                <td>收入类型</td>
+                <td>科目编码</td>
+                <td>备注</td>
+            </tr>
+
+            <tr ng-repeat="backMessOne in qtdata">
+                <td>{{backMessOne.code}}</td>
+                <td>{{backMessOne.type}}</td>
+                <td>{{backMessOne.other}}</td>
+               
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!-- /.container -->
+</html>
