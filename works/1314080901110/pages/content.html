@@ -1,0 +1,22 @@
+<div class="container text-center">
+<div class="jumbotron">
+    <h2><p>财务-其他收入-查询</p></h2>
+    <table class="table table-bordered table-condensed" align="center">
+        <thead>
+        <tr>
+            <th rowspan="2" class="text-center">起始日期</th>
+            <th rowspan="2" class="text-center">终止日期</th>
+            <th rowspan="2" class="text-center">收入状态</th>
+            
+        </tr>
+        </thead>
+        <tbody ng-repeat="caiwushouruchaxunData in caiwushouruchaxunArray">
+        <tr>
+            <td rowspan="2" class="text-center">{{caiwushouruchaxunData.Startdate}}</td>
+            <td rowspan="2" class="text-center">{{caiwushouruchaxunData.Terminationdate}}</td>
+            <td rowspan="2" class="text-center">{{caiwushouruchaxunData.state}}</td>
+            
+        </tr>
+        </tbody>
+    </table>
+</div>
