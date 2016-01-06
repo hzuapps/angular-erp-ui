@@ -1,0 +1,11 @@
+{
+    "mytypeData": [
+{ 
+    "type": "类型1",
+       "price": "5",
+       "number": "10",
+       "money": "50",
+       "idcard": "0001"
+   }
+    ]
+}

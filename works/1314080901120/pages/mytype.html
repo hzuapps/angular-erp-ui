@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="starter-template">
+        <table class="table table-bordered table-condensed" align="center">
+            <thead>
+            <tr>
+                <th rowspan="2" class="text-center">类型</th>
+                <th rowspan="2" class="text-center">单价</th>
+                <th rowspan="2" class="text-center">数量</th>
+                <th rowspan="2" class="text-center">金额</th>
+                <th rowspan="2" class="text-center">idcard</th>
+            </tr>
+            <tbody ng-repeat="datadata in backMess">
+            <tr>
+                <td rowspan="2" class="text-center">{{datadata.type}}</td>
+                <td rowspan="2" class="text-center">{{datadata.price}}</td>
+                <td rowspan="2" class="text-center">{{datadata.number}}</td>
+                <td rowspan="2" class="text-center">{{datadata.money}}</td>
+                <td rowspan="2" class="text-center">{{datadata.idcard}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!-- /.container -->
