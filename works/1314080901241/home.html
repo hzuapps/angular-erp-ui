@@ -1,0 +1,17 @@
+<div id="head" style="width:auto;height:32px;background-color:#0066c0;color:#fff;font-size:28px;padding-left:20px;">
+       板件列表
+     </div>
+     <div>
+       <table class="table">
+       <tr style="background-color:#e3e3e3">
+         <td>类别</td>
+         <td>名称</td>
+         <td>描述</td>
+       </tr>
+       <tr  ng-repeat="item in data">
+       <td>{{item.type}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+       </tr>
+       </table>
+     </div> 
