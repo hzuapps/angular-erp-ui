@@ -1,43 +1,37 @@
 // create a new module called 'supplierInformationModule' and save 
 // a reference to it in a variable called supplierInformationModule 
-var supplierInformationModule = angular.module('supplierInformationModule', []);
+var supplierInformationModule = angular.module('supplierInformationModule', ['ngRoute']);
 
 // use the supplierInformationModule variable to
 // configure the module with a controller
-angular.module('supplierInformationModule').controller('MyFilterDemoCtrl', function($scope) {
+supplierInformationModule.config(function ($routeProvider) {
+       // configure the routes
+     $routeProvider
+     .when('/index', {
+       // route for the home page
+         templateUrl: 'title.html',
+     })
+     .when('/home', {
+       // route for the home page
+         templateUrl: 'home.html',
+         controller: 'homeController'
+     })
+     .when('/about', {
+       // route for the about page
+         templateUrl:'about.html',
+         controller:'aboutController'
+     });
+ });
 
-    $scope.isHidden = true;
-    $scope.showHideColors = function() {
-        $scope.isHidden = !$scope.isHidden;
-    }
+supplierInformationModule.controller('aboutController', function ($scope) {
+       // controller code would go here
+       $scope.title = ' 学号1314080901133';
+     })
 
-    var someData = {
-        "suppliers": [{
-            numbers: '131401001',
-            name: 'xidada1',
-            code: '110120119',
-            photo: '20151021.jpg',
-            createTime: '2015-10-21'
-        }, {
-            numbers: '131401002',
-            name: 'xidada2',
-            code: '110120120',
-            photo: '20151022.jpg',
-            createTime: '2015-10-22'
-        }, {
-            numbers: '131401003',
-            name: 'xidada3',
-            code: '110120121',
-            photo: '20151023.jpg',
-            createTime: '2015-10-23'
-        }]
-
-    };
-    $scope.data = someData;
-    // controller code would go here
-
-
-});
+supplierInformationModule.controller('homeController', function ($http,$scope){
+       // controller code would go here
+        $http.get("supplierInformationList_JSON.txt").success(function(someData){$scope.data=someData;});
+     })
 
 // use the supplierInformationModule variable to
 // configure the module with a filter
@@ -46,3 +40,4 @@ supplierInformationModule.filter('stripDashes', function() {
         // filter code would go here
     };
 });
+	
