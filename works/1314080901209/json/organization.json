@@ -1,0 +1,5 @@
+﻿  { 
+	 "SelectDepartment": ["财务","仓库","人事","考勤","销售"],
+	"SelectQuartersType":["管理岗","技术岗","实习生","普通岗"]
+   }	
+   
