@@ -1,64 +1,312 @@
-﻿<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>人事的考勤页面-1314080901246</title>
-    <link rel="shortcut icon" href="icons/favicon.ico" />
-    
-    <!-- Bootstrap -->
-    <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+<style>
+ body{text-align:center;}
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+ td{width:100px;height:24px;text-align:center;line-height:24px;border:1px solid silver;}
+ .top{background:#CCCCCC;cursor:pointer;}
+ .up{background:#FFFFCC url(http://down.psd.cn/uploads/allimg/080912/173019330.gif) no-repeat right 5px;}
+ .down{background:#FFFFCC url(http://down.psd.cn/uploads/allimg/080912/173019334.gif) no-repeat right 5px;}
+ .hov{background:#F0EFE5;}
+</style>
+</head>
 
-  </head>
-  <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+<body>
+<div style="margin-top:10px;  margin-left:95px;width:1024px; height:40px; position:fixed;">
+<input style="width:800px; height:35px; color:#AAAAAA" type="text" value="请输入员工编号或姓名" onfocus="if (value=='请输入员工编号或姓名'){value ='';this.style.color='#000000'}" onblur="if (value==''){value='请输入员工编号或姓名';this.style.color='#AAAAAA'}" />
+<input type="button"  value="搜索" style="width:100px; height:30px; font-size:18px">
+</div>
+<div style="margin-top:50px; margin-left:150px; width:1024px; height:500px; position:fixed;">
 
-    <div class="container">
+<table cellpadding="0" id="table">
+ <tr class="top"><td>员工编号</td><td >员工姓名</td><td>月份</td><td>事假天数</td><td>病假天数</td><td >旷工天数</td><td>加班天数</td><td>当月签到数</td><td>实际签到数</td></tr>
+ 
+<tr>
+   <td>1</td>
+   <td>2</td>
+   <td>3</td>
+   <td>4</td>
+   <td>5</td>
+   <td>6</td>
+   <td>7</td>
+   <td>8</td>
+   <td>9</td>
+  
+ </tr>
+ <tr>
+   <td>2</td>
+   <td>3</td>
+   <td>4</td>
+   <td>5</td>
+   <td>6</td>
+   <td>7</td>
+   <td>8</td>
+   <td>9</td>
+   <td>10</td>
+ </tr>
+<tr>
+   <td>3</td>
+   <td>4</td>
+   <td>5</td>
+   <td>6</td>
+   <td>7</td>
+   <td>8</td>
+   <td>9</td>
+   <td>10</td>
+   <td>11</td>
+  
+ </tr>
+ <tr>
+   <td>4</td>
+   <td>5</td>
+   <td>6</td>
+   <td>7</td>
+   <td>8</td>
+   <td>9</td>
+   <td>10</td>
+   <td>11</td>
+   <td>12</td>
+ </tr>
+ <tr>
+   <td>5</td>
+   <td>6</td>
+   <td>7</td>
+   <td>8</td>
+   <td>9</td>
+   <td>10</td>
+   <td>11</td>
+   <td>12</td>
+   <td>13</td>
+  
+ </tr>
+ <tr>
+   <td>6</td>
+   <td>7</td>
+   <td>8</td>
+   <td>9</td>
+   <td>10</td>
+   <td>11</td>
+   <td>12</td>
+   <td>13</td>
+   <td>14</td>
+ </tr>
+ <tr>
+   <td>7</td>
+   <td>8</td>
+   <td>9</td>
+   <td>10</td>
+   <td>11</td>
+   <td>12</td>
+   <td>13</td>
+   <td>14</td>
+   <td>15</td>
+  
+ </tr>
+ <tr>
+   <td>8</td>
+   <td>9</td>
+   <td>10</td>
+   <td>11</td>
+   <td>12</td>
+   <td>13</td>
+   <td>14</td>
+   <td>15</td>
+   <td>16</td>
+ </tr>
+ <tr>
+   <td>9</td>
+   <td>10</td>
+   <td>11</td>
+   <td>12</td>
+   <td>13</td>
+   <td>14</td>
+   <td>15</td>
+   <td>16</td>
+   <td>17</td>
+  
+ </tr>
+ <tr>
+   <td>10</td>
+   <td>11</td>
+   <td>12</td>
+   <td>13</td>
+   <td>14</td>
+   <td>15</td>
+   <td>16</td>
+   <td>17</td>
+   <td>18</td>
+ </tr>
+ <tr>
+   <td>11</td>
+   <td>12</td>
+   <td>13</td>
+   <td>14</td>
+   <td>15</td>
+   <td>16</td>
+   <td>17</td>
+   <td>18</td>
+   <td>19</td>
+  
+ </tr>
+ <tr>
+   <td>12</td>
+   <td>13</td>
+   <td>14</td>
+   <td>15</td>
+   <td>16</td>
+   <td>17</td>
+   <td>18</td>
+   <td>19</td>
+   <td>20</td>
+ </tr>
+ 
+</table>
 
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        <p>{{data}}</p>
-      </div>
-
-    </div><!-- /.container -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-+   <script src="js/Attendance.js"></script>
-  </body>
+</div>
+<script type="text/javascript">
+ 
+ var tableSort = function(){
+  this.initialize.apply(this,arguments);
+ }
+ 
+ tableSort.prototype = {
+ 
+  initialize : function(tableId,clickRow,startRow,endRow,classUp,classDown,selectClass){
+   this.Table = document.getElementById(tableId);
+   this.rows = this.Table.rows;//所有行
+   this.Tags = this.rows[clickRow-1].cells;//标签td
+   this.up = classUp;
+   this.down = classDown;
+   this.startRow = startRow;
+   this.selectClass = selectClass;
+   this.endRow = (endRow == 999? this.rows.length : endRow);
+   this.T2Arr = this._td2Array();//所有受影响的td的二维数组
+   this.setShow();
+  },
+  //设置标签切换
+  setShow:function(){
+   var defaultClass = this.Tags[0].className;
+   for(var Tag ,i=0;Tag = this.Tags[i];i++){
+    Tag.index = i;
+    addEventListener(Tag ,'click', Bind(Tag,statu));
+   }
+   var _this =this;
+   var turn = 0;
+   function statu(){
+    for(var i=0;i<_this.Tags.length;i++){
+     _this.Tags[i].className = defaultClass;
+    }
+    if(turn==0){
+     addClass(this,_this.down)
+     _this.startArray(0,this.index);
+     turn=1;
+    }else{
+     addClass(this,_this.up)
+     _this.startArray(1,this.index);
+     turn=0;
+    }
+   }
+  },
+  //设置选中列样式
+  colClassSet:function(num,cla){
+   //得到关联到的td
+   for(var i= (this.startRow-1);i<(this.endRow);i++){
+    for(var n=0;n<this.rows[i].cells.length;n++){
+     removeClass(this.rows[i].cells[n],cla);
+    }
+    addClass(this.rows[i].cells[num],cla);
+   }
+  },
+  //开始排序  num 根据第几列排序  aord 逆序还是顺序
+  startArray:function(aord,num){
+   var afterSort = this.sortMethod(this.T2Arr,aord,num);//排序后的二维数组传到排序方法中去
+   this.array2Td(num,afterSort);//输出
+  },
+  //将受影响的行和列转换成二维数组
+  _td2Array:function(){  
+   var arr=[];
+   for(var i=(this.startRow-1),l=0;i<(this.endRow);i++,l++){
+    arr[l]=[];
+    for(var n=0;n<this.rows[i].cells.length;n++){
+     arr[l].push(this.rows[i].cells[n].innerHTML);
+    }
+   }
+   return arr;
+  },
+  //根据排序后的二维数组来输出相应的行和列的 innerHTML 
+  array2Td:function(num,arr){
+   this.colClassSet(num,this.selectClass); 
+   for(var i= (this.startRow-1),l=0;i<(this.endRow);i++,l++){
+    for(var n=0;n<this.Tags.length;n++){
+     this.rows[i].cells[n].innerHTML = arr[l][n]; 
+    }
+   }
+  },
+  //传进来一个二维数组，根据二维数组的子项中的w项排序，再返回排序后的二维数组
+  sortMethod:function(arr,aord,w){
+   //var effectCol = this.getColByNum(whichCol);
+   arr.sort(function(a,b){
+    x = killHTML(a[w]);
+    y = killHTML(b[w]);
+    x = x.replace(/,/g,'');
+    y = y.replace(/,/g,'');
+    switch (isNaN(x)){
+     case false:
+     return Number(x) - Number(y);
+     break;
+     case true:
+     return x.localeCompare(y);
+     break;
+    }
+   });
+   arr = aord==0?arr:arr.reverse();
+   return arr;
+  }
+ }
+ /*-----------------------------------*/
+ function addEventListener(o,type,fn){
+  if(o.attachEvent){o.attachEvent('on'+type,fn)}
+  else if(o.addEventListener){o.addEventListener(type,fn,false)}
+  else{o['on'+type] = fn;}
+ }
+ 
+ function hasClass(element, className) { 
+  var reg = new RegExp('(\\s|^)'+className+'(\\s|$)'); 
+  return element.className.match(reg); 
+ } 
+  
+ function addClass(element, className) { 
+  if (!this.hasClass(element, className)) 
+  { 
+   element.className += " "+className; 
+  } 
+ } 
+  
+ function removeClass(element, className) { 
+  if (hasClass(element, className)) { 
+   var reg = new RegExp('(\\s|^)'+className+'(\\s|$)'); 
+   element.className = element.className.replace(reg,' '); 
+  } 
+ } 
+ 
+ var Bind = function(object, fun) {
+  return function() {
+   return fun.apply(object, arguments);
+  }
+ }
+ //去掉所有的html标记
+ function killHTML(str){
+  return str.replace(/<[^>]+>/g,"");
+ }
+ //------------------------------------------------
+ //tableid  第几行是标签行，从第几行开始排序，第几行结束排序(999表示最后) 升序标签样式，降序标签样式  选中列样式
+ //注意标签行的class应该是一致的
+ var ex1 = new tableSort('table',1,2,999,'up','down','hov');
+</script>
+</body>
 </html>
+
+

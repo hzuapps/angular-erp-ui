@@ -8,9 +8,9 @@
 +       // controller code would go here
 +        var Yuekaoqin = {
             yuangongbianhao: '123',
-            yuangongxingming: ' ',
+            yuangongxingming: '1234',
             yuefen: '123',
-            shijiatianshu: '123',
+            shijiatianshu: '1235',
             bingjiatianshu: '123',
             kuanggongtianshu:'123',
             jiabantianshu:'123',
@@ -20,7 +20,14 @@
         $scope.data = Yuekaoqin;
 +    }
 +);
-+
++AttendanceModule.directive('liebiao',function(){
+	return {
+	restrict:'AEC',
+	template:"<p ng-repeat='dd in data>'{{thedata.yuangongbianhao}} | {{thedata.yuangongxingming}} | {{thedata.shijiatianshu}} </p>",
+
+    transclude:true 
+};
+});
 +// use the myAppModule variable to
 +// configure the module with a filter
 +AttendanceModule.filter('stripDashes', function() {
