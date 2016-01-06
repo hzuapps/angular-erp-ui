@@ -21,79 +21,17 @@
     <![endif]-->
     
   </head>
-  <body ng-controller="MyFilterDemoCtrl">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+  <body>
 
-   <div class="wrapper">
-      <div class="container" >
-        <form>
-        <h4>操作明细</h4>
-        <table >
-	    <tr>
-	    	<td>名称：</td>
-      		<td colspan="2" ><input class="form-control" type="text" id="name" ng-model="name"></td>
-      	</tr>
-    	<tr>
-      		<td >明细：</td>
-      		<td colspan="1" >
-        		<textarea class="form-control" name="detailed" id="detailed" rows="4" cols="100%" ng-model="detailed">{{data.detailed}}</textarea>
-      		</td>
-      		<td colspan="1">
-        		<a href="#"><img src="images/mg.jpg" width="50px" height="50" ></a>
-      		</td>
-    	</tr>
-    	<tr>
-      		<td >批示：</td>
-      		<td colspan="2">
-        		<textarea class="form-control"  name="instructions" ng-model="instructions" id="instructions" rows="4" ><span ng-bind="data.instructions"></span></textarea>
-     		 </td>
-    	</tr>
-    	</table>
-    	<div class="btn-group col-xs-offset-1 ng-cloak" role="group" ng-cloak>
-       	 	<button type="button" class="btn btn-default" ng-click="showInput()">
-            {{isHidden ? '提交' : '隐藏'}}
-        	</button>
-    	</div>
-    	<div class="foot">
-      		<button>通过</button>
-    	</div>
-    </form>
-</div>
-</div>
-	<div class="container col-xs-offset-3 ng-cloak" ng-cloak>
-    	<p class="lead">
-    	<div ng-hide="isHidden">您输入的数据为：</div>
-    	<div id="name" ng-hide="isHidden">名称：{{name}}</div>
-    	<div id="detailed" ng-hide="isHidden">供应商全称：{{detailed}}</div>
-    	<div id="instructions" ng-hide="isHidden">供应商简称：{{instructions}}</div>
-    	</p>
-    </div>
-    
-
+  <my-nav></my-nav>
+  <my-show></my-show>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+   <!-- <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     <script src="../../lib/angular-1.4.5/angular.min.js"></script> 
+        <script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
+
     <script src="js/AuditQequestFormModule.js"></script>
 
   </body>
