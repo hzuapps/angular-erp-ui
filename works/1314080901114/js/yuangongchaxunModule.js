@@ -1,10 +1,10 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var yuangongchaxunModule = angular.module('yuangongchaxunModule', []);
+var yuangongchaxunModule = angular.module('yuangongchaxunModule', ['ngRoute']);
 
 // use the myAppModule variable to
 // configure the module with a controller
-yuangongchaxunModule.controller('yuangongchaxunFilterDemoCtrl', function ($scope) {
+yuangongchaxunModule.controller('yuangongchaxunFilterDemoCtrl', function ($scope,$http) {
        // controller code would go here
        var yuangongchaxun = {
             leixing: '123',
@@ -13,14 +13,43 @@ yuangongchaxunModule.controller('yuangongchaxunFilterDemoCtrl', function ($scope
             jine: 123,
             IDcard: '123'
         };
-        $scope.data = yuangongchaxun;
-         $scope.items = [
-            {leixing: '001',danjia: '8',shuliang: '10',jine: '80',IDcard: "123"},
-            {leixing: '002',danjia: '9',shuliang: '10',jine: '90',IDcard: "456"},
-            {leixing: '003',danjia: '10',shuliang: '10',jine: '100',IDcard: "789"} 
-        ];
+
+
+        var promise=$http({
+            url:"data.json",
+            method:"get",
+        });
+
+        promise.success(function(data,status){
+            $scope.items = [{leixing:data[0].leixing,
+                danjia:data[0].danjia,
+                shuliang:data[0].shuliang,
+                jine:data[0].jine,
+                IDcard:data[0].IDcard
+                },
+                {leixing:data[1].leixing,
+                    danjia:data[1].danjia,
+                    shuliang:data[1].shuliang,
+                    jine:data[1].jine,
+                    IDcard:data[1].IDcard},
+                {leixing:data[2].leixing,
+                    danjia:data[2].danjia,
+                    shuliang:data[2].shuliang,
+                    jine:data[2].jine,
+                    IDcard:data[2].IDcard}];
+        });
+        promise.error(function(data,status){
+            alert(status);
+            alert("请求出现错误，具体是什么错误还有待检查");
+        });
+
+
     }
+
+
 );
+
+
 
 // use the myAppModule variable to
 // configure the module with a filter
@@ -28,3 +57,24 @@ yuangongchaxunModule.filter('yuangongchaxunstripDashes', function() {
     return function(txt) {
         // filter code would go here
 }; });
+
+
+yuangongchaxunModule.config(['$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/website', {
+                templateUrl: 'website.html',
+                //controller: 'aboutController'
+            }).
+            when('/table', {
+                templateUrl: 'table.html',
+                //controller: 'aboutController'
+            }).
+            when('/about', {
+                templateUrl: 'about.html',
+                //controller: 'aboutController'
+            }).
+            otherwise({
+                redirectTo: '/about'
+            });
+    }]);
