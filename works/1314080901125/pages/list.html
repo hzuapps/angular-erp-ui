@@ -1,0 +1,23 @@
+<!-- contents about the table 'list' -->
+
+<div class="container starter-template">
+  <h2><p>List</p></h2>
+  <table class="table table-bordered table-condensed" align="center">
+    <thead>
+      <tr>
+        <th rowspan="2" class="text-center">参数名</th>
+        <th rowspan="2" class="text-center">代码</th>
+        <th rowspan="2" class="text-center">参数值</th>
+        <th rowspan="2" class="text-center">备注</th>
+      </tr>
+      </thead>
+      <tbody ng-repeat="Data in ParameterArray">
+      <tr>
+        <td rowspan="2" class="text-center">{{Data.Name}}</td>
+        <td rowspan="2" class="text-center">{{Data.Code}}</td>
+        <td rowspan="2" class="text-center">{{Data.ParameterData}}</td>
+        <td rowspan="2" class="text-center">{{Data.Note}}</td>
+      </tr>
+      </tbody>
+  </table>
+</div>        

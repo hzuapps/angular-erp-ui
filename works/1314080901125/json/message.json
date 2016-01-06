@@ -1,0 +1,13 @@
+{
+    "success": [
+        {
+            "message": "Good! Thanks!"
+        }
+    ],
+    "error": [
+        {
+            "message": "Sorry! Something wrong~ "
+        }
+    ]
+} 
+
