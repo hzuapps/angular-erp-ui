@@ -1,6 +1,6 @@
 // create a new module called 'myAppModule' and save
 // a reference to it in a variable called myAppModule
-var SupplierContactAppModule = angular.module('SupplierContactAppModule', []);
+var SupplierContactAppModule = angular.module("SupplierContactAppModule", ['ngRoute']);
 
 // use the myAppModule variable to
 // configure the module with a controller
@@ -65,6 +65,27 @@ SupplierContactAppModule.filter('SupplierContactstripDashes', function() {
         // filter code would go here
     }; });
 
+
+
+SupplierContactAppModule.config(['$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/website', {
+                templateUrl: 'website.html',
+                //controller: 'aboutController'
+            }).
+            when('/table', {
+                templateUrl: 'table.html',
+                //controller: 'aboutController'
+            }).
+            when('/about', {
+                templateUrl: 'about.html',
+                //controller: 'aboutController'
+            }).
+            otherwise({
+                redirectTo: '/about'
+            });
+    }]);
 
 
 
