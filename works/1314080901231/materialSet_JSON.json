@@ -1,0 +1,27 @@
+﻿[
+    {
+        "typeName": "板材",
+        "typeCode": "bc"
+    },
+
+	    {
+        "typeName": "木皮",
+        "typeCode": "mp"
+    },
+	
+	    {
+        "typeName": "灯具",
+        "typeCode": "dg"
+    },
+	
+	    {
+        "typeName": "油漆",
+        "typeCode": "yq"
+    },
+	
+	    {
+        "typeName": "铰链",
+        "typeCode": "jl"
+    }
+	
+] 
