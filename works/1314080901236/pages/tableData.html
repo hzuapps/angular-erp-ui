@@ -1,0 +1,84 @@
+﻿
+<div class="container">
+
+      <div class="starter-template">
+        <h1>供应商信息表单创建</h1>
+       
+      </div>
+
+   
+
+
+    
+	<form class="form-horizontal" role="form" ng-submit="create()">
+    <fieldset>
+
+        <div class="form-group">
+            <label for="SuppId"  class="col-sm-2  control-label">供应商编号：</label>
+            <div class="col-md-2">
+               <input id="SuppId"  type="text"/>
+            </div>
+            <label for="CreatDate"  class="col-sm-2  control-label">建档日期：</label>
+            <div class="col-md-2">
+             <input id="CreatDate"  type="text"/>
+            </div>
+            <label for="SuppType"  class="col-sm-2 control-label">供应商类别：</label>
+            <div class="col-md-2">
+                <select id="SuppType" class="form-control" ng-model="seleted" ng-options="a.SuppType for a in SelectItem">
+                   
+                </select>
+            </div>
+            
+        </div>
+        <div class="form-group">
+		<label for="SuppFullName"  class="col-sm-2 control-label">供应商全称：</label>
+            <div class="col-md-2">
+              <input id="SuppFullName"  type="text"/>
+
+            </div>
+            <label for="pinyincode"  class="col-sm-2 control-label ">拼音码：</label>
+            <div class="col-md-2">
+               <input id="pinyincode"  type="text"/>
+
+            </div>
+            <label for="SuppPage"  class="col-sm-2 control-label">供应商主页：</label>
+            <div class="col-md-2">
+             <input id="SuppPage"  type="text"/>
+
+            </div>
+        </div>
+	 <div class="form-group">
+		<label for="SuppShortName"  class="col-sm-2 control-label">供应商简称：</label>
+            <div class="col-md-2">
+              <input id="SuppShortName"  type="text"/>
+
+            </div>
+            <label for="AdministrativeDivision"  class="col-sm-2 control-label ">行政区域：</label>
+            <div class="col-md-2">
+               <input id="AdministrativeDivision"  type="text"/>
+
+            </div>
+            <label for="SuppDesc"  class="col-sm-2 control-label">供应商简介：</label>
+            <div class="col-md-2">
+             <input id="SuppDesc"  type="text"/>
+
+            </div>
+        </div>
+		 
+	<div class="form-group">	
+	          <label class="col-sm-2 control-label"><b>是否停用：</b><input type="checkbox">
+    </label>
+        <div class="btn-group col-lg-push-1" >
+            <button type="submit" class="btn btn-default btn-sm" >+保存/修改</button>
+       
+        </div>
+	 </div>
+    </fieldset>
+
+
+
+
+
+	   
+ </form>
+ </div><!-- /.container -->
