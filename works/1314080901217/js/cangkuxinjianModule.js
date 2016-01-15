@@ -5,13 +5,23 @@ var myAppModule = angular.module('cangkuxinjianModule', []);
 
 // use the myAppModule variable to
 // configure the module with a controller
-myAppModule.controller('MyFilterDemoCtrl', function ($scope) {
+myAppModule.controller('MyFilterDemoCtrl', function ($scope,$http) {
        // controller code would go here
         var someData = {
             Name: '仓库-盘点-新建盘点清单',
             interface: '表单',
             dateJoined: new Date(2015, 10, 20)
         };
+        $scope.baocun=function(){
+           var promise=$http({
+            url:"jsonData/mydata.json",
+            method:"get"
+        });
+        promise.success(function(data,status){
+            alert(data["status"]);
+        });
+        }
+        
         $scope.data = someData;
 
     }
