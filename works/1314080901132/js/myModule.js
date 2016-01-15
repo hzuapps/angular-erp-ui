@@ -7,11 +7,18 @@
                };
               
 var myModule = angular.module("myapp", []);
-  myModule.controller("myController", function ($scope) {
-      var data1 = myData;
-      data1.theClassName ="灯具" ;
-      data1.classNumber = "12";
-      $scope.datas = [data1];
+  myModule.controller("myController", function ($scope,$http) {
+  	  var promise=$http({
+  	  	url:"myJson.json",
+  	  	method:"get"
+  	  });
+  	  promise.success(function(data,status){
+      $scope.datas = [data];
+  	  });
+  	   promise.error(function(data,status){
+              alert("请求出错");
+  	  });
+     
   });
 
 myModule.directive("mydata",function(){
