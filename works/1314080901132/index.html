@@ -7,6 +7,7 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
    <title>物料设置 1314080901132</title>
    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+   <script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
    <script src="js/myModule.js"></script>
     
     <link rel="shortcut icon" href="icons/favicon.ico" />
@@ -24,7 +25,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-controller="myController">
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -38,8 +39,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#aboutMe">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -54,9 +55,8 @@
       </div>
 
        <div style="margin-left:250px;"> 
+            <div id="main" ng-view></div>
 
-            <mydata>
-            </mydata>
        </div>
     </div><!-- /.container -->
 

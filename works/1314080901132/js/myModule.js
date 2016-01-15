@@ -6,7 +6,22 @@
              classNumber: '11'
                };
               
-var myModule = angular.module("myapp", []);
+var myModule = angular.module("myapp", ["ngRoute"]);
+function theRoute($routeProvider)
+{
+	$routeProvider.
+	when("/home",{
+			templateUrl:"home.html",
+            controller:"myController"
+	}).
+	when("/aboutMe",{
+		templateUrl:"aboutMe.html",
+	}).
+	otherwise({
+		templateUrl:"error.html",
+	});
+}
+myModule.config(theRoute);
   myModule.controller("myController", function ($scope,$http) {
   	  var promise=$http({
   	  	url:"myJson.json",
