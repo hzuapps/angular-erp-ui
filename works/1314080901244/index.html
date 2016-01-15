@@ -7,12 +7,26 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>生产组别-新增工作组1314080901244</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    
-    <!-- Bootstrap -->
     <link href="../../lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style type="text/css">
+          body {padding: 0; margin: 0; font-size: 190%; line-height: 540%;}
+          body,html{height: 100%; }
+          a{color: #333;}
+          a:hover{color: green;}
+          #outer {height: 100%; overflow: hidden; position: relative;width: 100%; background:ivory; }
+          #outer[id] {display: table; position: static;}
+          #middle {position: absolute; top: 50%;text-align:center;} /* for explorer only*/
+          #middle[id] {display: table-cell; vertical-align: middle; position: static;}
+          #inner {position: relative; top: -50%;width: 600px;margin: 0 auto;text-align:left;}/*for explorer only */
+          div.blackBorder {border: 1px solid black; background-color: #FFF;}
+          p{margin: 1em;}
+    </style>
+    
+    <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+    <script src="../../lib/angular-1.4.5/angular-route.js"></script>
+    <script src="js/myAppModule.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,22 +34,9 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-        <script src="../../lib/angular-1.4.5/angular.min.js"></script>
-	<script src="js/myAppModule.js"></script>
-    
-    <style type="text/css">
-       body {padding: 0; margin: 0; font-size: 75%; line-height: 540%;}
-       body,html{height: 100%; }
-       a{color: #333;}
-       a:hover{color: green;}
-       #outer {height: 100%; overflow: hidden; position: relative;width: 100%; background:ivory; }
-       #outer[id] {display: table; position: static;}
-       #middle {position: absolute; top: 50%;text-align:center;} /* for explorer only*/
-       #middle[id] {display: table-cell; vertical-align: middle; position: static;}
-       #inner {position: relative; top: -50%;width: 600px;margin: 0 auto;text-align:left;}/*for explorer only */
-       div.greenBorder {border: 1px solid green; background-color: #FFF;}
-       p{margin: 1em;}
-    </style>
+        
+<!-- Bootstrap -->    
+
 
   </head>
   <body ng-controller="MyFilterDemoCtrl">
@@ -48,7 +49,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">New working groups</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -59,7 +60,6 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
 
 <div id="outer">
 <div id="middle">
@@ -87,13 +87,11 @@
       </form>
      </td>
    </tr>
-</table>
-</div>
-</div>
-</div>
+  </table>
+  </div>
+  </div>
+  </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-  </body>
+    
+</body>
 </html>
