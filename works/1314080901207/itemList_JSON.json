@@ -1,0 +1,18 @@
+﻿[
+    {
+        "code": "a",
+        "name": "内衣",
+        "type": "衣服",
+        "color": "pink",
+        "inventory_number": "26",
+        "check_number": "226"
+    },
+    {
+       "code": "b",
+        "name": "短袖",
+        "type": "衣服",
+        "color": " blue",
+        "inventory_number": "36",
+        "check_number": "358"
+    }
+] 
