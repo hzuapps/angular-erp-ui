@@ -1,5 +1,24 @@
  
-var myapp = angular.module("myapp", []);
+var myapp = angular.module("myapp", ["ngRoute"]);
+
+
+
+
+
+function theRoute($routeProvider){
+	$routeProvider.
+	when("/home",{
+		templateUrl:"home.html",
+		controller:"homeController"
+	}).
+	when("/aboutMe",{
+		templateUrl:"aboutMe.html"
+	}).
+	otherwise({
+		templateUrl:"error.html"
+	});
+}
+myapp.config(theRoute);
 myapp.controller("homeController", function ($scope,$http){
 	
 	var promise=$http({
