@@ -1,8 +1,26 @@
 ﻿// create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
 
-var myAppModule = angular.module('cangkuxinjianModule', []);
-
+var myAppModule = angular.module('cangkuxinjianModule', ["ngRoute"]);
+function myRoute($routeProvider)
+{
+    $routeProvider.
+     when("/",{
+        templateUrl:"home.html",
+        controller:"MyFilterDemoCtrl"
+    })
+    .when("/home",{
+        templateUrl:"home.html",
+        controller:"MyFilterDemoCtrl"
+    })
+    .when("/aboutMe",{
+        templateUrl:"aboutMe.html"
+    })
+    .otherwise({
+        templateUrl:"error.html"
+    })
+}
+myAppModule.config(myRoute);
 // use the myAppModule variable to
 // configure the module with a controller
 myAppModule.controller('MyFilterDemoCtrl', function ($scope,$http) {
