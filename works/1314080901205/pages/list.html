@@ -1,0 +1,44 @@
+﻿   <div class="container" >
+      <div class="starter-template">
+        <h1>我的作业</h1>
+        <p class="lead"></p>
+          <body>
+            <div style='flaot:left; width:30px; height:20px;'>
+          <p>支出状态</p>
+            </div>
+        <div style='flaot:left; width:30px; height:20px;'>
+        <select id="expendsatate" name="hexi" onchange="changelist();">
+            <option value='A'>未完成</option>
+            <option value='B'>已完成</option>
+            <option value='C'>全部</option> 
+        </select>
+	<div>
+	<p>单位</p>
+            </div>
+<div style='flaot:left; width:30px; height:20px;'>
+        <select id="expendsatate" name="hexi" onchange="changelist();">
+            <option value='A'>未完成</option>
+            
+        </select>
+            </div>
+ </div>
+        </body>
+      </div>
+ 
+      <div class="form-group row" style="text:algin">
+                <div class="row">
+                    <label for="Orderform">经手人：</label>
+                    <input type="text"  class="form-control input-sm" ng-model="Orderform" id="Orderform" required />
+                    <label for="Productname">支出金额：</label>
+                    <input type="text" class="form-control input-sm" ng-model="Productname" id="Productname" required />
+                  <label for="Customername">状态：</label>
+                    <input type="text" class="form-control input-sm" ng-model="Customername" id="Customername" required/>
+                    <label for="Sealoffmember">备注：</label>
+                    <input type="text" class="form-control input-sm" ng-model="Sealoffmember" id="Sealoffmember" required/>
+                </div>
+
+    </div>  
+	<div>
+	<button type="button">新增</button>
+	<button type="button">保存</button>
+	</div>
