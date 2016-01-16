@@ -22,9 +22,10 @@
     <![endif]-->
    
 <script src="../../lib/angular-1.4.5/angular.min.js"></script>
+<script src="../../lib/angular-1.4.5/angular-route.min.js"></script>
     <script src="js/myModule.js"></script>
   </head>
-  <body ng-controller="homeController">
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -38,8 +39,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#aboutMe">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -53,12 +54,9 @@
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
 	  <div style="width:60%;margin:auto;">
-	    <div>所属部门<thesuoshubumen></thesuoshubumen></div>
-		<div>岗位名称<thegangweimingcheng></thegangweimingcheng></div>
-		<div>岗位层次<thegangweichenchi></thegangweichenchi></div>
-		<div>岗位类型<thegangweileixin></thegangweileixin></div>
-		<div>基本薪资<thejibenxinzhi></thejibenxinzhi></div>
-		<div>岗位职责<thegangweizhizhe></thegangweizhizhe></div>
+	   <div id="main" >
+          <div ng-view ></div>
+       <div>
 	  </div>
 
     </div><!-- /.container -->
