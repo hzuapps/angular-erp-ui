@@ -1,7 +1,7 @@
 // create a new module called 'myAppModule' and save 
 // a reference to it in a variable called myAppModule 
-var EmployeeAttendanceModule = angular.module('EmployeeAttendanceModule', []);
-
+//var EmployeeAttendanceModule = angular.module('EmployeeAttendanceModule', []);
+var EmployeeAttendanceModule = angular.module("EmployeeAttendanceModule", ["ngRoute"]);
 EmployeeAttendanceModule.factory("EmployeeAttendanceService",function($http){
       var getEmployeeAttendanceData={};
       getEmployeeAttendanceData.getData=function(AttenceData){
@@ -16,11 +16,28 @@ EmployeeAttendanceModule.factory("EmployeeAttendanceService",function($http){
 
 });
 
+function LockRoute($routeProvider){
+  $routeProvider.
+   when("/home",{
+     templateUrl:"Home.html",
+     controller:"EmployeeAttendanceController"
+       }).
+   when("/about",{
+     templateUrl:"AboutMe.html",
+     controller:"AboutMeController"
+   }).
+   otherwise({
+     templateUrl:"Error.html",
+     controller:"ErrorController"
+   });
+ }
+ +myOrderModule.config(LockRoute);
+
 //定义控制器
  EmployeeAttendanceModule.controller("EmployeeAttendanceController",function($scope,EmployeeAttendanceService){
            var promise=EmployeeAttendanceService.getData();
            promise.success(function(data,status){
-           alert("获取json数据成功！");
+          // alert("获取json数据成功！");
            $scope.theOrderDatas = [data[0]];
       });
       promise.error(function(data,status){
@@ -28,7 +45,13 @@ EmployeeAttendanceModule.factory("EmployeeAttendanceService",function($http){
       });
  
   });
-  
+ myOrderModule.controller("AboutMeController",function($scope){
+   $scope.myName="ZhouZeBiao";
+   $scope.myNumber="1314080901247";
+ });
+  myOrderModule.controller("notFoundController",function($scope){
+   $scope.information="Error!404!";
+ });
   
 EmployeeAttendanceModule.directive('list',function(){
 	return {
